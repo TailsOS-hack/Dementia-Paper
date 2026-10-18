@@ -1,0 +1,32 @@
+{
+  "doi": "10.17632/xx9zzz6t54.1",
+  "source_url": "https://data.mendeley.com/datasets/xx9zzz6t54/1",
+  "archive_sha256": "1f04258876a26973d1f76d6dc6bf78accbc409d53884a95612f4440e551e6df3",
+  "images": 6400,
+  "split_counts": {
+    "test": 1279,
+    "train": 5121
+  },
+  "class_counts": {
+    "MildDemented": 896,
+    "ModerateDemented": 64,
+    "NonDemented": 3200,
+    "VeryMildDemented": 2240
+  },
+  "dimensions": {
+    "176x208": 6400
+  },
+  "metadata_csv_files": 0,
+  "exact_legacy_overlap": 6400,
+  "dhash_legacy_overlap": 6400,
+  "exact_overlap_by_split": {
+    "train": 5121,
+    "test": 1279
+  },
+  "patient_independence": "not established; no participant metadata in downloaded payload",
+  "legacy_reference_sources_sha256": {
+    "stage_manifest.csv": "66a0cd9409d61edd32ee137154f769c749664f255ddebe461cf7683c1f4ba7b9",
+    "excluded_legacy.csv": "abcad712a8818ff20867980232c34e2b83fe5057bc7dde2dcceeddbef995296a"
+  },
+  "legacy_hash_reference_sha256": "1c562fae1dd2991f652b3d3c7fbe30d2d008b23a05a82cb04299cb94ca7297cd"
+}

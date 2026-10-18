@@ -2,7 +2,7 @@
 
 The fixed validation controls **do not support dominant input-corner reliance** by either the old model or the validation-selected new model, candidate 3. This is limited evidence from a development sample, not proof that every possible shortcut is absent or that the model is clinically robust.
 
-Open the [native 7×7 gallery for all 115 fixed cases](results/native_gallery.html), [native score-location summary](results/native_location_mass.pdf), [validation masking comparison](results/validation_masking_controls.pdf), or [explicit input masks](results/input_mask_definitions.pdf).
+Open the native 7×7 gallery for all 115 fixed cases (historical reference; see Git history), native score-location summary (historical reference; see Git history), validation masking comparison (historical reference; see Git history), or explicit input masks (historical reference; see Git history).
 
 ## What was measured
 
@@ -47,4 +47,4 @@ python docs/kevin_paper_20261011/round2_corner_audit/verify_and_plot.py
 
 The inference output must be a new directory; the supplied results already exist and are preserved. A CPU option is available. `verify_and_plot.py` reads the default results directory and does no inference. It recomputes all 26 metric records from all 4,160 exported probability rows, checks source/checkpoint/native-array hashes, and validates mask areas and complete case alignment. The saved state checks confirm both checkpoints and in-memory model states were unchanged and no gradients accumulated. Gallery panels and summary plots were visually inspected; PDF page/text bounds passed.
 
-Machine-readable records: [pre-inference protocol](results/protocol_before_inference.json), [validation sample](results/validation_sample.csv), [probabilities](results/validation_predictions.csv), [native map measures](results/native_map_mass.csv), [summary](results/summary.json), [verification](results/verification.json), and [visual QA](results/visual_qa.json). Existing paper figures and frozen training/evaluation sources were not modified.
+Machine-readable records: pre-inference protocol (historical reference; see Git history), validation sample (historical reference; see Git history), probabilities (historical reference; see Git history), native map measures (historical reference; see Git history), summary (historical reference; see Git history), verification (historical reference; see Git history), and visual QA (historical reference; see Git history). Existing paper figures and frozen training/evaluation sources were not modified.

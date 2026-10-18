@@ -10,8 +10,6 @@ The [access package](https://github.com/TailsOS-hack/Neuro-Radiology-Database/bl
 
 The initial endpoint uses clinical diagnosis with a prespecified scan/assessment match: 180 days for the primary analysis and 90 days for sensitivity analysis. Cognitive status, etiologic diagnosis and biomarker-defined AD remain distinct. MCI and alternative dementia etiologies are outside the primary binary endpoint; the project cannot claim general dementia differential diagnosis from AD/control performance. [NACC's clinical and imaging linkage guidance](https://www.naccdata.org/the-nacc-researchers-guide)
 
-The intended data design requires at least two development institutions and two untouched external institutions, with every visit and derivative belonging to one global patient partition. Different dataset names do not establish independent people or sites. NACC and SCAN are linked sources; repeated MIRIAD scans are repeated people. All previously evaluated cohorts, including Harvard and the original 100-image set, are historical benchmarks.
-
 ## Executable workflow
 
 The research implementation lives in [research/dementia_round3](https://github.com/TailsOS-hack/Neuro-Radiology-Database/tree/8bfd1dbb6bf6b29b1faf1962e6038c59f9a4f574/research/dementia_round3). Its command-line entry point exists and the top-level and evaluation help have been executed successfully. Run these commands from the repository root in a Python environment with the research dependencies available. Use actual help output for required arguments; do not infer filenames or options from this document:
@@ -40,7 +38,6 @@ The primary old-model comparator is the unchanged Round 1 **binary clinical ense
 The protocol's research progression gate requires all of the following: equal-site mean balanced-accuracy gain of at least 5 percentage points; a paired 95% interval with lower bound above zero; and, at every external site, sensitivity and specificity estimates of at least 0.85 with their separate exact 95% lower bounds at least 0.80. Failures and abstentions count as incorrect in the all-eligible primary denominators. These are project research targets, not universal medical standards. The point-gain requirement plus a lower bound above zero does **not** prove that the true gain is at least five points.
 
 Calibration uses reserved development patients, with a 0.90 development sensitivity target for threshold selection. That target is not guaranteed on external data. Unidentifiable or infeasible fits remain unavailable. The paired bootstrap conditions on the observed sites; it does not estimate performance at a random new hospital. Full clinical follow-up requirements are in [CLINICAL_ROADMAP.md](CLINICAL_ROADMAP.md).
-
 
 ## Preprocessing dependency boundary
 

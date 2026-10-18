@@ -1,0 +1,21 @@
+{
+  "clinical": {
+    "metrics": 112,
+    "model_cohort_pairs": 16,
+    "saved_prediction_rows_checked": 1456,
+    "numeric_match_to_retained_prior_metrics": true
+  },
+  "stage": {
+    "stage_models": 10,
+    "test_images_per_model": 1279,
+    "independent_external": false
+  },
+  "training_history_figures": 12,
+  "figures": 35,
+  "visual_review": "all 35 regenerated figures inspected using four contact sheets",
+  "dataset_intake_tests_passed": 6,
+  "retired_content_matches": 0,
+  "pdfs_scanned": 90,
+  "python_files_syntax_checked": 97,
+  "focused_tests_passed": 31
+}

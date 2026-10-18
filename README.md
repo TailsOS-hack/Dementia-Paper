@@ -1,36 +1,29 @@
-# Dementia paper research repository
+# Dementia research repository
 
-Dedicated dementia/Alzheimer research code, model checkpoints, figures, raw learning histories, statistical comparisons, methods, dataset-source notes, and study plans extracted on October 17, 2026.
+[Current results and tables](results/current/README.md) · [Regenerated figures](results/current/FIGURES.md) · [Mendeley audit](datasets/mendeley_xx9zzz6t54_v1/README.md) · [OASIS access status](datasets/OASIS_STATUS.md)
 
-See [source coverage](SOURCE_COVERAGE.md) for the scope and explicit omissions.
+The current scope contains legacy four-class image research, retained Besga/OpenNeuro clinical comparisons, trained checkpoints, methods, raw training histories, attribution controls and future-study software. Earlier broader snapshots remain in Git history. The active repository has no fresh external clinical validation and does not establish clinical superiority or readiness.
 
-## Post-hoc cohort subset
+## October 18 refresh
 
-[October 18 analysis excluding Harvard](analyses/harvard_excluded_20261018/README.md) recomputes the remaining reused-cohort counts. It preserves the original full results and leaves no fresh external clinical cohort.
+- Recomputed all 112 retained clinical model/scenario summaries from saved predictions, including uncertainty and paired comparisons.
+- Downloaded and audited Mendeley DOI 10.17632/xx9zzz6t54.1: all 6,400 images exactly match existing legacy pixels. Registered it as an alias; added no duplicate training data.
+- Reran all ten frozen stage classifiers on its 1,279-image supplied test split, explicitly labeled as reused-data evaluation.
+- Regenerated 35 current plots, including all twelve stored training histories. Unchanged historical stage and native attribution evidence remains available.
+- Added a validated local OASIS intake command. Access approval is pending, so no OASIS training or results are claimed.
 
-## Start here
+## Organization
 
-- [Current scientific handoff](handoff/START_HERE.md)
-- [Model and dataset comparison](handoff/MODEL_AND_DATASET_COMPARISON.md)
-- [Round 2 results and methods](docs/kevin_paper_20261011/round2_publication/README.md)
-- [Latest 49-page graph atlas](docs/kevin_paper_20261011/round2_publication/combined_graphs/Round2_All_Graphs_Atlas.pdf)
-- [All 115 latest Grad-CAM cases](docs/kevin_paper_20261011/round2_publication/artifacts/stage/attribution_diagnostics/gallery.html) — download and open locally.
-- [Earlier publication results and 40-page atlas](docs/kevin_paper_20261011/publication/README.md)
-- [Complete historical dementia-only evidence](paper_package/Dementia_Only_2026-10-09/START_HERE.txt)
-- [Round 3 proposed study and software](docs/kevin_paper_20261011/round3/README.md)
+- `results/current/`: current tables, figures, verification and reproducible outputs.
+- `analysis_refresh/`: refreshed evaluation/statistics/plotting scripts.
+- `datasets/`: source audit, provenance, overlap and access status.
+- `docs/kevin_paper_20261011/`: study methods, historical stage results, training code and future research design.
+- `models/`: baseline, six Round 1 and six Round 2 research checkpoints, plus initialization weights.
+- `research/dementia_round3/`: proposed patient/site-level study implementation; not completed clinical research.
+- `paper_package/Dementia_Only_2026-10-09/`: historical dementia figures and native maps.
 
-## Checkpoints and code
+Install Python dependencies from `requirements.txt`. Use Git LFS (`git lfs install`, then `git lfs pull`) to download model binaries. Raw clinical data, private access records and the large original training collection are not public. Some exact historical reruns require separately obtained source data and the earlier frozen code snapshot.
 
-`models/` includes the original dementia checkpoint, six Round 1 checkpoints, six Round 2 checkpoints, and the recorded initialization weights. Checkpoint identity records remain beside the weights. Binaries use Git LFS; run `git lfs install` and `git lfs pull` after cloning. GitHub's ordinary ZIP download may contain LFS pointers instead of the weights.
+The existing augmented JPEG data lack verified patient/upstream-family independence. The original100 exercise is reused internal data. Grad-CAM is exploratory. MCI and four-class image labels must not be silently converted into clinical AD/CN diagnoses. Tests are software checks, not clinical evidence.
 
-Training, analysis, evaluation, reporting and figure scripts retain their paths under `docs/kevin_paper_20261011/`. The proposed next-study implementation is in `research/dementia_round3/`, with its tests under `tests/`. Supporting attribution utilities are in `src/`. There are no tumor models, tumor datasets, routing models, or mixed-disease GUI applications. The generic provenance module was reduced to functions needed by dementia attribution; original scientific result files and checkpoints are preserved.
-
-Create a Python virtual environment and install `requirements.txt`. Recorded tested versions are in `research/dementia_round3/requirements-local-tested.txt` and `docs/kevin_paper_20261011/training/requirements-analysis.txt`. Full replay needs the original approved data and preprocessing assets; see [reconstruction boundaries](docs/kevin_paper_20261011/publication/RECONSTRUCTION.md). Missing clinical inputs must not be substituted with synthetic outcomes.
-
-## Evidence boundaries
-
-This is research-only. Clinical superiority and clinical readiness were not demonstrated. The latest clinical ensemble scored 9/19 on the fresh clinical cohort versus 10/19 for the older ensemble. The reused 100-image four-class benchmark contains training/validation overlap and is not independent clinical validation. Grad-CAM is exploratory attribution, not validated anatomical localization. Round 3 is a proposed workflow with software checks, not a new completed clinical study.
-
-Raw clinical MRI, participant records, private access attestations, credentials and personal correspondence are excluded. The full augmented training image collection is not duplicated; source inventories, manifests and acquisition/preprocessing code are supplied. Historical benchmark assets already present in the source project are retained for the paper's comparisons; source-use terms still apply. This repository grants no new dataset license. Historical document references to the original mixed project identify provenance, not additional scope.
-
-`REPOSITORY_MANIFEST.json` records every delivered file's SHA-256 and size (except itself). `handoff/FILE_MANIFEST.csv` and other original manifests describe their original packages and are retained as historical provenance.
+`REPOSITORY_MANIFEST.json` records current file hashes. Legacy package indexes describe historical layouts and are not a current inventory.

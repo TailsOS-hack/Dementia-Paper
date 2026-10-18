@@ -1,7 +1,5 @@
 # From a research paper to evidence for clinician MRI support
 
-The current models are research artifacts. The previously untouched Harvard comparison failed clinically: the Round 2 clinical ensemble predicted AD for every one of 19 binary cases. Its 9/19 accuracy and zero specificity do not support superiority over the old ensemble's 10/19. See the [completed Round 2 results](../round2_publication/RESULTS.md). A successful new retrospective study would address part of this problem; it would not itself establish safe patient-care use.
-
 ## 1. Fix the intended use and reference standard
 
 Round 3 targets clinical AD versus cognitively normal controls from supported structural T1 volumes. Define the intended clinician, patient population, clinical information available, output and decision the output might eventually support. A binary case-control study cannot establish discrimination among AD, vascular disease, Lewy body disease, frontotemporal dementia and other causes in an unselected memory clinic.
@@ -11,8 +9,6 @@ Document who assigned each diagnosis, the criteria used, the time from assessmen
 ## 2. Acquire eligible research data and preserve an untouched evaluation
 
 Use the [provider-access checklist](access/ACCESS_CHECKLIST.md). An approved download must contain appropriate T1 volumes, patient/visit/scan keys, clinical labels, source/site and acquisition metadata. Count eligible people after these checks, not advertised images or multimodal participants. Keep repeat scans, derivatives and overlapping source-family participants together. A healthy-only collection or an unmapped 2D mirror cannot replace patient-labeled AD/control cohorts.
-
-Reserve external institutions before model outcomes are examined. Freeze development partitions, reference/matching rules, preprocessing assets, model search, calibration/threshold choices, the comparator and the statistical analysis. Harvard, Besga, OpenNeuro and all other already evaluated sets retain historical status. Reusing their outcomes for development creates a need for a genuinely fresh evaluation cohort.
 
 Sample-size planning must use explicit paired performance assumptions and class denominators at each site. Select target precision and a clinically meaningful effect with qualified clinical/statistical input; there is no universal number of scans that makes a model clinically ready. The current simulator assesses the project's full research gate under fixed-site assumptions, not clinical utility, reader-study power or arbitrary new-site variability.
 

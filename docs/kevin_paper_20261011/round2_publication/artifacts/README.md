@@ -6,9 +6,6 @@
 
 **Attribution is a diagnostic appendix: probability replay remains BLOCKED.** 2/100 cases exceed the frozen maximum absolute probability-difference tolerance of 0.0001; predicted classes are unchanged. The tolerance was not widened and inference was not rerun. Successful visual review does not turn this failed replay check into a pass. See the [unchanged blocked marker](stage/attribution_diagnostics/source_attribution_complete.json) and [recovery evidence](stage/attribution_diagnostics/recovery_receipt.json).
 
-Stage results are reused development benchmarks. No clinical-readiness claim follows.
-The separate clinical pilot preserves the fresh Harvard 19-patient endpoint and reused Besga/OpenNeuro cohorts.
-
 [Six fixed research checkpoint identities](research_checkpoints/CHECKPOINTS.json) and [export fidelity evidence](research_checkpoints/export_verification.json). Checkpoint binaries are stored separately in the repository model directory; synthetic export equality does not establish medical validity.
 
 ## Figure and curve index
@@ -53,27 +50,3 @@ The separate clinical pilot preserves the fresh Harvard 19-patient endpoint and 
 - [raw curves](stage/training/stage_only_seed20261013/raw_curves.pdf)
 
 ### Clinical
-
-- [all training curves](clinical/report/all_training_curves.pdf)
-- [besga reused test all stress](clinical/report/besga_reused_test_all_stress.pdf)
-- [besga reused test confidence](clinical/report/besga_reused_test_confidence.pdf)
-- [besga reused test confusion](clinical/report/besga_reused_test_confusion.pdf)
-- [besga reused test exact intervals](clinical/report/besga_reused_test_exact_intervals.pdf)
-- [besga reused test reliability](clinical/report/besga_reused_test_reliability.pdf)
-- [besga reused test roc pr](clinical/report/besga_reused_test_roc_pr.pdf)
-- [harvard fresh external all stress](clinical/report/harvard_fresh_external_all_stress.pdf)
-- [harvard fresh external confidence](clinical/report/harvard_fresh_external_confidence.pdf)
-- [harvard fresh external confusion](clinical/report/harvard_fresh_external_confusion.pdf)
-- [harvard fresh external exact intervals](clinical/report/harvard_fresh_external_exact_intervals.pdf)
-- [harvard fresh external reliability](clinical/report/harvard_fresh_external_reliability.pdf)
-- [harvard fresh external roc pr](clinical/report/harvard_fresh_external_roc_pr.pdf)
-- [openneuro reused external all stress](clinical/report/openneuro_reused_external_all_stress.pdf)
-- [openneuro reused external confidence](clinical/report/openneuro_reused_external_confidence.pdf)
-- [openneuro reused external confusion](clinical/report/openneuro_reused_external_confusion.pdf)
-- [openneuro reused external exact intervals](clinical/report/openneuro_reused_external_exact_intervals.pdf)
-- [openneuro reused external reliability](clinical/report/openneuro_reused_external_reliability.pdf)
-- [openneuro reused external roc pr](clinical/report/openneuro_reused_external_roc_pr.pdf)
-- [raw patient curves](clinical/training/clinical_seed20261021/raw_patient_curves.pdf)
-- [raw patient curves](clinical/training/clinical_seed20261022/raw_patient_curves.pdf)
-- [raw patient curves](clinical/training/clinical_seed20261023/raw_patient_curves.pdf)
-

@@ -1,6 +1,6 @@
 {
-  "source_commit": "3b080e207aae9bfe55a9b54308b157a67d20a93c",
-  "scope": "dementia paper only",
+  "scope": "current dementia research snapshot",
+  "source_history_preserved": true,
   "files": [
     {
       "path": ".gitattributes",
@@ -14,33 +14,33 @@
     },
     {
       "path": "README.md",
-      "bytes": 4015,
-      "sha256": "05e1a768803902341ff8c6dd4b8a172966d8f316d368434984224ee68fdef565"
+      "bytes": 2833,
+      "sha256": "8c92ef253c3ab9d0bc668c3f1e6c8d72e336a60ca7f7193f0aa8c21466227f38"
     },
     {
       "path": "SOURCE_COVERAGE.md",
-      "bytes": 2549,
-      "sha256": "8c7c1a7db691dd15f8fbbd18185ac2f0413c0985768e4ef448b1c7857827248e"
+      "bytes": 848,
+      "sha256": "cff0ae50b8eb0afb5f2ed92fb4425cb3abf71032a76fe924bd3d4bb23fa5b3b4"
     },
     {
-      "path": "analyses/harvard_excluded_20261018/README.md",
-      "bytes": 2237,
-      "sha256": "da5dec6de8a081ae47cceea082c392e19b90db4841a1954de5e9b175239d2e9d"
+      "path": "analysis_refresh/README.md",
+      "bytes": 1530,
+      "sha256": "2ea8477e38f4b20d212505574f7ab75d1dce6d4164e5fa586d035dd25d181897"
     },
     {
-      "path": "analyses/harvard_excluded_20261018/recompute.py",
-      "bytes": 2643,
-      "sha256": "9dc53143ff96ffb58539694c284bfa338168259a75573aa00ddc7d56d57bdc71"
+      "path": "analysis_refresh/clinical_figures.py",
+      "bytes": 9578,
+      "sha256": "80439c0e76a2b362236c01c5fa05ae1977abe633cd64cb42b5709913980d981a"
     },
     {
-      "path": "analyses/harvard_excluded_20261018/recomputed_metrics.csv",
-      "bytes": 1820,
-      "sha256": "7aacf4bd41cef60c15b92fcc73f03b75aa11c8acac5a80ac5158ac5952b7a252"
+      "path": "analysis_refresh/evaluate_mendeley.py",
+      "bytes": 3525,
+      "sha256": "506a6c45fa6dd19356fc6fad0a841164a63a95fd94c3fd4a207e9e524cef2b31"
     },
     {
-      "path": "analyses/harvard_excluded_20261018/verification.json",
-      "bytes": 975,
-      "sha256": "b6bc8b80dd144efdf143d5277600982bd872f032e74232d03d26ed7733fd0e70"
+      "path": "analysis_refresh/refresh_results.py",
+      "bytes": 8269,
+      "sha256": "6b2d3c889b085edfabde5f4d3ef698c214f4ef749bab5c05b179f40156ed226d"
     },
     {
       "path": "data/evaluation/ground_truth/radiologist_test_key.csv",
@@ -573,6 +573,41 @@
       "sha256": "3be2c02b9eeb2dbc943ebcf97857a3545f79a477eca0ada6f63d8169991295f1"
     },
     {
+      "path": "datasets/OASIS_STATUS.md",
+      "bytes": 1489,
+      "sha256": "9d17b3c7cfa4e37362f8d1347fb0e61a68ad3e6191a6df0805b514070ce331e0"
+    },
+    {
+      "path": "datasets/import_oasis.py",
+      "bytes": 2736,
+      "sha256": "fe9e70acf1b08a4ea6fc52e4ac06728f8e1788be2ae8df8610591e07be1e02c4"
+    },
+    {
+      "path": "datasets/mendeley_xx9zzz6t54_v1/README.md",
+      "bytes": 1641,
+      "sha256": "2deb824a41d51de6853d2a1f0f03c7823fdad021c2956ae75ca4c6e27be15891"
+    },
+    {
+      "path": "datasets/mendeley_xx9zzz6t54_v1/audit.json",
+      "bytes": 1034,
+      "sha256": "03557915b365baf3e93d1f8a36365bf6ea5d1242a0c544465a0091c2caeaf540"
+    },
+    {
+      "path": "datasets/mendeley_xx9zzz6t54_v1/audit_source.py",
+      "bytes": 2456,
+      "sha256": "79addccdd092d132a87a85a1c1c7820f3f0edd0c5134a4ce936f6ac161620b0c"
+    },
+    {
+      "path": "datasets/mendeley_xx9zzz6t54_v1/image_inventory.csv",
+      "bytes": 1161273,
+      "sha256": "ba24da9d2370439c653f55f58f78817278c3f51ee6e05777397271954d1e0bfd"
+    },
+    {
+      "path": "datasets/mendeley_xx9zzz6t54_v1/legacy_hash_reference.csv",
+      "bytes": 3856595,
+      "sha256": "1c562fae1dd2991f652b3d3c7fbe30d2d008b23a05a82cb04299cb94ca7297cd"
+    },
+    {
       "path": "docs/kevin_paper_20261011/Kevin_Paper_Datasets_and_Training_Plan.docx",
       "bytes": 50471,
       "sha256": "4a270d988897c25ac466d4d0bfd0073070ea51c9d5df9268e81faa647545bd9a"
@@ -581,61 +616,6 @@
       "path": "docs/kevin_paper_20261011/abid_dataset_crosswalk.json",
       "bytes": 21574,
       "sha256": "6b700534f2ba632d7ebfcad43df91726446e9a0823ebe05651d49da7712ee9c9"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/abid_handoff_20261011/FIGURE_CAPTION_GUIDANCE.md",
-      "bytes": 5737,
-      "sha256": "f87a439cbdc712e8c6b0896672c39c1d4ecdc69ff6052d4c6cd26afd209cfed2"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/abid_handoff_20261011/FIGURE_INDEX.csv",
-      "bytes": 146076,
-      "sha256": "2dcc2eac7a04b05ddaca28659666b1f7b9fd69fc4b8f809d401712541c47a055"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/abid_handoff_20261011/FILE_MANIFEST.csv",
-      "bytes": 288153,
-      "sha256": "26509c77819d093ab16b7a8a40754ebd4a9caee2fd5a4223f2e0764e6dfaa4ab"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/abid_handoff_20261011/MODEL_AND_DATASET_COMPARISON.md",
-      "bytes": 15093,
-      "sha256": "fcf021e8d43544f9bb204be296595965c4e14aa8940e709978a5ac1660d5f3b9"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/abid_handoff_20261011/PACKAGE_VERIFICATION.json",
-      "bytes": 645,
-      "sha256": "b43889ceddbacd813902838cdebe695ad7927451ac02ab4220eac8bc3c9ba1f2"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/abid_handoff_20261011/SOURCE_MANIFEST.json",
-      "bytes": 771435,
-      "sha256": "ea3ada35cd02886303dc07bcedb416a2c31d30d172d3e942eae0242dd09a104e"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/abid_handoff_20261011/START_HERE.md",
-      "bytes": 5576,
-      "sha256": "55dbf7a7225749b730538255fca7f93a5fc7e169935181be523c542b61ea3c39"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/abid_handoff_20261011/build_package.py",
-      "bytes": 17950,
-      "sha256": "823a6253c6803361933041f640a8c60dcff48b6b82ede3d60cacbf0f684ff6f7"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/abid_handoff_20261011/facts.json",
-      "bytes": 8409,
-      "sha256": "f8ce5b51d4c4c58117b90b18d851e4250bbee6041dafb53bbdc9dd86900c02d0"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/abid_handoff_20261011/package_receipt.json",
-      "bytes": 340,
-      "sha256": "3d540799bad5e415ad27cbd6273c5dce4e5c3de3e4feb158b2313ebf121d9def"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/abid_handoff_20261011/scientific_review.json",
-      "bytes": 3372,
-      "sha256": "9aa546c445272e65ac9ef767f798794b83df323d4e6b7d8f82b565c2a74e71f3"
     },
     {
       "path": "docs/kevin_paper_20261011/additional_source_notes.json",
@@ -4923,34 +4903,19 @@
       "sha256": "6ca9a2791aacd75e43614f03b64bd2ab2d379cbc6403d1a7afd805a7f989aa23"
     },
     {
-      "path": "docs/kevin_paper_20261011/round2_clinical/CLINICAL_REPORT_USAGE.md",
-      "bytes": 4156,
-      "sha256": "bfae8e7283443d9cc699fe8953f657de24462c99e65a4e176808f700f866c682"
-    },
-    {
       "path": "docs/kevin_paper_20261011/round2_clinical/CLINICAL_TRANSFER_USAGE.md",
       "bytes": 3971,
       "sha256": "978a833dcdee0fa256a0c7fc54b697d66f24aae0c3ba8f29a58b42f1fafe6b06"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_clinical/README.md",
-      "bytes": 9203,
-      "sha256": "9eb3fff86a824f41ef79851de4ddc98a2f0ad3c06aed38648287586fb2ba1a0c"
+      "bytes": 7844,
+      "sha256": "ec6a74541f9edf6827f307c55e0a53324db8a2f87c08244c302ecc60976c6c96"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_clinical/clinical_bag.py",
-      "bytes": 38938,
-      "sha256": "96c4d3a53b717d4e0bfcee25221c8c31ac6b8c84e9ea03652adfa9c45cd88156"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_clinical/clinical_compare.py",
-      "bytes": 18501,
-      "sha256": "6e5d2e1ef2c3233d691163cc50c168b2b2ac7c6241ba1b78df7e40ad414fc3ed"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_clinical/clinical_report.py",
-      "bytes": 22672,
-      "sha256": "8146f61ee61736cb783f1c078b01d7a1c57b7c900ee3356dd3167e9c58e55e46"
+      "bytes": 38834,
+      "sha256": "c1e3c93fc8cec47aec58bbe97f8074f04e52dc67de74fdbd87508004c24d63d9"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_clinical/clinical_statistics.py",
@@ -4963,14 +4928,9 @@
       "sha256": "26d83baf2bc777ba9fd52eb83469b9df682e2aef91a0cb2ba5e45e241dc0fe23"
     },
     {
-      "path": "docs/kevin_paper_20261011/round2_clinical/evaluation_protocol.json",
-      "bytes": 4048,
-      "sha256": "d4a522d020e7342baaf44a3d594c00bfa073eb67398a5640320afe06d34e9cd8"
-    },
-    {
       "path": "docs/kevin_paper_20261011/round2_clinical/prepared/protocol.json",
-      "bytes": 5054,
-      "sha256": "58061826e2c1b351845bf3a0a6022552a4f1e60ce637c6d267524f62b8bfe2cf"
+      "bytes": 4837,
+      "sha256": "602cad444cf97732485d7573262f04a808e602b063715b0fb6538976c249eaa8"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_clinical/smoke_clinical_cuda.py",
@@ -4983,24 +4943,14 @@
       "sha256": "66d9ba8f26d4f72a5b60877b9f18dc0ba864a1c9327f538d90b41f5b2d3a73ee"
     },
     {
-      "path": "docs/kevin_paper_20261011/round2_clinical/test_clinical_report.py",
-      "bytes": 4924,
-      "sha256": "ba219d713fec833a3c9c1a7c90be84850c86d19df591c402132f525131929883"
-    },
-    {
       "path": "docs/kevin_paper_20261011/round2_clinical/test_clinical_transfer.py",
       "bytes": 5219,
       "sha256": "61aaa4dc549d97a8754807941b816302e993b2ca2a0f25f5d6c2ff6910901135"
     },
     {
-      "path": "docs/kevin_paper_20261011/round2_clinical/verify_clinical_report_synthetic.py",
-      "bytes": 3627,
-      "sha256": "866077e7946bbca7d4d70e8be29f152d75bc41a8a5d4544c97f30d9bdedb16e9"
-    },
-    {
       "path": "docs/kevin_paper_20261011/round2_corner_audit/README.md",
-      "bytes": 5922,
-      "sha256": "b9f485708bb4bc6a99064fe718e974b5c83625862f9d0815e350ce72fbfb2689"
+      "bytes": 5991,
+      "sha256": "22a6936fbf18f2f388e3b0efb51d262cd43a50b91983e671c09a92a3e81f29d2"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_corner_audit/corner_audit.py",
@@ -5079,8 +5029,8 @@
     },
     {
       "path": "docs/kevin_paper_20261011/round2_external_data/ADDITIONAL_OPEN_T1_SEARCH.md",
-      "bytes": 3839,
-      "sha256": "2f7255bf2918a46e4e9bccee0b4ca32258037153c8876724f391886d1209a0d3"
+      "bytes": 3434,
+      "sha256": "27041d2c5dcb83d10bf9b14329699a0f30c63525350f9625cf662f52c40974f6"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_external_data/acquire_alzaset.py",
@@ -5089,8 +5039,8 @@
     },
     {
       "path": "docs/kevin_paper_20261011/round2_external_data/additional_open_t1_search.json",
-      "bytes": 6983,
-      "sha256": "a8247e5b306fc7a5e4d6263ada0fbebd94d7a30e42b0f83e8cfdad2c3ea630d6"
+      "bytes": 6877,
+      "sha256": "cdd62d3b8231d46f0545c2984b7a9dddbd7507b8203d26d39187d242156254fa"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_external_data/alzaset_acquisition_summary.json",
@@ -5108,74 +5058,29 @@
       "sha256": "3cabd0afe9b5631b039ed4c9c7cfcc945cb1413e98f674bc5ae9413703cfb9f6"
     },
     {
-      "path": "docs/kevin_paper_20261011/round2_external_data/dataverse_29352/README.md",
-      "bytes": 4609,
-      "sha256": "b332c1fc4e9ed26c62254ad85323fb90f6e1d63d0e30ba3ef9623e21080993d3"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_external_data/dataverse_29352/acquisition_summary.json",
-      "bytes": 2390,
-      "sha256": "cc89948d40fd9b3a5623e9ff5845829503a1b61d43722ee195fcf9af4796fce6"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_external_data/dataverse_29352/output_verification.json",
-      "bytes": 1514,
-      "sha256": "f2149f4f56ab6c3505f8140a96fab923b52677275156024ab6cde56b2f4b6f8a"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_external_data/dataverse_29352/prepare_external_t1.py",
-      "bytes": 12158,
-      "sha256": "d23ea3ec1c5c75319bd0d81cb46f3dea6548cbf7d8fb631ed0e8e08919c005ff"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_external_data/dataverse_29352/preprocessing_summary.json",
-      "bytes": 4997,
-      "sha256": "f698db0bdb9fd04d2bdab4b3757c3efebae71544d0ccee4a83823425f16cd138"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_external_data/dataverse_29352/verify_acquisition.py",
-      "bytes": 9834,
-      "sha256": "9e92320ec43da78919d7875ccc9e0bb6ebdf48d5cb5181e02fcf58ae9fae0b79"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_external_data/dataverse_29352/verify_prepared_outputs.py",
-      "bytes": 4292,
-      "sha256": "b78c407c885da070c8ae14b273924c8f9503724f8c2cf4cb8dc899413b083c5b"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_external_data/dataverse_29352/visual_qc.json",
-      "bytes": 1872,
-      "sha256": "995dbf5c5c627bb9bdd0bde63108ee02fd129d944611fccc5fc6efa1358cbc99"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/ARTIFACT_EXPORT_USAGE.md",
-      "bytes": 9857,
-      "sha256": "3bb3118c64181ba29c725db28a4d25d405c94c608302823f9f748e802e8e6417"
-    },
-    {
       "path": "docs/kevin_paper_20261011/round2_publication/DATA_AND_LIMITATIONS.md",
-      "bytes": 14097,
-      "sha256": "3b585a3bd8cff1a95a256d18eacb66ecce256f103c9a327c12b91727a8ac5847"
+      "bytes": 501,
+      "sha256": "70a38ad4c5dac58f495fe94042f046547d4770b12c732b0b243427ffc0979182"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/Methods.md",
-      "bytes": 21546,
-      "sha256": "8919dbe797356563885d91c80ad3a89b90703ce5f64bd7d50d446cad6fe19057"
+      "bytes": 501,
+      "sha256": "70a38ad4c5dac58f495fe94042f046547d4770b12c732b0b243427ffc0979182"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/PUBLIC_SOURCE_ALLOWLIST.txt",
-      "bytes": 5942,
-      "sha256": "5c414e255e87deb6b9fbbe8b83e7f956e3d0de7c654772de1b052a6e5a338374"
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/PUBLIC_SOURCE_PRIVACY_NOTE.md",
-      "bytes": 7317,
-      "sha256": "8630692388e17f7ef147005b245affd38ea85244869b72ab33469050e7bb1064"
+      "bytes": 501,
+      "sha256": "70a38ad4c5dac58f495fe94042f046547d4770b12c732b0b243427ffc0979182"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/README.md",
-      "bytes": 2327,
-      "sha256": "9fce1cacdcdd527ba05e94351023b073e8eb48129aa5b65d5f2f9e22d86929b9"
+      "bytes": 501,
+      "sha256": "70a38ad4c5dac58f495fe94042f046547d4770b12c732b0b243427ffc0979182"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/RESEARCH_WEIGHTS_USAGE.md",
@@ -5184,23 +5089,13 @@
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/RESULTS.md",
-      "bytes": 10285,
-      "sha256": "68b23d76dd2576c56e82efc3d0abf378ff815808c8853b931c46e1fb9ead30b3"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/artifact_export_verification.json",
-      "bytes": 1991,
-      "sha256": "7229fb27bf5bf8ed6b3015ac9beccef6e88ae738b21cd77bd87d36fb441357ee"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/artifacts/EXPORT_MANIFEST.json",
-      "bytes": 469512,
-      "sha256": "e18b505b17a1b5ac16d3c57e39892f39e8c0840882caac16b6ef5b7019470980"
+      "bytes": 501,
+      "sha256": "70a38ad4c5dac58f495fe94042f046547d4770b12c732b0b243427ffc0979182"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/artifacts/README.md",
-      "bytes": 6065,
-      "sha256": "281dcc0fbba8401f63a0b5aeaa8b4d6fb2c52502a7118a76baf76c3324771ef3"
+      "bytes": 3882,
+      "sha256": "4bce28e917b6092132637a39155bd84f99df601db2b9026497e0a9119a2f3500"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/artifacts/VISUAL_QA.json",
@@ -5209,208 +5104,78 @@
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/README.md",
-      "bytes": 5534,
-      "sha256": "617fccbbb5895356b495d80b0fe21ab85a7711ebd5fc4e3bbe435e91d568c460"
+      "bytes": 228,
+      "sha256": "a46e64984fdf9aca64f535f97fa48a8a9f7979faa5964ec28cabbe47f06cfa3d"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/all_model_scenario_metrics.csv",
-      "bytes": 47146,
-      "sha256": "ff3511141df3cfe5444b925dc6747626c917e68dff90e3c15fc215136587b4e0"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/all_training_curves.pdf",
-      "bytes": 85644,
-      "sha256": "5e2043d995ed8d4f0d4a96a9cad4e6c77562b4c5797c6549d1b30635fd35bb4c"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/all_training_curves.png",
-      "bytes": 592119,
-      "sha256": "2403b2da3e39ddf25c0fda2c507360f9f6c0faeaa5cdf87993bb9fc07142f2d5"
+      "bytes": 31899,
+      "sha256": "dcb732de54f347af545f3eb8bddc433499551b89c428731c950a8b291aa67ab1"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/analysis.json",
-      "bytes": 97730,
-      "sha256": "3e60ec506b737b9a8d93ca94ab78c1701a761d0e724f66c8dd313827a11092ff"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/besga_reused_test_all_stress.pdf",
-      "bytes": 128183,
-      "sha256": "c2bfa9291b6552adfc2a9139346fe0f55eadbd297623ac837d2d0fb5b28add4b"
+      "bytes": 62350,
+      "sha256": "07f247202ba2006ffbad56c369dcb0dc69b3b51327f20fbaaafade2008f4af5f"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/besga_reused_test_all_stress.png",
-      "bytes": 639752,
-      "sha256": "abf9b548d379e036383c1e4b3bbd97139596fc999d9db33ffe1b12d4d234b551"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/besga_reused_test_confidence.pdf",
-      "bytes": 81146,
-      "sha256": "f02b84a3b4da83b02536d4e7e121653e516ee04b07359103c4312675d4195ff7"
+      "bytes": 638700,
+      "sha256": "6ce5f9ff472f799300938a5a267eb2dd0a61a724e3f6f44bfd384168d8ec99f1"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/besga_reused_test_confidence.png",
-      "bytes": 277454,
-      "sha256": "c497d157142b90cd237d6c7cf31a82d43143c9c544dfcc22ebc0c51f620a9208"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/besga_reused_test_confusion.pdf",
-      "bytes": 81790,
-      "sha256": "005e40c5dd052a2d1a12d15df710e4d9a777b12351d2ef2d7e5392dbf7b0f937"
+      "bytes": 275270,
+      "sha256": "ab6cb02f60abecd4c504fee8a49bf3f9c1781fffadefd137fc1c9ffc1cef1f78"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/besga_reused_test_confusion.png",
-      "bytes": 210371,
-      "sha256": "e5926db72be519cd04d3b1f1fa0fc7d7716c8aecb05092b73ad130953b2b090e"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/besga_reused_test_exact_intervals.pdf",
-      "bytes": 71004,
-      "sha256": "57e6182d9b9fb087c174e34952b1f904641bd9a487ca26605afdd7e442ea61ef"
+      "bytes": 209666,
+      "sha256": "b7821bf881c654cf0ea4f9b44f908b7639a5e9496cddd3a9f2761d9c028ba45b"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/besga_reused_test_exact_intervals.png",
-      "bytes": 134110,
-      "sha256": "b5f1150fc669078e76b81ffaa2a4b65203754e0a4778e01d10746b47983f66f4"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/besga_reused_test_reliability.pdf",
-      "bytes": 80280,
-      "sha256": "fd9f97eda5c23b07ca3edce74547190643abb2d097f5b3a947c0b3e5fa2faf75"
+      "bytes": 128436,
+      "sha256": "f6a07e7a460d66a454401e1463bbe66fafa0e72e19138a4d374c593316a8ab35"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/besga_reused_test_reliability.png",
-      "bytes": 376985,
-      "sha256": "853e8e95222341e80006c60ddc7bab462358624d3e4333cadf8b97c2685433b3"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/besga_reused_test_roc_pr.pdf",
-      "bytes": 66109,
-      "sha256": "b6b2f4a44c23dfef66de61dc0f4d809f03325c4758f62815998ded701102f05e"
+      "bytes": 374817,
+      "sha256": "bb6e6f8a35821a17d792f85c75f4fb652b986dbd3d0368820c59fc42d5c82636"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/besga_reused_test_roc_pr.png",
-      "bytes": 136208,
-      "sha256": "51054b7a1defb724560dd66e13b55a3a7a12992a0ecdb435cc0e20ea157db6eb"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/harvard_fresh_external_all_stress.pdf",
-      "bytes": 127857,
-      "sha256": "0ba4a71be5ef0de81af106f9f255eabf74dbdc640cba55d7006d26f58ab293ec"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/harvard_fresh_external_all_stress.png",
-      "bytes": 553023,
-      "sha256": "85dfa6b0b7e7cb26ee8e38e779a8eaf3653931278352db1da4eea354457da623"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/harvard_fresh_external_confidence.pdf",
-      "bytes": 81518,
-      "sha256": "16f430234cdd7240b90afcf338c85ab9d33cec6823713d3963f38a36de7fdf23"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/harvard_fresh_external_confidence.png",
-      "bytes": 266239,
-      "sha256": "2fc7dd24c8333fb069a1fec326d0b6d9f1b166887c9270164c1a8ee30e3e9576"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/harvard_fresh_external_confusion.pdf",
-      "bytes": 79195,
-      "sha256": "40aff908e8f6693f52af0049f428cb2054272d35c0d8b2d82da16dcdac1ddadb"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/harvard_fresh_external_confusion.png",
-      "bytes": 221019,
-      "sha256": "89cdfa3d4e5b5e40f77e81f0c85610432b7cbc9dcbabcaffae0f53abc297c73f"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/harvard_fresh_external_exact_intervals.pdf",
-      "bytes": 70311,
-      "sha256": "1f630135a6960d97d8df354665d76d6d12f55f8093df29500bb01eebbcc854d2"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/harvard_fresh_external_exact_intervals.png",
-      "bytes": 132770,
-      "sha256": "d50e855efad266f8aa515095cc84c54cac371d64820a1784a3fe51724799d8a4"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/harvard_fresh_external_reliability.pdf",
-      "bytes": 78439,
-      "sha256": "5a2c7c3847a3e78a22ad1ae5ef6169fca44830c02f112a6f2c6dcb47d884cf49"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/harvard_fresh_external_reliability.png",
-      "bytes": 374414,
-      "sha256": "895d9704dda9880f1ec8a199c075f8f3655616abd56b8c1ee60f4e0bf85020e4"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/harvard_fresh_external_roc_pr.pdf",
-      "bytes": 66636,
-      "sha256": "d495d7c0cc4f47ce84b1d62cc15f0a9ac8aab8fb5c17b2a47d1634027802b6be"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/harvard_fresh_external_roc_pr.png",
-      "bytes": 142152,
-      "sha256": "3138aaacfe25c23fa6383244a5554156e0f06a1c4dd31c5dc9c11aa5b33cb4ed"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/openneuro_reused_external_all_stress.pdf",
-      "bytes": 127996,
-      "sha256": "8141665cf2340325d375e8944928c0a1bc83ffb5de7f6c318d46a793c46aaad0"
+      "bytes": 136761,
+      "sha256": "1082e5d38e2a9a37402b3499b66b432c61035fbef2207c6168dacaa7dc167aba"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/openneuro_reused_external_all_stress.png",
-      "bytes": 698106,
-      "sha256": "ab1229a35d497438d1599433d672c60629cefa17d8513b52e096855d1c235744"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/openneuro_reused_external_confidence.pdf",
-      "bytes": 81239,
-      "sha256": "ef3da4eac3b9f51925c78e6b6e91eba85c1ad07a0aacf31241566611f214b2bd"
+      "bytes": 697052,
+      "sha256": "5b259892689f9dff6dabc9a77a763144b3124264b16b3f17bfb9c89121893ad7"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/openneuro_reused_external_confidence.png",
-      "bytes": 265103,
-      "sha256": "94d6e670d666ea0c9c0d76cb18d6cfccbc487055c436538be973e968bc1a1275"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/openneuro_reused_external_confusion.pdf",
-      "bytes": 79351,
-      "sha256": "fac3292f70e45f02dd7603c57d89aed096e353e9e9c39ad2847a0722b9d1096c"
+      "bytes": 263956,
+      "sha256": "1493d561b708c4e28d6b3742afe7877f412e456b189d6242fb2cc821f4109669"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/openneuro_reused_external_confusion.png",
-      "bytes": 218494,
-      "sha256": "b108dedf1892427aa97505ee9fc061ed6891895bea0536fb6f35dd6dd54f3d7f"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/openneuro_reused_external_exact_intervals.pdf",
-      "bytes": 70706,
-      "sha256": "2d75b6daed293ef968218789e230aa7d163dd79c70e4cfe74073f8bb74b20a37"
+      "bytes": 216252,
+      "sha256": "f7b865fbbd0fcf188722fa3566abfb4b56f25ca7e33ad17bb37b833e741aa3d2"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/openneuro_reused_external_exact_intervals.png",
-      "bytes": 139804,
-      "sha256": "d37728d3b7ed1251bc8693b66602338fe7e60f25ced4d24e67f2bbebb6a682a5"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/openneuro_reused_external_reliability.pdf",
-      "bytes": 78526,
-      "sha256": "0b1feb3c93ec15906cda1fe9d8962c7fcb1c0900805a25995cd4726794073cdc"
+      "bytes": 132673,
+      "sha256": "951770e3cb95e460d108f17933152ae8e77ff1ca9eea533c03d9f1ee384deb09"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/openneuro_reused_external_reliability.png",
-      "bytes": 372022,
-      "sha256": "8cc96c3b884d10f8a0ebc51c27af1af1e94843034ed0ceee4a7beb8ee7b41c36"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/openneuro_reused_external_roc_pr.pdf",
-      "bytes": 65762,
-      "sha256": "804d682926fa2589580afb92d921f2c5ac669e5324f65a72a2bb7d131ea7c515"
+      "bytes": 370054,
+      "sha256": "ed14513153e9a009cba4543cc675748035aa40730a9aad3ea7b65e194094f8a0"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/openneuro_reused_external_roc_pr.png",
-      "bytes": 134622,
-      "sha256": "c1d11936315ba6e8cda1fc427095f8662ae3f5d96e07b504a59aa3b8234dedf7"
+      "bytes": 135175,
+      "sha256": "e1a75d84a363d9dc1a4588d49e1995b38216102f7f00f197110863112e0fffe8"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/training/clinical_seed20261021/history.csv",
@@ -8618,19 +8383,9 @@
       "sha256": "d07a5ea8c24402de4154fe6e9e8849dffe9712d9da2ac922b63af2812f52762e"
     },
     {
-      "path": "docs/kevin_paper_20261011/round2_publication/assemble_combined_atlas.py",
-      "bytes": 4067,
-      "sha256": "a2c683c7764f015e6c350c48a027634b63bb00bb176d64aaf953d600f4830104"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/combined_graphs/Round2_All_Graphs_Atlas.pdf",
-      "bytes": 3826730,
-      "sha256": "2005b23e5c9e82d2e0513d7ac21fb9ea39b1362e885bb2de509ba691c27c3159"
-    },
-    {
       "path": "docs/kevin_paper_20261011/round2_publication/combined_graphs/atlas_index.csv",
-      "bytes": 5279,
-      "sha256": "bd8b57cc34b1e1ff54cefc79c43be05393bf373c44a147a97ef67241222e51f6"
+      "bytes": 4624,
+      "sha256": "fd5a62a72b26385d012d08a82e35f6cee14da94b55e4109711e490185faf118c"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/combined_graphs/atlas_verification.json",
@@ -8638,49 +8393,9 @@
       "sha256": "5d6676392f2edfa6fab8c2e5faf5e9f6b851c0021297860a0b383fae911ae1ba"
     },
     {
-      "path": "docs/kevin_paper_20261011/round2_publication/export_artifacts.py",
-      "bytes": 34447,
-      "sha256": "bf4e339a28167c8c4515f9d5216629b0ac1805132c4faa78cc936b11ade53d4a"
-    },
-    {
       "path": "docs/kevin_paper_20261011/round2_publication/export_research_weights.py",
       "bytes": 22726,
       "sha256": "fc8bb1a6f4ebf7144a777d0075cc4b91767915301b9277c95b4a8d132a011aae"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/independent_artifact_audit.json",
-      "bytes": 11384,
-      "sha256": "bf681deda7eb8cb48680d4f2054694fd66d5d07dfe4387f4f0696161640046f9"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/reconstruction/README.md",
-      "bytes": 3482,
-      "sha256": "5bccf3bf4d830b9e5f09ca208b1d43124b8fd9efe1f24b57ad77a3e9ad956a46"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/reconstruction/SOURCE_COPY_PROVENANCE.json",
-      "bytes": 1219,
-      "sha256": "b20e21c93dc77b9b98f015f938d9942b36d8f3b4ca8ba6a504e6468f65179796"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/reconstruction/clinical_migration_synthetic_verification.json",
-      "bytes": 1452,
-      "sha256": "b78c7fc89d6a60561a04c61c8e25f5c769919a887d6baff96b133296a8855f53"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/reconstruction/migrate_completed_clinical.py",
-      "bytes": 15899,
-      "sha256": "bc4ca9c6993592ab40870471b54eae443fc5230510a3a5d5e5f2f525f8e95154"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/reconstruction/portable_copy_test_verification.json",
-      "bytes": 1803,
-      "sha256": "d23bcd9f425048bfe91ff7a122513b98ce6730f0731ada629f2ba97d43f8d8d3"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_publication/reconstruction/test_migrate_completed_clinical.py",
-      "bytes": 7003,
-      "sha256": "566c80e60fd2486c5d74313115a56b7183936a8c05cd931cb2f5cb60fd3bd14a"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/research_weights_export_verification.json",
@@ -8693,19 +8408,14 @@
       "sha256": "be25665298d875383232591e89e6c71e691a9161ddada26856b75b2172cddaac"
     },
     {
-      "path": "docs/kevin_paper_20261011/round2_publication/test_export_artifacts.py",
-      "bytes": 19797,
-      "sha256": "1198f8800ca42b04a979fc9beba0990d76ac1dbf0ebed96663530e8e35f26bb5"
-    },
-    {
       "path": "docs/kevin_paper_20261011/round2_publication/test_export_research_weights.py",
       "bytes": 8898,
       "sha256": "9b62e3ed9b6388262b510b9650c6fae5d26745fe65e0b62dc114078ed6b2006d"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/usage/CLINICAL_REPORT_USAGE.md",
-      "bytes": 3982,
-      "sha256": "4256c591c5c7f9341917e559c2e10b2fcc13893f76cb4a630412ea070c3e08e6"
+      "bytes": 3444,
+      "sha256": "1633f8cf0a74544ff9af340a04a797572d36972fdc13b6be9c16a47e7a4a6a89"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/usage/STAGE_EVALUATION_USAGE.md",
@@ -8716,51 +8426,6 @@
       "path": "docs/kevin_paper_20261011/round2_publication/usage/STAGE_EXECUTION_UPDATE.md",
       "bytes": 2400,
       "sha256": "62f792cd828939184522a6ee70c21a5effcdda4a801e1e7c387aab239f452a4c"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_review/CLINICAL_DESIGN_REVIEW.md",
-      "bytes": 8636,
-      "sha256": "cbf7b93224851112e096cc9aa540cc1c330f9c440612676e3eeebedcd8e82aae"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_review/attribution_recovery_review.json",
-      "bytes": 1293,
-      "sha256": "8c8386fb89d3500d22b683287a8c57819fd3c0c5f5f75695a01619b4f2573ba9"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_review/clinical_comparison_review.json",
-      "bytes": 6904,
-      "sha256": "4b72dd5c1d7934c595608a1eacd31bae3510a9bb8dad971420b634e8fbf74508"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_review/clinical_final_code_review.json",
-      "bytes": 1459,
-      "sha256": "3d698c894148e83a2d40b07fa4a274a7c5b9d46fd8068ac81d1a416038252edf"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_review/clinical_scope_review.md",
-      "bytes": 4364,
-      "sha256": "6cb6aa75fb469abf14b40dbda4d612db6343b3be13bbc6e120207320f63d0e05"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_review/clinical_statistics_review.json",
-      "bytes": 1040,
-      "sha256": "3b76602a635404bbd6eeac926b2f42ba71ec993ba45d3912f3feaf6ea9b3bfb4"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_review/test_clinical_compare_independent.py",
-      "bytes": 14814,
-      "sha256": "f46a3737cb5de6fada2c405e8bcdf3e67796d5674ed958c2a33a536c4d9b2ff9"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_review/test_clinical_report_independent.py",
-      "bytes": 5325,
-      "sha256": "191e17e23f645aabfe7dabb3266e8725af13445a2c3a34f130a842d1bb41b037"
-    },
-    {
-      "path": "docs/kevin_paper_20261011/round2_review/trainer_implementation_review.json",
-      "bytes": 1472,
-      "sha256": "002473100769a9bf033672ab79107a3a80db2480115b412b1557424bb2d49758"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_training/README.md",
@@ -8789,8 +8454,8 @@
     },
     {
       "path": "docs/kevin_paper_20261011/round3/CLINICAL_ROADMAP.md",
-      "bytes": 7660,
-      "sha256": "75dc3124bbd551bee41335fd0645585d54675be1d28728ba451173f0e0f559b7"
+      "bytes": 6762,
+      "sha256": "bf187886871ede866f53faaf79d7dbaa85ac668995dcca712a25eed906146250"
     },
     {
       "path": "docs/kevin_paper_20261011/round3/EXECUTION_CONTRACT.md",
@@ -8799,8 +8464,8 @@
     },
     {
       "path": "docs/kevin_paper_20261011/round3/README.md",
-      "bytes": 7926,
-      "sha256": "d5f2f44d2ef80e1ebf8a9dc97c95e7d5915fb741ff1eb4b9eae43a58877947fd"
+      "bytes": 7478,
+      "sha256": "66e6ac6eb0f2dba3756a32bbf89c2212aad6761406e23aaa789df8fdcdc98b81"
     },
     {
       "path": "docs/kevin_paper_20261011/round3/REVIEW_STATUS.md",
@@ -8819,8 +8484,8 @@
     },
     {
       "path": "docs/kevin_paper_20261011/round3/access/README.md",
-      "bytes": 4048,
-      "sha256": "8f4e63a327c611086984f27d39844c80f60978b0458546960f4022cf454b9c5d"
+      "bytes": 3618,
+      "sha256": "ced52d7ef3292e4aee96b9f03e0377496e52ea41bfcb26c3ac4bd8f94f55973e"
     },
     {
       "path": "docs/kevin_paper_20261011/round3/access/access_inventory.json",
@@ -8868,14 +8533,9 @@
       "sha256": "76be61a84b2a01d02bdd423a400cf3d527d4d4922ea2e7f0c3e947366e502389"
     },
     {
-      "path": "docs/kevin_paper_20261011/round3/previous_failure_audit.json",
-      "bytes": 7099,
-      "sha256": "da3f3fcb50298652d31ee921787ab54c2e18172f477f65e951bce2640ebe0429"
-    },
-    {
       "path": "docs/kevin_paper_20261011/round3/protocol.json",
-      "bytes": 3934,
-      "sha256": "31ef20086952cfc63092ce320c34d08e3df4c6d232a0cf5fae2f2e43d2a15b63"
+      "bytes": 4331,
+      "sha256": "494858b8b62003ec900d12d5273a83a73ffce9215580c383a5cf95cfdbb87772"
     },
     {
       "path": "docs/kevin_paper_20261011/round3/reviews/data_gate_review.md",
@@ -8936,46 +8596,6 @@
       "path": "docs/kevin_paper_20261011/validate_cohort_manifest.py",
       "bytes": 10886,
       "sha256": "15c67a5ecf7a2ac9bdb15feeaedae71d114719eea51dfc1f21f2e05e151b1073"
-    },
-    {
-      "path": "handoff/FIGURE_CAPTION_GUIDANCE.md",
-      "bytes": 5737,
-      "sha256": "f87a439cbdc712e8c6b0896672c39c1d4ecdc69ff6052d4c6cd26afd209cfed2"
-    },
-    {
-      "path": "handoff/FIGURE_INDEX.csv",
-      "bytes": 146076,
-      "sha256": "2dcc2eac7a04b05ddaca28659666b1f7b9fd69fc4b8f809d401712541c47a055"
-    },
-    {
-      "path": "handoff/FILE_MANIFEST.csv",
-      "bytes": 288153,
-      "sha256": "26509c77819d093ab16b7a8a40754ebd4a9caee2fd5a4223f2e0764e6dfaa4ab"
-    },
-    {
-      "path": "handoff/MODEL_AND_DATASET_COMPARISON.md",
-      "bytes": 15085,
-      "sha256": "21952f636f66e6c64a5658988d7987911be348e297e429e1c7651660d8bb2c54"
-    },
-    {
-      "path": "handoff/PACKAGE_VERIFICATION.json",
-      "bytes": 645,
-      "sha256": "b43889ceddbacd813902838cdebe695ad7927451ac02ab4220eac8bc3c9ba1f2"
-    },
-    {
-      "path": "handoff/SOURCE_MANIFEST.json",
-      "bytes": 771435,
-      "sha256": "ea3ada35cd02886303dc07bcedb416a2c31d30d172d3e942eae0242dd09a104e"
-    },
-    {
-      "path": "handoff/START_HERE.md",
-      "bytes": 5534,
-      "sha256": "80c0bf999616eb35c3aaa4430bca44e2ec655b3e9850a28a38b085a1ac68056b"
-    },
-    {
-      "path": "handoff/facts.json",
-      "bytes": 8409,
-      "sha256": "f8ce5b51d4c4c58117b90b18d851e4250bbee6041dafb53bbdc9dd86900c02d0"
     },
     {
       "path": "models/alzheimers_classifier.pt",
@@ -16384,8 +16004,8 @@
     },
     {
       "path": "research/dementia_round3/data.py",
-      "bytes": 15357,
-      "sha256": "f747efa7bd05e3dd2d363e4f6cd3e37656e3c5f78ec6d9b0b26bb9eaa4da5093"
+      "bytes": 15341,
+      "sha256": "be5a06da9d982592ead86cd890e3654dba1b415f1fbef8433948e52a33832f52"
     },
     {
       "path": "research/dementia_round3/explanations.py",
@@ -16404,8 +16024,8 @@
     },
     {
       "path": "research/dementia_round3/preprocessing.py",
-      "bytes": 16624,
-      "sha256": "dd915a6844c4c119a7bab037fc3147bb4a4d7903eb2dc7cb83910757bafb401a"
+      "bytes": 16547,
+      "sha256": "da7fdb2bc2947e95eceedb7ff8605081fea5f42e7bdabcc913fc7b79367e5021"
     },
     {
       "path": "research/dementia_round3/report.py",
@@ -16438,6 +16058,226 @@
       "sha256": "17f05e7684404cc337cd434b3b4e5814a718c4641bd02fd21fb4f789e8391394"
     },
     {
+      "path": "results/current/FIGURES.md",
+      "bytes": 3245,
+      "sha256": "72bd44b84739da561c22ad3e6fb5a910b269e0d18739780f36e127dc7b3fa704"
+    },
+    {
+      "path": "results/current/README.md",
+      "bytes": 4279,
+      "sha256": "8baa0da9d6d89109396967d637c9b499a9129bd5ec5fb8482687bb7bfc7a30f9"
+    },
+    {
+      "path": "results/current/clinical/all_model_scenario_metrics.csv",
+      "bytes": 31899,
+      "sha256": "dcb732de54f347af545f3eb8bddc433499551b89c428731c950a8b291aa67ab1"
+    },
+    {
+      "path": "results/current/clinical/analysis.json",
+      "bytes": 62350,
+      "sha256": "07f247202ba2006ffbad56c369dcb0dc69b3b51327f20fbaaafade2008f4af5f"
+    },
+    {
+      "path": "results/current/clinical/besga_reused_test_all_stress.png",
+      "bytes": 638700,
+      "sha256": "6ce5f9ff472f799300938a5a267eb2dd0a61a724e3f6f44bfd384168d8ec99f1"
+    },
+    {
+      "path": "results/current/clinical/besga_reused_test_confidence.png",
+      "bytes": 275270,
+      "sha256": "ab6cb02f60abecd4c504fee8a49bf3f9c1781fffadefd137fc1c9ffc1cef1f78"
+    },
+    {
+      "path": "results/current/clinical/besga_reused_test_confusion.png",
+      "bytes": 209666,
+      "sha256": "b7821bf881c654cf0ea4f9b44f908b7639a5e9496cddd3a9f2761d9c028ba45b"
+    },
+    {
+      "path": "results/current/clinical/besga_reused_test_exact_intervals.png",
+      "bytes": 128436,
+      "sha256": "f6a07e7a460d66a454401e1463bbe66fafa0e72e19138a4d374c593316a8ab35"
+    },
+    {
+      "path": "results/current/clinical/besga_reused_test_reliability.png",
+      "bytes": 374817,
+      "sha256": "bb6e6f8a35821a17d792f85c75f4fb652b986dbd3d0368820c59fc42d5c82636"
+    },
+    {
+      "path": "results/current/clinical/besga_reused_test_roc_pr.png",
+      "bytes": 136761,
+      "sha256": "1082e5d38e2a9a37402b3499b66b432c61035fbef2207c6168dacaa7dc167aba"
+    },
+    {
+      "path": "results/current/clinical/openneuro_reused_external_all_stress.png",
+      "bytes": 697052,
+      "sha256": "5b259892689f9dff6dabc9a77a763144b3124264b16b3f17bfb9c89121893ad7"
+    },
+    {
+      "path": "results/current/clinical/openneuro_reused_external_confidence.png",
+      "bytes": 263956,
+      "sha256": "1493d561b708c4e28d6b3742afe7877f412e456b189d6242fb2cc821f4109669"
+    },
+    {
+      "path": "results/current/clinical/openneuro_reused_external_confusion.png",
+      "bytes": 216252,
+      "sha256": "f7b865fbbd0fcf188722fa3566abfb4b56f25ca7e33ad17bb37b833e741aa3d2"
+    },
+    {
+      "path": "results/current/clinical/openneuro_reused_external_exact_intervals.png",
+      "bytes": 132673,
+      "sha256": "951770e3cb95e460d108f17933152ae8e77ff1ca9eea533c03d9f1ee384deb09"
+    },
+    {
+      "path": "results/current/clinical/openneuro_reused_external_reliability.png",
+      "bytes": 370054,
+      "sha256": "ed14513153e9a009cba4543cc675748035aa40730a9aad3ea7b65e194094f8a0"
+    },
+    {
+      "path": "results/current/clinical/openneuro_reused_external_roc_pr.png",
+      "bytes": 135175,
+      "sha256": "e1a75d84a363d9dc1a4588d49e1995b38216102f7f00f197110863112e0fffe8"
+    },
+    {
+      "path": "results/current/mendeley/all_stage_models.png",
+      "bytes": 128446,
+      "sha256": "534f6e9ed58c63d07d3869c1c679bf6213cacea674d9efd4ed62de5892f199b8"
+    },
+    {
+      "path": "results/current/mendeley/alzheimers_classifier.png",
+      "bytes": 120461,
+      "sha256": "125aa8599fcc1b0f448357a0e5da796ede104405f74c62f7ff1d5c466dffa33a"
+    },
+    {
+      "path": "results/current/mendeley/kevin_20261011__multitask_seed20261011.png",
+      "bytes": 122724,
+      "sha256": "14a0b755dc5e57df9173c8edfdf663c53038a6f352e176b232debed1ef659290"
+    },
+    {
+      "path": "results/current/mendeley/kevin_20261011__multitask_seed20261012.png",
+      "bytes": 122917,
+      "sha256": "1b0d9dd391d34ee5b081b7e9d87c2da950c1d2160a4ee2135fbe4f9912bcb6c9"
+    },
+    {
+      "path": "results/current/mendeley/kevin_20261011__multitask_seed20261013.png",
+      "bytes": 123103,
+      "sha256": "4a2e5c324dfefa84ce3eb6c0efaca653d8ca03077d3829d2c4590fff0b6873bf"
+    },
+    {
+      "path": "results/current/mendeley/kevin_20261011__stage_only_seed20261011.png",
+      "bytes": 123788,
+      "sha256": "671433ee2e75d34e440073bb275f62b97f70335b993ea4e3fd1b644a922358cb"
+    },
+    {
+      "path": "results/current/mendeley/kevin_20261011__stage_only_seed20261012.png",
+      "bytes": 123440,
+      "sha256": "f034210852a74ea4756d24cab6d2e65ba6546d859fd8a1b5530b17ae2add059d"
+    },
+    {
+      "path": "results/current/mendeley/kevin_20261011__stage_only_seed20261013.png",
+      "bytes": 123615,
+      "sha256": "2e01b1dc491ff39ccfd0d6f70ffe53a5b41445c981a9a6c2df48ee2b202537c9"
+    },
+    {
+      "path": "results/current/mendeley/kevin_round2_20261011__stage_seed20261011.png",
+      "bytes": 123811,
+      "sha256": "94901770e7fce3785fa72bed6821d92d16e2ff9c76214f5c37efec4a42a708f2"
+    },
+    {
+      "path": "results/current/mendeley/kevin_round2_20261011__stage_seed20261012.png",
+      "bytes": 124088,
+      "sha256": "23e73397af1c31934b17ac93ca294fc9e468e562aff46e11ba69b1ffa9a4b954"
+    },
+    {
+      "path": "results/current/mendeley/kevin_round2_20261011__stage_seed20261013.png",
+      "bytes": 124193,
+      "sha256": "45c2f9791c13be1358dd89822a5fdfb1d91b95610db6756049a63383c72ff41b"
+    },
+    {
+      "path": "results/current/mendeley/metrics.json",
+      "bytes": 7640,
+      "sha256": "acb58c97b07923dbea2d1091385fa7a275c57a9f191f1091875022e41a9fe285"
+    },
+    {
+      "path": "results/current/mendeley/predictions.csv",
+      "bytes": 2244602,
+      "sha256": "924095a86f0001c7dc6d2f5cb51f6b782c6f346852ef64da4c3c35103fe877ab"
+    },
+    {
+      "path": "results/current/mendeley/recomputed_metrics.csv",
+      "bytes": 1134,
+      "sha256": "96be887c548afc3cb2d984a294076b583f73b39652febacc8fb6707d52104c52"
+    },
+    {
+      "path": "results/current/training/index.json",
+      "bytes": 3357,
+      "sha256": "14e6faa6df23a6416bd4f2d737720df744680e75616382bfb7a9b99e1957f9a3"
+    },
+    {
+      "path": "results/current/training/publication_multitask_seed20261011.png",
+      "bytes": 199540,
+      "sha256": "fd066b88c8d4614260607fcfc6d2cfe67ad7178cb4000eab6f1ab8b7795cd78f"
+    },
+    {
+      "path": "results/current/training/publication_multitask_seed20261012.png",
+      "bytes": 226483,
+      "sha256": "ffc946c050cfe90736e31030488ace7b5b4c98ce1f66a34aa9d7898c7c313fbb"
+    },
+    {
+      "path": "results/current/training/publication_multitask_seed20261013.png",
+      "bytes": 215129,
+      "sha256": "7836b32ff84c2504d38b3db410842c8c66f8617af51cd663bfc345fd4c7c573c"
+    },
+    {
+      "path": "results/current/training/publication_stage_only_seed20261011.png",
+      "bytes": 107225,
+      "sha256": "25bb5ac98ad204a0b2c99481b66bdc96d6c5f27e7462f8f22dcacca837028c25"
+    },
+    {
+      "path": "results/current/training/publication_stage_only_seed20261012.png",
+      "bytes": 110780,
+      "sha256": "a0da5cf8c49f16eab9634e2a6bd7ea2c190d2f13a9e9b564dfffffc020b7d59e"
+    },
+    {
+      "path": "results/current/training/publication_stage_only_seed20261013.png",
+      "bytes": 107283,
+      "sha256": "6800caea98ae58da9251712204e0c40e58f46c8de5cf40f7d18432df8b14c370"
+    },
+    {
+      "path": "results/current/training/round2_publication_clinical_clinical_seed20261021.png",
+      "bytes": 190471,
+      "sha256": "ba08f46506c52ca09505886d918e9b915609325933cf648bdf0d420885dcd46e"
+    },
+    {
+      "path": "results/current/training/round2_publication_clinical_clinical_seed20261022.png",
+      "bytes": 176763,
+      "sha256": "17c9df1fca565566134c76532f58f8d773d0b67877b473e0a2ed4ff7410517e0"
+    },
+    {
+      "path": "results/current/training/round2_publication_clinical_clinical_seed20261023.png",
+      "bytes": 191976,
+      "sha256": "581c16abf07343aa43aa942ec7593100cc9acb7f5b84e61f3a18c981e34c8bfe"
+    },
+    {
+      "path": "results/current/training/round2_publication_stage_only_seed20261011.png",
+      "bytes": 129050,
+      "sha256": "1e642d59529b37fb05a47bce38e80fddf50008b0b73c75d6b24b6c0bd613cc93"
+    },
+    {
+      "path": "results/current/training/round2_publication_stage_only_seed20261012.png",
+      "bytes": 139614,
+      "sha256": "dbb284ea7fbd4fb7342eb82d52775e2ee90c10258232b69bbd62c137619a6a76"
+    },
+    {
+      "path": "results/current/training/round2_publication_stage_only_seed20261013.png",
+      "bytes": 148314,
+      "sha256": "46888a14587d9c0f25e03a3668d1a2d958d85a33d11fcffe1ed5b34dee8871f3"
+    },
+    {
+      "path": "results/current/verification.json",
+      "bytes": 573,
+      "sha256": "bc84e6bf58047643d55ac66961d536f9eb77091963c6352ba7e07d16181d8ab3"
+    },
+    {
       "path": "src/__init__.py",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -16461,6 +16301,11 @@
       "path": "src/train_alzheimers.py",
       "bytes": 5274,
       "sha256": "ebe5b5ceaeaf9039bdcf78556cea02046f55d178e239c176c5a26550e534fe38"
+    },
+    {
+      "path": "tests/test_dataset_intake_refresh.py",
+      "bytes": 1642,
+      "sha256": "8d6633b9a55084c08207ce88543b9c6c1d680db9ff61c3608b56a6355726e294"
     },
     {
       "path": "tests/test_round3_calibration.py",
@@ -16542,12 +16387,5 @@
       "bytes": 8594643,
       "sha256": "66a0cd9409d61edd32ee137154f769c749664f255ddebe461cf7683c1f4ba7b9"
     }
-  ],
-  "verification": {
-    "python_files_syntax_checked": 106,
-    "extracted_scientific_functions_ast_identical": true,
-    "hydrated_weight_files": 14,
-    "model_training_or_inference_rerun": false,
-    "additional_already_public_dementia_files": 94
-  }
+  ]
 }

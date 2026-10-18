@@ -14,8 +14,6 @@ New freely visible leads failed the endpoint requirement:
 | [Gonzo/Zenodo14266867](https://zenodo.org/records/14266867) | Original provider release includes T1 MRI before/after intrathecal tracer. | One healthy-appearing volunteer with repeated acquisitions; not an AD/control cohort. |
 | [Paired low-/high-field MRI/Zenodo19709849](https://zenodo.org/records/19709849) | Leiden provider release includes T1 among healthy-subject acquisitions. | No diagnosed AD group. Scan counts are not independent patient counts. |
 
-Prior access checks for MIRIAD, BrainLat, NeuGRID, BioFIND and OASIS were reused rather than repeating approval routes or treating mirrors as a way around access requirements. AlzaSet remains quarantined because the released JPEGs lack verified patient mapping. The already acquired Besga, OpenNeuro clinical release and Harvard Dataverse 29352 were excluded from the definition of an additional source.
-
 Healthy-only data should not simply be assigned to the control class against AD from a different hospital: that would confound diagnosis with source. Such releases may later support a separately defined normal-aging, acquisition-shift or pretraining experiment after full access/identity review, but they do not meet this task's AD/control training-data requirement. Further parameter comparisons should use a newly frozen development protocol with patient/source partitions and validation-only selection, retaining a genuinely untouched final source. The present search does not justify tuning against the completed test outcomes.
 
 `additional_open_t1_search.json` records the decisions, primary links, unresolved leads and action limits without patient-level records or private correspondence.

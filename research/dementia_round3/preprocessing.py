@@ -2,7 +2,6 @@
 
 No external tool, atlas, segmentation model or weight is downloaded implicitly.
 Missing dependencies block processing; the QC here is not clinical adjudication.
-Official interfaces: https://surfer.nmr.mgh.harvard.edu/docs/synthstrip/ and
 https://github.com/ANTsX/ANTs/wiki/N4BiasFieldCorrection .
 """
 from dataclasses import asdict, dataclass, field

@@ -111,5 +111,16 @@
     "seed": 20261031,
     "site_population_generalization": false
   },
-  "status": "registered_design_data_access_gate_pending"
+  "status": "registered_design_data_access_gate_pending",
+  "execution": {
+    "analysis_location": "local_mac",
+    "delete_GPU_and_storage_after_verified_retrieval": true,
+    "live_price_verification_required": true,
+    "machine_hourly_ceiling_usd": 10,
+    "maximum_gpu_hourly_usd": 8.99,
+    "paid_resources_before_data_gate": false,
+    "scheduled_monitor_enabled": false,
+    "total_spending_cap_usd": null,
+    "training_gpu": "NVIDIA B300"
+  }
 }

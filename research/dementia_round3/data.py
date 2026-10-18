@@ -12,7 +12,7 @@ import json
 from pathlib import Path
 
 PARTITIONS = {"train", "tune", "calibration", "external", "historical"}
-HISTORICAL_FAMILIES = {"besga", "harvard29352", "openneuro_ds007561", "legacy_augmented_jpeg"}
+HISTORICAL_FAMILIES = {"besga", "openneuro_ds007561", "legacy_augmented_jpeg"}
 
 
 def valid_sha256(value):

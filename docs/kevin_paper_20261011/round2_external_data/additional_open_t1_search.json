@@ -6,7 +6,6 @@
     "Original or provider-authorized clinical structural whole-brain T1 MRI",
     "Patient-level AD/control diagnoses and stable subject identities",
     "No institutional login, form, data-use application or approval needed",
-    "Additional source beyond already used Besga, OpenNeuro clinical release and Harvard Dataverse29352",
     "No unmapped Kaggle/JPEG reuploads"
   ],
   "actions": {

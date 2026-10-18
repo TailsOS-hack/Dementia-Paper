@@ -109,8 +109,6 @@
     "primary_model": "Fixed equal-probability ensemble of all3 independently validation-selected seeds",
     "report_all_seeds": true,
     "representative": "lowest validation NLL, then ascending seed; attribution only",
-    "fresh_primary_source": "Harvard Dataverse10.7910/DVN/29352: verified9AD+10CN=19T1subjects",
-    "mci": "10Harvard MCI remain outsidebinary metrics; report separately without relabeling",
     "reused_sources": "Besga test11 and OpenNeuro prior external are descriptive reused cohorts",
     "old_comparators": "All3fixedmultitaskclinicalheads with historical mean-probability pooling, plus equal-probability ensemble; whole-pipelinecomparison"
   },
@@ -118,7 +116,6 @@
     "All legacy-stage data and outcomes",
     "Besga test",
     "OpenNeuro",
-    "Harvard Dataverse",
     "AlzaSet"
   ],
   "convergence": {
