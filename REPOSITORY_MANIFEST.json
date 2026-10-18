@@ -13,19 +13,14 @@
       "sha256": "d0ef9224fde33d0109a2c7e8cc7c62736ca297c58e33e02ddd93c6f566f580f2"
     },
     {
-      "path": "AI_START_HERE.md",
-      "bytes": 6424,
-      "sha256": "c0601f1e3e2a70ba8f63a37be18b96e2e2e97c97c9232ac4fbd6f9c08cb5e71b"
-    },
-    {
       "path": "README.md",
-      "bytes": 3859,
-      "sha256": "396e04b25ca0b9712dfc3ce1b9926cc4b24ea8c08539bb40aad98967b4ed6106"
+      "bytes": 3769,
+      "sha256": "390597fe6d41dbe15f18492576171cb14bd32732d610d0293de9d7581fc3495b"
     },
     {
       "path": "SOURCE_COVERAGE.md",
-      "bytes": 2522,
-      "sha256": "1bd9019c1698b7931ec374df5e52eb7de1427e8ddbd62c1ee29f232b367314dc"
+      "bytes": 2549,
+      "sha256": "8c7c1a7db691dd15f8fbbd18185ac2f0413c0985768e4ef448b1c7857827248e"
     },
     {
       "path": "data/evaluation/ground_truth/radiologist_test_key.csv",
