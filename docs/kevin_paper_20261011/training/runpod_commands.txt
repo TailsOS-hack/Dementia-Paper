@@ -1,0 +1,113 @@
+KEVIN DEMENTIA TRAINING — RUNPOD HANDOFF, 2026-10-11
+
+Status: local smoke tests only. No trained replacement, improvement claim, full
+training, original 100 inference, or clinical test inference has been performed.
+Production models/alzheimers_classifier.pt must remain untouched.
+
+Use a persistent Runpod volume. A single CUDA GPU with >=24 GB VRAM is a sensible
+starting configuration; confirm torch.cuda.is_available() on the selected image.
+This code does not provision, purchase or launch a pod. Use the supplied Runpod
+connection details only after the user has provided them.
+
+Local verified environment: Python 3.12, torch 2.12.1, torchvision 0.27.1, Apple M5 MPS.
+Use the matching CUDA builds on Runpod, NOT a copied macOS virtual environment.
+Keep the Runpod template's CUDA-enabled torch/torchvision unless a compatible
+version change is deliberately tested. Install analysis dependencies separately:
+
+cd /workspace/Neuro-Radiology-Database
+python -m pip install -r docs/kevin_paper_20261011/training/requirements-analysis.txt
+python -c 'import torch, torchvision; print(torch.__version__, torchvision.__version__); print(torch.cuda.is_available()); assert torch.cuda.is_available()'
+python -c 'import sys; from pathlib import Path; sys.path.insert(0,"docs/kevin_paper_20261011/training"); import evaluate_candidates as e; r,_=e.readers(Path.cwd()); print({k:len(v) for k,v in r.items()}); assert len(r)==3 and all(len(v)==100 and all(x in e.c.STAGES for x in v.values()) for v in r.values())'
+
+Transfer these paths with their repository-relative layout:
+  docs/kevin_paper_20261011/training/
+  data/alzheimers/                             27,178 retained JPGs selected by stage_manifest.csv
+  training_logs/splits/strict_manifest.csv
+  training_logs/splits/perceptual_strict_manifest.csv
+  training_logs/experiments/kevin_20261011/prepared/
+  data/external/clinical_t1_preprocessed_v1/    666 slices + clinical manifest
+  data/evaluation/                             original 100 + keys + readers
+  data_visualization/compare_rad_vs_ai.py       existing reader label loader
+  models/alzheimers_classifier.pt              baseline, read-only
+
+The lean transfer bundle contains only the retained 27,178 legacy images. It
+cannot rerun `prepare`, which requires all 44,000 original dementia images.
+Its strict/perceptual audit manifests are dementia-only derived copies; source
+and derived SHA256 digests are recorded in the transfer inventory. The prepared
+stage manifest and comparison intersection are frozen and unchanged.
+
+Keep original clinical NIfTI files and acquisition/preprocessing provenance in
+persistent storage for audit. The trainer consumes 224 px slices only. `--data-root`
+is the REPOSITORY root. Clinical CSV paths are relative to repo/data, so the default
+--clinical-image-root data is required unless you deliberately relocate images.
+
+ImageNet initialization is MobileNetV3-Large IMAGENET1K_V1, NOT the old dementia
+checkpoint. Torchvision downloads the official weights into its standard cache.
+For offline use, transfer the cached mobilenet_v3_large-8738ca79.pth and pass
+--imagenet-weights /workspace/cache/mobilenet_v3_large-8738ca79.pth to each train call.
+
+PRE-FLIGHT SMOKE ON THE POD (do not use these checkpoints as results):
+python docs/kevin_paper_20261011/training/train_candidate.py train --data-root . --stage-manifest training_logs/experiments/kevin_20261011/prepared/stage_manifest.csv --clinical-manifest data/external/clinical_t1_preprocessed_v1/clinical_slices.csv --mode multitask --device cuda --workers 4 --smoke --output training_logs/experiments/kevin_20261011/runpod_smoke
+
+FIXED EXPERIMENTS, AFTER CONNECTION/HARDWARE VERIFICATION:
+python docs/kevin_paper_20261011/training/train_candidate.py train --data-root . --stage-manifest training_logs/experiments/kevin_20261011/prepared/stage_manifest.csv --mode stage_only --device cuda --workers 4 --epochs 100 --min-epochs 20 --patience 15 --seed 20261011 --output training_logs/experiments/kevin_20261011/stage_only_seed20261011
+
+python docs/kevin_paper_20261011/training/train_candidate.py train --data-root . --stage-manifest training_logs/experiments/kevin_20261011/prepared/stage_manifest.csv --clinical-manifest data/external/clinical_t1_preprocessed_v1/clinical_slices.csv --mode multitask --device cuda --workers 4 --epochs 100 --min-epochs 20 --patience 15 --seed 20261011 --output training_logs/experiments/kevin_20261011/multitask_seed20261011
+
+Resume either interrupted experiment by repeating its identical command and adding:
+--resume training_logs/experiments/kevin_20261011/<run>/last.pt
+Use the same output directory. The trainer validates data-manifest digests and
+selection/training settings. It restores model, auxiliary head, optimizer,
+scheduler, epoch, best validation score and patience. Each epoch is reseeded.
+Resume operates at saved epoch boundaries. Partial-epoch work is repeated.
+A smoke checkpoint cannot resume into a research run.
+
+Optional prespecified repeat seeds: 20261012 and 20261013. Report all seeds; do not
+choose a seed using test/original 100 performance. Use separate output directories.
+These repeats are recommended for a paper but are not launched automatically.
+
+FREEZE SELECTION BEFORE ANY TEST INFERENCE:
+Within each experiment, best.pt minimizes 4-stage validation negative log likelihood
+(min_delta 0.0001). Auxiliary clinical validation is reported but never selects the
+stage checkpoint. Early stopping is allowed only after 20 epochs and 15 consecutive
+non-improving validations, with 100 epochs maximum. More epochs or lower loss do not
+guarantee stronger generalization. Both ablation conditions must be reported.
+
+ONE-PASS EVALUATION AFTER THE PRESPECIFIED RUNS FINISH:
+python docs/kevin_paper_20261011/training/evaluate_candidates.py --data-root . --prepared training_logs/experiments/kevin_20261011/prepared --candidate training_logs/experiments/kevin_20261011/stage_only_seed20261011/best.pt --candidate training_logs/experiments/kevin_20261011/multitask_seed20261011/best.pt --baseline models/alzheimers_classifier.pt --clinical-manifest data/external/clinical_t1_preprocessed_v1/clinical_slices.csv --device cuda --workers 4 --output training_logs/experiments/kevin_20261011/frozen_evaluation_seed20261011
+
+The evaluator compares the unchanged baseline and both stage heads on the same
+1,058-image test intersection and original 100. It exports aligned per-case labels
+from the existing neuroradiologist workbooks. Clinical AD/CN evaluation is emitted
+ONLY for a trained multitask auxiliary head; stage-only has no trained clinical
+head and cannot serve as a clinical baseline. No clinical superiority claim is
+supported by that head-to-head comparison.
+
+DATA AND SCIENTIFIC CONSTRAINTS:
+- Original 44,000 legacy JPGs lack patient/augmentation-family IDs. Exclude 1,863
+  rows connected to original 100 by decoded-pixel/dHash; additionally exclude 14,959
+  mixed-label hash-group rows as a conservative sensitivity choice. dHash collision
+  is not proof of label error or same person. Retain 27,178 images: 19,023 train,
+  2,705 validation, 5,450 test. All 4 stage classes remain present in each split.
+- Default stage epoch visits every retained training image once, shuffled. Loss is
+  inversely weighted by hash-group size and number of class groups. It never treats
+  missing patient IDs as recovered. --stage-draws is an explicit optional reduced
+  stochastic budget; leave 0 for the final full-pass experiments.
+- Multitask adds genuine AD/CN binary loss, weight 0.25, every 4 stage batches, using
+  a separate 2-output head. Sampling balances clinical classes/subjects and chooses
+  one random slice per sampled subject. Never map AD/MCI to 4 severity stages.
+- Besga 54 AD/CN subjects split BEFORE 9 slices: 32 train / 11 validation / 11 test. Exclude 24
+  bipolar subjects. OpenNeuro 20 entirely external: 14 CN / 1 AD / 5 MCI. MCI gets predictions,
+  no AD/CN metric label. Clinical probabilities average over 9 slices per subject.
+- No test-based tuning. All 100 is historical and old checkpoint exposed 66 train,
+  9 validation, 25 test images. This is a descriptive reader benchmark, not independent
+  clinical validation. Hash exclusion does not establish patient independence.
+- Small clinical cohorts, especially only 1 external AD case, cannot substantiate
+  reliable diagnostic performance or strong clinical superiority claims.
+- Per-epoch train/validation losses, training/validation accuracies, source/head
+  validation metrics, raw curve PNG, config and resumable checkpoints are saved.
+  Curves are never smoothed or cherry-picked. Smoke curves are explicitly labeled.
+- Point estimates and case-aligned predictions are prepared by the evaluator.
+  Manuscript uncertainty analysis, including paired comparisons and confidence
+  intervals at the appropriate image/subject unit, remains a separate prespecified
+  analysis step. The 100-image reader benchmark is not patient independent.

@@ -1,0 +1,215 @@
+{
+  "verified_on": "2026-10-11",
+  "scope": "Kevin dementia MRI paper; no STS work; no tumors; read-only provider research only",
+  "download_status": "No protected MRI files downloaded and no applications submitted. No assigned primary cohort was verified as anonymously downloadable.",
+  "interpretation": "Suitability and recommendations below are research-design inferences, not provider claims. Advertised cohort totals are not final usable MRI or independent-patient counts.",
+  "datasets": [
+    {
+      "id": "ADNI",
+      "priority": "High: principal training candidate after approved access",
+      "counts": "Dynamic longitudinal cohort. Obtain exact unique RID/PTID and QC-passed T1 counts from a dated IDA export; do not use ADNI4 remote enrollment targets as MRI counts.",
+      "mri": "3D structural T1 throughout; ADNI1 includes 1.5T/3T, later protocols emphasize 3T. FLAIR, diffusion, ASL and resting-state availability varies by phase. DICOM plus MRI QC/acquisition CSVs and numerical derivatives.",
+      "metadata_labels": "Age/demographics, clinical assessments, CDR, MMSE, cognitive diagnosis, genetics and biomarkers. Diagnostic groups are CU/CN, MCI, and dementia/AD; early/late MCI distinctions vary by phase. Both MCI and dementia/AD can have CDR 0.5, so never map CDR 0.5 directly to a universal diagnosis.",
+      "access": "LONI IDA application, institutional affiliation, proposed use, DUA and publication requirements. Official page says review generally within two weeks; annual account update required.",
+      "independence": "Participants roll between ADNI phases under the same RID/PTID. Group all visits, repeated sequences and derived slices by person. Phase alone cannot define an independent patient test set.",
+      "suitability": "Strong development cohort. Reserve a separate provider cohort for external evaluation; multicenter internal cross-validation alone is not external validation.",
+      "urls": [
+        "https://adni.loni.usc.edu/data-samples/adni-data/",
+        "https://adni.loni.usc.edu/data-samples/adni-data/neuroimaging/mri/",
+        "https://adni.loni.usc.edu/data-samples/adni-data/study-cohort-information/",
+        "https://adni.loni.usc.edu/help-faqs/ask-the-experts/",
+        "https://adni.loni.usc.edu/help-faqs/faqs/"
+      ]
+    },
+    {
+      "id": "OASIS-1",
+      "priority": "Lower: legacy benchmark or development alternative to OASIS-3",
+      "counts": "416 subjects aged 18\u201396; 3\u20134 T1 acquisitions per session; 100 older participants described as very mild-to-moderate AD. Reliability repeat subset exists. Do not multiply acquisitions or slices into patient count.",
+      "mri": "Structural T1 MRI, with original and processed forms in the original release.",
+      "metadata_labels": "Age, sex, dementia status; use supplied clinical dictionary for CDR/MMSE fields and missingness. Young controls can confound disease classification through age.",
+      "access": "Official access form labels OASIS-1/2 open datasets and routes requests through reviewed research statements and data-use terms. A NITRC account is explicitly required for OASIS-3/4; a corresponding requirement for OASIS-1/2 was not established. Follow the dataset-specific provider instructions; old mirrors do not establish project permission.",
+      "independence": "OASIS explicitly advises against combining OASIS-1, -2 and -3: anonymized people may appear across them with different IDs.",
+      "suitability": "Small legacy benchmark. Avoid if OASIS-3 is chosen for training or held-out evaluation; compare age-matched older groups rather than young-versus-demented shortcut learning.",
+      "urls": [
+        "https://sites.wustl.edu/oasisbrains/",
+        "https://sites.wustl.edu/oasisbrains/datasets/",
+        "https://sites.wustl.edu/oasisbrains/home/oasis-resources-and-faq/",
+        "https://doi.org/10.1162/jocn.2007.19.9.1498",
+        "https://sites.wustl.edu/oasisbrains/home/access/",
+        "https://sites.wustl.edu/oasisbrains/request-access/"
+      ]
+    },
+    {
+      "id": "OASIS-2",
+      "priority": "Lower: longitudinal alternative, not an independent add-on to OASIS-1/3",
+      "counts": "150 subjects aged 60\u201396, 373 MRI sessions, 3\u20134 T1 acquisitions per session. 72 remained nondemented; 64 were demented initially; 14 later converted.",
+      "mri": "T1-weighted MP-RAGE, repeated on the same scanner; raw and aligned/averaged, atlas-space, masked and segmented NIfTI forms described by release paper.",
+      "metadata_labels": "Age, sex, education, SES, MMSE, CDR, visit/timing, eTIV, normalized whole-brain volume and atlas scaling factor. The original paper describes 51 baseline CDR-0.5 cases as very mild AD, whereas ADNI MCI criteria also use CDR 0.5. Preserve source diagnosis.",
+      "access": "Official access form labels OASIS-1/2 open datasets and routes requests through reviewed research statements and data-use terms. A NITRC account is explicitly required for OASIS-3/4; a corresponding requirement for OASIS-1/2 was not established. Follow the dataset-specific provider instructions; old mirrors do not establish project permission.",
+      "independence": "Original paper explicitly says many subjects also occur in OASIS-1 under new random IDs. Current OASIS FAQ extends no-combination advice to OASIS-1/2/3.",
+      "suitability": "Useful for within-person longitudinal robustness after grouping by subject; inadequate as an independent external cohort if other overlapping OASIS releases are used.",
+      "urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC2895005/",
+        "https://sites.wustl.edu/oasisbrains/home/oasis-resources-and-faq/",
+        "https://sites.wustl.edu/oasisbrains/",
+        "https://sites.wustl.edu/oasisbrains/home/access/",
+        "https://sites.wustl.edu/oasisbrains/request-access/"
+      ]
+    },
+    {
+      "id": "OASIS-3",
+      "priority": "High: larger development candidate, or external cohort if not used in any model development",
+      "counts": "2,842 MR sessions. Official page narrative reports 1,378 subjects, counter 1,379, and subgroup totals 755+622=1,377: internally inconsistent. Treat approximately 1.38k as discovery scale; exact downloadable eligible counts require manifest audit.",
+      "mri": "T1w, T2w, FLAIR, ASL, SWI, time-of-flight, resting-state BOLD and DTI; availability is session-dependent. FreeSurfer derivatives also available.",
+      "metadata_labels": "UDS clinical/cognitive assessments, demographics and imaging JSON/CSV. Clinical diagnosis is in OASIS3_data_files. Dates are normalized to days from study entry; predefine a clinical-to-MRI matching window.",
+      "access": "Current provider uses NITRC-IR, reviewed application/DUA. Official scripts support selected session/type downloads. Old central.xnat.org instructions in older PDFs are not the current route.",
+      "independence": "Do not pool OASIS-1/2/3; subjects can overlap under distinct IDs. OASIS is also a released subset of the broader Knight imaging resource, so KARI is not automatically independent.",
+      "suitability": "Strong rich-metadata candidate, but use person-grouped splits and preserve original diagnostic variables. A broad cognitive-decline category is not a single AD stage.",
+      "urls": [
+        "https://sites.wustl.edu/oasisbrains/home/oasis-3/",
+        "https://sites.wustl.edu/oasisbrains/home/oasis-resources-and-faq/",
+        "https://sites.wustl.edu/oasisbrains/",
+        "https://sites.wustl.edu/oasisbrains/files/2024/04/OASIS-3_Imaging_Data_Dictionary_v2.3-a93c947a586e7367.pdf",
+        "https://github.com/NrgXnat/oasis-scripts",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12637817/"
+      ]
+    },
+    {
+      "id": "OASIS-4",
+      "priority": "High: clinical-setting evaluation candidate",
+      "counts": "663 subjects aged 21\u201394; 676 MRI sessions advertised. This is a clinical memory-disorder cohort, not 663 confirmed AD cases.",
+      "mri": "Volumetric structural T1; acquisition details and available sequences should be read from the release dictionary and JSON manifest.",
+      "metadata_labels": "Demographics, clinical diagnoses, psychometrics, CSF and FreeSurfer outputs. Contains patients evaluated for memory disorders and dementia of differing causes; preserve etiology separately from severity.",
+      "access": "NITRC-IR account, reviewed OASIS request and DUA. Download nonimaging data from OASIS4_data_files, scans via UI or official scripts.",
+      "independence": "Provider states OASIS-4 is a unique cohort and can be combined with other OASIS datasets. This does not by itself verify independence from every other external repository.",
+      "suitability": "Prefer reserving as a clinical cohort test rather than adding every source to training. May support AD-versus-other-dementia analysis if label/sample counts permit; do not recode all clinical referrals as AD. CSF assays have provider-specific compatibility warnings.",
+      "urls": [
+        "https://sites.wustl.edu/oasisbrains/home/oasis-4/",
+        "https://sites.wustl.edu/oasisbrains/home/oasis-resources-and-faq/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7182765/",
+        "https://sites.wustl.edu/oasisbrains/"
+      ]
+    },
+    {
+      "id": "AIBL",
+      "priority": "High: geographically distinct external candidate after access",
+      "counts": "MRI/PET subset is smaller than whole AIBL cohort; provider states roughly 25% through 36 months and later enrichment. Exact eligible MRI participants/sessions require dated IDA/CSIRO manifest; no invented current total.",
+      "mri": "Raw DICOM; ADNI-compliant MPRAGE plus PD/T2, later 3D T2-FLAIR; both 1.5T and 3T. Some oldest noncompliant MRI acquisitions are excluded from shared subset.",
+      "metadata_labels": "Demographic, medical-history, CDR/MMSE/neuropsychology, APOE/lab, diagnosis and MRI-acquisition CSVs. Provider warns that DICOM age/sex/birthdate can be unreliable: use nonimaging tables.",
+      "access": "AIBL subset via LONI IDA approval/terms and research/collaborator description. Broader access via AIBL expression of interest reviewed by management committee.",
+      "independence": "Australian AIBL is a distinct study hosted on ADNI-compatible infrastructure, not a new MRI modality or a guarantee of cross-source independence. Audit aliases and source provenance.",
+      "suitability": "Valuable held-out external geography; compare source clinical diagnoses rather than forcing four severity classes. Can join development only if a different untouched test cohort is reserved.",
+      "urls": [
+        "https://aibl.org.au/collaboration/",
+        "https://data.aibl.org.au/adni/index.html",
+        "https://data.aibl.org.au/adni/imaging.html",
+        "https://data.aibl.org.au/adni/nonimaging.php"
+      ]
+    },
+    {
+      "id": "NACC_MIXED_PROTOCOL",
+      "priority": "High but more curation: diverse multicenter clinical cohort",
+      "counts": "NACC advertises structural MRI for 12,000+ participants. This is not an assurance of 12,000 immediately downloadable QC-passed T1 volumes; freeze/date/sequence filtering and actual manifest are required. MRI preview estimates are explicitly unsuitable for publication.",
+      "mri": "Mixed-protocol packages can contain T1, FLAIR, DTI, T2 and other series; NACC cannot separate packages by sequence for delivery. DICOM/NIfTI availability; heterogeneous acquisition/QC.",
+      "metadata_labels": "Link by NACCID to longitudinal UDS demographics, CDR, neuropsychology, cognitive diagnosis and etiologic diagnosis. Match scan date with the relevant clinical visit, not the most recent arbitrary diagnosis.",
+      "access": "Data Front Door Quick Access File request plus DUA; images delivered through controlled S3 download. Clinical summary data may arrive quickly, but don't promise image delivery timing.",
+      "independence": "NACC explicitly says it lacks overlap lists for ADNI, DIAN and NIFD/FTLDNI. Therefore NACC is not proven independent merely because its repository name differs; document unresolved overlap and use available crosswalks/provider advice.",
+      "suitability": "Potentially valuable clinical external evaluation or training expansion. Greater scanner variation and etiologic breadth demand source/age/site stratification and careful quality checks.",
+      "urls": [
+        "https://www.naccdata.org/data-request-process/",
+        "https://www.naccdata.org/data-front-door",
+        "https://www.naccdata.org/data-file-faq",
+        "https://www.naccdata.org/mri-preview-system",
+        "https://www.naccdata.org/the-nacc-researchers-guide"
+      ]
+    },
+    {
+      "id": "NACC_SCAN",
+      "priority": "High: standardized contemporary MRI within NACC",
+      "counts": "Dynamic dashboard of QC-passed exams/participants, not a fixed independent cohort total. Manifest count required; do not add SCAN and mixed-protocol totals without NACCID deduplication.",
+      "mri": "Required structural T1 and FLAIR; optional full protocol resembles ADNI. Defaced images and volumes/thickness/surface-area/QC summaries available for released scans.",
+      "metadata_labels": "NACCID-linked UDS clinical, cognitive and demographic data; diagnosis must be aligned to scan time.",
+      "access": "Request through NACC Data Front Door/Quick Access File system under DUA. Provider notes not every submitted or QC-passed image has completed defacing/analysis for release.",
+      "independence": "SCAN is NACC's standardized imaging stream across ADRCs, not independent of NACC. Cross-study overlap remains an audit issue.",
+      "suitability": "Good acquisition consistency for training or evaluation. Hold out entire participants and, where justified, institutions; inspect the actual release availability before planning sample sizes.",
+      "urls": [
+        "https://scan.naccdata.org/",
+        "https://www.naccdata.org/data-front-door",
+        "https://www.naccdata.org/the-nacc-researchers-guide",
+        "https://www.naccdata.org/data-file-faq"
+      ]
+    },
+    {
+      "id": "MIRIAD",
+      "priority": "High-value small robustness/external candidate",
+      "counts": "69 participants: 46 mild\u2013moderate AD and 23 controls; 708 serial MRI scans, not 708 patients.",
+      "mri": "Single-site 1.5T GE Signa, 3D T1 IR-FSPGR; repeated scans over two weeks to two years, including back-to-back acquisitions.",
+      "metadata_labels": "Age at scan, sex, AD/control group, visit MMSE; screening CDR/global and sum-of-boxes for AD participants. No MCI cohort and no validated four-class stage coverage.",
+      "access": "UCL MIRIAD XNAT registration and data-use terms; project Download Images plus CSV exports from ClinicalAssessment and MR Sessions. Redistribution needs prior agreement; citation/acknowledgment and accepted-paper copy required.",
+      "independence": "All repeated acquisitions for each participant stay together. A single-scanner cohort is valuable for test\u2013retest consistency but not evidence of multicenter generalization on its own.",
+      "suitability": "Prefer external AD-versus-control evaluation and short-interval consistency analysis; small person count yields wide confidence intervals. Augmented/slice counts cannot remedy that uncertainty.",
+      "urls": [
+        "https://www.ucl.ac.uk/brain-sciences/ion/research/research-centres/dementia-research-centre/research-clinical-trials/minimal-interval-resonance-imaging-alzheimers-disease-miriad",
+        "https://discovery.ucl.ac.uk/id/eprint/1382603/",
+        "https://doi.org/10.1016/j.neuroimage.2012.12.044",
+        "https://miriad.drc.ion.ucl.ac.uk/"
+      ]
+    },
+    {
+      "id": "BRAINLAT",
+      "priority": "High scientific value; currently account-gated rather than immediate download",
+      "counts": "Primary descriptor reports 780 total participants: 278 AD, 163 bvFTD, 57 PD, 32 MS, 250 controls. This is a multimodal total; not every participant has MRI. Determine eligible AD/control T1 count from BrainLat_records_MRI.",
+      "mri": "1.5T/3T T1-MPRAGE anatomical MRI plus available diffusion, T2/FLAIR and resting-state MRI in BIDS; five Latin American countries.",
+      "metadata_labels": "CSV demographics, cognitive/functional measures; CDR in AD, FTLD-CDR in bvFTD; MoCA and IFS. Do not include PD/MS as dementia cases or treat all 530 patients as AD.",
+      "access": "Synapse project syn51549340, MRI folder syn53972968. On 2026-10-11 anonymous public API returns canView=true, canDownload=false, isCertificationRequired=true, isEntityOpenData=false for both. File content not downloaded; permission/registration is required.",
+      "public_inventory": {
+        "BrainLat_Cognition_MRI.csv": "syn54013317",
+        "BrainLat_Demographic_MRI.csv": "syn54013318",
+        "BrainLat_records_MRI": "syn64707910",
+        "MRI_site_folders": [
+          "AR",
+          "CLA",
+          "CLB",
+          "COA",
+          "COB",
+          "MXA",
+          "MXB",
+          "PE"
+        ]
+      },
+      "independence": "Distinct regional dataset candidate; deduplicate against ReDLat/BrainLat-derived studies, which can reuse these same people.",
+      "suitability": "Strong potential geographic external evaluation after access, actual MRI availability and source labels are verified. No anonymous-download shortcut established.",
+      "urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10710425/",
+        "https://www.nature.com/articles/s41597-023-02806-8",
+        "https://www.synapse.org/Synapse:syn51549340/wiki/624187",
+        "https://www.synapse.org/Synapse:syn53972968",
+        "https://repo-prod.prod.sagebase.org/repo/v1/entity/syn53972968/permissions"
+      ]
+    }
+  ],
+  "design_decisions_needed": [
+    "Define target separately: AD diagnosis versus dementia severity versus MCI conversion. CDR, diagnosis and amyloid status are not interchangeable labels.",
+    "Choose a development set and freeze an untouched external cohort before model/threshold selection. Pooling every source into training removes the intended independent evaluation.",
+    "Record source, version/freeze date, original subject/visit/session IDs, scan and clinical timing, age, sex, education, site/scanner, T1 sequence and source diagnosis plus harmonized label rule.",
+    "Build patient-grouped splits before slicing or augmentation; all repeats and derivatives remain with their person. Use baseline or prespecified index scan for primary patient-level performance.",
+    "Count persons, sessions, volumes and slices separately; source totals and QC-passed usable totals must both be reported.",
+    "Report person-level AUROC, balanced accuracy, sensitivity, specificity, macro-F1, confusion matrix and calibrated probability metrics with participant-bootstrap intervals; external results should be broken down by cohort and relevant age/sex/site groups.",
+    "Retain unresolved cross-repository subject overlap as a limitation unless a provider crosswalk or defensible privacy-preserving audit resolves it. Hash equality detects copied images, not every same-person scan."
+  ],
+  "nih_ncbi_note": "PMC/PubMed host primary research papers and point to repositories. Open-access articles do not imply anonymous access to their underlying MRIs. NIH support of ADNI/NACC does not eliminate each data access process.",
+  "additional_open_leads_not_yet_acquired": [
+    {
+      "id": "OpenNeuro_ds006148",
+      "paper": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13181006/",
+      "dataset": "https://openneuro.org/datasets/ds006148/versions/1.0.5",
+      "note": "Primary descriptor says anonymous imaging and cognition public, but age/sex/education/race controlled by institutional DUA. Primarily young/older neurodegeneration-mechanism cohort; AD diagnosis coverage unverified. Do not count as dementia training cohort yet."
+    },
+    {
+      "id": "OpenNeuro_ds004856_Dallas_Lifespan",
+      "paper": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12106762/",
+      "dataset": "https://openneuro.org/datasets/ds004856/versions/1.2.0",
+      "note": "Public adult lifespan brain/cognition dataset; healthy-aging support, not a verified dementia case cohort. Useful only for limited age/confound analyses, not substitute disease labels."
+    }
+  ]
+}

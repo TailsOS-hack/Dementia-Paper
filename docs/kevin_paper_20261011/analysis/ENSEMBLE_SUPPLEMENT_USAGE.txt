@@ -1,0 +1,90 @@
+Uniform three-seed ensemble supplement — Kevin paper
+
+This separate, prespecified supplement computes both stage condition ensembles
+and the multitask AD/CN subject ensemble from existing evaluator probabilities.
+Each applicable member has weight 1/3. No fitting, new model inference, model
+selection, threshold change, deployment or primary-result replacement occurs.
+
+1. Freeze BEFORE the existing primary evaluation wrapper can launch.
+
+Run from the project root on the training machine after uploading these files:
+  analysis/ensemble_supplement.py and analysis/ensemble_protocol.json
+alongside the existing frozen main analysis script/protocol, trainer and the
+seven project source manifests/audit files listed by source_manifest_paths().
+The paths below are relative to docs/kevin_paper_20261011 where abbreviated.
+
+python docs/kevin_paper_20261011/analysis/ensemble_supplement.py freeze \
+  --evaluation-output /workspace/kevin_results/frozen_evaluation_all6 \
+  --output /workspace/kevin_results/ensemble_supplement_freeze.json
+
+The freeze records the supplementary protocol, source/helper/protocol SHA256s
+and seven manifest SHA256s. It requires an absent/empty evaluation directory
+and no evaluation_launch.json in its parent, checked again before writing.
+It requires no completed checkpoints or future primary selection record.
+Run the existing training/evaluation wrapper unchanged. Preserve this freeze
+in the retrieved result archive. Record its SHA256 before held-out inference.
+
+2. Complete the frozen primary analysis first (see USAGE.txt), then run locally.
+
+For this command, RESULTS and PRIMARY_STATS below stand for the actual local
+result and primary-analysis directories. Use the same local source paths as
+the primary analysis so its exact input-provenance record can be verified.
+
+python docs/kevin_paper_20261011/analysis/ensemble_supplement.py analyze \
+  --evaluation-dir RESULTS/frozen_evaluation_all6 \
+  --prepared training_logs/experiments/kevin_20261011/prepared \
+  --original100-key data/evaluation/ground_truth/radiologist_test_key.csv \
+  --clinical-manifest data/external/clinical_t1_preprocessed_v1/clinical_slices.csv \
+  --validation-selection RESULTS/validation_selection_before_evaluation.json \
+  --old-hash-unexposed-manifest docs/kevin_paper_20261011/analysis/old_hash_group_unexposed_sensitivity.csv \
+  --baseline-exposure-audit docs/kevin_paper_20261011/analysis/old_hash_group_unexposed_sensitivity_audit.json \
+  --primary-analysis PRIMARY_STATS/uncertainty_analysis.json \
+  --supplement-freeze RESULTS/ensemble_supplement_freeze.json \
+  --output RESULTS/ensemble_supplement
+
+The output directory must be empty. If reader data are incomplete and the main
+analysis explicitly used --allow-incomplete-readers, also supply that flag.
+No checkpoint loading or torch import is needed: NumPy and SciPy suffice.
+All six candidates must match the existing validation-only freeze, exact case
+sets, classes, source manifests and checkpoint identities. Candidate ordering
+is resolved from mode/seed metadata; each ensemble always includes the same
+three seeds (20261011, 20261012, 20261013), independent of validation or test
+performance. The project evaluator's interleaved order remains unchanged.
+
+Outputs:
+  ensemble_supplement.json: all metrics, paired uncertainty, fixed-member
+    spread/disagreement, descriptive calibration, provenance and limitations.
+  ensemble_specifications.json: exact checkpoint SHA256s, mode/seed, weights,
+    class orders, frozen input-transform reference and head applicability.
+  Six stage prediction CSVs (both ensembles on primary1058, sensitivity756,
+    reused original100); clinical subject CSVs for each source/split cohort.
+
+The CPU command reuses all primary input validations and deterministic primary
+summary calculations, then computes supplementary metrics. Existing primary
+outputs are read-only. Each stage comparison uses 2000 paired bootstrap
+replicates with the frozen primary helper. Intervals are conditional on the
+fitted members and are not adjusted for multiple comparisons. Seed spread and
+disagreement are descriptive, not calibrated uncertainty. Brier uses the sum
+over classes (range 0–2), and ECE uses ten fixed equal-width confidence bins.
+
+The clinical ensemble averages each evaluator's already slice-averaged subject
+probabilities across the three multitask seeds within each source/split.
+MCI remains prediction-only. Exact subject accuracy/sensitivity/specificity
+intervals are reported; the old baseline and stage-only heads have no matching
+clinical AD/CN endpoint. One external AD subject cannot establish robust
+sensitivity, and the ensemble does not enlarge the independent sample size.
+
+Report both condition ensembles and every cohort regardless of results, beside
+all seven primary models. Original100 remains a reused image-level benchmark.
+The primary1058 has known old development hash-group exposure. The prespecified
+756-row sensitivity excludes observed old development group mates but hashes
+are not patient identities. Ensembling does not repair these limitations or
+establish real-world readiness. See real_world_readiness.txt and
+real_world_readiness.json in this directory.
+
+Verification uses only synthetic fixtures:
+  python docs/kevin_paper_20261011/analysis/test_ensemble_supplement.py
+
+Do not edit the supplement or primary source/protocol files after its freeze.
+Further changes would require an explicitly dated amendment and disclosure;
+they cannot silently replace this pre-evaluation specification.

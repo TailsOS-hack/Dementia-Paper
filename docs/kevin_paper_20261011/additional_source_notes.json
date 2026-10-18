@@ -1,0 +1,360 @@
+{
+  "verified_on": "2026-10-11",
+  "scope": "Additional dementia MRI cohorts for Kevin paper; no applications or contacts submitted. Research sources and file manifests only. This is a candidate register, not a claim of data acquired.",
+  "immediate_findings": [
+    "OpenNeuro ds007561 v1.0.0 acquired and validated: 20 T1 subjects (1 AD, 5 MCI, 14 controls), clinical metadata, 45 source files, 297880860 bytes.",
+    "Besga Zenodo3935636 is open and NIH/NCBI indexed via PMC7658647; root inspecting/downloading."
+  ],
+  "counting_notes": [
+    "Do not sum cohort participants, MRI sessions, images, slices or derived records as unique subjects.",
+    "Do not count a platform and its constituent cohorts separately.",
+    "Disease etiologies and severity scales need an explicit clinical mapping; FTD, DS-AD, preclinical risk and AD severity are different targets."
+  ],
+  "records": [
+    {
+      "id": "SYNAPSE_OPENNEURO_DS007561",
+      "name": "UCB-J PET and T1W Images for Synapse Project Cohort",
+      "priority": "immediate_open_pilot",
+      "access_class": "open_no_approval",
+      "raw_mri": "Raw native-space T1w, 1 mm isotropic MPnRAGE_VFA; PET also present",
+      "population": "AD / MCI / normal cognition",
+      "size": "20 unique participants: 1 AD, 5 MCI, 14 controls; calculated directly from participants.tsv",
+      "age": "61.2\u201384.2 in posted participants.tsv",
+      "clinical_metadata": "Participant ID, age, gender, visit diagnosis, sessions",
+      "access": "Acquired public release 1.0.0, CC0, no login/application. Pinned commit 4e23a0f47e955268df458729778f4d0ef1f2575a. All 20 T1w images verified against pinned SHA256 hashes and NIfTI integrity.",
+      "fit": "Small external pilot or pipeline check; too few AD cases for reliable stand-alone performance estimates or training.",
+      "overlap": "NIH-funded SYNAPSE, Wisconsin ADRC and WRAP; reconcile participant provenance before using alongside WRAP or NACC.",
+      "sources": [
+        "https://openneuro.org/datasets/ds007561/versions/1.0.0",
+        "https://github.com/OpenNeuroDatasets/ds007561",
+        "https://raw.githubusercontent.com/OpenNeuroDatasets/ds007561/main/participants.tsv",
+        "https://raw.githubusercontent.com/OpenNeuroDatasets/ds007561/main/participants.json",
+        "https://raw.githubusercontent.com/OpenNeuroDatasets/ds007561/main/dataset_description.json"
+      ],
+      "observed_example_path": "sub-01/ses-01/anat/sub-01_ses-01_T1w.nii.gz",
+      "local_directory": "/Users/armankazi/Desktop/Neuro-Radiology-Database/data/external/openneuro_ds007561_v1",
+      "acquisition_summary": "/Users/armankazi/Desktop/Neuro-Radiology-Database/docs/kevin_paper_20261011/openneuro_acquisition.json"
+    },
+    {
+      "id": "BESGA_ZENODO_3935636",
+      "name": "Alzheimer's Disease versus Bipolar Disorder versus Healthy Control MRI",
+      "priority": "immediate_open_candidate",
+      "access_class": "open_no_approval",
+      "raw_mri": "NIfTI original DWI; T1 preprocessed 1 mm MNI; primary data paper says original and registered T1 are included, exact archive contents need inspection",
+      "population": "AD, late-onset bipolar disorder, healthy controls",
+      "size": "Subject counts require archive inspection; small cohort",
+      "clinical_metadata": "Acquired approved demographics: 78 rows with source diagnosis code, random study ID, age and source gender code, plus separate plasma biomarker CSVs. The paper describes broader neuropsychological measures, NPI and FAST, but provider-ignored clinical_data_corrected.csv was not extracted or used; those scales are not verified usable acquired fields. Biomarker patient linkage and interpretation remain unaudited.",
+      "access": "Zenodo publicly downloadable archives: Clinical_data.zip 317.8 kB; T1_preprocessed.zip 5.3 GB; total collection 16.3 GB",
+      "fit": "Potential independent structural MRI plus clinical set; use AD/controls for AD task and keep bipolar separate. Root agent inspecting archive.",
+      "sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7658647/",
+        "https://pubmed.ncbi.nlm.nih.gov/33192477/",
+        "https://zenodo.org/records/3935636"
+      ]
+    },
+    {
+      "id": "DELCODE",
+      "name": "DZNE Longitudinal Cognitive Impairment and Dementia Study",
+      "priority": "high_after_access",
+      "access_class": "application_required",
+      "raw_mri": "Cranial MRI; exact sequences and QA availability discoverable through DZNE clinical data search tool",
+      "population": "Healthy controls, subjective/mild memory impairment, mild dementia, first-degree relatives of AD patients",
+      "size": "1,000 study participants; not a verified complete-MRI count",
+      "age": "Minimum 60 at enrollment",
+      "clinical_metadata": "Annual clinical interview, detailed neuropsychology, blood; optional CSF",
+      "access": "DZNE request form and use regulations; external requests reviewed by CAB/CEB. Raw data not an unrestricted download.",
+      "fit": "Strong independent AD-spectrum candidate; verify diagnostic classes, MRI completeness and approval.",
+      "sources": [
+        "https://www.dzne.de/en/research/studies/clinical-studies/delcode",
+        "https://www.dzne.de/en/research/research-areas/clinical-research/for-researchers/"
+      ]
+    },
+    {
+      "id": "EPAD",
+      "name": "European Prevention of Alzheimer's Dementia LCS V.IMI",
+      "priority": "conditional_preclinical",
+      "access_class": "application_required",
+      "raw_mri": "Raw/processed NIfTI T1w and FLAIR; ASL/diffusion/rs-fMRI in ~70% subset",
+      "population": "At-risk adults without dementia at enrollment",
+      "size": ">2,000 participants; MRI availability/QC per subject must be checked",
+      "age": "50+",
+      "clinical_metadata": "Cognition, biomarkers, sociodemographics, vital signs, genomics",
+      "access": "AD Workbench workspace and dataset application; imaging request specifies sequences/formats and includes clinical access",
+      "fit": "Useful preclinical/biomarker or MCI research; not a source of baseline established dementia cases.",
+      "overlap": "Recruited through existing cohorts including PREVENT; do not assume independent from parent cohorts.",
+      "sources": [
+        "https://ep-ad.org/index.php/open-source-data/",
+        "https://ep-ad.org/index.php/the-epad-story/"
+      ]
+    },
+    {
+      "id": "ALLFTD",
+      "name": "ALLFTD including ARTFL and LEFFTDS",
+      "priority": "auxiliary_ftd",
+      "access_class": "application_required",
+      "raw_mri": "Refaced raw MR images downloadable via approved LONI FTLD project; volumetric data also available",
+      "population": "Frontotemporal lobar degeneration spectrum / familial at-risk participants",
+      "size": ">3,000 clinical participants across ALLFTD and predecessors; not MRI subject count",
+      "clinical_metadata": "Demographics, neuropsychology, function, diagnosis, disease severity, CDR+NACC FTLD; NfL subset",
+      "access": "Research goals, analysis plan, qualified investigator and DUA; review generally 4\u20136 weeks. Minimal or full clinical data can accompany MRI.",
+      "fit": "Differential diagnosis / FTD auxiliary cohort, not AD severity labels.",
+      "overlap": "ARTFL and LEFFTDS are predecessors, not separate additive independent datasets; NACC-associated overlap possible.",
+      "sources": [
+        "https://www.allftd.org/data",
+        "https://www.allftd.org/policies"
+      ]
+    },
+    {
+      "id": "GENFI",
+      "name": "Genetic Frontotemporal Dementia Initiative",
+      "priority": "auxiliary_ftd",
+      "access_class": "application_required",
+      "raw_mri": "3T T1/T2, resting fMRI, ASL, DTI, NODDI, QSM",
+      "population": "Symptomatic and presymptomatic genetic FTD, relatives/noncarriers",
+      "size": "Official study page: 1,900 participants; MRI subset/release count not established",
+      "age": "Adults; age range release dependent",
+      "clinical_metadata": "Standardized clinical history/exam, CBI-R, FRS, CDR+NACC FTLD, neuropsychology, genetics, CSF/blood",
+      "access": "Central data access committee; primary GENFI paper describes reasonable requests through study website/GENFI team",
+      "fit": "Genetic FTD auxiliary cohort; not substitute AD or universal dementia-stage labels.",
+      "sources": [
+        "https://www.genfi.org/study/",
+        "https://www.genfi.org/",
+        "https://www.genfi.org/wp-content/uploads/2025/01/81_Best_Neurology_2024.pdf"
+      ]
+    },
+    {
+      "id": "FTLDNI_NIFD",
+      "name": "Frontotemporal Lobar Degeneration Neuroimaging Initiative (NIFD in LONI)",
+      "priority": "auxiliary_ftd",
+      "access_class": "registration_application_required",
+      "raw_mri": "Longitudinal structural MRI; diffusion and PET in subsets",
+      "population": "bvFTD, semantic/nonfluent PPA, cognitively normal controls",
+      "size": "Current unique raw-MRI participant count not verified; do not use selected-paper sample sizes as total",
+      "clinical_metadata": "Clinical/neuropsychological, caregiver, blood/CSF assessments",
+      "access": "NIFD currently listed by LONI among studies one can apply to. Legacy cohort website inaccessible during lookup.",
+      "fit": "FTD differential diagnosis only; reconcile overlap with UCSF/other FTD cohorts.",
+      "sources": [
+        "https://ida.loni.usc.edu/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6351779/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7455324/"
+      ]
+    },
+    {
+      "id": "4RTNI",
+      "name": "Four Repeat Tauopathy Neuroimaging Initiative / 4RTNI-2",
+      "priority": "auxiliary_tauopathy",
+      "access_class": "application_required",
+      "raw_mri": "MRI and tau-PET available by request for 4RTNI-2",
+      "population": "PSP, corticobasal syndrome and variant tauopathy syndromes plus healthy controls",
+      "size": "Current downloadable MRI counts not verified",
+      "clinical_metadata": "Clinical, imaging, blood and CSF biomarkers through joint ALLFTD resource sharing",
+      "access": "ALLFTD data request route; some imaging via LONI by request",
+      "fit": "Related neurodegenerative differential diagnosis; not AD or automatic dementia labels.",
+      "sources": [
+        "https://boxerlab.ucsf.edu/research/collaborate-us",
+        "https://boxerlab.ucsf.edu/study/4rtni-2-four-repeat-tauopathy-neuroimaging-initiative-cycle-2"
+      ]
+    },
+    {
+      "id": "ADC",
+      "name": "Amsterdam Dementia Cohort",
+      "priority": "high_collaboration_candidate",
+      "access_class": "collaboration_request_not_open",
+      "raw_mri": "Clinical diagnostic MRI; sequence/scanner mix to establish",
+      "population": "Clinical memory clinic cohort including SCD, MCI, AD, FTD, DLB",
+      "size": "Official October 2025 institutional page: almost 7,000 clinical individuals, not verified MRI count",
+      "age": "Mixed clinical referral ages; exact release range unverified",
+      "clinical_metadata": "Extensive neuropsychology, clinical workup, EEG, CSF; many annual follow-ups",
+      "access": "Institutional contact; cohort papers indicate reasonable-request sharing. No unrestricted raw MRI download verified.",
+      "fit": "Strong real-world independent clinical test set if collaboration/access granted.",
+      "sources": [
+        "https://amsterdamumc.org/en/research/support/amsterdam-cohort-hub/cohorts-amsterdam-cohort-hub/amsterdam-dementia-cohort-adc",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC5870023/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/11238942/"
+      ]
+    },
+    {
+      "id": "ABCDS",
+      "name": "Alzheimer Biomarkers Consortium\u2013Down Syndrome (including NiAD/ADDS predecessor components)",
+      "priority": "auxiliary_ds_ad",
+      "access_class": "application_required",
+      "raw_mri": "T1 structural, T2 FSE, FLAIR, T2*, ASL, DTI, resting fMRI; PET",
+      "population": "Adults with Down syndrome, normal aging through MCI and dementia; sibling controls",
+      "size": "550 DS plus 50 sibling control recruitment target; not verified available MRI count; >50 sibling controls reported",
+      "age": "25+",
+      "clinical_metadata": "Consensus diagnosis, demographics, medical/psychiatric history, neurological exam, caregiver tools, cognition, genetics",
+      "access": "Qualified investigator request, NIH/study review, DUA, LONI after approval",
+      "fit": "Separate Down-syndrome AD analysis; developmental/anatomical differences prevent naive pooling.",
+      "overlap": "NiAD and ADDS were original ABC-DS teams; avoid treating as independent additive cohorts.",
+      "sources": [
+        "https://research.nih.gov/research/abc-ds"
+      ]
+    },
+    {
+      "id": "MEMENTO",
+      "name": "MEMENTO",
+      "priority": "high_after_access_mci",
+      "access_class": "application_required_secure_environment",
+      "raw_mri": "T1/T2/FLAIR, diffusion, resting fMRI noted in DPUK matrix",
+      "population": "Cognitive complaints or deficits without dementia at enrollment; longitudinal conversion",
+      "size": "2,323 participants enrolled; usable MRI count requires release inventory",
+      "age": "DPUK imaging matrix lists 60+; confirm actual release criteria",
+      "clinical_metadata": "Clinical, neuropsychological, psychiatric, lifestyle/family, imaging, biosamples",
+      "access": "MEMENTO data access committee; application via DPUK; analysis remotely in secure environment, only approved aggregate results exported",
+      "fit": "MCI/progression research and later dementia outcomes; baseline participants cannot be labeled dementia.",
+      "sources": [
+        "https://host.credim.u-bordeaux.fr/dnn-memento/L%C3%A9tude/Ensavoirplus.aspx",
+        "https://host.credim.u-bordeaux.fr/dnn-memento/Espacechercheurs/Proposerunprojet.aspx",
+        "https://portal.dementiasplatform.uk/data/imaging-matrix/"
+      ]
+    },
+    {
+      "id": "BIOFIND",
+      "name": "BioFIND dementia/MCI cohort",
+      "priority": "conditional_mci",
+      "access_class": "application_required_secure_environment",
+      "raw_mri": "Structural T1 MRI with resting MEG",
+      "population": "Approximately half MCI and half healthy controls",
+      "size": "324 participants reported; exact matched MRI/clinical availability to confirm",
+      "age": "52\u201395 in DPUK imaging matrix",
+      "clinical_metadata": "Cognitive group; clinical details/variables require dictionary",
+      "access": "Exclusively DPUK according to cohort profile; approved research inside portal",
+      "fit": "MCI vs control auxiliary/external cohort; not the Parkinson BIOFIND collection with same acronym.",
+      "sources": [
+        "https://www.dementiasplatform.uk/research-hub/data-portal/featured-cohort-biofind",
+        "https://portal.dementiasplatform.uk/data/imaging-matrix/"
+      ]
+    },
+    {
+      "id": "NIMROD",
+      "name": "Neuroimaging of Inflammation in Memory and Related Other Disorders",
+      "priority": "differential_diagnosis_candidate",
+      "access_class": "application_required_secure_environment",
+      "raw_mri": "Structural and functional MRI plus PET",
+      "population": "AD, DLB, FTD, PSP, late-onset depression, MCI and controls",
+      "size": "167 cohort participants in current DPUK imaging matrix; historical larger sample counts should not replace portal inventory",
+      "age": "50+ in matrix",
+      "clinical_metadata": "Neuropsychology, blood inflammation, diagnosis; longitudinal cognition in protocol",
+      "access": "DPUK cohort approval and secure analysis",
+      "fit": "Small diagnosis-specific subsets; primary protocol lacks longitudinal neuroimaging.",
+      "sources": [
+        "https://portal.dementiasplatform.uk/data/imaging-matrix/",
+        "https://www.repository.cam.ac.uk/items/d25b976d-c7eb-4006-86d2-c3c9bcda84fe"
+      ]
+    },
+    {
+      "id": "PREVENT_DEMENTIA",
+      "name": "PREVENT Dementia (distinct from PREVENT-AD)",
+      "priority": "conditional_preclinical",
+      "access_class": "application_required",
+      "raw_mri": "Multimodal MRI baseline and follow-up; raw images reviewed case by case",
+      "population": "Midlife dementia-risk cohort, initially without dementia",
+      "size": "700 recruitment target; DPUK subset 210; neither is verified complete current raw MRI count",
+      "age": "40\u201359 in DPUK matrix",
+      "clinical_metadata": "Neuropsychological, lifestyle, clinical, imaging, genetics",
+      "access": "ADDI/AD Connect application approval; raw-image requests subject to imaging-team review",
+      "fit": "Risk/preclinical work, not established AD training. Distinct study from Canadian PREVENT-AD.",
+      "overlap": "Feeds EPAD and TriBEKA; participant overlap must be reconciled.",
+      "sources": [
+        "https://preventdementia.co.uk/for-researchers/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11166176/"
+      ]
+    },
+    {
+      "id": "AMPLE",
+      "name": "Amyloid imaging for phenotyping Lewy body dementia",
+      "priority": "auxiliary_dlb",
+      "access_class": "application_required_secure_environment",
+      "raw_mri": "T1, FLAIR, resting fMRI and diffusion indicated in DPUK matrix",
+      "population": "Lewy body dementia, AD and controls",
+      "size": "80 cohort/planned participants; complete MRI count unverified",
+      "age": "60\u201395 in DPUK matrix",
+      "clinical_metadata": "Clinical features and follow-up; exact fields need dictionary",
+      "access": "DPUK cohort approval",
+      "fit": "Small DLB/AD differential diagnosis cohort; not generic dementia-stage labels.",
+      "sources": [
+        "https://portal.dementiasplatform.uk/data/imaging-matrix/",
+        "https://neurodegenerationresearch.eu/cohort/amyloid-imaging-for-phenotyping-lewy-body-dementia/"
+      ]
+    },
+    {
+      "id": "QMIN_MC",
+      "name": "Quantitative MRI of Brain Structure and Function in NHS Memory Clinics",
+      "priority": "clinical_validation_candidate",
+      "access_class": "application_required_secure_environment",
+      "raw_mri": "High-quality structural MRI with additional sequences; DPUK T1/T2/diffusion/resting fMRI",
+      "population": "NHS memory clinic referrals undergoing structural imaging",
+      "size": "100 participants in DPUK matrix; a primary 2024 paper analyzes 272, so release scope must be confirmed",
+      "age": "34\u201396 in matrix",
+      "clinical_metadata": "Clinical clinic dataset; age/sex/cognition/diagnosis details release dependent",
+      "access": "DPUK cohort application; no unrestricted raw download verified",
+      "fit": "Potential real-world clinical external validation; confirm MRI inventory and labels.",
+      "sources": [
+        "https://www.hra.nhs.uk/planning-and-improving-research/application-summaries/research-summaries/quantitative-mri-in-the-nhs-memory-clinics-qmin-mc/",
+        "https://portal.dementiasplatform.uk/data/imaging-matrix/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11701481/"
+      ]
+    },
+    {
+      "id": "UK_BIOBANK",
+      "name": "UK Biobank",
+      "priority": "defer_no_new_access_now",
+      "access_class": "new_applications_paused_as_of_lookup",
+      "raw_mri": "Brain structural, functional, diffusion MRI; T1/FLAIR and other sequences",
+      "population": "Population cohort, linked incident dementia outcomes; not dementia-enriched",
+      "size": ">100,000 imaging attendees reported, not 100,000 dementia cases",
+      "clinical_metadata": "Age, demographic/lifestyle, cognition, genetics, linked coded health records and algorithmic dementia outcomes",
+      "access": "Official page says new applications paused; intends to reopen late 2026. Eligible institutional research plus legal agreement and UKB-RAP access.",
+      "fit": "Conditional future risk/generalization dataset; health-record outcome timing must align with MRI.",
+      "sources": [
+        "https://www.ukbiobank.ac.uk/use-our-data/apply-for-access/",
+        "https://www.ukbiobank.ac.uk/about-us/how-we-work/access-to-uk-biobank-data/",
+        "https://www.ukbiobank.ac.uk/about-our-data/types-of-data/healthcare-records/",
+        "https://community.ukbiobank.ac.uk/hc/en-gb/articles/24618819821981-Imaging-Data",
+        "https://www.ukbiobank.ac.uk/taking-part/your-contribution/how-your-information-and-samples-have-been-used/"
+      ]
+    }
+  ],
+  "platforms": [
+    {
+      "name": "DPUK",
+      "status": "Controlled access platform, not an independent cohort",
+      "scope": ">3,000 imaging participants across 20 imaging cohorts stated by imaging page; public overall portal counts (105 datasets/3.5M people) are not MRI counts",
+      "access": "Application to each selected cohort; analysis stays in secure environment",
+      "sources": [
+        "https://portal.dementiasplatform.uk/data/imaging-collection/",
+        "https://portal.dementiasplatform.uk/faq/",
+        "https://portal.dementiasplatform.uk/analyse-data/analysis-environment/"
+      ]
+    }
+  ],
+  "excluded_or_not_counted": [
+    {
+      "name": "DementiaBank",
+      "reason": "Official catalog is language/audio/video; no usable raw structural MRI cohort verified.",
+      "source": "https://talkbank.org/dementia/access/"
+    },
+    {
+      "name": "OpenNeuro ds004767",
+      "reason": "55 ex-vivo medial temporal lobe specimens/atlas and histology; not comparable clinical whole-brain in-vivo training.",
+      "source": "https://openneuro.org/datasets/ds004767/versions/1.0.0/file-display/dataset_description.json"
+    },
+    {
+      "name": "OpenNeuro ds004504 / ds006036",
+      "reason": "EEG, not MRI; do not treat as structural MRI datasets."
+    },
+    {
+      "name": "NLM Mendeley tsy6rbc5d4",
+      "reason": "Catalog description matches OASIS-2 (150 subjects/373 sessions), so not a new independent cohort.",
+      "source": "https://datasetcatalog.nlm.nih.gov/dataset?q=0001427920"
+    },
+    {
+      "name": "AlzaSet",
+      "reason": "Primary PMC paper says Zenodo under embargo/reasonable request; no immediate public raw MRI confirmed.",
+      "sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12691013/",
+        "https://doi.org/10.5281/zenodo.15564968"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+Descriptive evaluation figures — separate from the frozen statistical protocol
+===========================================================================
+
+Run only after all six selected checkpoints have been evaluated and their frozen
+CSV outputs, metadata, and validation selection record have been retrieved.
+This script does not run models, optimize thresholds, recalibrate probabilities,
+choose models, retrain, or alter the frozen inferential protocol.
+
+Example from the repository root (replace retrieved result paths):
+
+python docs/kevin_paper_20261011/analysis/plot_evaluation_figures.py \
+  --evaluation-dir /path/to/retrieved/heldout_evaluation \
+  --prepared training_logs/experiments/kevin_20261011/prepared \
+  --original100-key /path/to/exact/original100_key.csv \
+  --validation-selection /path/to/retrieved/validation_selection_before_evaluation.json \
+  --old-hash-unexposed-manifest docs/kevin_paper_20261011/analysis/old_hash_group_unexposed_sensitivity.csv \
+  --baseline-exposure-audit docs/kevin_paper_20261011/analysis/old_hash_group_unexposed_sensitivity_audit.json \
+  --output /path/to/new/evaluation_figures
+
+Use the SAME original100 key used by the frozen statistical analysis, with
+FileName and TrueCategory columns. Output must be a new directory.
+
+Scope and fixed display rules
+-----------------------------
+For each cohort, render old baseline plus ALL six validation-frozen candidates:
+  1. Original100, explicitly labeled as a historically reused image benchmark.
+  2. The unchanged full 1058-image primary same-case intersection.
+  3. The pinned 756-image sensitivity subset, derived only by selecting rows
+     from the full primary prediction CSVs; no new inference or model selection.
+
+Each cohort gets a seven-model confusion matrix figure, a four-panel classwise
+one-versus-rest ROC figure, and a four-panel precision-recall figure. Models stay
+in baseline, stage-only seeds, multitask seeds order. No best-test model appears
+alone and no performance ordering hides unfavorable candidates. Candidate names
+and identities come from the validation-frozen metadata.
+
+Each figure is written as a 300-dpi PNG and vector PDF. Confusion cells display
+integer counts; color is normalized within each reference-class row, on a common
+0 to 1 scale. The reference/prediction axes preserve the published class order:
+MildDemented, ModerateDemented, NonDemented, VeryMildDemented.
+
+Reader confusion matrices use original100 only and require all reader identities
+and all 100 known labels. No reader ROC/PR curves are fabricated from categorical
+answers. Clinical AD/CN results are not plotted by this script: they remain
+separate by source cohort/split in the frozen statistical report, including the
+one-AD external pilot and the prediction-only MCI cases.
+
+Probability summaries
+---------------------
+Classwise ROC area is ordinary ROC AUC. Precision-recall scalar summaries are
+noninterpolated average precision (AP), not trapezoidal PR area. Curves retain
+the frozen scores and do not choose a threshold. Missing positive or negative
+target classes make that classwise summary undefined, with explicit labeling.
+These summaries have no added confidence intervals or significance tests.
+
+The additional calibration CSV and JSON are labeled exploratory and descriptive:
+
+  Multiclass Brier sum = mean over images of sum over four classes of
+  (probability - one-hot reference)^2. Range 0 to 2; do not divide by four.
+
+  Top-label ECE = sum over 10 fixed equal-width confidence bins of
+  (bin count / image count) * abs(bin accuracy - bin mean maximum probability).
+  Bins are [0,.1), [.1,.2), ..., [.9,1]; only the last includes its upper edge.
+  Empty bins contribute zero. Argmax ties follow the published class order.
+
+No probabilities are fitted, recalibrated or renormalized. ECE depends on bins
+and sample size and can hide classwise errors; Brier also reflects discrimination.
+Neither is evidence of clinical calibration or a model-selection criterion.
+These tables do not amend the frozen statistical protocol or its intervals.
+
+Guards and provenance
+---------------------
+Before rendering, verify exact candidate/checkpoint identities, all six planned
+mode/seed pairs, frozen helper-code/protocol hashes, prepared-manifest hashes,
+unchanged primary membership, pinned sensitivity membership, exact case sets,
+reference labels, finite normalized probabilities, argmax agreement, reader
+identity/completeness, and aligned model-versus-reader-table consistency.
+
+The known production baseline SHA256 is the default expected hash. Any explicit
+override must be documented; it does not make a different model the old baseline.
+All used input files and generated figures have SHA256s in the output provenance.
+The script uses existing read/identity validation helpers from the frozen
+summarize_frozen_evaluation.py without invoking its bootstrap analysis or edits.
+
+The --synthetic-qa option prominently marks figures as SYNTHETIC QA and permits
+small artificial primary/sensitivity cohorts. Never pass it for paper figures.
+Synthetic examples are implementation checks, never research results.
+
+Dependencies: NumPy, SciPy (for the imported validation helper module),
+scikit-learn, and Matplotlib. No torch or image/model inputs are needed.

@@ -1,0 +1,36 @@
+After retrieving all six completed run directories and the validation-frozen
+selection JSON, run the standalone figure builder from the repository root:
+
+python docs/kevin_paper_20261011/analysis/plot_training_curves.py \
+  --run-root /path/to/retrieved/kevin_results \
+  --validation-selection /path/to/retrieved/kevin_results/validation_selection_before_evaluation.json \
+  --output /path/to/new/publication_curves
+
+The run root must contain stage_only_seed20261011, stage_only_seed20261012,
+stage_only_seed20261013, multitask_seed20261011, multitask_seed20261012,
+and multitask_seed20261013. Each needs config.json, full history.json, and best.pt.
+Only the checkpoint checksum is read; no checkpoint contents are deserialized.
+No held-out outcomes or image data are required or read.
+
+Outputs:
+  stage_loss_all_six_runs.png and .pdf
+  clinical_loss_all_three_multitask_seeds.png and .pdf
+  curve_provenance.json (source/figure checksums, epoch counts, loss definitions)
+
+All recorded epochs remain visible without smoothing. The frozen selected epoch
+is marked on each panel. This does not recalculate checkpoint or mode selection.
+Stage-only runs do not get an empty clinical panel. Both clinical curves are
+labeled with their different aggregation units: training slices versus validation
+subjects. Their gap cannot directly measure a same-unit generalization gap.
+
+Stage training curves show the raw logged, unweighted cross-entropy, not the
+label-smoothed weighted training objective or combined multitask objective.
+PNG exports use 300 dpi. PDFs retain vector lines/text. A new output directory
+is required to preserve existing figures and source histories.
+
+Dependencies: standard Python library plus Matplotlib. No torch import is needed.
+For restricted local environments, optionally set MPLCONFIGDIR and XDG_CACHE_HOME
+to writable temporary paths before execution.
+
+The --synthetic-qa flag adds a prominent SYNTHETIC QA title and provenance status.
+It is exclusively for testing with artificial histories, never research figures.

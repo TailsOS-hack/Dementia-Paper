@@ -1,0 +1,13 @@
+torch
+torchvision
+numpy
+scipy
+scikit-learn
+pandas
+Pillow
+matplotlib
+nibabel
+openpyxl
+pypdf
+python-docx
+pytest

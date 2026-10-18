@@ -1,0 +1,9 @@
+DEMENTIA PAPER FIGURES — 9 October 2026
+
+This single archive replaces the earlier two attachments. It contains dementia figures and supporting dementia data only. FIGURE_INDEX.csv lists every figure. Exact duplicates are stored once.
+
+The source folder preserves original paths: historical training and validation figures, ROC/precision-recall, calibration, confidence, dementia Grad-CAM cases and maps, randomization control maps, and the October dementia comparison figures. The dementia_figures folder adds primary/sensitivity dementia-only training panels and all 100 saved October Grad-CAM cases as input/native-map/overlay panels. Maps were rendered from saved arrays, not recomputed or adjusted to look anatomically plausible. The native 7x7 view uses nearest-neighbor enlargement; overlays use bilinear enlargement at alpha 0.45.
+
+Interpretation: historical runs and October evaluation are distinct. The October 100/100 dementia result is a reused internal benchmark: 66 training, 9 validation, and 25 test cases under the strict manifest. It is not independent clinical validation or evidence of superiority over radiologists. The dementia dataset was augmented upstream and patient/original-family identifiers are unavailable. Grad-CAM is exploratory attribution, not validated anatomical localization. Historical file-hash deduplication does not demonstrate patient-level independence.
+
+The older alz_ figures are historical and do not report the current October checkpoint. Source paths and checksums are recorded in FILE_MANIFEST.csv. No new model training or inference was performed for this archive.

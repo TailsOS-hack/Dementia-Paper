@@ -1,0 +1,69 @@
+Kevin experiment results report generator
+
+Run only after verified local retrieval, completed one-pass evaluation, and the
+frozen uncertainty analysis. The generator uses Python's standard library. It
+does not load tensors, run inference, recalculate uncertainty, choose a model,
+change frozen scripts, or contact Runpod.
+
+Example (replace the local results-root directory if retrieval used another path):
+
+python docs/kevin_paper_20261011/analysis/build_results_report.py \
+  --results-root training_logs/experiments/kevin_20261011/runpod_blackwell_20261011 \
+  --evaluation-dir training_logs/experiments/kevin_20261011/runpod_blackwell_20261011/frozen_evaluation_all6 \
+  --uncertainty-json training_logs/experiments/kevin_20261011/runpod_blackwell_20261011/frozen_uncertainty_analysis_all6/uncertainty_analysis.json \
+  --validation-selection training_logs/experiments/kevin_20261011/runpod_blackwell_20261011/validation_selection_before_evaluation.json \
+  --output docs/kevin_paper_20261011/Kevin_Experiment_Results.md
+
+Optional: --cleanup-json PATH
+Supply a concise actual cleanup-evidence JSON record (Pod and volume IDs,
+retrieval/archive digest verification, explicit deletion/absence checks and
+timestamps). Its content is reproduced verbatim, so omit credentials/account
+secrets and unrelated metadata. A stopped Pod is not a deleted Pod; absent
+metadata produces an explicit statement that cleanup is unverified here.
+
+Optional: --figures-dir PATH
+Link existing companion PNG/SVG/PDF evaluation figures if another renderer has
+created them. Figures are not required and are not generated or interpreted by
+this program. The manuscript Methods draft methods_protocol_snapshot.md is linked
+when present beside the generator, with its exact SHA256.
+
+Required layout under results-root:
+  suite_status.json
+  stage_only_seed20261011/{best.pt,config.json,history.json,history.csv,loss_curves.png,accuracy_curves.png}
+  multitask_seed20261011/{same artifacts}
+  stage_only_seed20261012/{same artifacts}
+  multitask_seed20261012/{same artifacts}
+  stage_only_seed20261013/{same artifacts}
+  multitask_seed20261013/{same artifacts}
+
+The generator checks all six run identities and local best.pt hashes against the
+analyzed evaluation and pre-evaluation selection record. It checks epoch history,
+selected-epoch validation loss, complete primary/secondary/original100 model sets,
+and evaluated CSV digests against the uncertainty analysis input manifest.
+Absolute paths recorded before retrieval may be relocated only where a source
+basename is unique in the analysis manifest. The selection JSON itself must be
+unchanged; do not edit historical paths within it merely for relocation.
+
+The report includes all six runs, raw curve/history links, condition means/SDs,
+per-class recalls, primary and secondary paired contrasts, all100 case labels,
+model-reader comparisons and missingness, separate clinical cohorts with exact
+denominators and intervals, MCI descriptive probabilities, and interpretation
+limits. The original100 table retains exact labels; every model's probability
+CSV is linked. Undefined metrics and suppressed/degenerate intervals are labeled.
+No missing metric is replaced with invented numbers, and no automatic superiority
+claim is generated. Standard deviations across three seeds are not confidence
+intervals. Report output uses exclusive creation to preserve earlier evidence.
+
+The archive/checksum retrieval verification and visual inspection of all raw
+curves remain required outside this text renderer. The renderer checks curve
+files exist, but does not inspect image contents or verify clinical validity.
+The supplied uncertainty JSON is trusted as a generated analysis artifact after
+the stated cross-checks; cryptographic signatures are not provided.
+
+Synthetic verification only:
+python docs/kevin_paper_20261011/analysis/test_synthetic_results_report.py
+
+Tests construct inert synthetic checkpoint bytes, synthetic histories and the
+existing synthetic statistics fixture in a temporary directory. They never open
+the project's model weights, images or real held-out outcomes. The test runtime
+also needs NumPy/SciPy for the existing synthetic uncertainty fixture.

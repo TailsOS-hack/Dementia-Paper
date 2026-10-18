@@ -1,0 +1,153 @@
+Kevin paper: frozen evaluation uncertainty analysis
+Specified 2026-10-11 before any held-out model inference.
+
+This analysis is separate from the frozen trainer and transfer archive. It never
+loads image pixels or runs a model. The selection helper loads trusted checkpoint
+metadata with PyTorch. The statistics program reads completed evaluator CSVs.
+
+DEPENDENCIES
+Use the same environment as training/evaluation: numpy, scipy, torch (helper only).
+No model architecture or image-processing dependency is needed by the statistics
+program. Output records include the exact NumPy/SciPy versions and script SHA256.
+
+ORDER OF OPERATIONS
+1. Finish all six prespecified runs: stage_only and multitask, each at seeds
+   20261011, 20261012, and 20261013. Use each run's best.pt selected by validation.
+2. Run freeze_validation_selection.py BEFORE the held-out evaluator. Keep the
+   candidate order identical in the helper and evaluator. The helper refuses to
+   run when the nominated evaluation directory contains files; its record is
+   exclusive-create and cannot overwrite a prior selection.
+3. Run evaluate_candidates.py once with all six frozen checkpoints.
+4. Run summarize_frozen_evaluation.py on the completed evaluator outputs.
+
+Example on the Runpod host (adjust project root if needed):
+
+python docs/kevin_paper_20261011/analysis/freeze_validation_selection.py \
+  --candidate /workspace/kevin_results/stage_only_seed20261011/best.pt \
+  --candidate /workspace/kevin_results/multitask_seed20261011/best.pt \
+  --candidate /workspace/kevin_results/stage_only_seed20261012/best.pt \
+  --candidate /workspace/kevin_results/multitask_seed20261012/best.pt \
+  --candidate /workspace/kevin_results/stage_only_seed20261013/best.pt \
+  --candidate /workspace/kevin_results/multitask_seed20261013/best.pt \
+  --old-hash-unexposed-manifest docs/kevin_paper_20261011/analysis/old_hash_group_unexposed_sensitivity.csv \
+  --baseline-exposure-audit docs/kevin_paper_20261011/analysis/old_hash_group_unexposed_sensitivity_audit.json \
+  --evaluation-output /workspace/kevin_results/frozen_evaluation_all6 \
+  --output /workspace/kevin_results/validation_selection_before_evaluation.json
+
+Run the evaluator using those exact six --candidate arguments in that order.
+
+python docs/kevin_paper_20261011/analysis/summarize_frozen_evaluation.py \
+  --evaluation-dir /workspace/kevin_results/frozen_evaluation_all6 \
+  --prepared training_logs/experiments/kevin_20261011/prepared \
+  --original100-key data/evaluation/ground_truth/radiologist_test_key.csv \
+  --clinical-manifest data/external/clinical_t1_preprocessed_v1/clinical_slices.csv \
+  --validation-selection /workspace/kevin_results/validation_selection_before_evaluation.json \
+  --old-hash-unexposed-manifest docs/kevin_paper_20261011/analysis/old_hash_group_unexposed_sensitivity.csv \
+  --baseline-exposure-audit docs/kevin_paper_20261011/analysis/old_hash_group_unexposed_sensitivity_audit.json \
+  --output /workspace/kevin_results/frozen_uncertainty_analysis_all6
+
+The statistics program requires complete reader labels by default. If some are
+actually missing, --allow-incomplete-readers explicitly enables paired complete
+cases per reader, records every excluded case, and makes the fixed-panel summary
+use the intersection of complete cases across all readers. Unknown labels outside
+the evaluator's Missing/Unknown/empty vocabulary are always rejected.
+
+PRIMARY CONDITION REPORTING AND EXPLORATORY PREFERENCE
+Both conditions and all six runs remain in the report. Primary condition summaries
+give the arithmetic mean, sample SD, range and per-seed values. Three-seed SD is
+training-run spread, not a confidence interval. The helper prefers the condition
+with lowest mean four-stage validation NLL across its three seeds, then its lowest
+validation-NLL seed as an exploratory representative. Ties use mode name, then
+seed. Clinical validation loss does not influence this preference. No test result
+can be used to choose a checkpoint, seed, architecture, threshold or condition.
+
+The analysis guards the six condition/seed identities, checkpoint SHA256s, frozen
+stage/clinical manifest digests, and the exact analysis code/protocol recorded in
+the pre-evaluation selection file. A later code change causes a refusal; document
+any necessary correction as an amendment rather than silently replacing the
+pre-evaluation record. The helper checks only the nominated evaluation directory;
+its record is not proof that nobody inspected held-out results elsewhere.
+
+INTERVAL METHODS
+There are exactly 2,000 deterministic paired bootstrap replicates per comparison
+context, with base seed 1729 and SHA256-derived context seeds. All candidate and
+reference predictions share sampled indices. Two-sided 95% percentile intervals
+are exploratory and unadjusted for multiple comparisons. They condition on these
+fixed trained checkpoints and do not incorporate training randomness.
+
+The old/new legacy comparison uses the full prepared intersection of new test and
+old strict test rows. It samples whole exact-pixel/dHash connected groups uniformly
+with replacement and computes image-weighted metrics. Hash groups are not patient
+IDs and cannot certify patient independence. This primary is held out at the exact
+row level only: the pre-evaluation audit found 291/1058 rows in groups with an old
+training mate and 302/1058 with an old training or validation mate (233/966 groups).
+These relationships are within the retained prepared manifest; omitted source
+images and unrecognized related images remain unresolved. Matched-seed multitask-minus-stage-
+only contrasts are also reported; all six candidate-minus-old contrasts are kept.
+
+A prespecified SECONDARY sensitivity analysis retains 756 rows in 733 hash groups
+after removing those 302 primary rows. It never replaces the unchanged 1058-row
+primary and never runs additional model inference: the script subsets the already
+aligned primary prediction CSVs. Its paired hash-group intervals and condition/seed
+summaries use the same fixed protocol. Class counts become Mild199, Moderate189,
+Non180, VeryMild188. Hash grouping is conservative and may collide across people;
+the selected subset changes composition/difficulty and is not patient validation.
+
+Both sensitivity flags are optional for general use but are required for this
+project's complete prespecified analysis. Supply them to the freeze helper and the
+statistics program. Their file SHA256s are pinned before held-out inference; a
+pinned pair cannot be silently omitted, changed or added after the freeze. The
+statistics program recomputes exact subset membership from all prepared groups,
+checks every subset row/label/group and all audit source digests/counts, and refuses
+missing/extra/tampered rows. The audit's original full strict-manifest source hash
+is retained as provenance; the statistics program independently recomputes group
+exposure from the already audited prepared baseline_strict_split fields.
+
+Original100 uses paired image resampling because supported patient/family clusters
+do not exist. It remains a historically reused image-level descriptive benchmark:
+the old model had 66 training, 9 validation and 25 test image matches. Its marginal
+accuracy also has a Clopper-Pearson sensitivity interval, explicitly conditional on
+unproven image independence. Neither method makes this clinical validation.
+
+Fixed vocabulary macro F1 uses zero for undefined class F1. Balanced accuracy is
+undefined when a target class is absent; invalid bootstrap replicates for that
+metric are counted and its interval is suppressed if fewer than 95% are valid.
+Degenerate bootstrap intervals are flagged and do not prove certainty/equivalence.
+No p-values, significance stars or automatic superiority conclusions are emitted.
+
+Clinical AD/CN is a separate endpoint, reported for each source cohort AND split.
+The evaluator has already averaged slice probabilities within each source subject.
+Argmax uses CN first, so an exact binary probability tie predicts CN. MCI predictions
+are listed separately and never counted as either AD or CN. Accuracy, AD sensitivity
+and CN specificity use exact two-sided Clopper-Pearson binomial intervals with their
+explicit denominators. One AD case yields sensitivity 0/1 or 1/1 with a very wide
+interval; it cannot establish stable external sensitivity. Clinical macro F1 and
+balanced accuracy are descriptive point estimates with across-seed summaries.
+
+Reader comparisons preserve the same paired images for each model/reader contrast.
+The panel mean is the mean of fixed-reader metrics on common complete cases. The
+program does not pool reader-case observations into fictitious independent trials
+or generalize to a population of neuroradiologists.
+
+OUTPUTS
+uncertainty_analysis.json: full protocol, all metrics, paired contrasts, seed-spread
+  summaries, reader summaries, clinical cohorts, input/code digests and limitations.
+stage_metrics.csv: every model's accuracy, macro F1 and balanced accuracy with
+  conditional bootstrap intervals and degenerate/valid-replicate indicators.
+paired_differences.csv: six candidate-minus-old and three matched-seed multitask-
+  minus-stage-only comparisons, all metrics, both image benchmark cohorts and the
+  separately labeled prespecified hash-unexposed sensitivity subset.
+reader_paired_differences.csv: every model-minus-reader contrast on original100.
+clinical_exact_intervals.csv: clinical accuracy/sensitivity/specificity with exact
+  intervals and their correct subject/class denominators.
+interpretation_limits.txt: required interpretation cautions for manuscript use.
+
+SYNTHETIC VERIFICATION
+python docs/kevin_paper_20261011/analysis/test_synthetic_analysis.py
+Only generated CSVs/checkpoint dictionaries in temporary directories are used.
+No project model, image, held-out truth or real prediction is opened by the tests.
+
+METHOD REFERENCES
+https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html
+https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binomtest.html
+https://docs.scipy.org/doc/scipy-1.16.1/reference/generated/scipy.stats._result_classes.BinomTestResult.proportion_ci.html
