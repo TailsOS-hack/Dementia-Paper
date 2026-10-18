@@ -1,5 +1,6 @@
 {
   "analysis_location": "local_mac",
+  "cloud_resources_started": false,
   "data_gate": {
     "blockers": [
       "calibration_missing_AD_or_CN",
@@ -24,12 +25,11 @@
     "manifest_hash": "e1c8781efd6a391cdefc7f829d265bb2e3c97bc8435fb9d3543374ae4fd86ef9",
     "power_plan_hash": "cf818e17fad8ad000e695c3078a5a3bbb360163876b144a94f555002eec15da4",
     "primary_patients": 0,
-    "protocol_hash": "e1fea61674f32480e65f9b0ae76889b6f0d280ab4b617bf974474f4e30ad6aae",
+    "protocol_hash": "44ec95281185683ddbe605477b2221a69cc62cf6fc8d60cf0dc819d9c0c19960",
     "status": "blocked",
     "training_authorized": false,
     "warnings": []
   },
-  "paid_resources_started": false,
   "preprocessing": {
     "errors": [
       "N4BiasFieldCorrection: Missing or changed pinned dependency: ",

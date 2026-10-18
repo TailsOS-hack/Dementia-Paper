@@ -146,7 +146,8 @@
   "assessment_label": "Retrospective reused-benchmark development, not fresh independent test validation.",
   "attribution_used_for_selection": false,
   "rep_seed_selection": "No test-based or CAM-based seed selection. Report all3; optional representative is smallest eligible selected validation score, tie seed order.",
-  "budget_authority": "User superseded $10 total cap; machine <=$10/hour; epochs stop by validation plateau or100max.12h suite timeout is operational failsafe only. Root monitors billing/retrieval/cleanup.",
+  "execution_notes": "Epochs stop by validation plateau or 100 maximum. The 12-hour suite timeout is an operational failsafe only. The root controller handles verified retrieval and resource cleanup.",
+  "publication_note": "Execution description revised for this public copy; source_hashes retain the archived run identities. Regenerate with prepare before a new training run.",
   "resume_policy": "No automatic restart or resume; preserve diagnostics and completed checkpoints on failure. Any restart requires explicit reviewed continuation, not new hyperparameter search.",
   "interpretation": "Research-only 2D legacy-stage experiment. Does not establish real-world clinical readiness, patient independence, MRI domain robustness or improvement."
 }

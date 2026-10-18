@@ -1,0 +1,616 @@
+{
+  "schema_version": 1,
+  "status": "verified_from_archived_prediction_csvs",
+  "cohort": "full_new_test",
+  "analysis_role": "post_hoc_descriptive_overlapping_test_split",
+  "n_images": 5450,
+  "n_prepared_similarity_groups": 4273,
+  "class_order": [
+    "MildDemented",
+    "ModerateDemented",
+    "NonDemented",
+    "VeryMildDemented"
+  ],
+  "class_counts": {
+    "MildDemented": 1342,
+    "ModerateDemented": 1538,
+    "NonDemented": 1324,
+    "VeryMildDemented": 1246
+  },
+  "split_image_counts": {
+    "train": 19023,
+    "val": 2705,
+    "test": 5450
+  },
+  "source_image_count": 44000,
+  "excluded_image_count": 16822,
+  "exclusion_counts": {
+    "mixed_label_hash_group": 14959,
+    "original100_pixel_or_dhash_connected_group": 1863
+  },
+  "candidate_hash_groups_disjoint_across_splits": true,
+  "historical_baseline_split_counts_within_full_cohort": {
+    "train": 3860,
+    "val": 532,
+    "test": 1058
+  },
+  "primary_matched_comparison_n": 1058,
+  "sensitivity_n": 756,
+  "cohort_nesting_verified": "sensitivity756_subset_primary1058_subset_full5450",
+  "validation_preferred_condition": "stage_only",
+  "validation_exploratory_representative": "candidate_3",
+  "models": [
+    {
+      "model": "candidate_1",
+      "condition": "stage_only",
+      "seed": 20261011,
+      "selected_epoch": 23,
+      "checkpoint_sha256": "a3a811c02a43d5f0ba4b126955a50b2a9d5e98e1a3f333aaba7b201e6dc2d771",
+      "prediction_file": "docs/kevin_paper_20261011/publication/figures/clean_replay/candidate_1_full_new_test_predictions.csv",
+      "n": 5450,
+      "correct": 5438,
+      "errors": 12,
+      "accuracy": 0.9977981651376147,
+      "balanced_accuracy": 0.9976775700928162,
+      "macro_f1": 0.9976913897759937,
+      "negative_log_likelihood": 0.038531262519645275,
+      "confusion_matrix": [
+        [
+          1341,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1538,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1318,
+          5
+        ],
+        [
+          1,
+          1,
+          3,
+          1241
+        ]
+      ],
+      "per_class": [
+        {
+          "class": "MildDemented",
+          "support": 1342,
+          "true_positive": 1341,
+          "false_positive": 2,
+          "false_negative": 1,
+          "true_negative": 4106,
+          "precision": 0.9985107967237528,
+          "recall": 0.9992548435171386,
+          "specificity": 0.9995131450827653,
+          "f1": 0.9988826815642458
+        },
+        {
+          "class": "ModerateDemented",
+          "support": 1538,
+          "true_positive": 1538,
+          "false_positive": 1,
+          "false_negative": 0,
+          "true_negative": 3911,
+          "precision": 0.9993502274204028,
+          "recall": 1.0,
+          "specificity": 0.9997443762781186,
+          "f1": 0.9996750081247969
+        },
+        {
+          "class": "NonDemented",
+          "support": 1324,
+          "true_positive": 1318,
+          "false_positive": 4,
+          "false_negative": 6,
+          "true_negative": 4122,
+          "precision": 0.9969742813918305,
+          "recall": 0.9954682779456193,
+          "specificity": 0.9990305380513815,
+          "f1": 0.9962207105064248
+        },
+        {
+          "class": "VeryMildDemented",
+          "support": 1246,
+          "true_positive": 1241,
+          "false_positive": 5,
+          "false_negative": 5,
+          "true_negative": 4199,
+          "precision": 0.9959871589085072,
+          "recall": 0.9959871589085072,
+          "specificity": 0.9988106565176023,
+          "f1": 0.9959871589085072
+        }
+      ]
+    },
+    {
+      "model": "candidate_2",
+      "condition": "multitask",
+      "seed": 20261011,
+      "selected_epoch": 28,
+      "checkpoint_sha256": "dded15b8c2201e8f3d71fab1f0af547363a539f78b79db49f389337eef2654d9",
+      "prediction_file": "docs/kevin_paper_20261011/publication/figures/clean_replay/candidate_2_full_new_test_predictions.csv",
+      "n": 5450,
+      "correct": 5413,
+      "errors": 37,
+      "accuracy": 0.9932110091743119,
+      "balanced_accuracy": 0.9927062673061349,
+      "macro_f1": 0.9928844631988775,
+      "negative_log_likelihood": 0.060856617797515986,
+      "confusion_matrix": [
+        [
+          1342,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1538,
+          0,
+          0
+        ],
+        [
+          8,
+          0,
+          1313,
+          3
+        ],
+        [
+          19,
+          1,
+          6,
+          1220
+        ]
+      ],
+      "per_class": [
+        {
+          "class": "MildDemented",
+          "support": 1342,
+          "true_positive": 1342,
+          "false_positive": 27,
+          "false_negative": 0,
+          "true_negative": 4081,
+          "precision": 0.9802775748721695,
+          "recall": 1.0,
+          "specificity": 0.9934274586173321,
+          "f1": 0.9900405754334194
+        },
+        {
+          "class": "ModerateDemented",
+          "support": 1538,
+          "true_positive": 1538,
+          "false_positive": 1,
+          "false_negative": 0,
+          "true_negative": 3911,
+          "precision": 0.9993502274204028,
+          "recall": 1.0,
+          "specificity": 0.9997443762781186,
+          "f1": 0.9996750081247969
+        },
+        {
+          "class": "NonDemented",
+          "support": 1324,
+          "true_positive": 1313,
+          "false_positive": 6,
+          "false_negative": 11,
+          "true_negative": 4120,
+          "precision": 0.9954510993176648,
+          "recall": 0.9916918429003021,
+          "specificity": 0.9985458070770722,
+          "f1": 0.9935679152478244
+        },
+        {
+          "class": "VeryMildDemented",
+          "support": 1246,
+          "true_positive": 1220,
+          "false_positive": 3,
+          "false_negative": 26,
+          "true_negative": 4201,
+          "precision": 0.9975470155355682,
+          "recall": 0.9791332263242376,
+          "specificity": 0.9992863939105614,
+          "f1": 0.9882543539894694
+        }
+      ]
+    },
+    {
+      "model": "candidate_3",
+      "condition": "stage_only",
+      "seed": 20261012,
+      "selected_epoch": 37,
+      "checkpoint_sha256": "642c39da1adecd7925cb4057718772af2603ef6077df676c4c4abd1907c3356e",
+      "prediction_file": "docs/kevin_paper_20261011/publication/figures/clean_replay/candidate_3_full_new_test_predictions.csv",
+      "n": 5450,
+      "correct": 5443,
+      "errors": 7,
+      "accuracy": 0.9987155963302752,
+      "balanced_accuracy": 0.9986596723926224,
+      "macro_f1": 0.9986525929814092,
+      "negative_log_likelihood": 0.037551880617851925,
+      "confusion_matrix": [
+        [
+          1340,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1538,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1321,
+          2
+        ],
+        [
+          0,
+          0,
+          2,
+          1244
+        ]
+      ],
+      "per_class": [
+        {
+          "class": "MildDemented",
+          "support": 1342,
+          "true_positive": 1340,
+          "false_positive": 1,
+          "false_negative": 2,
+          "true_negative": 4107,
+          "precision": 0.9992542878448919,
+          "recall": 0.9985096870342772,
+          "specificity": 0.9997565725413826,
+          "f1": 0.9988818486768543
+        },
+        {
+          "class": "ModerateDemented",
+          "support": 1538,
+          "true_positive": 1538,
+          "false_positive": 0,
+          "false_negative": 0,
+          "true_negative": 3912,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": 1.0,
+          "f1": 1.0
+        },
+        {
+          "class": "NonDemented",
+          "support": 1324,
+          "true_positive": 1321,
+          "false_positive": 3,
+          "false_negative": 3,
+          "true_negative": 4123,
+          "precision": 0.9977341389728097,
+          "recall": 0.9977341389728097,
+          "specificity": 0.9992729035385362,
+          "f1": 0.9977341389728097
+        },
+        {
+          "class": "VeryMildDemented",
+          "support": 1246,
+          "true_positive": 1244,
+          "false_positive": 3,
+          "false_negative": 2,
+          "true_negative": 4201,
+          "precision": 0.9975942261427426,
+          "recall": 0.9983948635634029,
+          "specificity": 0.9992863939105614,
+          "f1": 0.9979943842759728
+        }
+      ]
+    },
+    {
+      "model": "candidate_4",
+      "condition": "multitask",
+      "seed": 20261012,
+      "selected_epoch": 59,
+      "checkpoint_sha256": "9435ae63d0ccb38b9474d2aee85f063bcb48f207d88c6f83d6fc495f8b52beac",
+      "prediction_file": "docs/kevin_paper_20261011/publication/figures/clean_replay/candidate_4_full_new_test_predictions.csv",
+      "n": 5450,
+      "correct": 5435,
+      "errors": 15,
+      "accuracy": 0.9972477064220183,
+      "balanced_accuracy": 0.9971203925067769,
+      "macro_f1": 0.9970882303126266,
+      "negative_log_likelihood": 0.049488694721155156,
+      "confusion_matrix": [
+        [
+          1342,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1538,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1313,
+          10
+        ],
+        [
+          2,
+          0,
+          2,
+          1242
+        ]
+      ],
+      "per_class": [
+        {
+          "class": "MildDemented",
+          "support": 1342,
+          "true_positive": 1342,
+          "false_positive": 3,
+          "false_negative": 0,
+          "true_negative": 4105,
+          "precision": 0.9977695167286246,
+          "recall": 1.0,
+          "specificity": 0.999269717624148,
+          "f1": 0.9988835132117603
+        },
+        {
+          "class": "ModerateDemented",
+          "support": 1538,
+          "true_positive": 1538,
+          "false_positive": 0,
+          "false_negative": 0,
+          "true_negative": 3912,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": 1.0,
+          "f1": 1.0
+        },
+        {
+          "class": "NonDemented",
+          "support": 1324,
+          "true_positive": 1313,
+          "false_positive": 2,
+          "false_negative": 11,
+          "true_negative": 4124,
+          "precision": 0.9984790874524715,
+          "recall": 0.9916918429003021,
+          "specificity": 0.9995152690256908,
+          "f1": 0.9950738916256158
+        },
+        {
+          "class": "VeryMildDemented",
+          "support": 1246,
+          "true_positive": 1242,
+          "false_positive": 10,
+          "false_negative": 4,
+          "true_negative": 4194,
+          "precision": 0.9920127795527156,
+          "recall": 0.9967897271268058,
+          "specificity": 0.9976213130352045,
+          "f1": 0.9943955164131305
+        }
+      ]
+    },
+    {
+      "model": "candidate_5",
+      "condition": "stage_only",
+      "seed": 20261013,
+      "selected_epoch": 39,
+      "checkpoint_sha256": "b0cfa50d30cc6880a52ea0e3aaf7249de3b52ba91163bb1e6472a3d59d12d06b",
+      "prediction_file": "docs/kevin_paper_20261011/publication/figures/clean_replay/candidate_5_full_new_test_predictions.csv",
+      "n": 5450,
+      "correct": 5444,
+      "errors": 6,
+      "accuracy": 0.9988990825688073,
+      "balanced_accuracy": 0.9988366738425796,
+      "macro_f1": 0.9988438223960909,
+      "negative_log_likelihood": 0.03888106325823993,
+      "confusion_matrix": [
+        [
+          1340,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1538,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1323,
+          1
+        ],
+        [
+          3,
+          0,
+          0,
+          1243
+        ]
+      ],
+      "per_class": [
+        {
+          "class": "MildDemented",
+          "support": 1342,
+          "true_positive": 1340,
+          "false_positive": 3,
+          "false_negative": 2,
+          "true_negative": 4105,
+          "precision": 0.9977661950856291,
+          "recall": 0.9985096870342772,
+          "specificity": 0.999269717624148,
+          "f1": 0.9981378026070763
+        },
+        {
+          "class": "ModerateDemented",
+          "support": 1538,
+          "true_positive": 1538,
+          "false_positive": 0,
+          "false_negative": 0,
+          "true_negative": 3912,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": 1.0,
+          "f1": 1.0
+        },
+        {
+          "class": "NonDemented",
+          "support": 1324,
+          "true_positive": 1323,
+          "false_positive": 1,
+          "false_negative": 1,
+          "true_negative": 4125,
+          "precision": 0.9992447129909365,
+          "recall": 0.9992447129909365,
+          "specificity": 0.9997576345128454,
+          "f1": 0.9992447129909365
+        },
+        {
+          "class": "VeryMildDemented",
+          "support": 1246,
+          "true_positive": 1243,
+          "false_positive": 2,
+          "false_negative": 3,
+          "true_negative": 4202,
+          "precision": 0.9983935742971888,
+          "recall": 0.9975922953451043,
+          "specificity": 0.9995242626070409,
+          "f1": 0.9979927739863509
+        }
+      ]
+    },
+    {
+      "model": "candidate_6",
+      "condition": "multitask",
+      "seed": 20261013,
+      "selected_epoch": 29,
+      "checkpoint_sha256": "87d25d2e878caeb4aef33b99c210ebfdf303fc20058974b1a3c390d3aa5a39fe",
+      "prediction_file": "docs/kevin_paper_20261011/publication/figures/clean_replay/candidate_6_full_new_test_predictions.csv",
+      "n": 5450,
+      "correct": 5428,
+      "errors": 22,
+      "accuracy": 0.9959633027522936,
+      "balanced_accuracy": 0.9957682445970907,
+      "macro_f1": 0.9957553054484506,
+      "negative_log_likelihood": 0.05446629494842384,
+      "confusion_matrix": [
+        [
+          1340,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          1538,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1311,
+          10
+        ],
+        [
+          4,
+          0,
+          3,
+          1239
+        ]
+      ],
+      "per_class": [
+        {
+          "class": "MildDemented",
+          "support": 1342,
+          "true_positive": 1340,
+          "false_positive": 7,
+          "false_negative": 2,
+          "true_negative": 4101,
+          "precision": 0.9948032665181886,
+          "recall": 0.9985096870342772,
+          "specificity": 0.9982960077896786,
+          "f1": 0.9966530308664932
+        },
+        {
+          "class": "ModerateDemented",
+          "support": 1538,
+          "true_positive": 1538,
+          "false_positive": 0,
+          "false_negative": 0,
+          "true_negative": 3912,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": 1.0,
+          "f1": 1.0
+        },
+        {
+          "class": "NonDemented",
+          "support": 1324,
+          "true_positive": 1311,
+          "false_positive": 5,
+          "false_negative": 13,
+          "true_negative": 4121,
+          "precision": 0.9962006079027356,
+          "recall": 0.9901812688821753,
+          "specificity": 0.9987881725642268,
+          "f1": 0.9931818181818182
+        },
+        {
+          "class": "VeryMildDemented",
+          "support": 1246,
+          "true_positive": 1239,
+          "false_positive": 10,
+          "false_negative": 7,
+          "true_negative": 4194,
+          "precision": 0.9919935948759008,
+          "recall": 0.9943820224719101,
+          "specificity": 0.9976213130352045,
+          "f1": 0.9931863727454909
+        }
+      ]
+    }
+  ],
+  "source_sha256": {
+    "docs/kevin_paper_20261011/publication/prepared/stage_manifest.csv": "66a0cd9409d61edd32ee137154f769c749664f255ddebe461cf7683c1f4ba7b9",
+    "docs/kevin_paper_20261011/publication/results/validation_selection.json": "faf700755b7877dc8331d314206dc37547bf08249dfa8c5f7fd81f40a4f8f170",
+    "docs/kevin_paper_20261011/publication/figures/clean_replay/replay_metadata.json": "6e5e79a8b402310f4ee7849abccf797e697b02a8b527d23b8e7ca0558525edc3",
+    "docs/kevin_paper_20261011/publication/figures/clean_replay/protocol_before_inference.json": "2293d3e7d79c38a22917c129c847274ed438c8cbbb5cdd295eb11c7f4cce7020",
+    "docs/kevin_paper_20261011/publication/evidence/clean_replay_verification.json": "6299b50354749dabaff7de2dd79f42fd22aea2bcc2248efbc0e0e255cceab3b0",
+    "docs/kevin_paper_20261011/publication/prepared/split_audit.json": "7b497f425532309ff8c6dac33383bf0c3fff387db9f056f24988413e2ea57fe4",
+    "docs/kevin_paper_20261011/publication/figures/clean_replay/replay_complete.json": "a5923c04248f5773e916193c6d0fee6bdc389e63a45d95fe87ed5ca3732b0554",
+    "docs/kevin_paper_20261011/publication/prepared/same_case_test_intersection.csv": "7cf400fe66e8edc9bf86b784976ab1682e1ee8e933ee0d90b15cfd785b36ac05",
+    "docs/kevin_paper_20261011/publication/prepared/old_hash_group_unexposed_sensitivity.csv": "da1288c26944a10d7fdbda0ffc87886d77e48cb5ca2d7186a603e2492239bcba",
+    "docs/kevin_paper_20261011/publication/figures/clean_replay/candidate_1_full_new_test_predictions.csv": "58201cfa219ddfc5614e33c980d48497feca13f329aeefcd7f01c39c20cd2084",
+    "docs/kevin_paper_20261011/publication/figures/clean_replay/candidate_2_full_new_test_predictions.csv": "a3b336e0e2d00cdd62fa59793da659bb4dc2accc7cc4ab6fd6eddae25097a443",
+    "docs/kevin_paper_20261011/publication/figures/clean_replay/candidate_3_full_new_test_predictions.csv": "f39b4c83160e592c0ab836cdf716bbeeb30848ad0b650afb17e70494cb011283",
+    "docs/kevin_paper_20261011/publication/figures/clean_replay/candidate_4_full_new_test_predictions.csv": "63b2c923b6b3bebfda262832c3088e377ec6f640e7c53c32d57f45cedbf9c4de",
+    "docs/kevin_paper_20261011/publication/figures/clean_replay/candidate_5_full_new_test_predictions.csv": "08a04cf842793961ac39a183194ab4a3e38aa3c2bbd1b62779afbbe3a4a279dd",
+    "docs/kevin_paper_20261011/publication/figures/clean_replay/candidate_6_full_new_test_predictions.csv": "2c2e93e63ef3f71dc92095bd50a583c44a4df00b709d06a13ff6032321bfafed"
+  },
+  "generator_sha256": "819fc1c224e180ab64032f14785050ad144f38ac5e6cc4309c128e2d93563608",
+  "interpretation": [
+    "These six runs are the first six-candidate experiment archived under kevin_paper_20261011; they are not the earlier single historical baseline or later round-2 retraining.",
+    "All 5,450 images belong to the frozen candidate test split. The clean full-split replay was post hoc and contains the historical primary 1,058-image comparison; it is not an additional independent cohort or a retrospectively prespecified primary analysis.",
+    "The 5,450-image split contains 3,860 historical-baseline training and 532 validation rows. The old baseline must not be represented as independently held out on this full cohort.",
+    "The legacy source was augmented upstream. Participant and original augmentation-family identifiers are unavailable. Similarity-group separation does not establish patient independence.",
+    "The four supplied image labels do not establish a clinically validated CDR-stage mapping. These are descriptive image-level results, not clinical diagnostic validation.",
+    "No model was trained, selected, calibrated or tuned during this extraction. Reported point estimates are recomputed from preserved CSV probabilities and labels; no new confidence intervals are claimed."
+  ]
+}

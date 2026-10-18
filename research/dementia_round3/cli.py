@@ -148,7 +148,7 @@ def main(argv=None):
         if args.command == "status":
             from .preprocessing import PreprocessingConfig, preflight
             result = {"data_gate": _gate(args), "preprocessing": preflight(PreprocessingConfig()),
-                      "paid_resources_started": False, "real_training_performed": False, "analysis_location": "local_mac"}
+                      "cloud_resources_started": False, "real_training_performed": False, "analysis_location": "local_mac"}
             if args.output:
                 common.write_json(args.output, result)
         elif args.command == "match":

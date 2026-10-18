@@ -4,6 +4,7 @@
   "checked_date_local": "2026-10-11",
   "checked_date_utc": "2026-10-12",
   "scope": "Documentation and sanitized metadata validation; not provider approval or patient-data validation",
+  "source_identity_scope": "Prior-source documentation verification snapshot: reviewed_payloads identify the original reviewed bytes, not current-file checksums after subsequent repository revisions.",
   "checks": {
     "all_three_json_documents_parse": true,
     "provider_source_references_resolve": true,

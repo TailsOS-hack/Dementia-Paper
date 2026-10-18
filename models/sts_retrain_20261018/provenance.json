@@ -1,0 +1,223 @@
+{
+  "study": "sts_retrain_20261018",
+  "source_aggregate_report_sha256": "80a7bedf6a3d273e39d2b7384d4602686232501e06cdeb8bb209a746c4002961",
+  "derivatives": [
+    {
+      "run": "stage_only_seed20261011",
+      "mode": "stage_only",
+      "seed": 20261011,
+      "selected_epoch": 27,
+      "original_checkpoint": "stage_only_seed20261011/best.pt",
+      "original_checkpoint_sha256": "c56ffcf8914a65a6a4b983082288838d1d962b16536d4043a351834bb8927660",
+      "original_bytes": 50839444,
+      "public_file": "models/sts_retrain_20261018/stage_only_seed20261011_inference.pt",
+      "derivative_sha256": "31bfe6cad26bbadc73c351d0f8b7018a11be5477f0ed3a5efd97ff3d1e03d433",
+      "derivative_bytes": 17028059,
+      "safe_weights_only_readback": true,
+      "frozen_constructor_strict_load": true,
+      "tensor_correspondence": {
+        "model_state": {
+          "included": true,
+          "entries": 312,
+          "canonical_tensor_sha256": "6f14de8ec6c1c4b3f0492963414281bf20adc1c689edde90caa5f46c067a57ea",
+          "exact_tensor_bytes_preserved": true
+        },
+        "aux_state": {
+          "included": false,
+          "reason": "Untrained auxiliary head omitted from stage-only model"
+        }
+      },
+      "image_inference_performed": false,
+      "omitted": [
+        "optimizer_state",
+        "scheduler_state",
+        "rng_state",
+        "config",
+        "history",
+        "aggregate_evaluation_records"
+      ]
+    },
+    {
+      "run": "multitask_seed20261011",
+      "mode": "multitask",
+      "seed": 20261011,
+      "selected_epoch": 52,
+      "original_checkpoint": "multitask_seed20261011/best.pt",
+      "original_checkpoint_sha256": "2f3bda192dcc3afce17f640f72102b1f7eb02687dd96b531155257cd0b8d5036",
+      "original_bytes": 50871862,
+      "public_file": "models/sts_retrain_20261018/multitask_seed20261011_inference.pt",
+      "derivative_sha256": "b76324cc7f86578bfcc46145b8d3be2b429fab4c48418560f0e254155103ae09",
+      "derivative_bytes": 17038603,
+      "safe_weights_only_readback": true,
+      "frozen_constructor_strict_load": true,
+      "tensor_correspondence": {
+        "model_state": {
+          "included": true,
+          "entries": 312,
+          "canonical_tensor_sha256": "5c0727d1b4ef66762779daa743cda7617a70210f14fdd1933556fe3c26d51de2",
+          "exact_tensor_bytes_preserved": true
+        },
+        "aux_state": {
+          "included": true,
+          "entries": 2,
+          "canonical_tensor_sha256": "2a4e393c3247f3d105255fdddca5fd38d6a448846caed1170320548d8129c079",
+          "exact_tensor_bytes_preserved": true
+        }
+      },
+      "image_inference_performed": false,
+      "omitted": [
+        "optimizer_state",
+        "scheduler_state",
+        "rng_state",
+        "config",
+        "history",
+        "aggregate_evaluation_records"
+      ]
+    },
+    {
+      "run": "stage_only_seed20261012",
+      "mode": "stage_only",
+      "seed": 20261012,
+      "selected_epoch": 40,
+      "original_checkpoint": "stage_only_seed20261012/best.pt",
+      "original_checkpoint_sha256": "67a0c540ff37a656860b09696dde03ae424998891e1bff35c954f121dd09f41b",
+      "original_bytes": 50841748,
+      "public_file": "models/sts_retrain_20261018/stage_only_seed20261012_inference.pt",
+      "derivative_sha256": "2e35581c2f96da1cfd312179ada49b8f98032b9918630d0a535efe57038fc4bc",
+      "derivative_bytes": 17028059,
+      "safe_weights_only_readback": true,
+      "frozen_constructor_strict_load": true,
+      "tensor_correspondence": {
+        "model_state": {
+          "included": true,
+          "entries": 312,
+          "canonical_tensor_sha256": "e17ec58fb097ffadb51a239d3d2f61a522670c961e4818d40dc91423bb1c4e2f",
+          "exact_tensor_bytes_preserved": true
+        },
+        "aux_state": {
+          "included": false,
+          "reason": "Untrained auxiliary head omitted from stage-only model"
+        }
+      },
+      "image_inference_performed": false,
+      "omitted": [
+        "optimizer_state",
+        "scheduler_state",
+        "rng_state",
+        "config",
+        "history",
+        "aggregate_evaluation_records"
+      ]
+    },
+    {
+      "run": "multitask_seed20261012",
+      "mode": "multitask",
+      "seed": 20261012,
+      "selected_epoch": 60,
+      "original_checkpoint": "multitask_seed20261012/best.pt",
+      "original_checkpoint_sha256": "85a08a690a9550934159abafa2d9a05e5d4ae3a7c4d0e07a6bae76aa46283b77",
+      "original_bytes": 50874038,
+      "public_file": "models/sts_retrain_20261018/multitask_seed20261012_inference.pt",
+      "derivative_sha256": "77d0410e8b37adb974b9dce0808bb6cd45246930b1e29ca7b3d89e7130470043",
+      "derivative_bytes": 17038603,
+      "safe_weights_only_readback": true,
+      "frozen_constructor_strict_load": true,
+      "tensor_correspondence": {
+        "model_state": {
+          "included": true,
+          "entries": 312,
+          "canonical_tensor_sha256": "3a4709be8cd8fc94b117bcd1286e8375b02b1d6c77eb659931b8278b9b2553f5",
+          "exact_tensor_bytes_preserved": true
+        },
+        "aux_state": {
+          "included": true,
+          "entries": 2,
+          "canonical_tensor_sha256": "1a9d219abfa3463113e1401de1929d7c00fd5b2dd04994e39b4f946490a7b328",
+          "exact_tensor_bytes_preserved": true
+        }
+      },
+      "image_inference_performed": false,
+      "omitted": [
+        "optimizer_state",
+        "scheduler_state",
+        "rng_state",
+        "config",
+        "history",
+        "aggregate_evaluation_records"
+      ]
+    },
+    {
+      "run": "stage_only_seed20261013",
+      "mode": "stage_only",
+      "seed": 20261013,
+      "selected_epoch": 25,
+      "original_checkpoint": "stage_only_seed20261013/best.pt",
+      "original_checkpoint_sha256": "3b11bf30e8429995ca0d1176dcc50ca2f4337579f9c357bba395f6614e639654",
+      "original_bytes": 50839060,
+      "public_file": "models/sts_retrain_20261018/stage_only_seed20261013_inference.pt",
+      "derivative_sha256": "228ffe23933f237dabbf4fdec6b9ec43d0c9cd8091bba3946404448540218b13",
+      "derivative_bytes": 17028059,
+      "safe_weights_only_readback": true,
+      "frozen_constructor_strict_load": true,
+      "tensor_correspondence": {
+        "model_state": {
+          "included": true,
+          "entries": 312,
+          "canonical_tensor_sha256": "1990f9af68bac9bc3a13d564fd628c884fd0018304199c2ec69707583741c0fc",
+          "exact_tensor_bytes_preserved": true
+        },
+        "aux_state": {
+          "included": false,
+          "reason": "Untrained auxiliary head omitted from stage-only model"
+        }
+      },
+      "image_inference_performed": false,
+      "omitted": [
+        "optimizer_state",
+        "scheduler_state",
+        "rng_state",
+        "config",
+        "history",
+        "aggregate_evaluation_records"
+      ]
+    },
+    {
+      "run": "multitask_seed20261013",
+      "mode": "multitask",
+      "seed": 20261013,
+      "selected_epoch": 35,
+      "original_checkpoint": "multitask_seed20261013/best.pt",
+      "original_checkpoint_sha256": "aa9d704ff00fac0bfc022860e743bd14cc97b3dbffa58f1135449b0419259c12",
+      "original_bytes": 50867190,
+      "public_file": "models/sts_retrain_20261018/multitask_seed20261013_inference.pt",
+      "derivative_sha256": "cee9dd3524da53020a338673b536685d2943f75e9582e9e03137b01e95eebcc3",
+      "derivative_bytes": 17038603,
+      "safe_weights_only_readback": true,
+      "frozen_constructor_strict_load": true,
+      "tensor_correspondence": {
+        "model_state": {
+          "included": true,
+          "entries": 312,
+          "canonical_tensor_sha256": "d3e984d34763451fccc53c9810e172dd7877194053a389cbeff608e708f4c148",
+          "exact_tensor_bytes_preserved": true
+        },
+        "aux_state": {
+          "included": true,
+          "entries": 2,
+          "canonical_tensor_sha256": "0830e561fe590d5616aa5c9f694b61ddb03fd9741f46ef0e36bf4955cc679133",
+          "exact_tensor_bytes_preserved": true
+        }
+      },
+      "image_inference_performed": false,
+      "omitted": [
+        "optimizer_state",
+        "scheduler_state",
+        "rng_state",
+        "config",
+        "history",
+        "aggregate_evaluation_records"
+      ]
+    }
+  ],
+  "heldout_inference_performed": false
+}

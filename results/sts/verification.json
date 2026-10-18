@@ -1,0 +1,13 @@
+{
+  "status": "verified",
+  "training_runs": 6,
+  "completed_epochs": 305,
+  "full_test_images": 5450,
+  "full_test_models": 6,
+  "supporting_cohort_model_rows": 27,
+  "paired_contrasts_verified": 36,
+  "training_or_inference_performed": false,
+  "uncertainty": "Historical paired intervals preserved; point metrics and discordances independently recomputed.",
+  "historical_primary": "Matched 1058 images",
+  "full_test_role": "Post-hoc descriptive supplement containing primary1058"
+}

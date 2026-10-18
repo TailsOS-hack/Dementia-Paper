@@ -1,0 +1,1148 @@
+{
+  "status": "verified",
+  "experiment": "kevin_20261011 Round 1",
+  "scope": "Supporting four-stage image benchmarks, not the older baseline training or later rounds",
+  "new_training": false,
+  "new_inference": false,
+  "cohort_model_rows": 27,
+  "frozen_point_records_verified": 30,
+  "paired_contrasts_verified": 36,
+  "ensemble_probability_tables_reconstructed": 6,
+  "interval_status": "Frozen 2000-resample conditional paired bootstrap intervals preserved; not rerun",
+  "mcnemar_status": "No McNemar statistic occurs in these frozen primary/supplement records; no new significance test added",
+  "baseline_group_exposure": {
+    "primary_images": 1058,
+    "primary_hash_groups": 966,
+    "images_with_old_train_group_mate": 291,
+    "images_with_old_train_or_validation_group_mate": 302,
+    "groups_with_old_train_mate": 223,
+    "groups_with_old_train_or_validation_mate": 233,
+    "groups_with_unknown_old_split": 0,
+    "scope": "Within retained prepared stage rows; omitted legacy rows and unidentified relationships remain unresolved."
+  },
+  "historical100_old_exposure": {
+    "train_images": 66,
+    "validation_images": 9,
+    "test_images": 25
+  },
+  "class_order": [
+    "MildDemented",
+    "ModerateDemented",
+    "NonDemented",
+    "VeryMildDemented"
+  ],
+  "cohorts": {
+    "internal_same_case": {
+      "models": {
+        "old_baseline": {
+          "n": 1058,
+          "correct": 1057,
+          "accuracy": 0.999054820415879,
+          "balanced_accuracy": 0.9989130434782609,
+          "macro_f1": 0.9989602881856813,
+          "class_counts": [
+            277,
+            299,
+            230,
+            252
+          ],
+          "confusion_matrix": [
+            [
+              277,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              299,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              229,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              252
+            ]
+          ]
+        },
+        "candidate_1": {
+          "n": 1058,
+          "correct": 1055,
+          "accuracy": 0.997164461247637,
+          "balanced_accuracy": 0.9968340234644583,
+          "macro_f1": 0.9968808645570439,
+          "class_counts": [
+            277,
+            299,
+            230,
+            252
+          ],
+          "confusion_matrix": [
+            [
+              277,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              299,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              228,
+              2
+            ],
+            [
+              0,
+              0,
+              1,
+              251
+            ]
+          ]
+        },
+        "candidate_2": {
+          "n": 1058,
+          "correct": 1054,
+          "accuracy": 0.996219281663516,
+          "balanced_accuracy": 0.996031746031746,
+          "macro_f1": 0.9961112015484253,
+          "class_counts": [
+            277,
+            299,
+            230,
+            252
+          ],
+          "confusion_matrix": [
+            [
+              277,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              299,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              230,
+              0
+            ],
+            [
+              3,
+              0,
+              1,
+              248
+            ]
+          ]
+        },
+        "candidate_3": {
+          "n": 1058,
+          "correct": 1057,
+          "accuracy": 0.999054820415879,
+          "balanced_accuracy": 0.9990974729241877,
+          "macro_f1": 0.9990528709290458,
+          "class_counts": [
+            277,
+            299,
+            230,
+            252
+          ],
+          "confusion_matrix": [
+            [
+              276,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              299,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              230,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              252
+            ]
+          ]
+        },
+        "candidate_4": {
+          "n": 1058,
+          "correct": 1056,
+          "accuracy": 0.998109640831758,
+          "balanced_accuracy": 0.998015873015873,
+          "macro_f1": 0.9981047034882055,
+          "class_counts": [
+            277,
+            299,
+            230,
+            252
+          ],
+          "confusion_matrix": [
+            [
+              277,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              299,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              230,
+              0
+            ],
+            [
+              2,
+              0,
+              0,
+              250
+            ]
+          ]
+        },
+        "candidate_5": {
+          "n": 1058,
+          "correct": 1057,
+          "accuracy": 0.999054820415879,
+          "balanced_accuracy": 0.9990974729241877,
+          "macro_f1": 0.9990056210847555,
+          "class_counts": [
+            277,
+            299,
+            230,
+            252
+          ],
+          "confusion_matrix": [
+            [
+              276,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              299,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              230,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              252
+            ]
+          ]
+        },
+        "candidate_6": {
+          "n": 1058,
+          "correct": 1055,
+          "accuracy": 0.997164461247637,
+          "balanced_accuracy": 0.9968340234644583,
+          "macro_f1": 0.9969726979779295,
+          "class_counts": [
+            277,
+            299,
+            230,
+            252
+          ],
+          "confusion_matrix": [
+            [
+              277,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              299,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              228,
+              2
+            ],
+            [
+              1,
+              0,
+              0,
+              251
+            ]
+          ]
+        },
+        "ensemble_stage_only": {
+          "n": 1058,
+          "correct": 1058,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "macro_f1": 1.0,
+          "class_counts": [
+            277,
+            299,
+            230,
+            252
+          ],
+          "confusion_matrix": [
+            [
+              277,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              299,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              230,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              252
+            ]
+          ]
+        },
+        "ensemble_multitask": {
+          "n": 1058,
+          "correct": 1056,
+          "accuracy": 0.998109640831758,
+          "balanced_accuracy": 0.998015873015873,
+          "macro_f1": 0.9981047034882055,
+          "class_counts": [
+            277,
+            299,
+            230,
+            252
+          ],
+          "confusion_matrix": [
+            [
+              277,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              299,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              230,
+              0
+            ],
+            [
+              2,
+              0,
+              0,
+              250
+            ]
+          ]
+        }
+      },
+      "n_resampling_units": 966
+    },
+    "old_hash_group_unexposed_sensitivity": {
+      "models": {
+        "old_baseline": {
+          "n": 756,
+          "correct": 755,
+          "accuracy": 0.9986772486772487,
+          "balanced_accuracy": 0.9986111111111111,
+          "macro_f1": 0.9986404911964416,
+          "class_counts": [
+            199,
+            189,
+            180,
+            188
+          ],
+          "confusion_matrix": [
+            [
+              199,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              189,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              179,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              188
+            ]
+          ]
+        },
+        "candidate_1": {
+          "n": 756,
+          "correct": 753,
+          "accuracy": 0.996031746031746,
+          "balanced_accuracy": 0.9958924349881797,
+          "macro_f1": 0.9959214735893249,
+          "class_counts": [
+            199,
+            189,
+            180,
+            188
+          ],
+          "confusion_matrix": [
+            [
+              199,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              189,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              178,
+              2
+            ],
+            [
+              0,
+              0,
+              1,
+              187
+            ]
+          ]
+        },
+        "candidate_2": {
+          "n": 756,
+          "correct": 752,
+          "accuracy": 0.9947089947089947,
+          "balanced_accuracy": 0.9946808510638298,
+          "macro_f1": 0.9947489829918399,
+          "class_counts": [
+            199,
+            189,
+            180,
+            188
+          ],
+          "confusion_matrix": [
+            [
+              199,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              189,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              180,
+              0
+            ],
+            [
+              3,
+              0,
+              1,
+              184
+            ]
+          ]
+        },
+        "candidate_3": {
+          "n": 756,
+          "correct": 755,
+          "accuracy": 0.9986772486772487,
+          "balanced_accuracy": 0.9987437185929648,
+          "macro_f1": 0.9987071471046108,
+          "class_counts": [
+            199,
+            189,
+            180,
+            188
+          ],
+          "confusion_matrix": [
+            [
+              198,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              189,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              180,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              188
+            ]
+          ]
+        },
+        "candidate_4": {
+          "n": 756,
+          "correct": 754,
+          "accuracy": 0.9973544973544973,
+          "balanced_accuracy": 0.9973404255319149,
+          "macro_f1": 0.9974131016042781,
+          "class_counts": [
+            199,
+            189,
+            180,
+            188
+          ],
+          "confusion_matrix": [
+            [
+              199,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              189,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              180,
+              0
+            ],
+            [
+              2,
+              0,
+              0,
+              186
+            ]
+          ]
+        },
+        "candidate_5": {
+          "n": 756,
+          "correct": 755,
+          "accuracy": 0.9986772486772487,
+          "balanced_accuracy": 0.9987437185929648,
+          "macro_f1": 0.9986777563024625,
+          "class_counts": [
+            199,
+            189,
+            180,
+            188
+          ],
+          "confusion_matrix": [
+            [
+              198,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              189,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              180,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              188
+            ]
+          ]
+        },
+        "candidate_6": {
+          "n": 756,
+          "correct": 754,
+          "accuracy": 0.9973544973544973,
+          "balanced_accuracy": 0.9972813238770686,
+          "macro_f1": 0.9973472675198338,
+          "class_counts": [
+            199,
+            189,
+            180,
+            188
+          ],
+          "confusion_matrix": [
+            [
+              199,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              189,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              179,
+              1
+            ],
+            [
+              1,
+              0,
+              0,
+              187
+            ]
+          ]
+        },
+        "ensemble_stage_only": {
+          "n": 756,
+          "correct": 756,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "macro_f1": 1.0,
+          "class_counts": [
+            199,
+            189,
+            180,
+            188
+          ],
+          "confusion_matrix": [
+            [
+              199,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              189,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              180,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              188
+            ]
+          ]
+        },
+        "ensemble_multitask": {
+          "n": 756,
+          "correct": 754,
+          "accuracy": 0.9973544973544973,
+          "balanced_accuracy": 0.9973404255319149,
+          "macro_f1": 0.9974131016042781,
+          "class_counts": [
+            199,
+            189,
+            180,
+            188
+          ],
+          "confusion_matrix": [
+            [
+              199,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              189,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              180,
+              0
+            ],
+            [
+              2,
+              0,
+              0,
+              186
+            ]
+          ]
+        }
+      },
+      "n_resampling_units": 733
+    },
+    "original100": {
+      "models": {
+        "old_baseline": {
+          "n": 100,
+          "correct": 100,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "macro_f1": 1.0,
+          "class_counts": [
+            23,
+            23,
+            27,
+            27
+          ],
+          "confusion_matrix": [
+            [
+              23,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              23,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              27,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              27
+            ]
+          ]
+        },
+        "candidate_1": {
+          "n": 100,
+          "correct": 99,
+          "accuracy": 0.99,
+          "balanced_accuracy": 0.9907407407407407,
+          "macro_f1": 0.99073756432247,
+          "class_counts": [
+            23,
+            23,
+            27,
+            27
+          ],
+          "confusion_matrix": [
+            [
+              23,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              23,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              26,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              27
+            ]
+          ]
+        },
+        "candidate_2": {
+          "n": 100,
+          "correct": 100,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "macro_f1": 1.0,
+          "class_counts": [
+            23,
+            23,
+            27,
+            27
+          ],
+          "confusion_matrix": [
+            [
+              23,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              23,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              27,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              27
+            ]
+          ]
+        },
+        "candidate_3": {
+          "n": 100,
+          "correct": 100,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "macro_f1": 1.0,
+          "class_counts": [
+            23,
+            23,
+            27,
+            27
+          ],
+          "confusion_matrix": [
+            [
+              23,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              23,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              27,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              27
+            ]
+          ]
+        },
+        "candidate_4": {
+          "n": 100,
+          "correct": 99,
+          "accuracy": 0.99,
+          "balanced_accuracy": 0.9907407407407407,
+          "macro_f1": 0.99073756432247,
+          "class_counts": [
+            23,
+            23,
+            27,
+            27
+          ],
+          "confusion_matrix": [
+            [
+              23,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              23,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              26,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              27
+            ]
+          ]
+        },
+        "candidate_5": {
+          "n": 100,
+          "correct": 100,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "macro_f1": 1.0,
+          "class_counts": [
+            23,
+            23,
+            27,
+            27
+          ],
+          "confusion_matrix": [
+            [
+              23,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              23,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              27,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              27
+            ]
+          ]
+        },
+        "candidate_6": {
+          "n": 100,
+          "correct": 99,
+          "accuracy": 0.99,
+          "balanced_accuracy": 0.9907407407407407,
+          "macro_f1": 0.9907375643224701,
+          "class_counts": [
+            23,
+            23,
+            27,
+            27
+          ],
+          "confusion_matrix": [
+            [
+              23,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              23,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              27,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              26
+            ]
+          ]
+        },
+        "ensemble_stage_only": {
+          "n": 100,
+          "correct": 100,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "macro_f1": 1.0,
+          "class_counts": [
+            23,
+            23,
+            27,
+            27
+          ],
+          "confusion_matrix": [
+            [
+              23,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              23,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              27,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              27
+            ]
+          ]
+        },
+        "ensemble_multitask": {
+          "n": 100,
+          "correct": 100,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "macro_f1": 1.0,
+          "class_counts": [
+            23,
+            23,
+            27,
+            27
+          ],
+          "confusion_matrix": [
+            [
+              23,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              23,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              27,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              27
+            ]
+          ]
+        }
+      },
+      "n_resampling_units": 100
+    }
+  },
+  "limitations": [
+    "Original100 is a historically reused image-level descriptive benchmark. The old checkpoint had 66 train, 9 validation and 25 test image matches; it is not independent clinical validation.",
+    "Legacy patient IDs and original augmentation families are unknown. Hash grouping is image similarity, not patient identity; cluster intervals do not establish clinical independence.",
+    "The full primary intersection holds out exact rows for both models, but includes hash groups with old training/validation mates. A separately prespecified hash-unexposed sensitivity subset addresses only observed prepared-group overlap, changes sample composition, and does not prove patient independence or absence of other related old images.",
+    "Bootstrap intervals condition on the observed sample and fixed fitted checkpoints. They omit training randomness and dataset/source uncertainty; boundary or identical predictions can yield degenerate intervals that do not prove certainty or equivalence.",
+    "Unadjusted exploratory intervals across multiple candidates, endpoints and readers must not be treated as confirmatory significance or used to select a model on the test set.",
+    "Reader labels concern these fixed images, not prospective clinical diagnosis; a fixed reader panel is not a random sample of neuroradiologists.",
+    "Clinical AD/CN is a separate endpoint from the four legacy stages. MCI remains prediction-only and is excluded from binary accuracy denominators.",
+    "Clinical exact binomial intervals assume independent, representative source subjects. Tiny, selected cohorts, source confounding and preprocessing inspection limit interpretation; one external AD subject cannot establish stable sensitivity.",
+    "Ensembling can retain correlated errors and does not fix missing patient provenance, source confounding or inadequate clinical data.",
+    "Original100 remains historically reused, and the primary exact-row comparison has known old development hash-group exposure; the secondary subset is not patient-independent.",
+    "Conditional bootstrap intervals do not account for training randomness or multiple comparisons; three-seed spread is not a confidence interval.",
+    "The clinical external pilot contains only one AD subject. Ensemble averaging does not increase the independent sample size.",
+    "Research inference with an ensemble requires three member forwards; no production inference wrapper is built or deployed by this analysis."
+  ],
+  "source_sha256": {
+    "docs/kevin_paper_20261011/publication/results/uncertainty_analysis.json": "94919582137897a5f9a1f3f956af44128c9a53d8c63a6df2fc9bd5edd7afa61e",
+    "docs/kevin_paper_20261011/publication/results/ensemble_supplement.json": "ab57831936d34573401b5f9cd8f85cdec2322b49043b311ab628f4888b27e24b",
+    "docs/kevin_paper_20261011/publication/results/ensemble_specifications.json": "6f02822b56bbbbf8fbc4741f93e7fb7d0f68455ad750b7b5f7b0ba0e2983b221",
+    "docs/kevin_paper_20261011/publication/evidence/sensitivity_audit.json": "3748b7aebc649b51970c922873174a8a08e12d4abebf9d17e8621638ebebfb0b",
+    "docs/kevin_paper_20261011/publication/prepared/same_case_test_intersection.csv": "7cf400fe66e8edc9bf86b784976ab1682e1ee8e933ee0d90b15cfd785b36ac05",
+    "docs/kevin_paper_20261011/publication/prepared/old_hash_group_unexposed_sensitivity.csv": "da1288c26944a10d7fdbda0ffc87886d77e48cb5ca2d7186a603e2492239bcba",
+    "docs/kevin_paper_20261011/publication/results/original100/radiologist_test_key.csv": "067b3b6bd3f7d1224e50befe7dcb11c43dff878aeb1aac6c6f3f9dd6eabdb9af",
+    "docs/kevin_paper_20261011/publication/results/legacy_predictions/old_baseline_internal_same_case_predictions.csv": "f9044f6274a4abc0cf1a0b7d2acb5b35b382cfee6d1ade18524621c52282cb7b",
+    "docs/kevin_paper_20261011/publication/results/original100/old_baseline_original100_predictions.csv": "f23a5373b85a7e6610450429062096dc89e2ea476fa57b6890d2d6984739de4e",
+    "docs/kevin_paper_20261011/publication/results/legacy_predictions/candidate_1_internal_same_case_predictions.csv": "11894e3a11cc666b8a19e4acd577e485e863a41d0257d8019c37882377310667",
+    "docs/kevin_paper_20261011/publication/results/original100/candidate_1_original100_predictions.csv": "0969a84e99bf4d1bdc937d269a15d8b5db79fd0a1c013c62404275b179f543f2",
+    "docs/kevin_paper_20261011/publication/results/legacy_predictions/candidate_2_internal_same_case_predictions.csv": "ecf9daf0156994b3cb448ada9a83cb0ae837f7f86bb6b5b8673d6452750592a7",
+    "docs/kevin_paper_20261011/publication/results/original100/candidate_2_original100_predictions.csv": "5d5968367644f82bda763a9e8759351ae283fc565222127852c34ed2d8e5b6f8",
+    "docs/kevin_paper_20261011/publication/results/legacy_predictions/candidate_3_internal_same_case_predictions.csv": "6c0da9e0c559fe8eaefa640d27abe59aba86332c066ac28f2c48b44a62ca70b6",
+    "docs/kevin_paper_20261011/publication/results/original100/candidate_3_original100_predictions.csv": "0606d6ef4e48b1aea5c8ca30e49a26578db67e1f963aed9ac5b05e1ae857dbba",
+    "docs/kevin_paper_20261011/publication/results/legacy_predictions/candidate_4_internal_same_case_predictions.csv": "62a9aeb0488afaf5bd5ad7d5c90c0f10df20de21a094cbd0c405e46c67ba8651",
+    "docs/kevin_paper_20261011/publication/results/original100/candidate_4_original100_predictions.csv": "741514166bccc279d5429e3c89ca26b125838117ff445fb0b01ce54d94d0e124",
+    "docs/kevin_paper_20261011/publication/results/legacy_predictions/candidate_5_internal_same_case_predictions.csv": "e5e4d87dff39e61b12652ff77e91ac014c5549c9af1f5878029bfdaa9469e7c4",
+    "docs/kevin_paper_20261011/publication/results/original100/candidate_5_original100_predictions.csv": "634cbc5f79bf48a1463ac0d379e48807be6cd1bbb204310752828900560a5080",
+    "docs/kevin_paper_20261011/publication/results/legacy_predictions/candidate_6_internal_same_case_predictions.csv": "1070ad55b82a052b83ec5503aa144b078b87ad969f2101388c5822ff4cd38572",
+    "docs/kevin_paper_20261011/publication/results/original100/candidate_6_original100_predictions.csv": "21173e84fb78980f84b00aae1fd9126cef2b72bc8629b560b414ec5b31f74af8",
+    "docs/kevin_paper_20261011/publication/results/legacy_predictions/ensemble_stage_only_internal_same_case_predictions.csv": "bf156342647288813b9f8894d5cc413644edea2c157553493a722895b1ec5673",
+    "docs/kevin_paper_20261011/publication/results/legacy_predictions/ensemble_multitask_internal_same_case_predictions.csv": "3d4af11321f501c0e9c43a5d6565e5ca45232b79ee3b5ae5759d9222bc2b89ce",
+    "docs/kevin_paper_20261011/publication/results/legacy_predictions/ensemble_stage_only_old_hash_group_unexposed_sensitivity_predictions.csv": "c28338413bda61630a130b8a20ffa54ce8029f568cbe1fe5c34f1dc7cb62dd35",
+    "docs/kevin_paper_20261011/publication/results/legacy_predictions/ensemble_multitask_old_hash_group_unexposed_sensitivity_predictions.csv": "f4c5a6ab15cc3e59eafc0ceae7d26e37e935a85e63a4b0e45602c08e43424798",
+    "docs/kevin_paper_20261011/publication/results/original100/ensemble_stage_only_original100_predictions.csv": "a0ec3e7e565f74f3d4a229cd0a4917715b72bfc72c84d548614e6b6b0587e705",
+    "docs/kevin_paper_20261011/publication/results/original100/ensemble_multitask_original100_predictions.csv": "5e27ec69204c5164094a985da5d0d22af8774b8ad2687c030d1a91c716111090"
+  }
+}

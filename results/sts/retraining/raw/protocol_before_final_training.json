@@ -1,0 +1,27 @@
+{
+  "recorded_at_utc": "2026-10-18T21:53:01.287059+00:00",
+  "stage": "before_final_six_run_launch",
+  "study": "sts_retrain_20261018",
+  "trainer_sha256": "58402818b041400be904963846470c4ded19b029a7120fb1dd8bc511851a8441",
+  "suite_sha256": "9cd67b21c3d3aa47fc346761531f43428d984d3116997d31b8714268c68a0b6a",
+  "seeds": [
+    20261011,
+    20261012,
+    20261013
+  ],
+  "modes": [
+    "stage_only",
+    "multitask"
+  ],
+  "torch_threads": 1,
+  "workers": 4,
+  "epochs_max": 100,
+  "epochs_min": 20,
+  "patience": 15,
+  "min_delta": 0.0001,
+  "checkpoint_selection": "stage_validation_nll_only",
+  "condition_preference": "mean_selected_stage_validation_nll_across_three_seeds",
+  "heldout_inference_planned": false,
+  "prior_attempt": "Incomplete CPU64 pilot deliberately stopped for performance configuration standardization; no checkpoint or performance is eligible for final suite",
+  "clinical_minimized_manifest_sha256": "56e88016f6da24ae6aa4075ad700e1409d6f50868bfdc79bbb35074a1e0ac3ce"
+}

@@ -13,7 +13,7 @@
     "accounts_created": false,
     "agreements_accepted": true,
     "restricted_patient_data_downloaded": false,
-    "paid_resources_created": false,
+    "cloud_resources_created": false,
     "agreement_scope": "NACC DUA, typed signature and separate accuracy/electronic-signature certification each explicitly confirmed by user at action time.",
     "provider_generated_applicant_email": "Save-and-return page stated an automated continuation email was sent; no agent message to other persons."
   },

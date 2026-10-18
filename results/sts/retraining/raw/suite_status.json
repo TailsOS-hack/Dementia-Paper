@@ -1,0 +1,139 @@
+{
+  "study": "sts_retrain_20261018",
+  "source_helper_sha256": "cbf67b7c6e842ce35eeef2e0c0a6a0752b865cec3399d7aa58bd5e8ff0e2a5e2",
+  "data_root": "/tmp/sts_input",
+  "started_at": "2026-10-18T21:53:26.519319+00:00",
+  "state": "all_six_completed_no_heldout_evaluation",
+  "completed": [
+    "stage_only_seed20261011",
+    "multitask_seed20261011",
+    "stage_only_seed20261012",
+    "multitask_seed20261012",
+    "stage_only_seed20261013",
+    "multitask_seed20261013"
+  ],
+  "current": null,
+  "seeds": [
+    20261011,
+    20261012,
+    20261013
+  ],
+  "modes": [
+    "stage_only",
+    "multitask"
+  ],
+  "max_epochs": 100,
+  "min_epochs": 20,
+  "patience": 15,
+  "min_delta": 0.0001,
+  "heldout_inference_performed": false,
+  "input_identity": {
+    "data_root": "/tmp/sts_input",
+    "stage_manifest": "training_logs/experiments/kevin_20261011/prepared/stage_manifest.csv",
+    "clinical_manifest": "data/external/clinical_t1_preprocessed_v1/clinical_slices.csv",
+    "clinical_manifest_sha256": "56e88016f6da24ae6aa4075ad700e1409d6f50868bfdc79bbb35074a1e0ac3ce",
+    "clinical_image_root": "data",
+    "workers": 4,
+    "torch_threads": 1,
+    "trainer_sha256": "58402818b041400be904963846470c4ded19b029a7120fb1dd8bc511851a8441"
+  },
+  "records": {
+    "stage_only_seed20261011": {
+      "study": "sts_retrain_20261018",
+      "selected_epoch": 27,
+      "val_loss": 0.03615409066455745,
+      "reason": "minimum clean stage validation NLL with min_delta",
+      "selected_checkpoint_sha256": "c56ffcf8914a65a6a4b983082288838d1d962b16536d4043a351834bb8927660",
+      "test_used_for_selection": false
+    },
+    "multitask_seed20261011": {
+      "study": "sts_retrain_20261018",
+      "selected_epoch": 52,
+      "val_loss": 0.04597849913498282,
+      "reason": "minimum clean stage validation NLL with min_delta",
+      "selected_checkpoint_sha256": "2f3bda192dcc3afce17f640f72102b1f7eb02687dd96b531155257cd0b8d5036",
+      "test_used_for_selection": false
+    },
+    "stage_only_seed20261012": {
+      "study": "sts_retrain_20261018",
+      "selected_epoch": 40,
+      "val_loss": 0.037723753732340125,
+      "reason": "minimum clean stage validation NLL with min_delta",
+      "selected_checkpoint_sha256": "67a0c540ff37a656860b09696dde03ae424998891e1bff35c954f121dd09f41b",
+      "test_used_for_selection": false
+    },
+    "multitask_seed20261012": {
+      "study": "sts_retrain_20261018",
+      "selected_epoch": 60,
+      "val_loss": 0.04881036796945932,
+      "reason": "minimum clean stage validation NLL with min_delta",
+      "selected_checkpoint_sha256": "85a08a690a9550934159abafa2d9a05e5d4ae3a7c4d0e07a6bae76aa46283b77",
+      "test_used_for_selection": false
+    },
+    "stage_only_seed20261013": {
+      "study": "sts_retrain_20261018",
+      "selected_epoch": 25,
+      "val_loss": 0.03844953644165441,
+      "reason": "minimum clean stage validation NLL with min_delta",
+      "selected_checkpoint_sha256": "3b11bf30e8429995ca0d1176dcc50ca2f4337579f9c357bba395f6614e639654",
+      "test_used_for_selection": false
+    },
+    "multitask_seed20261013": {
+      "study": "sts_retrain_20261018",
+      "selected_epoch": 35,
+      "val_loss": 0.049141484784956606,
+      "reason": "minimum clean stage validation NLL with min_delta",
+      "selected_checkpoint_sha256": "aa9d704ff00fac0bfc022860e743bd14cc97b3dbffa58f1135449b0419259c12",
+      "test_used_for_selection": false
+    }
+  },
+  "command": [
+    "/workspace/venv/bin/python",
+    "-m",
+    "research.sts_retrain_20261018.train",
+    "--data-root",
+    "/tmp/sts_input",
+    "--output",
+    "/workspace/sts_retrain_20261018/multitask_seed20261013",
+    "--stage-manifest",
+    "training_logs/experiments/kevin_20261011/prepared/stage_manifest.csv",
+    "--mode",
+    "multitask",
+    "--seed",
+    "20261013",
+    "--device",
+    "cuda",
+    "--workers",
+    "4",
+    "--torch-threads",
+    "1",
+    "--epochs",
+    "100",
+    "--min-epochs",
+    "20",
+    "--patience",
+    "15",
+    "--min-delta",
+    "0.0001",
+    "--clinical-manifest",
+    "data/external/clinical_t1_preprocessed_v1/clinical_slices.csv",
+    "--clinical-image-root",
+    "data",
+    "--clinical-manifest-sha256",
+    "56e88016f6da24ae6aa4075ad700e1409d6f50868bfdc79bbb35074a1e0ac3ce",
+    "--imagenet-weights",
+    "/tmp/sts_input/cache/mobilenet_v3_large-8738ca79.pth"
+  ],
+  "finished_at": "2026-10-18T23:43:06.391853+00:00",
+  "validation_only_preference": {
+    "condition": "stage_only",
+    "representative": "stage_only_seed20261011",
+    "condition_mean_validation_nll": {
+      "stage_only": 0.03744246027951733,
+      "multitask": 0.04797678396313291
+    },
+    "selection_basis": "Mean selected stage-validation NLL; lowest seed within preferred condition",
+    "test_used_for_selection": false,
+    "all_six_runs_reported": true
+  }
+}
