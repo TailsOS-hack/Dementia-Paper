@@ -1,0 +1,80 @@
+{
+  "scope": "Historical dementia histories predating the October 11 Round 1 study",
+  "histories": [
+    {
+      "label": "Legacy dementia specialist",
+      "completed_epochs": 32,
+      "source": {
+        "path": "paper_package/Dementia_Only_2026-10-09/source/training_logs/Dementia_Specialist_history.json",
+        "sha256": "fd0ca4c6c09a9a97868945371ba7680b2486f550d137153c0dd9df21fff11574",
+        "bytes": 3661
+      },
+      "seed": null,
+      "selected_epoch": null,
+      "checkpoint_lineage": "Not established by this history alone"
+    },
+    {
+      "label": "Archived Collab_Train dementia specialist",
+      "completed_epochs": 5,
+      "source": {
+        "path": "paper_package/Dementia_Only_2026-10-09/source/models/Collab_Train/trained_models/training_logs/Dementia_Specialist_history.json",
+        "sha256": "5678198d12766d27264b39625e1c14aab6243ae6262ad294f2fe5fca694e2a61",
+        "bytes": 668
+      },
+      "seed": null,
+      "selected_epoch": null,
+      "checkpoint_lineage": "Not established by this history alone"
+    },
+    {
+      "label": "experiments_regularized",
+      "completed_epochs": 20,
+      "source": {
+        "path": "paper_package/Dementia_Only_2026-10-09/source/training_logs/experiments_regularized/dementia/20260511_221548/history.json",
+        "sha256": "b302f13f244dd3749a8079c9fe47ceb7ea1c2ae79351ff6ab4ea584f23588db4",
+        "bytes": 3604
+      },
+      "seed": null,
+      "selected_epoch": null,
+      "checkpoint_lineage": "Not established by this history alone"
+    },
+    {
+      "label": "experiments_dedup_regularized",
+      "completed_epochs": 16,
+      "source": {
+        "path": "paper_package/Dementia_Only_2026-10-09/source/training_logs/experiments_dedup_regularized/dementia/20260512_022515/history.json",
+        "sha256": "7e5664c8653a1b9cd4f10f7f406daeb138435bc2ec9cb505e67ad073832c3890",
+        "bytes": 2906
+      },
+      "seed": null,
+      "selected_epoch": null,
+      "checkpoint_lineage": "Not established by this history alone"
+    },
+    {
+      "label": "experiments_perceptual_regularized",
+      "completed_epochs": 17,
+      "source": {
+        "path": "paper_package/Dementia_Only_2026-10-09/source/training_logs/experiments_perceptual_regularized/dementia/20260513_163515/history.json",
+        "sha256": "018aa98ad261c3cbb61acea1f6e80171a98a8e68289a5ac61d24dfe2235605f2",
+        "bytes": 3089
+      },
+      "seed": null,
+      "selected_epoch": null,
+      "checkpoint_lineage": "Not established by this history alone"
+    }
+  ],
+  "same_filename_comparison": {
+    "source": {
+      "path": "paper_package/Dementia_Only_2026-10-09/source/models/Collab_Train/trained_models/training_logs/Dementia_Specialist_history.json",
+      "sha256": "5678198d12766d27264b39625e1c14aab6243ae6262ad294f2fe5fca694e2a61",
+      "bytes": 668
+    },
+    "compared_with": "paper_package/Dementia_Only_2026-10-09/source/training_logs/Dementia_Specialist_history.json",
+    "identical": false
+  },
+  "limitations": [
+    "These five history artifacts are separate from the six October 11 runs and are not included in the 305-epoch total.",
+    "History length is observed; seed, validation selection and exact baseline-checkpoint ancestry are not established by these history files alone.",
+    "Two files named Dementia_Specialist_history.json have different contents (32 and 5 epochs); their shared filename does not establish common run or checkpoint identity.",
+    "No six-architecture or eighteen-run original STS experiment is established by the supplied six-run evidence."
+  ]
+}

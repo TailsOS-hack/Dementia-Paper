@@ -1,11 +1,12 @@
 # Dementia research repository
 
-[Current results and tables](results/current/README.md) · [Regenerated figures](results/current/FIGURES.md) · [Mendeley audit](datasets/mendeley_xx9zzz6t54_v1/README.md) · [OASIS access status](datasets/OASIS_STATUS.md)
+[STS manuscript and full test results](results/sts/README.md) · [Current results and tables](results/current/README.md) · [Regenerated figures](results/current/FIGURES.md) · [Mendeley audit](datasets/mendeley_xx9zzz6t54_v1/README.md) · [OASIS access status](datasets/OASIS_STATUS.md)
 
 The current scope contains legacy four-class image research, retained Besga/OpenNeuro clinical comparisons, trained checkpoints, methods, raw training histories, attribution controls and future-study software. Earlier broader snapshots remain in Git history. The active repository has no fresh external clinical validation and does not establish clinical superiority or readiness.
 
 ## October 18 refresh
 
+- Added the four-page STS Results manuscript and reproducible audits of the six Round 1 training runs, complete 5,450-image test split, nested matched/sensitivity comparisons and reused 100-image benchmark. Their original analysis roles and limitations remain explicit.
 - Recomputed all 112 retained clinical model/scenario summaries from saved predictions, including uncertainty and paired comparisons.
 - Downloaded and audited Mendeley DOI 10.17632/xx9zzz6t54.1: all 6,400 images exactly match existing legacy pixels. Registered it as an alias; added no duplicate training data.
 - Reran all ten frozen stage classifiers on its 1,279-image supplied test split, explicitly labeled as reused-data evaluation.
@@ -14,16 +15,18 @@ The current scope contains legacy four-class image research, retained Besga/Open
 
 ## Organization
 
+- `results/sts/` and `analysis/sts_results/`: STS manuscript, recovered historical metrics, source audits and regeneration code.
 - `results/current/`: current tables, figures, verification and reproducible outputs.
 - `analysis_refresh/`: refreshed evaluation/statistics/plotting scripts.
 - `datasets/`: source audit, provenance, overlap and access status.
 - `docs/kevin_paper_20261011/`: study methods, historical stage results, training code and future research design.
 - `models/`: baseline, six Round 1 and six Round 2 research checkpoints, plus initialization weights.
 - `research/dementia_round3/`: proposed patient/site-level study implementation; not completed clinical research.
+- `research/sts_retrain_20261018/`: separate new training implementation with comparable clean training/validation loss measurements; its outputs do not replace the historical six-run results.
 - `paper_package/Dementia_Only_2026-10-09/`: historical dementia figures and native maps.
 
 Install Python dependencies from `requirements.txt`. Use Git LFS (`git lfs install`, then `git lfs pull`) to download model binaries. Raw clinical data, private access records and the large original training collection are not public. Some exact historical reruns require separately obtained source data and the earlier frozen code snapshot.
 
 The existing augmented JPEG data lack verified patient/upstream-family independence. The original100 exercise is reused internal data. Grad-CAM is exploratory. MCI and four-class image labels must not be silently converted into clinical AD/CN diagnoses. Tests are software checks, not clinical evidence.
 
-`REPOSITORY_MANIFEST.json` records current file hashes. Legacy package indexes describe historical layouts and are not a current inventory.
+`REPOSITORY_MANIFEST.json` records current public file payload hashes. For Git LFS files, the size and SHA256 refer to the model payload, including when the checkout contains only its pointer. Preview an update with `python -m analysis.sts_results.refresh_repository_manifest`; run with `--write` after finalizing public files, then `--check` to verify coverage. Raw-data and private working archives are excluded. Legacy package indexes describe historical layouts and are not a current inventory.

@@ -1,0 +1,1016 @@
+{
+  "status": "historical_curves_replotted_from_unchanged_values",
+  "histories": [
+    {
+      "source": "docs/kevin_paper_20261011/publication/training/multitask_seed20261011/history.csv",
+      "sha256": "eea4ecb951d64725094409697a815e7c24e02d5c4b36ce48061f864f6f395aed",
+      "rows": 43,
+      "figure": "publication_multitask_seed20261011.png",
+      "schema": "round1_multitask",
+      "epochs": [
+        1,
+        43
+      ],
+      "panels": [
+        {
+          "title": "Four-class stage: image NLL",
+          "endpoint": "stage",
+          "unit": "image",
+          "metric": "nll",
+          "series": [
+            {
+              "field": "train_stage_loss",
+              "label": "Train: online, augmented CE"
+            },
+            {
+              "field": "val_stage_loss",
+              "label": "Validation: epoch-end NLL"
+            }
+          ]
+        },
+        {
+          "title": "Four-class stage: image accuracy",
+          "endpoint": "stage",
+          "unit": "image",
+          "metric": "accuracy",
+          "series": [
+            {
+              "field": "train_stage_accuracy",
+              "label": "Train: online, augmented"
+            },
+            {
+              "field": "val_stage_accuracy",
+              "label": "Validation: epoch-end"
+            },
+            {
+              "field": "val_stage_balanced_accuracy",
+              "label": "Validation: balanced accuracy"
+            }
+          ]
+        },
+        {
+          "title": "AD/control training: sampled-slice CE",
+          "endpoint": "clinical",
+          "unit": "sampled_slice",
+          "metric": "nll",
+          "series": [
+            {
+              "field": "train_aux_loss",
+              "label": "Train: online, augmented slices"
+            }
+          ]
+        },
+        {
+          "title": "AD/control training: sampled-slice accuracy",
+          "endpoint": "clinical",
+          "unit": "sampled_slice",
+          "metric": "accuracy",
+          "series": [
+            {
+              "field": "train_aux_accuracy",
+              "label": "Train: online, augmented slices"
+            }
+          ]
+        },
+        {
+          "title": "AD/control validation: subject NLL",
+          "endpoint": "clinical",
+          "unit": "subject_mean_probability",
+          "metric": "nll",
+          "series": [
+            {
+              "field": "val_aux_loss",
+              "label": "Validation: mean slice probabilities"
+            }
+          ]
+        },
+        {
+          "title": "AD/control validation: subject accuracy",
+          "endpoint": "clinical",
+          "unit": "subject_mean_probability",
+          "metric": "accuracy",
+          "series": [
+            {
+              "field": "val_aux_accuracy",
+              "label": "Validation: subject accuracy"
+            },
+            {
+              "field": "val_aux_balanced_accuracy",
+              "label": "Validation: balanced accuracy"
+            }
+          ]
+        }
+      ],
+      "note": "Stage training logs unweighted, unsmoothed online CE with augmentation/dropout; validation uses epoch-end inference.\nClinical train slices and validation subjects use different units; their losses are separated and do not define a matched generalization gap.\nRaw stage/clinical CE excludes weighting, label smoothing and the combined multitask objective.",
+      "smoothing": false,
+      "missing_values_imputed": false,
+      "raw_histories_modified": false
+    },
+    {
+      "source": "docs/kevin_paper_20261011/publication/training/multitask_seed20261012/history.csv",
+      "sha256": "8751f97d6e250f997056a0062f9fb3a6a15882d52bbc7e5de772d9659fc36824",
+      "rows": 74,
+      "figure": "publication_multitask_seed20261012.png",
+      "schema": "round1_multitask",
+      "epochs": [
+        1,
+        74
+      ],
+      "panels": [
+        {
+          "title": "Four-class stage: image NLL",
+          "endpoint": "stage",
+          "unit": "image",
+          "metric": "nll",
+          "series": [
+            {
+              "field": "train_stage_loss",
+              "label": "Train: online, augmented CE"
+            },
+            {
+              "field": "val_stage_loss",
+              "label": "Validation: epoch-end NLL"
+            }
+          ]
+        },
+        {
+          "title": "Four-class stage: image accuracy",
+          "endpoint": "stage",
+          "unit": "image",
+          "metric": "accuracy",
+          "series": [
+            {
+              "field": "train_stage_accuracy",
+              "label": "Train: online, augmented"
+            },
+            {
+              "field": "val_stage_accuracy",
+              "label": "Validation: epoch-end"
+            },
+            {
+              "field": "val_stage_balanced_accuracy",
+              "label": "Validation: balanced accuracy"
+            }
+          ]
+        },
+        {
+          "title": "AD/control training: sampled-slice CE",
+          "endpoint": "clinical",
+          "unit": "sampled_slice",
+          "metric": "nll",
+          "series": [
+            {
+              "field": "train_aux_loss",
+              "label": "Train: online, augmented slices"
+            }
+          ]
+        },
+        {
+          "title": "AD/control training: sampled-slice accuracy",
+          "endpoint": "clinical",
+          "unit": "sampled_slice",
+          "metric": "accuracy",
+          "series": [
+            {
+              "field": "train_aux_accuracy",
+              "label": "Train: online, augmented slices"
+            }
+          ]
+        },
+        {
+          "title": "AD/control validation: subject NLL",
+          "endpoint": "clinical",
+          "unit": "subject_mean_probability",
+          "metric": "nll",
+          "series": [
+            {
+              "field": "val_aux_loss",
+              "label": "Validation: mean slice probabilities"
+            }
+          ]
+        },
+        {
+          "title": "AD/control validation: subject accuracy",
+          "endpoint": "clinical",
+          "unit": "subject_mean_probability",
+          "metric": "accuracy",
+          "series": [
+            {
+              "field": "val_aux_accuracy",
+              "label": "Validation: subject accuracy"
+            },
+            {
+              "field": "val_aux_balanced_accuracy",
+              "label": "Validation: balanced accuracy"
+            }
+          ]
+        }
+      ],
+      "note": "Stage training logs unweighted, unsmoothed online CE with augmentation/dropout; validation uses epoch-end inference.\nClinical train slices and validation subjects use different units; their losses are separated and do not define a matched generalization gap.\nRaw stage/clinical CE excludes weighting, label smoothing and the combined multitask objective.",
+      "smoothing": false,
+      "missing_values_imputed": false,
+      "raw_histories_modified": false
+    },
+    {
+      "source": "docs/kevin_paper_20261011/publication/training/multitask_seed20261013/history.csv",
+      "sha256": "15b5a058639ec07c55d4042e2948841d506e1dc5057be60d280069acfaf1e156",
+      "rows": 44,
+      "figure": "publication_multitask_seed20261013.png",
+      "schema": "round1_multitask",
+      "epochs": [
+        1,
+        44
+      ],
+      "panels": [
+        {
+          "title": "Four-class stage: image NLL",
+          "endpoint": "stage",
+          "unit": "image",
+          "metric": "nll",
+          "series": [
+            {
+              "field": "train_stage_loss",
+              "label": "Train: online, augmented CE"
+            },
+            {
+              "field": "val_stage_loss",
+              "label": "Validation: epoch-end NLL"
+            }
+          ]
+        },
+        {
+          "title": "Four-class stage: image accuracy",
+          "endpoint": "stage",
+          "unit": "image",
+          "metric": "accuracy",
+          "series": [
+            {
+              "field": "train_stage_accuracy",
+              "label": "Train: online, augmented"
+            },
+            {
+              "field": "val_stage_accuracy",
+              "label": "Validation: epoch-end"
+            },
+            {
+              "field": "val_stage_balanced_accuracy",
+              "label": "Validation: balanced accuracy"
+            }
+          ]
+        },
+        {
+          "title": "AD/control training: sampled-slice CE",
+          "endpoint": "clinical",
+          "unit": "sampled_slice",
+          "metric": "nll",
+          "series": [
+            {
+              "field": "train_aux_loss",
+              "label": "Train: online, augmented slices"
+            }
+          ]
+        },
+        {
+          "title": "AD/control training: sampled-slice accuracy",
+          "endpoint": "clinical",
+          "unit": "sampled_slice",
+          "metric": "accuracy",
+          "series": [
+            {
+              "field": "train_aux_accuracy",
+              "label": "Train: online, augmented slices"
+            }
+          ]
+        },
+        {
+          "title": "AD/control validation: subject NLL",
+          "endpoint": "clinical",
+          "unit": "subject_mean_probability",
+          "metric": "nll",
+          "series": [
+            {
+              "field": "val_aux_loss",
+              "label": "Validation: mean slice probabilities"
+            }
+          ]
+        },
+        {
+          "title": "AD/control validation: subject accuracy",
+          "endpoint": "clinical",
+          "unit": "subject_mean_probability",
+          "metric": "accuracy",
+          "series": [
+            {
+              "field": "val_aux_accuracy",
+              "label": "Validation: subject accuracy"
+            },
+            {
+              "field": "val_aux_balanced_accuracy",
+              "label": "Validation: balanced accuracy"
+            }
+          ]
+        }
+      ],
+      "note": "Stage training logs unweighted, unsmoothed online CE with augmentation/dropout; validation uses epoch-end inference.\nClinical train slices and validation subjects use different units; their losses are separated and do not define a matched generalization gap.\nRaw stage/clinical CE excludes weighting, label smoothing and the combined multitask objective.",
+      "smoothing": false,
+      "missing_values_imputed": false,
+      "raw_histories_modified": false
+    },
+    {
+      "source": "docs/kevin_paper_20261011/publication/training/stage_only_seed20261011/history.csv",
+      "sha256": "06bf084ddd9758069546802ce87902a8a8f3053f1d91a0ec0dc3271c965fe445",
+      "rows": 38,
+      "figure": "publication_stage_only_seed20261011.png",
+      "schema": "round1_stage",
+      "epochs": [
+        1,
+        38
+      ],
+      "panels": [
+        {
+          "title": "Four-class stage: image NLL",
+          "endpoint": "stage",
+          "unit": "image",
+          "metric": "nll",
+          "series": [
+            {
+              "field": "train_stage_loss",
+              "label": "Train: online, augmented CE"
+            },
+            {
+              "field": "val_stage_loss",
+              "label": "Validation: epoch-end NLL"
+            }
+          ]
+        },
+        {
+          "title": "Four-class stage: image accuracy",
+          "endpoint": "stage",
+          "unit": "image",
+          "metric": "accuracy",
+          "series": [
+            {
+              "field": "train_stage_accuracy",
+              "label": "Train: online, augmented"
+            },
+            {
+              "field": "val_stage_accuracy",
+              "label": "Validation: epoch-end"
+            },
+            {
+              "field": "val_stage_balanced_accuracy",
+              "label": "Validation: balanced accuracy"
+            }
+          ]
+        }
+      ],
+      "note": "Stage training logs unweighted, unsmoothed online CE with augmentation/dropout; validation uses epoch-end inference.\nRaw stage CE excludes the group/class weighting and label smoothing used by the optimization objective.",
+      "smoothing": false,
+      "missing_values_imputed": false,
+      "raw_histories_modified": false
+    },
+    {
+      "source": "docs/kevin_paper_20261011/publication/training/stage_only_seed20261012/history.csv",
+      "sha256": "835de05cb742b5a691ee1e873328c4c1fc01ee0d7dbf55ec2514bb8619b1a747",
+      "rows": 52,
+      "figure": "publication_stage_only_seed20261012.png",
+      "schema": "round1_stage",
+      "epochs": [
+        1,
+        52
+      ],
+      "panels": [
+        {
+          "title": "Four-class stage: image NLL",
+          "endpoint": "stage",
+          "unit": "image",
+          "metric": "nll",
+          "series": [
+            {
+              "field": "train_stage_loss",
+              "label": "Train: online, augmented CE"
+            },
+            {
+              "field": "val_stage_loss",
+              "label": "Validation: epoch-end NLL"
+            }
+          ]
+        },
+        {
+          "title": "Four-class stage: image accuracy",
+          "endpoint": "stage",
+          "unit": "image",
+          "metric": "accuracy",
+          "series": [
+            {
+              "field": "train_stage_accuracy",
+              "label": "Train: online, augmented"
+            },
+            {
+              "field": "val_stage_accuracy",
+              "label": "Validation: epoch-end"
+            },
+            {
+              "field": "val_stage_balanced_accuracy",
+              "label": "Validation: balanced accuracy"
+            }
+          ]
+        }
+      ],
+      "note": "Stage training logs unweighted, unsmoothed online CE with augmentation/dropout; validation uses epoch-end inference.\nRaw stage CE excludes the group/class weighting and label smoothing used by the optimization objective.",
+      "smoothing": false,
+      "missing_values_imputed": false,
+      "raw_histories_modified": false
+    },
+    {
+      "source": "docs/kevin_paper_20261011/publication/training/stage_only_seed20261013/history.csv",
+      "sha256": "1b23eb73f99e7edd749ccda45897414f96f322770fb6363138319fb926b554bf",
+      "rows": 54,
+      "figure": "publication_stage_only_seed20261013.png",
+      "schema": "round1_stage",
+      "epochs": [
+        1,
+        54
+      ],
+      "panels": [
+        {
+          "title": "Four-class stage: image NLL",
+          "endpoint": "stage",
+          "unit": "image",
+          "metric": "nll",
+          "series": [
+            {
+              "field": "train_stage_loss",
+              "label": "Train: online, augmented CE"
+            },
+            {
+              "field": "val_stage_loss",
+              "label": "Validation: epoch-end NLL"
+            }
+          ]
+        },
+        {
+          "title": "Four-class stage: image accuracy",
+          "endpoint": "stage",
+          "unit": "image",
+          "metric": "accuracy",
+          "series": [
+            {
+              "field": "train_stage_accuracy",
+              "label": "Train: online, augmented"
+            },
+            {
+              "field": "val_stage_accuracy",
+              "label": "Validation: epoch-end"
+            },
+            {
+              "field": "val_stage_balanced_accuracy",
+              "label": "Validation: balanced accuracy"
+            }
+          ]
+        }
+      ],
+      "note": "Stage training logs unweighted, unsmoothed online CE with augmentation/dropout; validation uses epoch-end inference.\nRaw stage CE excludes the group/class weighting and label smoothing used by the optimization objective.",
+      "smoothing": false,
+      "missing_values_imputed": false,
+      "raw_histories_modified": false
+    },
+    {
+      "source": "docs/kevin_paper_20261011/round2_publication/artifacts/stage/training/stage_only_seed20261011/history.csv",
+      "sha256": "9f16fd89636bf36ca53caf47e0fbac03e761db74beb9ca445b8d141ff913695a",
+      "rows": 22,
+      "figure": "round2_publication_stage_only_seed20261011.png",
+      "schema": "round2_stage",
+      "epochs": [
+        0,
+        21
+      ],
+      "panels": [
+        {
+          "title": "Four-class stage: image NLL",
+          "endpoint": "stage",
+          "unit": "image",
+          "metric": "nll",
+          "series": [
+            {
+              "field": "train_raw_nll",
+              "label": "Train: online, augmented CE"
+            },
+            {
+              "field": "clean_nll",
+              "label": "Validation: clean image NLL"
+            }
+          ]
+        },
+        {
+          "title": "Four-class stage: image accuracy",
+          "endpoint": "stage",
+          "unit": "image",
+          "metric": "accuracy",
+          "series": [
+            {
+              "field": "train_accuracy",
+              "label": "Train: online, augmented"
+            },
+            {
+              "field": "clean_accuracy",
+              "label": "Validation: clean accuracy"
+            },
+            {
+              "field": "clean_balanced_accuracy",
+              "label": "Validation: balanced accuracy"
+            }
+          ]
+        },
+        {
+          "title": "Validation stress: family-mean NLL",
+          "endpoint": "stage",
+          "unit": "stress_family_mean",
+          "metric": "nll",
+          "series": [
+            {
+              "field": "stress_nll",
+              "label": "Fixed stress: mean across families"
+            }
+          ]
+        },
+        {
+          "title": "Validation stress: scenario-mean accuracy",
+          "endpoint": "stage",
+          "unit": "stress_scenario_mean",
+          "metric": "accuracy",
+          "series": [
+            {
+              "field": "stress_accuracy",
+              "label": "Fixed stress: mean across scenarios"
+            }
+          ]
+        },
+        {
+          "title": "Training optimization objective",
+          "endpoint": "stage",
+          "unit": "weighted_image",
+          "metric": "objective",
+          "series": [
+            {
+              "field": "train_weighted_smoothed_objective",
+              "label": "Weighted CE with label smoothing"
+            }
+          ]
+        },
+        {
+          "title": "Validation-only selection score",
+          "endpoint": "stage",
+          "unit": "selection_composite",
+          "metric": "score",
+          "series": [
+            {
+              "field": "score",
+              "label": "0.5 clean NLL + 0.5 stress-family NLL"
+            }
+          ]
+        }
+      ],
+      "note": "Raw image NLL, stress aggregates, weighted/smoothed training objective and selection score occupy distinct panels.\nEpoch 0 is the initialization evaluation; online training metrics begin at epoch 1. No missing epoch-0 training values are invented.",
+      "smoothing": false,
+      "missing_values_imputed": false,
+      "raw_histories_modified": false
+    },
+    {
+      "source": "docs/kevin_paper_20261011/round2_publication/artifacts/stage/training/stage_only_seed20261012/history.csv",
+      "sha256": "aea4a31ff7b38186d91b8916ab4d7acf8af68554b00c6cba9f7a1679ff92bff9",
+      "rows": 34,
+      "figure": "round2_publication_stage_only_seed20261012.png",
+      "schema": "round2_stage",
+      "epochs": [
+        0,
+        33
+      ],
+      "panels": [
+        {
+          "title": "Four-class stage: image NLL",
+          "endpoint": "stage",
+          "unit": "image",
+          "metric": "nll",
+          "series": [
+            {
+              "field": "train_raw_nll",
+              "label": "Train: online, augmented CE"
+            },
+            {
+              "field": "clean_nll",
+              "label": "Validation: clean image NLL"
+            }
+          ]
+        },
+        {
+          "title": "Four-class stage: image accuracy",
+          "endpoint": "stage",
+          "unit": "image",
+          "metric": "accuracy",
+          "series": [
+            {
+              "field": "train_accuracy",
+              "label": "Train: online, augmented"
+            },
+            {
+              "field": "clean_accuracy",
+              "label": "Validation: clean accuracy"
+            },
+            {
+              "field": "clean_balanced_accuracy",
+              "label": "Validation: balanced accuracy"
+            }
+          ]
+        },
+        {
+          "title": "Validation stress: family-mean NLL",
+          "endpoint": "stage",
+          "unit": "stress_family_mean",
+          "metric": "nll",
+          "series": [
+            {
+              "field": "stress_nll",
+              "label": "Fixed stress: mean across families"
+            }
+          ]
+        },
+        {
+          "title": "Validation stress: scenario-mean accuracy",
+          "endpoint": "stage",
+          "unit": "stress_scenario_mean",
+          "metric": "accuracy",
+          "series": [
+            {
+              "field": "stress_accuracy",
+              "label": "Fixed stress: mean across scenarios"
+            }
+          ]
+        },
+        {
+          "title": "Training optimization objective",
+          "endpoint": "stage",
+          "unit": "weighted_image",
+          "metric": "objective",
+          "series": [
+            {
+              "field": "train_weighted_smoothed_objective",
+              "label": "Weighted CE with label smoothing"
+            }
+          ]
+        },
+        {
+          "title": "Validation-only selection score",
+          "endpoint": "stage",
+          "unit": "selection_composite",
+          "metric": "score",
+          "series": [
+            {
+              "field": "score",
+              "label": "0.5 clean NLL + 0.5 stress-family NLL"
+            }
+          ]
+        }
+      ],
+      "note": "Raw image NLL, stress aggregates, weighted/smoothed training objective and selection score occupy distinct panels.\nEpoch 0 is the initialization evaluation; online training metrics begin at epoch 1. No missing epoch-0 training values are invented.",
+      "smoothing": false,
+      "missing_values_imputed": false,
+      "raw_histories_modified": false
+    },
+    {
+      "source": "docs/kevin_paper_20261011/round2_publication/artifacts/stage/training/stage_only_seed20261013/history.csv",
+      "sha256": "fe9ca6b81fa83e3a510c540c40d919d7790ac20d2581fbaed5233a2732ef6443",
+      "rows": 36,
+      "figure": "round2_publication_stage_only_seed20261013.png",
+      "schema": "round2_stage",
+      "epochs": [
+        0,
+        35
+      ],
+      "panels": [
+        {
+          "title": "Four-class stage: image NLL",
+          "endpoint": "stage",
+          "unit": "image",
+          "metric": "nll",
+          "series": [
+            {
+              "field": "train_raw_nll",
+              "label": "Train: online, augmented CE"
+            },
+            {
+              "field": "clean_nll",
+              "label": "Validation: clean image NLL"
+            }
+          ]
+        },
+        {
+          "title": "Four-class stage: image accuracy",
+          "endpoint": "stage",
+          "unit": "image",
+          "metric": "accuracy",
+          "series": [
+            {
+              "field": "train_accuracy",
+              "label": "Train: online, augmented"
+            },
+            {
+              "field": "clean_accuracy",
+              "label": "Validation: clean accuracy"
+            },
+            {
+              "field": "clean_balanced_accuracy",
+              "label": "Validation: balanced accuracy"
+            }
+          ]
+        },
+        {
+          "title": "Validation stress: family-mean NLL",
+          "endpoint": "stage",
+          "unit": "stress_family_mean",
+          "metric": "nll",
+          "series": [
+            {
+              "field": "stress_nll",
+              "label": "Fixed stress: mean across families"
+            }
+          ]
+        },
+        {
+          "title": "Validation stress: scenario-mean accuracy",
+          "endpoint": "stage",
+          "unit": "stress_scenario_mean",
+          "metric": "accuracy",
+          "series": [
+            {
+              "field": "stress_accuracy",
+              "label": "Fixed stress: mean across scenarios"
+            }
+          ]
+        },
+        {
+          "title": "Training optimization objective",
+          "endpoint": "stage",
+          "unit": "weighted_image",
+          "metric": "objective",
+          "series": [
+            {
+              "field": "train_weighted_smoothed_objective",
+              "label": "Weighted CE with label smoothing"
+            }
+          ]
+        },
+        {
+          "title": "Validation-only selection score",
+          "endpoint": "stage",
+          "unit": "selection_composite",
+          "metric": "score",
+          "series": [
+            {
+              "field": "score",
+              "label": "0.5 clean NLL + 0.5 stress-family NLL"
+            }
+          ]
+        }
+      ],
+      "note": "Raw image NLL, stress aggregates, weighted/smoothed training objective and selection score occupy distinct panels.\nEpoch 0 is the initialization evaluation; online training metrics begin at epoch 1. No missing epoch-0 training values are invented.",
+      "smoothing": false,
+      "missing_values_imputed": false,
+      "raw_histories_modified": false
+    },
+    {
+      "source": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/training/clinical_seed20261021/history.csv",
+      "sha256": "db776da0c6b798e205757809aa1a1a0b7cb2d34feccf8beb55dc98a47eb06da6",
+      "rows": 81,
+      "figure": "round2_publication_clinical_clinical_seed20261021.png",
+      "schema": "round2_clinical",
+      "epochs": [
+        0,
+        80
+      ],
+      "panels": [
+        {
+          "title": "AD/control: matched clean subject NLL",
+          "endpoint": "clinical",
+          "unit": "subject_mean_logits",
+          "metric": "nll",
+          "series": [
+            {
+              "field": "train_clean_loss",
+              "label": "Train: epoch-end, clean"
+            },
+            {
+              "field": "val_loss",
+              "label": "Validation: epoch-end, clean"
+            }
+          ]
+        },
+        {
+          "title": "AD/control: clean subject accuracy",
+          "endpoint": "clinical",
+          "unit": "subject_mean_logits",
+          "metric": "accuracy",
+          "series": [
+            {
+              "field": "train_clean_accuracy",
+              "label": "Train: epoch-end, clean"
+            },
+            {
+              "field": "val_accuracy",
+              "label": "Validation: epoch-end, clean"
+            },
+            {
+              "field": "val_balanced_accuracy",
+              "label": "Validation: balanced accuracy"
+            }
+          ]
+        },
+        {
+          "title": "AD/control: online augmented subject CE",
+          "endpoint": "clinical",
+          "unit": "subject_mean_logits",
+          "metric": "nll",
+          "series": [
+            {
+              "field": "train_aug_loss",
+              "label": "Train: online, augmented subject bags"
+            }
+          ]
+        },
+        {
+          "title": "AD/control: online augmented accuracy",
+          "endpoint": "clinical",
+          "unit": "subject_mean_logits",
+          "metric": "accuracy",
+          "series": [
+            {
+              "field": "train_aug_accuracy",
+              "label": "Train: online, augmented subject bags"
+            }
+          ]
+        }
+      ],
+      "note": "All losses use subject bags with mean slice logits. Clean train and validation are evaluated at the same epoch-end weights.\nOnline augmented training measurements are separated. Epoch 0 is initialization; online metrics begin at epoch 1.",
+      "smoothing": false,
+      "missing_values_imputed": false,
+      "raw_histories_modified": false
+    },
+    {
+      "source": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/training/clinical_seed20261022/history.csv",
+      "sha256": "67a6f708e47d452c67f8ac56e786ddda037aaa17ea11f336f2390c2164fbc9cd",
+      "rows": 54,
+      "figure": "round2_publication_clinical_clinical_seed20261022.png",
+      "schema": "round2_clinical",
+      "epochs": [
+        0,
+        53
+      ],
+      "panels": [
+        {
+          "title": "AD/control: matched clean subject NLL",
+          "endpoint": "clinical",
+          "unit": "subject_mean_logits",
+          "metric": "nll",
+          "series": [
+            {
+              "field": "train_clean_loss",
+              "label": "Train: epoch-end, clean"
+            },
+            {
+              "field": "val_loss",
+              "label": "Validation: epoch-end, clean"
+            }
+          ]
+        },
+        {
+          "title": "AD/control: clean subject accuracy",
+          "endpoint": "clinical",
+          "unit": "subject_mean_logits",
+          "metric": "accuracy",
+          "series": [
+            {
+              "field": "train_clean_accuracy",
+              "label": "Train: epoch-end, clean"
+            },
+            {
+              "field": "val_accuracy",
+              "label": "Validation: epoch-end, clean"
+            },
+            {
+              "field": "val_balanced_accuracy",
+              "label": "Validation: balanced accuracy"
+            }
+          ]
+        },
+        {
+          "title": "AD/control: online augmented subject CE",
+          "endpoint": "clinical",
+          "unit": "subject_mean_logits",
+          "metric": "nll",
+          "series": [
+            {
+              "field": "train_aug_loss",
+              "label": "Train: online, augmented subject bags"
+            }
+          ]
+        },
+        {
+          "title": "AD/control: online augmented accuracy",
+          "endpoint": "clinical",
+          "unit": "subject_mean_logits",
+          "metric": "accuracy",
+          "series": [
+            {
+              "field": "train_aug_accuracy",
+              "label": "Train: online, augmented subject bags"
+            }
+          ]
+        }
+      ],
+      "note": "All losses use subject bags with mean slice logits. Clean train and validation are evaluated at the same epoch-end weights.\nOnline augmented training measurements are separated. Epoch 0 is initialization; online metrics begin at epoch 1.",
+      "smoothing": false,
+      "missing_values_imputed": false,
+      "raw_histories_modified": false
+    },
+    {
+      "source": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/training/clinical_seed20261023/history.csv",
+      "sha256": "bcd26ba9e6b40eb50ec46235032c5f36627e911942ec213dea3294ce7c2b305e",
+      "rows": 79,
+      "figure": "round2_publication_clinical_clinical_seed20261023.png",
+      "schema": "round2_clinical",
+      "epochs": [
+        0,
+        78
+      ],
+      "panels": [
+        {
+          "title": "AD/control: matched clean subject NLL",
+          "endpoint": "clinical",
+          "unit": "subject_mean_logits",
+          "metric": "nll",
+          "series": [
+            {
+              "field": "train_clean_loss",
+              "label": "Train: epoch-end, clean"
+            },
+            {
+              "field": "val_loss",
+              "label": "Validation: epoch-end, clean"
+            }
+          ]
+        },
+        {
+          "title": "AD/control: clean subject accuracy",
+          "endpoint": "clinical",
+          "unit": "subject_mean_logits",
+          "metric": "accuracy",
+          "series": [
+            {
+              "field": "train_clean_accuracy",
+              "label": "Train: epoch-end, clean"
+            },
+            {
+              "field": "val_accuracy",
+              "label": "Validation: epoch-end, clean"
+            },
+            {
+              "field": "val_balanced_accuracy",
+              "label": "Validation: balanced accuracy"
+            }
+          ]
+        },
+        {
+          "title": "AD/control: online augmented subject CE",
+          "endpoint": "clinical",
+          "unit": "subject_mean_logits",
+          "metric": "nll",
+          "series": [
+            {
+              "field": "train_aug_loss",
+              "label": "Train: online, augmented subject bags"
+            }
+          ]
+        },
+        {
+          "title": "AD/control: online augmented accuracy",
+          "endpoint": "clinical",
+          "unit": "subject_mean_logits",
+          "metric": "accuracy",
+          "series": [
+            {
+              "field": "train_aug_accuracy",
+              "label": "Train: online, augmented subject bags"
+            }
+          ]
+        }
+      ],
+      "note": "All losses use subject bags with mean slice logits. Clean train and validation are evaluated at the same epoch-end weights.\nOnline augmented training measurements are separated. Epoch 0 is initialization; online metrics begin at epoch 1.",
+      "smoothing": false,
+      "missing_values_imputed": false,
+      "raw_histories_modified": false
+    }
+  ],
+  "training_performed": false,
+  "common_clean_train_validation_available": "Round 2 clinical only; unavailable for historical Round 1 epochs",
+  "repaired_issue": "Prior substring plotting mixed stage and clinical losses, mixed clinical slice/subject units, and omitted the weighted/smoothed objective field."
+}

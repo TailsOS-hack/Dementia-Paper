@@ -1,0 +1,318 @@
+{
+  "study": "October 11, 2026 Round 1 dementia training experiment",
+  "design": "Two training conditions, three shared seed values per condition; six fitted checkpoints total",
+  "architecture": "ImageNet-initialized MobileNetV3-Large in both conditions",
+  "run_count": 6,
+  "conditions": {
+    "stage_only": 3,
+    "multitask": 3
+  },
+  "distinct_seed_count": 3,
+  "total_completed_epochs": 305,
+  "stopping_controls": {
+    "maximum_epochs": 100,
+    "minimum_epochs": 20,
+    "patience": 15,
+    "minimum_improvement": 0.0001
+  },
+  "selection_rule": "Strict improvement: current stage-validation NLL < selected NLL - minimum_improvement",
+  "selection_frozen_utc": "2026-10-11T23:10:27.325271+00:00",
+  "validation_preferred_condition": "stage_only",
+  "mean_selected_validation_nll_by_condition": {
+    "stage_only": 0.03639474491472902,
+    "multitask": 0.050314940356674005
+  },
+  "exploratory_representative": "candidate_3",
+  "runs": [
+    {
+      "candidate": "candidate_1",
+      "condition": "stage_only",
+      "seed": 20261011,
+      "architecture": "MobileNetV3-Large",
+      "initialization": "ImageNet",
+      "selected_epoch": 23,
+      "selected_validation_nll": 0.03747158972872587,
+      "completed_epochs": 38,
+      "first_stopping_epoch": 38,
+      "epochs_since_selected": 15,
+      "mathematical_minimum_epoch": 23,
+      "mathematical_minimum_nll": 0.03747158972872587,
+      "selection_to_minimum_nll_gap": 0.0,
+      "checkpoint_metadata_sha256": "a3a811c02a43d5f0ba4b126955a50b2a9d5e98e1a3f333aaba7b201e6dc2d771",
+      "history_path": "docs/kevin_paper_20261011/publication/training/stage_only_seed20261011/history.csv",
+      "history_sha256": "06bf084ddd9758069546802ce87902a8a8f3053f1d91a0ec0dc3271c965fe445",
+      "historical_source_history_sha256": "a7fbc496f1499dec90aa44c63139aa93b5ff8163afab1c7d79f9509f5584447c",
+      "original_loss_figure": "docs/kevin_paper_20261011/publication/training/stage_only_seed20261011/loss_curves.png",
+      "original_accuracy_figure": "docs/kevin_paper_20261011/publication/training/stage_only_seed20261011/accuracy_curves.png"
+    },
+    {
+      "candidate": "candidate_2",
+      "condition": "multitask",
+      "seed": 20261011,
+      "architecture": "MobileNetV3-Large",
+      "initialization": "ImageNet",
+      "selected_epoch": 28,
+      "selected_validation_nll": 0.051600637482635964,
+      "completed_epochs": 43,
+      "first_stopping_epoch": 43,
+      "epochs_since_selected": 15,
+      "mathematical_minimum_epoch": 28,
+      "mathematical_minimum_nll": 0.051600637482635964,
+      "selection_to_minimum_nll_gap": 0.0,
+      "checkpoint_metadata_sha256": "dded15b8c2201e8f3d71fab1f0af547363a539f78b79db49f389337eef2654d9",
+      "history_path": "docs/kevin_paper_20261011/publication/training/multitask_seed20261011/history.csv",
+      "history_sha256": "eea4ecb951d64725094409697a815e7c24e02d5c4b36ce48061f864f6f395aed",
+      "historical_source_history_sha256": "d5218898c3836eda877f00db29b282c113e499ac7837809ce53417d87097214f",
+      "original_loss_figure": "docs/kevin_paper_20261011/publication/training/multitask_seed20261011/loss_curves.png",
+      "original_accuracy_figure": "docs/kevin_paper_20261011/publication/training/multitask_seed20261011/accuracy_curves.png"
+    },
+    {
+      "candidate": "candidate_3",
+      "condition": "stage_only",
+      "seed": 20261012,
+      "architecture": "MobileNetV3-Large",
+      "initialization": "ImageNet",
+      "selected_epoch": 37,
+      "selected_validation_nll": 0.03477062228208098,
+      "completed_epochs": 52,
+      "first_stopping_epoch": 52,
+      "epochs_since_selected": 15,
+      "mathematical_minimum_epoch": 37,
+      "mathematical_minimum_nll": 0.03477062228208098,
+      "selection_to_minimum_nll_gap": 0.0,
+      "checkpoint_metadata_sha256": "642c39da1adecd7925cb4057718772af2603ef6077df676c4c4abd1907c3356e",
+      "history_path": "docs/kevin_paper_20261011/publication/training/stage_only_seed20261012/history.csv",
+      "history_sha256": "835de05cb742b5a691ee1e873328c4c1fc01ee0d7dbf55ec2514bb8619b1a747",
+      "historical_source_history_sha256": "cde2bf8293810ccdd1841ee3b77fbc9a320e83437f0558d75ba8b966167e959b",
+      "original_loss_figure": "docs/kevin_paper_20261011/publication/training/stage_only_seed20261012/loss_curves.png",
+      "original_accuracy_figure": "docs/kevin_paper_20261011/publication/training/stage_only_seed20261012/accuracy_curves.png"
+    },
+    {
+      "candidate": "candidate_4",
+      "condition": "multitask",
+      "seed": 20261012,
+      "architecture": "MobileNetV3-Large",
+      "initialization": "ImageNet",
+      "selected_epoch": 59,
+      "selected_validation_nll": 0.04531075374947832,
+      "completed_epochs": 74,
+      "first_stopping_epoch": 74,
+      "epochs_since_selected": 15,
+      "mathematical_minimum_epoch": 59,
+      "mathematical_minimum_nll": 0.04531075374947832,
+      "selection_to_minimum_nll_gap": 0.0,
+      "checkpoint_metadata_sha256": "9435ae63d0ccb38b9474d2aee85f063bcb48f207d88c6f83d6fc495f8b52beac",
+      "history_path": "docs/kevin_paper_20261011/publication/training/multitask_seed20261012/history.csv",
+      "history_sha256": "8751f97d6e250f997056a0062f9fb3a6a15882d52bbc7e5de772d9659fc36824",
+      "historical_source_history_sha256": "930c0e52f834884a14c8b071b9bd2205977668d8b8be846d9f3795fddb105d50",
+      "original_loss_figure": "docs/kevin_paper_20261011/publication/training/multitask_seed20261012/loss_curves.png",
+      "original_accuracy_figure": "docs/kevin_paper_20261011/publication/training/multitask_seed20261012/accuracy_curves.png"
+    },
+    {
+      "candidate": "candidate_5",
+      "condition": "stage_only",
+      "seed": 20261013,
+      "architecture": "MobileNetV3-Large",
+      "initialization": "ImageNet",
+      "selected_epoch": 39,
+      "selected_validation_nll": 0.03694202273338021,
+      "completed_epochs": 54,
+      "first_stopping_epoch": 54,
+      "epochs_since_selected": 15,
+      "mathematical_minimum_epoch": 39,
+      "mathematical_minimum_nll": 0.03694202273338021,
+      "selection_to_minimum_nll_gap": 0.0,
+      "checkpoint_metadata_sha256": "b0cfa50d30cc6880a52ea0e3aaf7249de3b52ba91163bb1e6472a3d59d12d06b",
+      "history_path": "docs/kevin_paper_20261011/publication/training/stage_only_seed20261013/history.csv",
+      "history_sha256": "1b23eb73f99e7edd749ccda45897414f96f322770fb6363138319fb926b554bf",
+      "historical_source_history_sha256": "928442f2e32203e5f472a81c298a22f0e1387d49e9b69b28b210cb99756236ed",
+      "original_loss_figure": "docs/kevin_paper_20261011/publication/training/stage_only_seed20261013/loss_curves.png",
+      "original_accuracy_figure": "docs/kevin_paper_20261011/publication/training/stage_only_seed20261013/accuracy_curves.png"
+    },
+    {
+      "candidate": "candidate_6",
+      "condition": "multitask",
+      "seed": 20261013,
+      "architecture": "MobileNetV3-Large",
+      "initialization": "ImageNet",
+      "selected_epoch": 29,
+      "selected_validation_nll": 0.05403342983790774,
+      "completed_epochs": 44,
+      "first_stopping_epoch": 44,
+      "epochs_since_selected": 15,
+      "mathematical_minimum_epoch": 29,
+      "mathematical_minimum_nll": 0.05403342983790774,
+      "selection_to_minimum_nll_gap": 0.0,
+      "checkpoint_metadata_sha256": "87d25d2e878caeb4aef33b99c210ebfdf303fc20058974b1a3c390d3aa5a39fe",
+      "history_path": "docs/kevin_paper_20261011/publication/training/multitask_seed20261013/history.csv",
+      "history_sha256": "15b5a058639ec07c55d4042e2948841d506e1dc5057be60d280069acfaf1e156",
+      "historical_source_history_sha256": "07339957333fe8516655721a1d369c8708c8611658adf2b0e019ad13662a206e",
+      "original_loss_figure": "docs/kevin_paper_20261011/publication/training/multitask_seed20261013/loss_curves.png",
+      "original_accuracy_figure": "docs/kevin_paper_20261011/publication/training/multitask_seed20261013/accuracy_curves.png"
+    }
+  ],
+  "legacy_lineage": {
+    "scope": "Historical dementia histories predating the October 11 Round 1 study",
+    "histories": [
+      {
+        "label": "Legacy dementia specialist",
+        "completed_epochs": 32,
+        "source": {
+          "path": "paper_package/Dementia_Only_2026-10-09/source/training_logs/Dementia_Specialist_history.json",
+          "sha256": "fd0ca4c6c09a9a97868945371ba7680b2486f550d137153c0dd9df21fff11574",
+          "bytes": 3661
+        },
+        "seed": null,
+        "selected_epoch": null,
+        "checkpoint_lineage": "Not established by this history alone"
+      },
+      {
+        "label": "Archived Collab_Train dementia specialist",
+        "completed_epochs": 5,
+        "source": {
+          "path": "paper_package/Dementia_Only_2026-10-09/source/models/Collab_Train/trained_models/training_logs/Dementia_Specialist_history.json",
+          "sha256": "5678198d12766d27264b39625e1c14aab6243ae6262ad294f2fe5fca694e2a61",
+          "bytes": 668
+        },
+        "seed": null,
+        "selected_epoch": null,
+        "checkpoint_lineage": "Not established by this history alone"
+      },
+      {
+        "label": "experiments_regularized",
+        "completed_epochs": 20,
+        "source": {
+          "path": "paper_package/Dementia_Only_2026-10-09/source/training_logs/experiments_regularized/dementia/20260511_221548/history.json",
+          "sha256": "b302f13f244dd3749a8079c9fe47ceb7ea1c2ae79351ff6ab4ea584f23588db4",
+          "bytes": 3604
+        },
+        "seed": null,
+        "selected_epoch": null,
+        "checkpoint_lineage": "Not established by this history alone"
+      },
+      {
+        "label": "experiments_dedup_regularized",
+        "completed_epochs": 16,
+        "source": {
+          "path": "paper_package/Dementia_Only_2026-10-09/source/training_logs/experiments_dedup_regularized/dementia/20260512_022515/history.json",
+          "sha256": "7e5664c8653a1b9cd4f10f7f406daeb138435bc2ec9cb505e67ad073832c3890",
+          "bytes": 2906
+        },
+        "seed": null,
+        "selected_epoch": null,
+        "checkpoint_lineage": "Not established by this history alone"
+      },
+      {
+        "label": "experiments_perceptual_regularized",
+        "completed_epochs": 17,
+        "source": {
+          "path": "paper_package/Dementia_Only_2026-10-09/source/training_logs/experiments_perceptual_regularized/dementia/20260513_163515/history.json",
+          "sha256": "018aa98ad261c3cbb61acea1f6e80171a98a8e68289a5ac61d24dfe2235605f2",
+          "bytes": 3089
+        },
+        "seed": null,
+        "selected_epoch": null,
+        "checkpoint_lineage": "Not established by this history alone"
+      }
+    ],
+    "same_filename_comparison": {
+      "source": {
+        "path": "paper_package/Dementia_Only_2026-10-09/source/models/Collab_Train/trained_models/training_logs/Dementia_Specialist_history.json",
+        "sha256": "5678198d12766d27264b39625e1c14aab6243ae6262ad294f2fe5fca694e2a61",
+        "bytes": 668
+      },
+      "compared_with": "paper_package/Dementia_Only_2026-10-09/source/training_logs/Dementia_Specialist_history.json",
+      "identical": false
+    },
+    "limitations": [
+      "These five history artifacts are separate from the six October 11 runs and are not included in the 305-epoch total.",
+      "History length is observed; seed, validation selection and exact baseline-checkpoint ancestry are not established by these history files alone.",
+      "Two files named Dementia_Specialist_history.json have different contents (32 and 5 epochs); their shared filename does not establish common run or checkpoint identity.",
+      "No six-architecture or eighteen-run original STS experiment is established by the supplied six-run evidence."
+    ]
+  },
+  "sources": [
+    {
+      "path": "models/kevin_20261011/CHECKPOINTS.json",
+      "sha256": "fd047101930e7cedbf31e45252dbad1eef1fc29853989544cb73fa9df1b71e21",
+      "bytes": 2314
+    },
+    {
+      "path": "docs/kevin_paper_20261011/publication/results/validation_selection.json",
+      "sha256": "faf700755b7877dc8331d314206dc37547bf08249dfa8c5f7fd81f40a4f8f170",
+      "bytes": 6392
+    },
+    {
+      "path": "docs/kevin_paper_20261011/publication/evidence/completed_methods_evidence.json",
+      "sha256": "496494bb7e98d354898d820f2f37f133571f796cb6ea4e4db602f7ffbed257c9",
+      "bytes": 4606
+    },
+    {
+      "path": "docs/kevin_paper_20261011/training/train_candidate.py",
+      "sha256": "cbf67b7c6e842ce35eeef2e0c0a6a0752b865cec3399d7aa58bd5e8ff0e2a5e2",
+      "bytes": 24838
+    },
+    {
+      "path": "docs/kevin_paper_20261011/publication/reports/Completed_Methods.md",
+      "sha256": "0ac35f2ec0770d09e1bea1982e4d61345beef1e1b631746cfcb222304811af46",
+      "bytes": 8960
+    },
+    {
+      "path": "docs/kevin_paper_20261011/publication/training/stage_only_seed20261011/history.csv",
+      "sha256": "06bf084ddd9758069546802ce87902a8a8f3053f1d91a0ec0dc3271c965fe445",
+      "bytes": 5763
+    },
+    {
+      "path": "docs/kevin_paper_20261011/publication/training/multitask_seed20261011/history.csv",
+      "sha256": "eea4ecb951d64725094409697a815e7c24e02d5c4b36ce48061f864f6f395aed",
+      "bytes": 10107
+    },
+    {
+      "path": "docs/kevin_paper_20261011/publication/training/stage_only_seed20261012/history.csv",
+      "sha256": "835de05cb742b5a691ee1e873328c4c1fc01ee0d7dbf55ec2514bb8619b1a747",
+      "bytes": 7811
+    },
+    {
+      "path": "docs/kevin_paper_20261011/publication/training/multitask_seed20261012/history.csv",
+      "sha256": "8751f97d6e250f997056a0062f9fb3a6a15882d52bbc7e5de772d9659fc36824",
+      "bytes": 17446
+    },
+    {
+      "path": "docs/kevin_paper_20261011/publication/training/stage_only_seed20261013/history.csv",
+      "sha256": "1b23eb73f99e7edd749ccda45897414f96f322770fb6363138319fb926b554bf",
+      "bytes": 8125
+    },
+    {
+      "path": "docs/kevin_paper_20261011/publication/training/multitask_seed20261013/history.csv",
+      "sha256": "15b5a058639ec07c55d4042e2948841d506e1dc5057be60d280069acfaf1e156",
+      "bytes": 10438
+    }
+  ],
+  "limitations": [
+    "The 305 epochs describe the October 11 Round 1 experiment, not a documented original six-architecture STS training experiment.",
+    "There are six condition-by-seed runs, not eighteen runs. The same three seed values occur in both conditions.",
+    "Stopping controls are read from the published trainer defaults, corroborated by Completed_Methods.md and exact replay of all six histories; raw run configurations are not in this portable training directory.",
+    "Checkpoint hashes are cross-checked between metadata records; model binaries are not loaded or independently rehashed by this audit.",
+    "Public CSV byte hashes and historical original-history hashes refer to different exported files and are retained separately.",
+    "Stage train loss is unweighted unsmoothed cross-entropy with augmentation/dropout active; optimized loss includes weights and smoothing, while validation is evaluated without training augmentation.",
+    "The multitask condition adds a distinct AD/control head; its clinical endpoint and sampled-slice training loss must not be merged with the four-class stage endpoint."
+  ],
+  "figures": [
+    {
+      "file": "completed_vs_selected_epochs.png",
+      "kind": "epoch_summary"
+    },
+    {
+      "file": "completed_vs_selected_epochs.pdf",
+      "kind": "epoch_summary"
+    },
+    {
+      "file": "stage_loss_curves.png",
+      "kind": "raw_stage_loss"
+    },
+    {
+      "file": "stage_loss_curves.pdf",
+      "kind": "raw_stage_loss"
+    }
+  ]
+}

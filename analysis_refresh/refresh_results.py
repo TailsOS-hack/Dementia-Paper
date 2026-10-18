@@ -72,20 +72,11 @@ def stage(out):
  fig.suptitle('Frozen stage models — all source images already present in legacy data');fig.tight_layout();fig.savefig(out/'all_stage_models.png',dpi=180);plt.close(fig)
  return {'stage_models':len(summary),'test_images_per_model':1279,'independent_external':False}
 def training(out):
- out.mkdir(parents=True,exist_ok=True);folders=['publication/training','round2_publication/artifacts/stage/training','round2_publication/artifacts/clinical/training'];index=[]
- for folder in folders:
-  for p in sorted((ROOT/'docs/kevin_paper_20261011'/folder).rglob('history.csv')):
-   rows=list(csv.DictReader(p.open()));fig,axs=plt.subplots(1,2,figsize=(13,4.6))
-   for ax,kind in zip(axs,['loss','accuracy']):
-    for key in rows[0]:
-     if ('loss' in key or 'nll' in key) if kind=='loss' else ('accuracy' in key):
-      vals=[(float(r['epoch']),float(r[key])) for r in rows if r.get(key) not in [None,'','None','null']]
-      if vals:ax.plot(*zip(*vals),label=key)
-    ax.set(xlabel='Epoch',ylabel=kind);ax.legend(fontsize=6);ax.grid(alpha=.2)
-   name=folder.split('/')[0]+'_'+('clinical_' if 'clinical/' in folder else '')+p.parent.name
-   fig.suptitle(name+' — stored unsmoothed history, no retraining');fig.tight_layout();fig.savefig(out/(name+'.png'),dpi=180);plt.close(fig)
-   index.append(dict(source=str(p.relative_to(ROOT)),sha256=hashlib.sha256(p.read_bytes()).hexdigest(),rows=len(rows),figure=name+'.png'))
- assert len(index)==12;dump(out/'index.json',index);return len(index)
+ try:
+  from .training_curves import regenerate
+ except ImportError:
+  from training_curves import regenerate
+ return regenerate(ROOT,out)
 def main():
  p=argparse.ArgumentParser();p.add_argument('--clinical-predictions',type=Path,required=True);a=p.parse_args();out=ROOT/'results/current';out.mkdir(parents=True,exist_ok=True)
  report={'clinical':clinical(a.clinical_predictions,out/'clinical'),'stage':stage(out/'mendeley'),'training_history_figures':training(out/'training')}
