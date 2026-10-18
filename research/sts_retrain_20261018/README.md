@@ -1,6 +1,15 @@
 # New retraining with comparable learning curves
 
-This is a separate October 18 experiment. It retains the original two conditions
+The separate October 18 experiment completed **six runs and 329 epochs**. The
+[verified report](../../results/sts/retraining/report.json),
+[selected-checkpoint summary](../../results/sts/retraining/summary.csv),
+[public run evidence](../../results/sts/retraining/raw/) and
+[six inference states](../../models/sts_retrain_20261018/README.md) are included.
+The [combined six-page manuscript](../../results/sts/README.md) has four tables and
+four embedded graphs. These new observations remain separate from the historical
+305-epoch experiment and add no held-out performance estimates.
+
+The experiment retains the original two conditions
 (stage only and multitask), three seeds (20261011–20261013), ImageNet initialization,
 full 19,023-image training passes, optimizer, augmentation, weighting, label
 smoothing and validation-only checkpoint-selection rules. It never loads an old
@@ -59,8 +68,14 @@ the first committed checkpoint is restartable only for the suite's verified curr
 run: its incomplete configuration/temporary files are archived, never deleted.
 Completed runs carry hashes for both checkpoints and history/selection/curve files;
 suite resume verifies them before skipping a run. Worker count is part of resume
-identity because it changes augmentation RNG assignment. Ties between condition
-means use the original lexicographic condition-name rule, then ascending seed.
+identity because it changes augmentation RNG assignment. Condition preference
+minimizes mean selected validation NLL across three seeds; exact condition-mean
+ties use lexicographic condition-name order. Within the preferred condition,
+the representative minimizes selected validation NLL, with ascending seed used
+only for exact NLL ties. The archived `selection_basis` says “lowest seed”; that
+description is imprecise and is preserved as source metadata. The frozen code and
+report verification implement the NLL-based rule. The completed suite preferred
+stage-only, represented by seed 20261011 at epoch 27.
 
 The frozen helper is imported by its full repository module name, so its dataset
 class can be reconstructed by spawned DataLoader workers as well as Linux forked
@@ -73,6 +88,27 @@ The new observations must be reported separately from the historical experiment.
 
 Tests: `python -m unittest tests.test_sts_retrain -v`.
 
+## Rebuild from public metadata
+
+The public records are sufficient to rebuild numeric summaries and curves without
+training, image inference or checkpoint files. Keep the output separate from the
+published report:
+
+```sh
+python -m research.sts_retrain_20261018.report \
+  --input results/sts/retraining/raw \
+  --output /tmp/sts_retraining_rebuild
+```
+
+This checks histories, per-epoch denominators, stopping, selection and available
+public stage-manifest evidence. It reports metadata-only verification for absent
+original checkpoints and the private clinical manifest. The publication report
+records a separate local check of all twelve original best/last binaries and both
+manifests. Public inference derivatives have distinct file hashes and cannot stand
+in for the original resumable files. Their [provenance](../../models/sts_retrain_20261018/provenance.json)
+maps each selected source hash and epoch to its derivative and unchanged tensor
+bytes. No new held-out estimates follow from this rebuild.
+
 ## Prepare minimized inputs
 
 `prepare_inputs.py` reproduces the verified training-only bundle from separately held source data and official ImageNet initialization. It checks frozen stage pixel identities, clinical development membership, image metadata and every archive member hash. The unchanged stage manifest retains test-row metadata for split verification; no test pixels are included. Private bundle output must be outside this repository. The script performs no upload.
@@ -83,3 +119,47 @@ python -m research.sts_retrain_20261018.prepare_inputs \
   --imagenet-initialization /path/to/mobilenet_v3_large-8738ca79.pth \
   --output-dir /private/path/outside/repository
 ```
+
+## Reproduce public evidence packaging
+
+The completed publication package was built after all six runs passed the
+aggregate verifier. To reproduce packaging from separately held originals,
+generate the aggregate report with
+`python -m research.sts_retrain_20261018.report --require-checkpoints` against
+the full retrieved suite, supplying the
+same private clinical manifest used below. Packaging independently verifies all
+twelve original checkpoint binaries and checks that the supplied report matches
+the histories, selection, split checks and source hashes. Existing target folders
+are refused. This command stages files locally; it does not commit or publish.
+The report also pins all six generated PNG/PDF files by SHA256. Packaging checks
+those hashes, and the manuscript checks its two figure hashes before embedding.
+Generate the publication report with plots enabled: `--no-plots` records an empty
+figure map and cannot reuse plot files left by a previous build.
+
+```sh
+python -m research.sts_retrain_20261018.package \
+  --repo . \
+  --suite /private/path/sts_retrain_20261018 \
+  --report results/sts/retraining/report.json \
+  --clinical-manifest /private/path/clinical_manifest.csv \
+  --runtime /private/path/sts_retrain_20261018/runtime.json \
+  --export-inference-states --trust-local-checkpoint-pickle
+```
+
+Only named public metadata, numeric histories, aggregate per-epoch records and
+curves enter `results/sts/retraining/raw/`; private manifests, input inventories,
+images, logs and original checkpoint binaries are excluded. The clinical manifest
+is read only for verification. Runtime and the frozen protocol are checked before
+copying. Omit the last two flags to package metadata without models.
+
+Optional inference states enter `models/sts_retrain_20261018/` under Git LFS.
+Their hashes differ from the original resumable `best.pt` files. Provenance maps
+each derivative to its original SHA256 and selected epoch and verifies unchanged
+model tensor bytes, `weights_only=True` read-back and strict loading with the
+frozen constructor. Multitask auxiliary weights are retained; unused stage-only
+auxiliary weights and all optimizer, scheduler and RNG state are omitted. Original
+selection/completion hashes continue to identify the local resumable files.
+No image inference or new held-out performance estimate occurs during packaging.
+
+Packaging helper tests use temporary synthetic data only:
+`python -m unittest tests.test_sts_retrain_package -v`.

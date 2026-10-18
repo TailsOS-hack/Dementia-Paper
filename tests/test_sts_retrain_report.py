@@ -3,11 +3,14 @@ import copy
 import csv
 import hashlib
 import json
+import math
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 
-from research.sts_retrain_20261018.report import COMPLETION_ARTIFACTS, EXPECTED_CONFIG, EXPECTED_NAMES, run, sha, verify_manifests
+from research.sts_retrain_20261018.report import (COMPLETION_ARTIFACTS, EXPECTED_CONFIG, EXPECTED_NAMES, FIGURE_FILES,
+                                               run, sha, verify_figure_hashes, verify_manifests)
 from research.sts_retrain_20261018.train import CODE_ROOT, LEGACY_SHA, STAGE_SHA, STUDY, METRIC_DEFINITIONS
 from research.sts_retrain_20261018.suite import validation_preference
 
@@ -202,6 +205,66 @@ class RetrainReportTests(unittest.TestCase):
         item=json.loads(path.read_text());item["torch_threads_actual"]=64;dump(path,item)
         with self.assertRaisesRegex(ValueError,"CPU thread setting"):
             self.report()
+
+    def save_preference(self, preference, update_suite=True):
+        dump(self.root/'validation_only_preference.json',preference)
+        if update_suite:
+            path=self.root/'suite_status.json'
+            suite=json.loads(path.read_text());suite['validation_only_preference']=preference;dump(path,suite)
+
+    def test_cross_python_mean_roundoff_preserves_original_saved_preference(self):
+        preference=json.loads((self.root/'validation_only_preference.json').read_text())
+        preference['condition_mean_validation_nll']['stage_only']=math.nextafter(.5,math.inf)
+        self.save_preference(preference)
+        result=self.report()
+        self.assertEqual(result['validation_only_preference'],preference)
+        self.assertNotEqual(result['validation_only_preference']['condition_mean_validation_nll']['stage_only'],.5)
+
+    def test_preference_condition_representative_and_material_mean_changes_rejected(self):
+        original=json.loads((self.root/'validation_only_preference.json').read_text())
+        for key,value in (('condition','stage_only'),('representative','multitask_seed20261012')):
+            with self.subTest(field=key):
+                changed=copy.deepcopy(original);changed[key]=value;self.save_preference(changed)
+                with self.assertRaisesRegex(ValueError,'preference differs from recomputation: '+key):
+                    self.report()
+        changed=copy.deepcopy(original);changed['condition_mean_validation_nll']['stage_only']+=.001
+        self.save_preference(changed)
+        with self.assertRaisesRegex(ValueError,'Validation preference mean stage_only'):
+            self.report()
+
+    def test_saved_suite_preference_and_condition_sets_still_require_exact_match(self):
+        preference=json.loads((self.root/'validation_only_preference.json').read_text())
+        preference['condition_mean_validation_nll']['stage_only']=math.nextafter(.5,math.inf)
+        self.save_preference(preference,update_suite=False)
+        with self.assertRaisesRegex(ValueError,'Saved and suite validation preferences differ'):
+            self.report()
+        preference['condition_mean_validation_nll']['unexpected']=.5
+        self.save_preference(preference)
+        with self.assertRaisesRegex(ValueError,'condition set differs'):
+            self.report()
+
+    def test_generated_plots_are_pinned_and_no_plots_build_cannot_reuse_them(self):
+        result=run(self.root,self.output,make_plots=True,allow_synthetic=True)
+        self.assertEqual(set(result['figure_sha256']),set(FIGURE_FILES))
+        self.assertEqual(result['figure_sha256'],{name:sha(self.output/name) for name in FIGURE_FILES})
+        verify_figure_hashes(self.output,result['figure_sha256'])
+        previous_bytes=(self.output/'matched_clean_nll.png').read_bytes()
+        metadata_only=self.report()
+        self.assertEqual(metadata_only['figure_sha256'],{})
+        self.assertEqual((self.output/'matched_clean_nll.png').read_bytes(),previous_bytes)
+        with self.assertRaisesRegex(ValueError,'all six generated figures'):
+            verify_figure_hashes(self.output,metadata_only['figure_sha256'])
+
+    def test_plotting_failure_does_not_publish_new_report(self):
+        self.report()
+        previous=(self.output/'report.json').read_bytes()
+        def partial_plot_failure(output, *_):
+            (output/'matched_clean_nll.png').write_bytes(b'PARTIAL SYNTHETIC PLOT')
+            raise RuntimeError('synthetic plotting failure')
+        with patch('research.sts_retrain_20261018.report.figures',side_effect=partial_plot_failure):
+            with self.assertRaisesRegex(RuntimeError,'plotting failure'):
+                run(self.root,self.output,make_plots=True,allow_synthetic=True)
+        self.assertEqual((self.output/'report.json').read_bytes(),previous)
 
 
 if __name__=="__main__":

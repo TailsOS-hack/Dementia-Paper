@@ -98,3 +98,41 @@ The earlier specialist histories are separate from the six October 11 runs summa
 - [Original paired accuracy intervals](https://github.com/TailsOS-hack/Dementia-Paper/blob/84c1d731154d12103abf1adce5a57ad6f7bb6b8a/docs/kevin_paper_20261011/publication/figures/quantitative/paired_accuracy_differences.png)
 - [Original two-condition architecture figure](https://github.com/TailsOS-hack/Dementia-Paper/blob/84c1d731154d12103abf1adce5a57ad6f7bb6b8a/docs/kevin_paper_20261011/publication/figures/quantitative/dementia_two_condition_architecture.png)
 - [Complete matched statistics and historical benchmark](https://github.com/TailsOS-hack/Dementia-Paper/blob/84c1d731154d12103abf1adce5a57ad6f7bb6b8a/docs/kevin_paper_20261011/publication/reports/Full_Results.md)
+## New retraining with comparable learning curves
+
+A separate October 18 experiment completed 6 runs and 329 epochs, using stage-only and multitask conditions with three seeds each. At every epoch end, the same fixed checkpoint was evaluated on all 19,023 training and 2,705 validation images with the same clean transform, evaluation mode and unweighted, unsmoothed negative log-likelihood (NLL). Table 4 and Figure 3 report these new measurements; Tables 1 to 3 retain the historical October 11 results.
+
+Table 4. New retraining epochs and clean NLL at the validation-selected checkpoint.
+
+| Condition | Seed | Completed | Selected | Train NLL | Val NLL |
+| --- | --- | --- | --- | --- | --- |
+| Stage only | 20261011 | 42 | 27 | 0.034431 | 0.036154 |
+| Multitask | 20261011 | 67 | 52 | 0.041157 | 0.045978 |
+| Stage only | 20261012 | 55 | 40 | 0.035196 | 0.037724 |
+| Multitask | 20261012 | 75 | 60 | 0.042489 | 0.048810 |
+| Stage only | 20261013 | 40 | 25 | 0.035889 | 0.038450 |
+| Multitask | 20261013 | 50 | 35 | 0.044689 | 0.049141 |
+
+![Figure 3. New epoch-end clean training and validation NLL for all six runs. Dashed lines identify validation-selected checkpoints. Both curves use the same measurement procedure; training remains resubstitution. Raw observations are shown without smoothing or interpolation.](../retraining/matched_clean_nll.png)
+
+Figure 3. New epoch-end clean training and validation NLL for all six runs. Dashed lines identify validation-selected checkpoints. Both curves use the same measurement procedure; training remains resubstitution. Raw observations are shown without smoothing or interpolation.
+
+## Clinical auxiliary curves and interpretation
+
+For the multitask runs, clinical loss was calculated after averaging slice probabilities within each subject: 32 training subjects and 11 validation subjects. These clean subject-level curves use the same evaluation procedure across splits. Clinical loss did not select the stage checkpoint.
+
+![Figure 4. New clean clinical auxiliary NLL for the three multitask seeds, scored after subject-level probability aggregation. Dashed lines show the epoch selected by stage-validation NLL. No held-out or external clinical result is presented.](../retraining/clinical_clean_nll.png)
+
+Figure 4. New clean clinical auxiliary NLL for the three multitask seeds, scored after subject-level probability aggregation. Dashed lines show the epoch selected by stage-validation NLL. No held-out or external clinical result is presented.
+
+## Training controls and validation selection
+
+The verified training configuration used a maximum of 100 epochs, a minimum of 20, patience of 15 epochs and a required validation-NLL improvement greater than 0.0001. Inputs were 224 by 224 pixels with batch size 32. AdamW used learning rate 0.0001 and weight decay 0.001; label smoothing was 0.05. The multitask auxiliary objective had weight 0.25 and was added every 4 stage batches.
+
+The validation-only preferred condition was stage-only; its representative used seed 20261011 and epoch 27. This preference used mean selected stage-validation NLL across the three seeds and then the lowest validation NLL within that condition. All six runs remain reported. Online training NLL measured augmented images with changing parameters; the weighted, smoothed optimization objective was logged separately and is not substituted for the clean NLL curves.
+
+## Evidence boundaries and provenance
+
+Training loss is resubstitution, and validation was used for selection. These new learning curves do not supply independent test performance, demonstrate clinical superiority or establish readiness for clinical use. They do not revise the historical benchmark estimates. Image-similarity groups do not establish patient independence, and the clinical training and validation samples remain small.
+
+The source report checked all six completed histories, per-epoch clean evaluation records, denominators, stopping decisions and validation-only selection. All 12 retrieved checkpoint file hashes were verified. Stage and clinical manifest IDs and group separation were independently checked. The machine-readable report records source hashes; the appended figures were checked against its figure hashes. Report SHA256 begins 80a7bedf6a3d273e; full provenance is retained in report.json and summary.csv.

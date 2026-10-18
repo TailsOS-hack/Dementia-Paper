@@ -42,18 +42,18 @@
     },
     {
       "path": "README.md",
-      "bytes": 3849,
-      "sha256": "6047198ecfc8964e9c4ec0bdb752f415c6d1be39d7dd1e62c93cacad4d81da76"
+      "bytes": 4800,
+      "sha256": "0d326ddc64683f49ef6e1f44089f2b44f32b7d2b10c71e071e929e6186225ac5"
     },
     {
       "path": "SOURCE_COVERAGE.md",
-      "bytes": 1762,
-      "sha256": "e3f56ae53c9f4faa6051a640cc32e579aef6d960d32d5c44eecb83602e77e857"
+      "bytes": 3046,
+      "sha256": "d4aba48eedc993fe35e640f83bdd6c70fbe928c5b45691a17b0fea059d0de841"
     },
     {
       "path": "analysis/sts_results/build_manuscript.py",
-      "bytes": 29908,
-      "sha256": "deefa58e08867df98b953b37a6276a3f90806658361e1f3e4c83c92a41b3310f"
+      "bytes": 30415,
+      "sha256": "487d2372cb2c23d67357f954b0af7b47647d88defbfba5c136d7785426346cad"
     },
     {
       "path": "analysis/sts_results/full_cohort.py",
@@ -8746,6 +8746,46 @@
       "sha256": "e3a06ac53bb3506f3e5d3485a0373b4a407cadc6e0f0d6c08fc6deee96995393"
     },
     {
+      "path": "models/sts_retrain_20261018/README.md",
+      "bytes": 1375,
+      "sha256": "968b9295a4f730f6d8e029c7a6ea7584432adb19cb09b59a8d4b6174c5027406"
+    },
+    {
+      "path": "models/sts_retrain_20261018/multitask_seed20261011_inference.pt",
+      "bytes": 17038603,
+      "sha256": "b76324cc7f86578bfcc46145b8d3be2b429fab4c48418560f0e254155103ae09"
+    },
+    {
+      "path": "models/sts_retrain_20261018/multitask_seed20261012_inference.pt",
+      "bytes": 17038603,
+      "sha256": "77d0410e8b37adb974b9dce0808bb6cd45246930b1e29ca7b3d89e7130470043"
+    },
+    {
+      "path": "models/sts_retrain_20261018/multitask_seed20261013_inference.pt",
+      "bytes": 17038603,
+      "sha256": "cee9dd3524da53020a338673b536685d2943f75e9582e9e03137b01e95eebcc3"
+    },
+    {
+      "path": "models/sts_retrain_20261018/provenance.json",
+      "bytes": 8203,
+      "sha256": "d6da1ae5777aeb24a8465698438ea44a73308dc9960bcecec5a255cf18abf83b"
+    },
+    {
+      "path": "models/sts_retrain_20261018/stage_only_seed20261011_inference.pt",
+      "bytes": 17028059,
+      "sha256": "31bfe6cad26bbadc73c351d0f8b7018a11be5477f0ed3a5efd97ff3d1e03d433"
+    },
+    {
+      "path": "models/sts_retrain_20261018/stage_only_seed20261012_inference.pt",
+      "bytes": 17028059,
+      "sha256": "2e35581c2f96da1cfd312179ada49b8f98032b9918630d0a535efe57038fc4bc"
+    },
+    {
+      "path": "models/sts_retrain_20261018/stage_only_seed20261013_inference.pt",
+      "bytes": 17028059,
+      "sha256": "228ffe23933f237dabbf4fdec6b9ec43d0c9cd8091bba3946404448540218b13"
+    },
+    {
       "path": "paper_package/Dementia_Only_2026-10-09/FIGURE_INDEX.csv",
       "bytes": 8068,
       "sha256": "d5ebf64799ccd8308ad7c428e2652152a5eb8ec7181bfd5de2a3b95c3fa616f6"
@@ -16122,13 +16162,18 @@
     },
     {
       "path": "research/sts_retrain_20261018/README.md",
-      "bytes": 5366,
-      "sha256": "76a8644e617448ec93eba42a8a15651a3d6dab02e6899f0f761784557af96dd9"
+      "bytes": 9856,
+      "sha256": "9639953a3dfb1444b25fd94f71c0cb74071e4eaa454fe1bcbdbe60dc9ec9799a"
     },
     {
       "path": "research/sts_retrain_20261018/__init__.py",
       "bytes": 84,
       "sha256": "c7a1a48cd59440e021166e37131eba2b573ff9a8d42cfe375ceaf6df176b434e"
+    },
+    {
+      "path": "research/sts_retrain_20261018/package.py",
+      "bytes": 21660,
+      "sha256": "d1c06cc8cc1488cc104aff40709541346f87affd9076c88a3087f2e5ea7f4cbf"
     },
     {
       "path": "research/sts_retrain_20261018/prepare_inputs.py",
@@ -16142,8 +16187,8 @@
     },
     {
       "path": "research/sts_retrain_20261018/report.py",
-      "bytes": 29777,
-      "sha256": "7b34f0ea3ebd2ff5966dd9d67f0eeebb09f635fa777931e92feca483e9e0dea9"
+      "bytes": 32110,
+      "sha256": "a9ac1cf94c4404c96c578590d32b5c12f91ca734ba0b43e01a0ef6b5cd9eb0b8"
     },
     {
       "path": "research/sts_retrain_20261018/suite.py",
@@ -16382,8 +16427,8 @@
     },
     {
       "path": "results/sts/README.md",
-      "bytes": 4725,
-      "sha256": "391d2cdab49554b1214aa4c4d0be0f321ff49f88e2f9d31119aacd61bc96eeb3"
+      "bytes": 7864,
+      "sha256": "4b95abaa8dd3e97e30347edd11dc6a085667b97cff2e52ece6b5c6bfdf7b3d4e"
     },
     {
       "path": "results/sts/full_cohort/README.md",
@@ -16412,18 +16457,1963 @@
     },
     {
       "path": "results/sts/manuscript/RESULTS.md",
-      "bytes": 11156,
-      "sha256": "cd47e982541a2b07bbafe3c82aea03fc5ca263d6bacd6cec98080d0f949b9b32"
+      "bytes": 15498,
+      "sha256": "9e8fb31d81e9a099c20344a3da0e02a2b5d0628e05d00002221882778dd9e49b"
     },
     {
       "path": "results/sts/manuscript/STS_Expanded_Results.docx",
-      "bytes": 291113,
-      "sha256": "45b3557c98969a7f9479fdeabcf9030ed21abc4904befcf77ef4072eca7f62c2"
+      "bytes": 789203,
+      "sha256": "1e469e2f4473bcdb430234d8e145ecea99c475b32892d1d099c50f25ec8d768c"
     },
     {
       "path": "results/sts/manuscript/STS_Expanded_Results.pdf",
-      "bytes": 400981,
-      "sha256": "0074eeb8ff09b02c15d91009f8cb23d9c1b5bfb99be216cf01d61b9a130a4fc0"
+      "bytes": 875514,
+      "sha256": "d99db5b7c2edda4e9191eb1cb206301188c6a9e0850502684e590e42872d8a86"
+    },
+    {
+      "path": "results/sts/retraining/README.md",
+      "bytes": 3229,
+      "sha256": "ccf966ec0cd54844e45280a9601387b21bc9e8a8c669fa8bb53f77562faf903f"
+    },
+    {
+      "path": "results/sts/retraining/clinical_clean_nll.pdf",
+      "bytes": 22212,
+      "sha256": "630c7f48e750afa38dbd08281a8e16f0827aeb678003594f40a1bbf60eeafc61"
+    },
+    {
+      "path": "results/sts/retraining/clinical_clean_nll.png",
+      "bytes": 248820,
+      "sha256": "09710c65439d994c50c60845c9be96d72655d87ba9b08fefb18699b45acadf26"
+    },
+    {
+      "path": "results/sts/retraining/condition_summary.csv",
+      "bytes": 858,
+      "sha256": "5cfc9f9138e123c8cd1733211beb0c7a937481e2d40034d7b056b9dfd4bfffb2"
+    },
+    {
+      "path": "results/sts/retraining/epochs.csv",
+      "bytes": 106305,
+      "sha256": "c5a2b1e43a01a94fc33f2a5af0b022ae924b388ab7a33e6d134967144e016623"
+    },
+    {
+      "path": "results/sts/retraining/input_audit.json",
+      "bytes": 3389,
+      "sha256": "3e06ccf51033a7f7335acbc5bd298e2e5ff758396986bce625262529532aecca"
+    },
+    {
+      "path": "results/sts/retraining/matched_clean_nll.pdf",
+      "bytes": 26152,
+      "sha256": "9206b1ecebcacfa2a4d7c6136d21939f983f6ee06da84afd47f989870a331aeb"
+    },
+    {
+      "path": "results/sts/retraining/matched_clean_nll.png",
+      "bytes": 283803,
+      "sha256": "d57cc399a33dc215cba1718cd12b1d82240bbfb24aea222e9d35122f573c42c9"
+    },
+    {
+      "path": "results/sts/retraining/online_and_objectives.pdf",
+      "bytes": 28948,
+      "sha256": "52472d0bbfb8a91742d1f5a51a0d123fa87375e665f73b28c4b4d0ded7d023f6"
+    },
+    {
+      "path": "results/sts/retraining/online_and_objectives.png",
+      "bytes": 287900,
+      "sha256": "41c403f9bbdfe69bda6097ab4f5e1bb5a80d47c2793b7b9619b265c2bed70857"
+    },
+    {
+      "path": "results/sts/retraining/raw/README.md",
+      "bytes": 978,
+      "sha256": "c1b581db694f0261df60777efb3547f2c3820fd6050882e66045a6b9ffd2d832"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/config.json",
+      "bytes": 2839,
+      "sha256": "73135d2371b71e30c9a6ac359065468c4300d283b173db0ea19bbb5726b2a340"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_001_evaluation.json",
+      "bytes": 3815,
+      "sha256": "b3204824d537b9ca941d5249a5051d615d97720e0f1936bdd2db9edad2188f85"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_002_evaluation.json",
+      "bytes": 3827,
+      "sha256": "62d4a9d90724f2745ba6b3bb8c580cc4f5d750014254c587d67a3f67ef5ec574"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_003_evaluation.json",
+      "bytes": 3779,
+      "sha256": "8893eb6cb3455483b9322f0726b47fec9d5c2e8bf702e9401af9f97849363b79"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_004_evaluation.json",
+      "bytes": 3841,
+      "sha256": "ec1c7cdf384441560960b3e767d575272d5855fac2128ae106236e28067c7310"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_005_evaluation.json",
+      "bytes": 3803,
+      "sha256": "984abd4849c7bd1979635107c82a86ccac255273c667ac3cbbe130fc3e3f0e34"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_006_evaluation.json",
+      "bytes": 3781,
+      "sha256": "c3c65a8031734efe343ae8c4180e6ab65a373bbee793d00cc44216c1bfb88f5a"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_007_evaluation.json",
+      "bytes": 3741,
+      "sha256": "d39f8a62523f5e42abb5d0b41e8496e2bc7093c270f06863e7253d0734a3fad0"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_008_evaluation.json",
+      "bytes": 3837,
+      "sha256": "b8af1522c037b5bf96880b7f5b7e0502af4cabff21d862c7a4ee0692515a3d06"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_009_evaluation.json",
+      "bytes": 3743,
+      "sha256": "984f56473ebfa8ccf9f7bf8d7594809f838392c3bd0a87e397980530ddb8fc52"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_010_evaluation.json",
+      "bytes": 3835,
+      "sha256": "973b41fab4c4131aa1e3e9b9eebe316903af35acc0fc8bffd2e42b2ebd28e22d"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_011_evaluation.json",
+      "bytes": 3743,
+      "sha256": "cc50d643b1347857d106a2214beff57075b8ba6dbac67aa9cc98dc76ae648d71"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_012_evaluation.json",
+      "bytes": 3785,
+      "sha256": "7397cb700dae7acea5d63f279acacf7786b9cb7529c644a7d0a354ff670a1b4d"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_013_evaluation.json",
+      "bytes": 3837,
+      "sha256": "ac2ec2a5fbd55efb60c3e1164368ab06ae27c2e80aa9dd541c0c53be89a97bad"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_014_evaluation.json",
+      "bytes": 3807,
+      "sha256": "4582ca5150c49f5f5acdf63f5b4fd3b8121ca559c1d85fba86e3d6c0303dc8e3"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_015_evaluation.json",
+      "bytes": 3795,
+      "sha256": "2c0c27b9980f8d46039caec1d3ee46e5440ed8cf267cadc9fd64ac9ba329c9ee"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_016_evaluation.json",
+      "bytes": 3765,
+      "sha256": "2aefdb4ab60310ff0bd77edb777f40a095dcaec71e679be597e672ce3fa373c0"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_017_evaluation.json",
+      "bytes": 3805,
+      "sha256": "912c8626067130c00155e0de0589deb373da98340a2937f7a8d5d8f335833180"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_018_evaluation.json",
+      "bytes": 3821,
+      "sha256": "02b50f159744122e2cbee6f3e201f86747ccb322c804724c8b70c8241018cb34"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_019_evaluation.json",
+      "bytes": 3829,
+      "sha256": "0136b13810437e855ae4cb45d6f4737e05ede7957f0719560d14378b988832bc"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_020_evaluation.json",
+      "bytes": 3821,
+      "sha256": "0c25e9b10e8b87a2bebe54ea188e62bcdd158795c4cd725fc3ca142b486d2432"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_021_evaluation.json",
+      "bytes": 3763,
+      "sha256": "b5587fe683ed50aafb9ccf607ed1f864378a684a7c5a8aa3492fb3fb4bfdfaa8"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_022_evaluation.json",
+      "bytes": 3821,
+      "sha256": "e10ffe7980458eb1e2e02ea8bca2e31fe212e76d4269fd0c8d364553fb4249bd"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_023_evaluation.json",
+      "bytes": 3789,
+      "sha256": "fb4dc29f105a4ad799e3f933aac185daa6eae391f3a1d9b3e13913bbfdc74161"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_024_evaluation.json",
+      "bytes": 3827,
+      "sha256": "e05f4f6f7f9ef480d45747d2fedf96e73eed3793a782750fbd70e349b3952137"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_025_evaluation.json",
+      "bytes": 3759,
+      "sha256": "65c3b893d563c7bba680e76ade142696544c2970a8363038e8240d58e267ed54"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_026_evaluation.json",
+      "bytes": 3801,
+      "sha256": "1aa1254840c6a6f72635225e3f8f04f5903406c6c90c6e4b4015dd3abafd342c"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_027_evaluation.json",
+      "bytes": 3791,
+      "sha256": "088b60e8ffcecae12a17dc52a15dd8a095986431217fdac9d8ad43bacaae663f"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_028_evaluation.json",
+      "bytes": 3795,
+      "sha256": "e2fcdbc3eb60e181ac1fdb0d6785449bb7d1c4ae51be67c7dcda1f34f9084076"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_029_evaluation.json",
+      "bytes": 3789,
+      "sha256": "7e2c93f4e05fbe9a49206e0bc8c11ebeb51bc8d2b88e553d3314d867f55e8333"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_030_evaluation.json",
+      "bytes": 3795,
+      "sha256": "f85d593064c6d068451930350f5bb030c3b0ab73444382e47f06815bff4f9d5e"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_031_evaluation.json",
+      "bytes": 3759,
+      "sha256": "e10cda056e17a316c00a29e930248aabd60e1b70b6695f6847f58c97cd3ab604"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_032_evaluation.json",
+      "bytes": 3763,
+      "sha256": "4246ceab45f33d66d26f289560ce06357228ce438bba79bf25d21e4a8ab15993"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_033_evaluation.json",
+      "bytes": 3833,
+      "sha256": "7288d9e4b46852756fc3b306e74188cb91eea5d6f295005d5e83cf4077991592"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_034_evaluation.json",
+      "bytes": 3797,
+      "sha256": "e265598a5edd61b10bd8b5a380468309ab1f8ba87074f45e0fcf0fabdb202c3d"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_035_evaluation.json",
+      "bytes": 3793,
+      "sha256": "5c9c2ea4499630ef129fe2c9e1c6c205b7e6622800fb043f16cfebfce3d3b351"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_036_evaluation.json",
+      "bytes": 3763,
+      "sha256": "088e331c9285a1a2d646935d0ad10f3cbf111e4da342541ec97b59647c0efad7"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_037_evaluation.json",
+      "bytes": 3757,
+      "sha256": "7fb615e2954edbf00160b1f78b5854cc76fb1a3f8ec4a00535c4d82035fa6172"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_038_evaluation.json",
+      "bytes": 3773,
+      "sha256": "f2c55d78718ec1df4fac4d482b76f6ae4aed508d9b0a5941416d2e3b62d84981"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_039_evaluation.json",
+      "bytes": 3795,
+      "sha256": "b440f862e91a78c25171ce5a2a393e01a8d222e5e11dc95d032bc42e553ceb0f"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_040_evaluation.json",
+      "bytes": 3799,
+      "sha256": "4fee0bd20775634f7a0645258f43b682e619db3281082be25870c2ca71c728b1"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_041_evaluation.json",
+      "bytes": 3733,
+      "sha256": "1e0fa9bf14bbbc00198ef9e4a053aedc6c64caf405ef032e726ee295462cda40"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_042_evaluation.json",
+      "bytes": 3763,
+      "sha256": "11666089ec84e1a94c1a0fa580a32b6a44fdbbb58979a98e7cd94a6238154db3"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_043_evaluation.json",
+      "bytes": 3763,
+      "sha256": "0e034b674fd32e228cb08d5df3d2a386ce3c6d271d0d9000ed6751c6d2c576ee"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_044_evaluation.json",
+      "bytes": 3735,
+      "sha256": "924b710da5dffb417140f7c311ed58260360720b515d915996e43a080332d2e7"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_045_evaluation.json",
+      "bytes": 3793,
+      "sha256": "0eb699109c453e7baf38f7b720dace8c39f4bdb244a143c1b1a040aa865282e3"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_046_evaluation.json",
+      "bytes": 3761,
+      "sha256": "ae024a681b4f40864c99863b172e26e1b7ef4fad0bfab5a4b62b67b2f3587aac"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_047_evaluation.json",
+      "bytes": 3763,
+      "sha256": "05983be620b7781afbaabe32493a754ef1375ff370548d4f90eb1857547b8b34"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_048_evaluation.json",
+      "bytes": 3799,
+      "sha256": "1ad77fb40c14b10c646d6012c4188c550facff5b8d86f309e1fbb80c2243d8ea"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_049_evaluation.json",
+      "bytes": 3793,
+      "sha256": "3cb07ea4aad68f66e6cfc18ffaa7585aeb250a121698dbecd537d3ab218d7e45"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_050_evaluation.json",
+      "bytes": 3761,
+      "sha256": "6cb2af5fbd3ee585f8480833a1d148b639cff33807a1bf9d806c83c65b765cfa"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_051_evaluation.json",
+      "bytes": 3825,
+      "sha256": "85e49106409569c94ed1a462a17e234d17752b183684ab98f857aede049099bc"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_052_evaluation.json",
+      "bytes": 3815,
+      "sha256": "1313bcf56d19fe0290e7a94a6d6c4c770ba3051d08d5729ff85d988a2d1eb5c5"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_053_evaluation.json",
+      "bytes": 3797,
+      "sha256": "d1c822bea0bb80c6a2062377393e182d703b89569b5ca389080910714462b696"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_054_evaluation.json",
+      "bytes": 3793,
+      "sha256": "715cde550d711d8e9c9e91b68d33010df55ec507ddeb678c1160080d04f13336"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_055_evaluation.json",
+      "bytes": 3793,
+      "sha256": "1962b9d697c984531e3cdf5b730dadf098d74badc5c706f8bf296b10d7dddf56"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_056_evaluation.json",
+      "bytes": 3793,
+      "sha256": "7b2fbb94976da35b5c692aaea4bf571d67d761102253ba3c4a32678214ec4347"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_057_evaluation.json",
+      "bytes": 3789,
+      "sha256": "a294e9c99d969f50dd3b797d7d1c90a3de011f34c855bf96335e2dc50323e323"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_058_evaluation.json",
+      "bytes": 3791,
+      "sha256": "c29217124da848ba2a2a1bb3961b02d908a18298b280d772c804b907207aa56b"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_059_evaluation.json",
+      "bytes": 3793,
+      "sha256": "d3cad001e1c37848922f90dabcbbee72e9134987306dc0688d1798615bc48ad1"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_060_evaluation.json",
+      "bytes": 3795,
+      "sha256": "8e5aea9f9f53bceb8f5ab9f037bb7afbec28e569db3653b6d9323a0dc3be8743"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_061_evaluation.json",
+      "bytes": 3795,
+      "sha256": "c1666cd36e14455a68545adbb3b92dbcd708ca590a1e18e9f3b29ec4f3e9ca41"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_062_evaluation.json",
+      "bytes": 3785,
+      "sha256": "58df251e59c71688698214f96992d85f1499cc58bceb33c855afc7cb35f22221"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_063_evaluation.json",
+      "bytes": 3783,
+      "sha256": "6c297bc29a64982352a81fa56ebf96bbf1f3f0ad16bd4071f30ed5e9e94cbc68"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_064_evaluation.json",
+      "bytes": 3787,
+      "sha256": "6c8bb42476dec6e4f5159638b1cd24741b0a178939ba05a514d7ab53c8b9d00a"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_065_evaluation.json",
+      "bytes": 3763,
+      "sha256": "25a6b1f7e0d294b4df539fdfd8b9a821d80e698ef2811c7daf1da4453c082fc8"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_066_evaluation.json",
+      "bytes": 3765,
+      "sha256": "eff2f2592f8cb22e77c1b5bd71d5cd7587ae38ec8ba725d3ed45e912582546e8"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/epoch_067_evaluation.json",
+      "bytes": 3767,
+      "sha256": "732b25e2347a37154c0436902cf49001fe745a23b1b06a167129fea753dad4f1"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/history.csv",
+      "bytes": 22142,
+      "sha256": "c1f20bb520126875270596745413a84642a3aed49d127b4085623261d8b3aa1f"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/history.json",
+      "bytes": 56969,
+      "sha256": "7a60aeb12e01b9f101d55bb216b6708b15a33bdb0bfdc245ae18aa40e90560d6"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/learning_curves.pdf",
+      "bytes": 23883,
+      "sha256": "993fb0de3474dafda73e2f16dfe104f7b2648240ba84efee56c74b72887e1681"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/learning_curves.png",
+      "bytes": 148365,
+      "sha256": "11445910e35560043a17f6d4e952e06f4683668d04b5d59e6b219377df4c46e6"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/run_complete.json",
+      "bytes": 841,
+      "sha256": "caed7719677839cfde28a620e3f2164e4fc51b2eba4a07ee768af1a2c04c04ba"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261011/selection.json",
+      "bytes": 298,
+      "sha256": "95940f5d6155d690a43861bee2c8c27a7b07113b2927cd691a57755f5300b286"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/config.json",
+      "bytes": 2839,
+      "sha256": "26f5fcfdb95767e57b6635c9d16e39c93e1aafc974a88a71d314ca5c2af96ec7"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_001_evaluation.json",
+      "bytes": 3863,
+      "sha256": "8ac0495af66b64a1179968e31b3bdd1d1b49cef18f1b707a0b3bb3654948286d"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_002_evaluation.json",
+      "bytes": 3855,
+      "sha256": "ee4583da4807c2664f22e3c7cd5431c5a8bc5cf8fbe67c7e295af50eaf4fc8b1"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_003_evaluation.json",
+      "bytes": 3815,
+      "sha256": "b98c107bdec9d8377b52b26eb64e46b7e5347c8a0ebb869b27c2b22ccec180c1"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_004_evaluation.json",
+      "bytes": 3841,
+      "sha256": "2c3d5ee69fb9a1226502b95a2948028e9265261099ac7371d205b4d2026a7d4e"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_005_evaluation.json",
+      "bytes": 3845,
+      "sha256": "333ab757f9cefaadfeaf85718730ba61e3f137f792916abad622e5cff7fb4d97"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_006_evaluation.json",
+      "bytes": 3833,
+      "sha256": "a38f6e45ec4c34c908914647869423ea293109397d06bce2775cfc4f7abc3296"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_007_evaluation.json",
+      "bytes": 3813,
+      "sha256": "efa4bd12c4505795eeeb0c37bd87fa89b59fac22f9fb771812754fbc01f56571"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_008_evaluation.json",
+      "bytes": 3797,
+      "sha256": "68f14bff0c30a48a54a80fd2f485dec82926f2dc8aa89a9c83712122b76453be"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_009_evaluation.json",
+      "bytes": 3827,
+      "sha256": "36a27b210cf6e35bf00a996ef3f69caaeda70d2edff41332f4e78bc8c69c8ed4"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_010_evaluation.json",
+      "bytes": 3763,
+      "sha256": "58a2d1c156f5f59ee9e2978b68408af0164b554507d9b5ea915526e3eabb3818"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_011_evaluation.json",
+      "bytes": 3831,
+      "sha256": "3f4c4a58d5465576b66119914bd7de179e6fbacbd5d206d33001b8639615f474"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_012_evaluation.json",
+      "bytes": 3829,
+      "sha256": "ed1ecedab27beb4d3311f2a6cfdc306919556570af56241a4fed2cce82c5e498"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_013_evaluation.json",
+      "bytes": 3823,
+      "sha256": "27e3529e98f2ba441d53bce6ea0e087c5d46287ee68b111e76a75120de22a683"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_014_evaluation.json",
+      "bytes": 3831,
+      "sha256": "3bfc6670c00ab6b3328ed2797737c4a6a9c5a5637f5c9147b7994fa9ee4386b5"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_015_evaluation.json",
+      "bytes": 3829,
+      "sha256": "c2e5cb5b68a620ead9c4f7fbff30b8e5ffa2b5d5cc9d72735b0ce9c144ee613c"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_016_evaluation.json",
+      "bytes": 3831,
+      "sha256": "117af8c3ecdea8c216c28072f5ffb414e6449302d7451ed2c20feebb2d48a7c6"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_017_evaluation.json",
+      "bytes": 3817,
+      "sha256": "bdfec1d553997d117bf27a4e1e8bc3154f97d570354e233f44149d15b635778f"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_018_evaluation.json",
+      "bytes": 3829,
+      "sha256": "adfa450d5ae23cd1ce843fb7f06e9cbeda2ce5584e54fa67084f41c26e508f2e"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_019_evaluation.json",
+      "bytes": 3827,
+      "sha256": "d965a7faebf3d8565bf7a2f7c4e1901189e4b46ecafd3f05e76a1b8e35f97a63"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_020_evaluation.json",
+      "bytes": 3787,
+      "sha256": "d9c141add81e0ea7d8367683a141fdb4b707f88c479a18c6b3e586c941cfbf90"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_021_evaluation.json",
+      "bytes": 3799,
+      "sha256": "b3fc8c831efae26e3d76960388325447092a7499424a11bac5bc3c3229df6a72"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_022_evaluation.json",
+      "bytes": 3821,
+      "sha256": "7aebda8a41cc1f590aa5605e6f3369d861852fc9cedec10b1cc62deeeed2550f"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_023_evaluation.json",
+      "bytes": 3789,
+      "sha256": "bc25ffbfa536d262efe2b2bc3d26509d48e1e384aeb7a7ebea6f9f502ccebdcf"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_024_evaluation.json",
+      "bytes": 3795,
+      "sha256": "1d0610a140901d1ca205abb8cfe1253269aef736424e2aba89c538c244bd2ee7"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_025_evaluation.json",
+      "bytes": 3833,
+      "sha256": "9e173e3d9824064ecc9848e1479830717a3d0e510014c40b9f666867f567f0e5"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_026_evaluation.json",
+      "bytes": 3805,
+      "sha256": "154355bf147d9c7cf87d6a912da64040934ff3a07fa5bdade2a5084661157e11"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_027_evaluation.json",
+      "bytes": 3801,
+      "sha256": "ff94c81bad198103d0dfed48102a87967cc7db56094d9c6865f88f5089b98d6d"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_028_evaluation.json",
+      "bytes": 3789,
+      "sha256": "bdb160d792cfdf27059980fda8a57a2d8510856193416d544a3c1e53405ee3fd"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_029_evaluation.json",
+      "bytes": 3785,
+      "sha256": "60e3aff02eb97261c146281e8a900e5b17e5b5ea45a10583bb94f10df9503bc4"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_030_evaluation.json",
+      "bytes": 3791,
+      "sha256": "d73457490460baccd6dc8dee9dfd3ed5d878181b21f690041988ec4a6e9f3e65"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_031_evaluation.json",
+      "bytes": 3827,
+      "sha256": "f2aadf93e113ad6ef54a74eb853a35bbafa723bbcea9e8404db414cc4a4a6f0d"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_032_evaluation.json",
+      "bytes": 3823,
+      "sha256": "4eec9e827310acf171a7730a54c01af865251f3377cc6739917cdfc550409aa4"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_033_evaluation.json",
+      "bytes": 3817,
+      "sha256": "6536abaee4d2bb39bb3255a1868f1187271463e1a1ce938e9de27ef5659ebc85"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_034_evaluation.json",
+      "bytes": 3767,
+      "sha256": "18a95039f50b7e083b61dda1f0d6c4a01f3ef0cbe15b982f7d0dd16b500df821"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_035_evaluation.json",
+      "bytes": 3787,
+      "sha256": "4ad564ab151b0a79f2a594cf94da5e9a6cccfab53fbeb6695d64408c41d7bc14"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_036_evaluation.json",
+      "bytes": 3811,
+      "sha256": "e3e3d3131b232f805a0896196730a098d864d8904f4edb0a78e3cad5fcda4f4a"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_037_evaluation.json",
+      "bytes": 3783,
+      "sha256": "779d5e030bc05c42593b0f851215ccaed9755bbe33faf841d57675907c9f1c8c"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_038_evaluation.json",
+      "bytes": 3819,
+      "sha256": "5de1ff11904a82758132f9bd0e33ba45e1b36daa4f013b1b096bbda3c741e341"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_039_evaluation.json",
+      "bytes": 3791,
+      "sha256": "6d03dcde97ab920a2a56a3a307a20aa7334950155badb4c0b9e72e4547f0752c"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_040_evaluation.json",
+      "bytes": 3769,
+      "sha256": "8affa421cbf49396994a12d45a0af444221fe44d5315337345d21f4f98db7208"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_041_evaluation.json",
+      "bytes": 3803,
+      "sha256": "ea9d75de2458f848ead45fe9c798813d4c71f77966453b95256fe54470d6e79b"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_042_evaluation.json",
+      "bytes": 3799,
+      "sha256": "15bbd524544880b862c2659e5ef11d3f4ea1a6816b088c26038a14eb230a5a14"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_043_evaluation.json",
+      "bytes": 3753,
+      "sha256": "07a42091a8101523453846a874c68a6ddb014873662b1bb996f03b8dafa12782"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_044_evaluation.json",
+      "bytes": 3793,
+      "sha256": "7dede70d04bccc2fdb6025ee80e54a7f7db0a18490fa7bd1550c7273a186e9af"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_045_evaluation.json",
+      "bytes": 3819,
+      "sha256": "1a06017e2abd04a6898ca19d80639f1cd395ca80f9b5d1c2159b53e3ad4e60bd"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_046_evaluation.json",
+      "bytes": 3823,
+      "sha256": "ef052c6b93b6392575e3caaf50b07a959fdac5c528743cc3496347a845531b50"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_047_evaluation.json",
+      "bytes": 3789,
+      "sha256": "e4042a88093544ab4d3962552d952d5bc2e123b53accacdb60f235edcb047135"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_048_evaluation.json",
+      "bytes": 3769,
+      "sha256": "2d90cebd1cfef579e7fbc2f1f4b45a7e3943af0a0ab4a629fe854c24d03607d5"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_049_evaluation.json",
+      "bytes": 3819,
+      "sha256": "964c669923f90a228f554cd5b43febbfed1238881d22cafe4affd8b4395e1bad"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_050_evaluation.json",
+      "bytes": 3823,
+      "sha256": "043fc6c9d4c7bb9172d3f8f68c2309342b669da3c909ceb7f5142be77566643a"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_051_evaluation.json",
+      "bytes": 3793,
+      "sha256": "e7c0016e4e2689005d2d5985fc575fd4280af2a1c6f33300c958217809f26ea5"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_052_evaluation.json",
+      "bytes": 3821,
+      "sha256": "99725b6afa70db2347b9672e32311caaac40819f2790f3f9c9755dc84710f3c3"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_053_evaluation.json",
+      "bytes": 3797,
+      "sha256": "d675aebe9af6823f07eb18c0f214a77a28f3358cf12bce837da3aecbf4094247"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_054_evaluation.json",
+      "bytes": 3785,
+      "sha256": "95074f44e6b887bf8637c522cc0f0379241456002e028341432a4708cd192fd8"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_055_evaluation.json",
+      "bytes": 3789,
+      "sha256": "7c0975b28739bfcce858c284734353aa6ae4191c2f24fe9e69bd9894e7bba659"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_056_evaluation.json",
+      "bytes": 3791,
+      "sha256": "d8f707b50e348c2be4591b7fc511bf2eda95210e9ca075bb84f2928d83d52df2"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_057_evaluation.json",
+      "bytes": 3825,
+      "sha256": "f22f118ff0de2d4d592569e36ea695680e10c32fb3d50c767d428f19d782285d"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_058_evaluation.json",
+      "bytes": 3789,
+      "sha256": "c476043cbd508e718e4c459c8cb68816538b84b3f57254676b759cd29686523a"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_059_evaluation.json",
+      "bytes": 3793,
+      "sha256": "89ea84ebf423768d041f83febfe2ba87985ac98916326538cc78cf988b8d91ec"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_060_evaluation.json",
+      "bytes": 3789,
+      "sha256": "30ddbcc8ce2442f319450ddd37d2d6b7d703e2ad624e00e1caf5b4ecde25d2a3"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_061_evaluation.json",
+      "bytes": 3797,
+      "sha256": "0cb059212c7ccdd329dd0a7a36b31abba86897a382f60d52d6f1fd0ba9d63c0d"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_062_evaluation.json",
+      "bytes": 3791,
+      "sha256": "eaee5555ac4f368362df29680eb1189c5bb01b2d8ead2dd6f20576d8bfc4301f"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_063_evaluation.json",
+      "bytes": 3793,
+      "sha256": "46cdd87449b18331a05ff623bd62c500ef23100b83f4a4486e2db1167cc24023"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_064_evaluation.json",
+      "bytes": 3815,
+      "sha256": "d44e180e98937bd1c653ac8847e6147316103f3fac4333bca37520c3cdec0417"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_065_evaluation.json",
+      "bytes": 3813,
+      "sha256": "28af35d5d30913dcd4cab17bad1f3293da118c8568cd910615f4b30244708041"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_066_evaluation.json",
+      "bytes": 3787,
+      "sha256": "d5d98a5c60e5be273289dbd9d7f1af6ae83d9e2e0be67c0b38033b3f82fe3c1d"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_067_evaluation.json",
+      "bytes": 3819,
+      "sha256": "5d6937dea6e9ced5f81e6edbfff932691414c55910af561c2bee86d32dedd0d6"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_068_evaluation.json",
+      "bytes": 3787,
+      "sha256": "68f6d62981d47d24f014389661b5072be1913d3bc55a1bd2728c9495c0e93e2c"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_069_evaluation.json",
+      "bytes": 3791,
+      "sha256": "00140d435510325114c6e35cc5c67a87ccd3aa5c6a88b00a18aa14b3e7fcac98"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_070_evaluation.json",
+      "bytes": 3767,
+      "sha256": "8a00ad31cb9369e1952d7410601444ab54ef140f0c66f3917ce122a2f2f30242"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_071_evaluation.json",
+      "bytes": 3793,
+      "sha256": "8fc47e5a3f39135b154e25b310e8be373884b65475b5a705ef3523526ff94d74"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_072_evaluation.json",
+      "bytes": 3765,
+      "sha256": "5e4727c1cc17ad6322b842e0a200ac23acfaa81e8d18cbb1c25e3e63e1a490a8"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_073_evaluation.json",
+      "bytes": 3763,
+      "sha256": "dd96fbe53729dadf1e6764931337967be0ed25bcc03888aa973de00b759d052d"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_074_evaluation.json",
+      "bytes": 3789,
+      "sha256": "f93d06394a9a510b283324d7e12467a5cc4a620567be95d2e2b3789c7a10d451"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/epoch_075_evaluation.json",
+      "bytes": 3789,
+      "sha256": "aa8c5e55fc1a9806d35fcd6a9da6b4bef867d8bb79b5a4f124b2b8488b6c1100"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/history.csv",
+      "bytes": 24608,
+      "sha256": "e9750b6c39b7b72c7acc78c413818f1387a7b65a6cae239b0e99e852c8fd59d3"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/history.json",
+      "bytes": 63635,
+      "sha256": "82b146e2c4cc0eaf56f1b9b04d3a10d89bade2452fda7b84281f042de7aead59"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/learning_curves.pdf",
+      "bytes": 24139,
+      "sha256": "d2646a15cf45090eb15830f0ba64c8110eae81b61fd9414304e915a271908f4c"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/learning_curves.png",
+      "bytes": 153222,
+      "sha256": "5ac546ca9e199e0c62229f4160a3213c627411b83ad3dc3fa29e7318d35bba98"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/run_complete.json",
+      "bytes": 841,
+      "sha256": "8fab52e81b2d7b10f27ecf4c16f754f4f2161bc6e6cb744876acb2a5f882bc10"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261012/selection.json",
+      "bytes": 298,
+      "sha256": "c507f515afc32f900c94d015eb9387864fe9657470c4f9783b9434d4b9020ae7"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/config.json",
+      "bytes": 2839,
+      "sha256": "929fcde5b92897f8e9772919fc45ada0137726b5804b2a9e5487ca59036a0e77"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_001_evaluation.json",
+      "bytes": 3855,
+      "sha256": "415fc07f924268ef271cae49a9abc7e6b500c99bd1ce1fd7df00f1b38c1516d9"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_002_evaluation.json",
+      "bytes": 3845,
+      "sha256": "0819aec0f01083f1d6102fe5820a9034c294b8cbb3d31c720be27caf3081aa33"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_003_evaluation.json",
+      "bytes": 3835,
+      "sha256": "5d6cd22f4faccf400b761ab7d71929f4ee128449dbe655c7620e927e2062ad96"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_004_evaluation.json",
+      "bytes": 3799,
+      "sha256": "76b772661f2983d91e65936f59178a9cd3283d4362d03cca96520cd70ef67e98"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_005_evaluation.json",
+      "bytes": 3801,
+      "sha256": "384e426aef1ef6bdb56c0896fb77f3fed0a154e9c71aa69d7d52f204af0f0d21"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_006_evaluation.json",
+      "bytes": 3803,
+      "sha256": "87b96811a316aaf0c8a56a625dbe6e4e59e0369255791a5df6e8990a40015e47"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_007_evaluation.json",
+      "bytes": 3797,
+      "sha256": "96b5b6d6ab054d9fde6d0d311160799f7afbc487709f2dd25df49a880d5b02fb"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_008_evaluation.json",
+      "bytes": 3791,
+      "sha256": "1fc8153cb587532b471d8217125e5e0348245ee23ad9d01ddf0d87c09df92b33"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_009_evaluation.json",
+      "bytes": 3775,
+      "sha256": "8ef90470b8b536622ec341020e18189ae79555c8fc23f66d2fd01463de06b770"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_010_evaluation.json",
+      "bytes": 3837,
+      "sha256": "17c41a091c1fa7064b63b978377a3bf333c72a97f6828c6f2c5a47c9acbd6771"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_011_evaluation.json",
+      "bytes": 3771,
+      "sha256": "061fe80645011f87a439599c4e41533449ee09bfaa42752cba22d91c59a5a194"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_012_evaluation.json",
+      "bytes": 3737,
+      "sha256": "4f33fd4a696e4bc1400787ea87efb589a26c567ec5ddc3d6e996ddaa1bde0bba"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_013_evaluation.json",
+      "bytes": 3771,
+      "sha256": "e8f9eb6664676579ab81a10ab1d95947d3b9c514d7a234e840fcc6886f8a78e6"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_014_evaluation.json",
+      "bytes": 3801,
+      "sha256": "5c888300e536e7988643f5fcd8c789c78615a49763230dbac5923945e726d0e8"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_015_evaluation.json",
+      "bytes": 3781,
+      "sha256": "b367a592c48f756b4f7b8c65ffa7bb15aa6b963bbb9c99fb22c167198bf0ed85"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_016_evaluation.json",
+      "bytes": 3801,
+      "sha256": "e05abb2fc79abe18ab950f25eecc56193977f0cd8691c68d06a61c5604b79998"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_017_evaluation.json",
+      "bytes": 3799,
+      "sha256": "c37311c2d6b7e060c5b730be1113ed1897990f3f052407cb282f9024c1ac6eb2"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_018_evaluation.json",
+      "bytes": 3769,
+      "sha256": "fbd3e56e3b0bb239a6060cf80233300c821c887bddb2f6514cb90c77b088c320"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_019_evaluation.json",
+      "bytes": 3771,
+      "sha256": "da7d965971f46b21c118ee2b6acdb54c355f681a11c874a658cb5b7bd5cb2370"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_020_evaluation.json",
+      "bytes": 3793,
+      "sha256": "3d5550c5d632bc742fc474f66abfd08aa49f57bed7a66c9d0a671ec32bf0c2de"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_021_evaluation.json",
+      "bytes": 3769,
+      "sha256": "0b1c158f762e04137cc90a664e222cbebc42e56e0c29521abcca738382c12ddb"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_022_evaluation.json",
+      "bytes": 3807,
+      "sha256": "6b75f6e5c21088bb791e08ffdeb5ede482b6c94832ad69f38545f7d5de5492ca"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_023_evaluation.json",
+      "bytes": 3787,
+      "sha256": "2be18e4f6dc862306f6bf995ce54b2125d5cf3aaeb3e922fb6b9f956106cfa4e"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_024_evaluation.json",
+      "bytes": 3793,
+      "sha256": "9a1e37fc2c8c955c6c6e1de13d0ab3eb5b65821b154a6c91aabd9702a045ce97"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_025_evaluation.json",
+      "bytes": 3799,
+      "sha256": "95ccbe871682e9caa19e8eeead9c4841a472c646bc2001fce576cdc005ef4960"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_026_evaluation.json",
+      "bytes": 3769,
+      "sha256": "09ff8ec2dce36e4af43409aead34dd19c00d3b04d0cf00b0f82c9805c7248b40"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_027_evaluation.json",
+      "bytes": 3791,
+      "sha256": "9fc552ad6d35e7a5d140ddd4fc0674ddbe27f972dfba2a28d26f49f17912c18b"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_028_evaluation.json",
+      "bytes": 3801,
+      "sha256": "e86febb0c8b3ad80e7bea2e81e8601e0b2416808eea5a70b6c218a6cc817a06a"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_029_evaluation.json",
+      "bytes": 3815,
+      "sha256": "c77b0e79b47f4f15ff21047b9cd65d32573c7f631c5d29af26df92515d97db06"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_030_evaluation.json",
+      "bytes": 3827,
+      "sha256": "ae8d270866c2243fb951be6221ba68d8ce8f009898e2078745469a5c87a8afdb"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_031_evaluation.json",
+      "bytes": 3829,
+      "sha256": "e5327aed5401a106f011d9ba0e088d0a35ad742cfb90de6853473b95de24e824"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_032_evaluation.json",
+      "bytes": 3771,
+      "sha256": "aa1cc403e6a8def43ec4ff68772dc95faaf86adb6e65330347609b967a73701a"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_033_evaluation.json",
+      "bytes": 3793,
+      "sha256": "e5e7f21e540088ac8fc1aa389db29f1c809fbfa0a67e4e94f275b6186eb0e55a"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_034_evaluation.json",
+      "bytes": 3825,
+      "sha256": "69bc7b675cda704eef97388cbab2989ca0881ea3ffe17ad99c126c8ec64e8d9f"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_035_evaluation.json",
+      "bytes": 3821,
+      "sha256": "af77c172605884ba8505a3be286d61659d67767579ff977ff0c76634fc02feb2"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_036_evaluation.json",
+      "bytes": 3827,
+      "sha256": "d572d06084616ab273ed6ea5140232986cb82ee6269094236d43f148fa10423a"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_037_evaluation.json",
+      "bytes": 3783,
+      "sha256": "41f100ed06fdb7b4cbfe93307a20426bdc14e3e1ec47345d75a363eab838ff30"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_038_evaluation.json",
+      "bytes": 3799,
+      "sha256": "e00c22b48a9cff0108c364359af796e6fa979c74b22a242eb75f0d437d6bb0a2"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_039_evaluation.json",
+      "bytes": 3777,
+      "sha256": "43fbf7cf11c4b90dab8659cee49cd1850f02394c80f3c123339463fc98d953cd"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_040_evaluation.json",
+      "bytes": 3761,
+      "sha256": "35281d958bd6465e27c87e2ee0ec80b49143cc4334f8986438bed39261d3b679"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_041_evaluation.json",
+      "bytes": 3799,
+      "sha256": "f198ed6e37f1d8caa4bb29eae111fab395b53d9d66820c64afc612bd4da6fac9"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_042_evaluation.json",
+      "bytes": 3781,
+      "sha256": "b04a59df1871b2671f390fd150d51349612d5fd9b4515a6c31c347d90d3194c6"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_043_evaluation.json",
+      "bytes": 3795,
+      "sha256": "2ae770c9a80633e8f126df5d0b789121e4b109c61ee11a4a7c00af16750d3b2d"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_044_evaluation.json",
+      "bytes": 3763,
+      "sha256": "31b0b01aa14d466784f98342608ac8cba2e462752febc0291b0257deb25e11a4"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_045_evaluation.json",
+      "bytes": 3799,
+      "sha256": "b8e3ad4c5d9dc00caa6fd61652aa57cb4cb39e1eb156df44b11510e183097d4e"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_046_evaluation.json",
+      "bytes": 3791,
+      "sha256": "68655ca615d03238a9c106c4850c8a645e55f3fb5d7e80da839f44b618a19056"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_047_evaluation.json",
+      "bytes": 3791,
+      "sha256": "aa513f8e39fc62864399a8e6886be7e048e76ff4fe929aa29eb4204b8e6a4b24"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_048_evaluation.json",
+      "bytes": 3761,
+      "sha256": "e3ff6205bf8f833760b9af9b5ddfed14d142b8f38e170cacbafc56791977bcd7"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_049_evaluation.json",
+      "bytes": 3791,
+      "sha256": "3cb05d0930130c6b32041e3c85ad901650ba905af6ec9a358dd3f14775eef45e"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/epoch_050_evaluation.json",
+      "bytes": 3799,
+      "sha256": "2094e018c751242386e16e626d6a8f4b60758f7b6ba116236f6df116669b3ee8"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/history.csv",
+      "bytes": 16648,
+      "sha256": "39de528c0eb258dea42d985ea1548e00d4e2ff38c1a66454580347410d0f233f"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/history.json",
+      "bytes": 42550,
+      "sha256": "9a3d335675504803555f89cee1ff13888d9fa66d4919ce50887df479acecc137"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/learning_curves.pdf",
+      "bytes": 22865,
+      "sha256": "dfd468350954ca3419d7598e65856aca08acd7f2d836496b2d840ec5001917ad"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/learning_curves.png",
+      "bytes": 151624,
+      "sha256": "2fc5b9a8b90dc38cfe34addd795903756ddec4f49a115c78bd11b510041546ff"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/run_complete.json",
+      "bytes": 842,
+      "sha256": "4cfae4737a2428170e2cb9f4c1790992feb9b607a1bb659d20912180f89f2775"
+    },
+    {
+      "path": "results/sts/retraining/raw/multitask_seed20261013/selection.json",
+      "bytes": 299,
+      "sha256": "dab4382d5a2cbaa31695466f246ed116d27d0f32036cb780e310766a2272baae"
+    },
+    {
+      "path": "results/sts/retraining/raw/package_manifest.json",
+      "bytes": 133526,
+      "sha256": "7d29d2e1df36c16e7451cb5c5174a5b276e697f918b1145f49f4a2b6db58dee3"
+    },
+    {
+      "path": "results/sts/retraining/raw/protocol_before_final_training.json",
+      "bytes": 996,
+      "sha256": "a130a0c4aca2d25fb4ed0dc78c78a085ada5b655cfc00a31bcbc8784023dbe36"
+    },
+    {
+      "path": "results/sts/retraining/raw/runtime.json",
+      "bytes": 726,
+      "sha256": "4987d65b4ea9972676ab8339a0b9ef981030d0e31e205624ca252c1940fe98bd"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/config.json",
+      "bytes": 2718,
+      "sha256": "ea5f259b4e17b012ed72d1da6eb3eb3456386c88aa90764f8b5ec2bd1e33489a"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_001_evaluation.json",
+      "bytes": 2351,
+      "sha256": "b8186a4597ce1d2a409b4840ca7c5c29e43d1b1534fb00090a3e6040e94e451a"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_002_evaluation.json",
+      "bytes": 2343,
+      "sha256": "a3cfb6d37a3dc3e16c2376859978a5311d93211ce654e2d568cb118eb074de64"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_003_evaluation.json",
+      "bytes": 2333,
+      "sha256": "c0949b28b29e091a05aff6127b0d7b96c27370351b42c9404f614229b45c0aab"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_004_evaluation.json",
+      "bytes": 2323,
+      "sha256": "cd791f094e9a18b590317422680b400c2de876f05d34b25e032d504f00261b56"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_005_evaluation.json",
+      "bytes": 2319,
+      "sha256": "2580c92e4f4a1863d4fcbaada05c9533745dff766790d5464f074358952e1158"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_006_evaluation.json",
+      "bytes": 2319,
+      "sha256": "4031906019a0703607d469bf09aba1e85b4433fe128c1036435425ffa36b3e85"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_007_evaluation.json",
+      "bytes": 2319,
+      "sha256": "15a328952793e28e47286bf89ab93fc582c0e4b1f0f22d2fc380198a20eb9c96"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_008_evaluation.json",
+      "bytes": 2317,
+      "sha256": "30c2a8c7d3432621512efeb3112e559ad7af4a195e9ab15f66e0bc652d4b7bcf"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_009_evaluation.json",
+      "bytes": 2313,
+      "sha256": "bff677f6403ae893e0bbcaa28de6142e61193dd2378dd9ad35acbba62a3ce440"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_010_evaluation.json",
+      "bytes": 2313,
+      "sha256": "b8cd247048035d6662affad4a23dd0f6701c31f2385bfcba60c6bf16485fc73d"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_011_evaluation.json",
+      "bytes": 2315,
+      "sha256": "4d73b129fc1c7db0e1689c470db47fbcec242694b4d9f6d0fa070ee7ad4116e9"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_012_evaluation.json",
+      "bytes": 2319,
+      "sha256": "4e45728118811e0b134ae0bbf30e6c64f0e7f0b6f6922f4e02591658a5f04650"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_013_evaluation.json",
+      "bytes": 2315,
+      "sha256": "1e731d33ef53c52061d1325095e61b5b0c7bb19c03fab490ec34cfe8ce3d1c08"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_014_evaluation.json",
+      "bytes": 2317,
+      "sha256": "fd42e8b7bdf6c24ca6b549f634cdf0a4409e834e775aacb1b099d585a0a59613"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_015_evaluation.json",
+      "bytes": 2317,
+      "sha256": "f32a0f4433ed91e9786f3cf5559c1a8631c54646507c0eb0c63c21fea94739e6"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_016_evaluation.json",
+      "bytes": 2313,
+      "sha256": "272336357a6363703b4feeafe0d3b0fd2ae812c1607fd94de6be19009f614878"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_017_evaluation.json",
+      "bytes": 2315,
+      "sha256": "9684d467687cb25fdb0dd4b07317514e689f71fcf4a9a83293d0cfcf83e87971"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_018_evaluation.json",
+      "bytes": 2321,
+      "sha256": "912c850522b43f6b2ce33d7a08180878dc20b135805ba2707b7f51eb561e1142"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_019_evaluation.json",
+      "bytes": 2315,
+      "sha256": "9994258283025e6917e79971e4968949cffedce7246fd0b3b2fe3a474c3336c5"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_020_evaluation.json",
+      "bytes": 2319,
+      "sha256": "c75d743e5010794857178d8c3d895edd19ce229cb99ee9b85ff0416bc5cd3195"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_021_evaluation.json",
+      "bytes": 2311,
+      "sha256": "a5d06cac503e2cfcca330d82cb7049d75e3c1215a870b2b43d139b42430dd5c8"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_022_evaluation.json",
+      "bytes": 2223,
+      "sha256": "7232c99363e8628d3994b26d19929e76652d2df8992d699796b8920d9ad6cef7"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_023_evaluation.json",
+      "bytes": 2225,
+      "sha256": "46df9017043e6462b028b4516e3f3403a557bf223f12f06a2ab69fc61f3a6d7a"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_024_evaluation.json",
+      "bytes": 2317,
+      "sha256": "8e063ddb9d1fe0cde3c8593133279f6b4a18a459a2f9353966bbd2dc6350ed07"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_025_evaluation.json",
+      "bytes": 2227,
+      "sha256": "caaf85e9049c2e2be83b49272e84abc3886320f4cd280a3dbe348c91b72c8211"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_026_evaluation.json",
+      "bytes": 2135,
+      "sha256": "dbc3cd68257acccbf8a30e6b7d926f85a651dfc6f59fb88c7d13d8bc1b68636f"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_027_evaluation.json",
+      "bytes": 2135,
+      "sha256": "d580af4c5fa6d8c902841803650100245b5524e2eb80e197897b38f45b4c15bc"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_028_evaluation.json",
+      "bytes": 2225,
+      "sha256": "b58f465e03177b087dee5817004fd352454ec52f5ec8124ef83a2e44cd38fe90"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_029_evaluation.json",
+      "bytes": 2221,
+      "sha256": "7e548794bb2336c77236644e2f2d6b332e3f573b1e09bdde478d1271b2d4caf0"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_030_evaluation.json",
+      "bytes": 2315,
+      "sha256": "4ccc259b89d976afd25f952d0a7769c0444796b625969b2c64c8cb091b24a570"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_031_evaluation.json",
+      "bytes": 2229,
+      "sha256": "b17a0b1d3204ac8b63c1e9287bd69d670b490b8d9fbe047d76cb581bec8c6db6"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_032_evaluation.json",
+      "bytes": 2317,
+      "sha256": "d3068e130765d2700741e3479bfffd45417926b17c2bd60fe78e5dda85b0e570"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_033_evaluation.json",
+      "bytes": 2221,
+      "sha256": "6d262d3b4b5f7cfd76fe7dfe56353791106696b6749988fab8457d496700cc22"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_034_evaluation.json",
+      "bytes": 2317,
+      "sha256": "3631577c363e637204a81f9d1735f7e555d22a751d7f3d83328df064312f54eb"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_035_evaluation.json",
+      "bytes": 2225,
+      "sha256": "d5765edd4f430612b85b280435ff3ff34dbfafc2eb297bf52a23c3b71a05753a"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_036_evaluation.json",
+      "bytes": 2227,
+      "sha256": "bc1a987425e69b000e9db05ab8ff8a836f5258146d7628f2e0f9efb7178d1dec"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_037_evaluation.json",
+      "bytes": 2139,
+      "sha256": "0104b726ecb6cb338ed4eabba79ce3f5f85bec5d6bad13c62b3bc7e1cc5c64eb"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_038_evaluation.json",
+      "bytes": 2317,
+      "sha256": "9a45aa404aa4ef673b8f02e21204dd4e1a8db430c3b1bbae0a5e776917fe13a1"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_039_evaluation.json",
+      "bytes": 2313,
+      "sha256": "a8152bb45c397e6e5e69b52b9cff9ab4fe9435d2a67b6b0d1399445694aa8869"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_040_evaluation.json",
+      "bytes": 2313,
+      "sha256": "ad5561ccd049b3aa5cf3003635160871438ed19219c06ec41a859b701fd04b5b"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_041_evaluation.json",
+      "bytes": 2227,
+      "sha256": "23db9fdc5de26e1a2bb790e7f3dc889825b922151eca9824669f54e4d5cecaf0"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/epoch_042_evaluation.json",
+      "bytes": 2313,
+      "sha256": "abd6825a28c06eef455a7b2a2a807624fee21e4a609f2360c0af37659f337578"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/history.csv",
+      "bytes": 8882,
+      "sha256": "236f15cbbaef1efe0a71d0c5c340b1c7c2dac0d06cd6eb2d198965dc9dafb313"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/history.json",
+      "bytes": 22533,
+      "sha256": "d0e190595eaa0f12761535b128b04cc79847d2d08df20f0f7f8231df765085c6"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/learning_curves.pdf",
+      "bytes": 21545,
+      "sha256": "e12072207e9bb20e37097d7d5c8fa9870258e0014f2bc8b558db8c11546e4e32"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/learning_curves.png",
+      "bytes": 129147,
+      "sha256": "ed1bfa045900dbf5b55caf35dcf8711772de3185b92c3862891e97544bc88718"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/run_complete.json",
+      "bytes": 841,
+      "sha256": "a38d56e05e035502010e01af93b8e562ee58974b45fcf027322acc5d25b1389e"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261011/selection.json",
+      "bytes": 298,
+      "sha256": "70a8a95ae1772913cd9fa692c53f2a52680b6d661eb4f9d528f34c0ca121531f"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/config.json",
+      "bytes": 2718,
+      "sha256": "45c3a11ccb1235f8e421355ccb6994c11aefe3889836e85f1a990995fb7fd081"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_001_evaluation.json",
+      "bytes": 2353,
+      "sha256": "1bb49229fa0812021faed8e077d0e26248f7956064f2c2d0e1c8e42236abc8b2"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_002_evaluation.json",
+      "bytes": 2341,
+      "sha256": "7790ae5918a179fa98278bfc806eaa8f20bbc71d401fe76c00d2b46d907bd0f8"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_003_evaluation.json",
+      "bytes": 2331,
+      "sha256": "9a61920ab3b31138ec8306cb1a47d21e296acf3d904fb14eaab2ae07b3872fbd"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_004_evaluation.json",
+      "bytes": 2329,
+      "sha256": "6a2eb49549fec89eff20c8996ae6c4967ed86978db4198a7d94e384c19eb43aa"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_005_evaluation.json",
+      "bytes": 2315,
+      "sha256": "d3337931794c38db1dd3eff375d71236f9ee0d1173d5d19b111a00cb62293afb"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_006_evaluation.json",
+      "bytes": 2319,
+      "sha256": "11251b7ef998d1a6b187c08251f4d6937d9adc90636afe4ce1ddb558b9623dc3"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_007_evaluation.json",
+      "bytes": 2315,
+      "sha256": "5a5a70c70b2fed86de7654b70fbc888755d88b105f60e353b01590e6897277ef"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_008_evaluation.json",
+      "bytes": 2319,
+      "sha256": "a46c423bda63b420c603c8d4aca18ee9524d9eb7f3af34536f84d03cb507fde8"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_009_evaluation.json",
+      "bytes": 2317,
+      "sha256": "c62aa21cafe07af5e72d9d8b10c7053dc9dcb4e3fa6ababff6f1ac57071a971b"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_010_evaluation.json",
+      "bytes": 2315,
+      "sha256": "353303541c0d630cc1c61d14122ab76596392492091dc75a7e044a2db7ea38bf"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_011_evaluation.json",
+      "bytes": 2315,
+      "sha256": "c1ef487ce53f3306fc275e869af0acdb5aa9abb9bcbb518f6a0e3e9668609591"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_012_evaluation.json",
+      "bytes": 2223,
+      "sha256": "d95ac911cc3ab99775a9ebb49a295c7ae4e6b11f04ac0650b2674d4b06c808b0"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_013_evaluation.json",
+      "bytes": 2321,
+      "sha256": "8459070e53ba9af208f00cbb7f2ea73038658458774209aefb4a5814b51a8cdb"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_014_evaluation.json",
+      "bytes": 2319,
+      "sha256": "0af04fca4e832c57af4fda3205cc0096be2f8786bd6a13be92c3142551452e8a"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_015_evaluation.json",
+      "bytes": 2319,
+      "sha256": "c2fee4992e348260271b145fe8b80005686b48b995316970e97246f7b95f24d5"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_016_evaluation.json",
+      "bytes": 2319,
+      "sha256": "2f6b97adccc8b1f091f1b1116c2e7925745429370c57bd54313fee63e46d4ca1"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_017_evaluation.json",
+      "bytes": 2313,
+      "sha256": "cf8b61572133fa9f45d2a746ba4a9cbd9fcbb2fb336599ec379f37f0794aa0b5"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_018_evaluation.json",
+      "bytes": 2319,
+      "sha256": "1e73c480d9c701b2f6c387a9d81b0ced35f4c469cacab6ce80a6ba71c6ccbbdd"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_019_evaluation.json",
+      "bytes": 2321,
+      "sha256": "c65227ba414c870287d2dbe5250a471e0323f08b82ada6664da9dd28abde9ed3"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_020_evaluation.json",
+      "bytes": 2315,
+      "sha256": "68bc9f276e60fe6b148515346b34020626f4ed683d9cda4d697ae4e1862369c7"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_021_evaluation.json",
+      "bytes": 2313,
+      "sha256": "ba380d4ed3b25367e91b2e921dbef4cebb68cb12596cccb76a26a7e1a6471a03"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_022_evaluation.json",
+      "bytes": 2313,
+      "sha256": "8d0b7a7b91561e9e6f72819d7b85d545f858675ce98ce2de3e45bee91c02da43"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_023_evaluation.json",
+      "bytes": 2317,
+      "sha256": "bdc6fc0655da556c23a0993661d81ee4b8746797205c7caf5703649de8afc4d4"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_024_evaluation.json",
+      "bytes": 2317,
+      "sha256": "38506540112cf561f262f09131c6bf3d98317a008507a7ad8ed7f5ad3431c894"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_025_evaluation.json",
+      "bytes": 2317,
+      "sha256": "485fd21410d1194566d94107f6035643d027832bc0069227b3f0d01c87d7a082"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_026_evaluation.json",
+      "bytes": 2225,
+      "sha256": "8b065a66a721f82b85b259e427d3b671aa35c900a932c91e023cb5670d221c31"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_027_evaluation.json",
+      "bytes": 2317,
+      "sha256": "17f4a6b73b861c7d1c6142fccf8a0bb20cf0a56b9bc3884157bb7343e36db5e0"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_028_evaluation.json",
+      "bytes": 2317,
+      "sha256": "df718deefbe563505e3b5df6047f2c99f03c9a98228679c9dbddfee4a162397a"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_029_evaluation.json",
+      "bytes": 2317,
+      "sha256": "c33a1f685ffcbc929a1521169c9d1c5e90bd47115913cff5d8b505f8e90564a2"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_030_evaluation.json",
+      "bytes": 2315,
+      "sha256": "1030b2be1e8e5947d15558f36c1f54f28ecb223994081cba76bb349ce09a1944"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_031_evaluation.json",
+      "bytes": 2317,
+      "sha256": "d72aa38ef91a9ed53b0acce57002261cfb5b46f4ea20a3941ea51469e29c0d1d"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_032_evaluation.json",
+      "bytes": 2315,
+      "sha256": "37f986014dc81a1bcbfc8bd05dbae6ccaeabc6b5bd0be4da63cc38c4fa51d560"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_033_evaluation.json",
+      "bytes": 2311,
+      "sha256": "b29ac7736ac1d59aaeb8565771f7a13efede632436caa066c3bd2dc5b5b3a99c"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_034_evaluation.json",
+      "bytes": 2315,
+      "sha256": "8e9b8204717fcd837d3ac5cc9057eba5affd4a3f75afc1e6be2128e4a62578b7"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_035_evaluation.json",
+      "bytes": 2225,
+      "sha256": "017ab7b167eb45a2fa91803a9e63fb10dd1a0ff95d35d7033c8a962e31c36581"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_036_evaluation.json",
+      "bytes": 2313,
+      "sha256": "4f7bd0423b13155a2a42d3d63429b2febfdef9e931b94cad184a1adcc5a43c74"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_037_evaluation.json",
+      "bytes": 2313,
+      "sha256": "8859122d5ff3c00e9c81f20002a87131fbf7663727dc5f919a5958d6e91cbafc"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_038_evaluation.json",
+      "bytes": 2313,
+      "sha256": "38c56aacdf2dd6f7d050121f47f2e872e2f0de5df713be77c504b5d4c0e8fab6"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_039_evaluation.json",
+      "bytes": 2315,
+      "sha256": "a3df39740ef2d9caa01ea26e71752ade5898615007a9f7c08ccbf56b33c31adb"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_040_evaluation.json",
+      "bytes": 2223,
+      "sha256": "27ab54702677db2c64f7b0ee64b0bd04c4669a2f661b85c62309f23cf5b619b1"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_041_evaluation.json",
+      "bytes": 2315,
+      "sha256": "9e1486683b06292b3f700a2d04f5c232dd29100a5a0d9bc3cecc0638b50bb2b9"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_042_evaluation.json",
+      "bytes": 2227,
+      "sha256": "2141a3a4cfb5b795a96e99e5ad9bfcafe57d5d3d0c69870f193ff979126dd7a5"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_043_evaluation.json",
+      "bytes": 2317,
+      "sha256": "448352431a4d555092afe8eafc1f8b88103abc033571c0209b7ffbc847958f80"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_044_evaluation.json",
+      "bytes": 2315,
+      "sha256": "7455cea9fb3fc038d178673ab7ba7440cf09873fc8510268fed13114dad4d724"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_045_evaluation.json",
+      "bytes": 2225,
+      "sha256": "3e0d5dbd882e7dcab46e5c07c6f0eb67cc6862cbdceb3597f3803852df8df3f7"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_046_evaluation.json",
+      "bytes": 2311,
+      "sha256": "4211cb02b53d510b692e129019ab27f51864d18d494ff275c50336859321926f"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_047_evaluation.json",
+      "bytes": 2221,
+      "sha256": "6338a16abee17dcb74acd95b3f8f5135c2a2cf1b720c708dc4d8d6a56b30879e"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_048_evaluation.json",
+      "bytes": 2313,
+      "sha256": "c14f0d13b534e84d4e54a417d74609473f89dca436d7a371909c8cd3c52a5e60"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_049_evaluation.json",
+      "bytes": 2317,
+      "sha256": "4977f497486152a5b3d1062cec4a39d043b3be69ca8fb666698b4f0da9fe3eb0"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_050_evaluation.json",
+      "bytes": 2225,
+      "sha256": "40e64b0d7f7f3fe882c462ba0635a3255ad4bef21deb76b58e34e73e00702741"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_051_evaluation.json",
+      "bytes": 2317,
+      "sha256": "d5fd8bac8e5dff4da5dc5942c0815b311d5aa11e6704f1fd78cdd3cee81dfc44"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_052_evaluation.json",
+      "bytes": 2225,
+      "sha256": "d6fde527b912a266659377f96942e773a958b6e9010d23582b9c7866dfcb582a"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_053_evaluation.json",
+      "bytes": 2223,
+      "sha256": "f677f38849ce640cefeb609a602a69ab426cfa65103b788821e6f4ac9991ae7a"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_054_evaluation.json",
+      "bytes": 2229,
+      "sha256": "99a1323740198bd30799f98b415a77363a218cd893a0a36243104c4356e9a4fb"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/epoch_055_evaluation.json",
+      "bytes": 2225,
+      "sha256": "1161972ddcf319017eea56540e9bb50b1aad1afceddf2368c13199a13332f00e"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/history.csv",
+      "bytes": 11721,
+      "sha256": "297db59fe822f349ef3e68be7cf2a43aaa63c676a044b501b238a99ce8e5435c"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/history.json",
+      "bytes": 29662,
+      "sha256": "4d98c00b09ef970e7201711c7b276761b23af7da69697815b686613ada8384c9"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/learning_curves.pdf",
+      "bytes": 22151,
+      "sha256": "063a10d165da2b77784fb76666f1423661292d31efe09ade32c194635406fe25"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/learning_curves.png",
+      "bytes": 127112,
+      "sha256": "ae30822905bb0b101d1b3f3fa9c1199b665448c7bdaae3290162f0fd7fa0448b"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/run_complete.json",
+      "bytes": 842,
+      "sha256": "8b7a5521b5281076400dae00290766795bf51f5d117aad0a84e4987a4e013397"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261012/selection.json",
+      "bytes": 299,
+      "sha256": "56ddc7c944253e44c59d1903850719240bcebc2d828a7660c7fd45edeff46ef1"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/config.json",
+      "bytes": 2718,
+      "sha256": "d67d89b16ceb7358ece697da42d20a1f6ad6b79bd9b3fe92d0a0d476a8385d01"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_001_evaluation.json",
+      "bytes": 2351,
+      "sha256": "1fc7b8008e2c7c88ca7d0d11f3b635cc40a63f144aa196375ce63da20d57e9af"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_002_evaluation.json",
+      "bytes": 2343,
+      "sha256": "3ddf5f29387d55cc4c107aac4f3e65076f2c01c1ae90af324e08e8ac3e8894ed"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_003_evaluation.json",
+      "bytes": 2333,
+      "sha256": "c0808d9ab70463ec6acd0d470a953e8344663c347821872ac8ffb093250b42bb"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_004_evaluation.json",
+      "bytes": 2331,
+      "sha256": "d068a44a3b046fc5801ccbb3b5f25ce170d35202657eab10cc06b1dd552fc871"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_005_evaluation.json",
+      "bytes": 2323,
+      "sha256": "c98f27cab09cb7f4d130df1665969dcc008c0be099ade75deab63e9c2cc0b18c"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_006_evaluation.json",
+      "bytes": 2319,
+      "sha256": "413e5f88a8dae36012bb76ba17a500ce0edcf6200e912bb294333e8141c2a2ea"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_007_evaluation.json",
+      "bytes": 2321,
+      "sha256": "4c78436dfb35abac4fd65bcca8741b74e2f1c501b7f84fd030e6e20e81721692"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_008_evaluation.json",
+      "bytes": 2319,
+      "sha256": "e497525e583a879ff7bb2edd6c46dc2ddfb03f12c1bc6ebc98995093365dec0d"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_009_evaluation.json",
+      "bytes": 2319,
+      "sha256": "0243caacd06a48eadb9c5c7c5964c9e6d1456a6d44ab84194dd948ab8ac42e77"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_010_evaluation.json",
+      "bytes": 2317,
+      "sha256": "506a5ee3d2616377e3452207ef786cf1985eb182826340e9bdb73fb42842e04a"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_011_evaluation.json",
+      "bytes": 2319,
+      "sha256": "ac5e1621ac11ae6fad66577c59cfb2711c7e599fa5907d344d0c3825a7d8eda6"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_012_evaluation.json",
+      "bytes": 2315,
+      "sha256": "cd7dac965a242ea64c8ce793a5a04ee023c60efc3b18f10d4b6c2d27a28d5131"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_013_evaluation.json",
+      "bytes": 2225,
+      "sha256": "77647dd9ef2ffe08700a3e4912afc17a8e746b2003d14b859959c9cf7803b7dd"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_014_evaluation.json",
+      "bytes": 2321,
+      "sha256": "7d3ba463d4e34a15e4d3e1827ccbc974b0fbcc4e428ea92599a7d12d9f06ab96"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_015_evaluation.json",
+      "bytes": 2317,
+      "sha256": "90044e445397e0ede9fed66de05f480b0e406878a801ee6f911666e767e8ac80"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_016_evaluation.json",
+      "bytes": 2319,
+      "sha256": "9445435cb9a9ecbe2a600f626778a80bd04ebb79f0bdb7027957f186b362f33c"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_017_evaluation.json",
+      "bytes": 2313,
+      "sha256": "91b227bfe3ff9c62d202c1665291072806e4016f295041a5326ced0161b320d4"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_018_evaluation.json",
+      "bytes": 2315,
+      "sha256": "76450cd8522c69bbf6385d7980b097b2c6af418634bf0685dc329751d8761128"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_019_evaluation.json",
+      "bytes": 2319,
+      "sha256": "9c86d18599dac74d4599e376f471e1fd8694e61c52791a9ab0a7e3644a14ee6f"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_020_evaluation.json",
+      "bytes": 2319,
+      "sha256": "c7a963088672769c485a98029d520c3c205ab512047d6607ce039dad86b88374"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_021_evaluation.json",
+      "bytes": 2225,
+      "sha256": "741c172f1b811cafcb3b33bbf65bf3e48fc403c72ca5f880ad06813adb4d6964"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_022_evaluation.json",
+      "bytes": 2317,
+      "sha256": "5dc84dbe386d8c2be56b3cc50c497079070696dbb51d2143d34518a627611907"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_023_evaluation.json",
+      "bytes": 2315,
+      "sha256": "fd716ff80c79710fbb50813f8ee31656e542240f9b77e0c63230fa37bd452bb1"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_024_evaluation.json",
+      "bytes": 2311,
+      "sha256": "a0a63147598641f653bc4d5d8ef86a5bd25940989f512123a17b509ca9f1df54"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_025_evaluation.json",
+      "bytes": 2223,
+      "sha256": "97bdf095881c55ca4b869862dfd94452146250283557e6721337356ec092cb1d"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_026_evaluation.json",
+      "bytes": 2315,
+      "sha256": "1f8e358f08d2c8ce6b940a053b6eea0f738f0092aef680f971ebef8227fd182d"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_027_evaluation.json",
+      "bytes": 2315,
+      "sha256": "29bd0024f46421ad62e6306667e9f05086a25f3ca61b615582fcc0df7d2c4422"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_028_evaluation.json",
+      "bytes": 2317,
+      "sha256": "616f29ed2e4fb84108d8701f36ae85425865f3738ce7608d46a471976ef7165e"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_029_evaluation.json",
+      "bytes": 2315,
+      "sha256": "01903e6293dec1f762d2e42ba06e57f867b39a4676f00582e6a753d15b45e0ee"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_030_evaluation.json",
+      "bytes": 2219,
+      "sha256": "2e2952e698e6cefd5a63645c81a1cdbea40abe6b35a6dca5a470a54b3a1e4dc7"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_031_evaluation.json",
+      "bytes": 2317,
+      "sha256": "f29bcec97691c92615995e6ae60409ffe50697d74231ce102a3b2133b81090ee"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_032_evaluation.json",
+      "bytes": 2313,
+      "sha256": "787a1918aee75d09da0d99eaf9d423da5bff6cb6743941ce6fe7a38a2ffbc79c"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_033_evaluation.json",
+      "bytes": 2315,
+      "sha256": "7a3e7a9b9695bf9ee716c85f65cbce0b822de8ef4c2fb4801aea4ed09d0b91c5"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_034_evaluation.json",
+      "bytes": 2133,
+      "sha256": "042c80a9e170ba3b9ba9209a46de9e5c3987f8e06d0a0acdd0a17981400ccfc1"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_035_evaluation.json",
+      "bytes": 2313,
+      "sha256": "b6a28bc13a1483935c33b52f3409ca9fa24b91c80efad467b0d457988f4e7519"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_036_evaluation.json",
+      "bytes": 2227,
+      "sha256": "b06fa519de9f001c5f58484cefe1085f79f7686dafbdce033ff4eace1711f219"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_037_evaluation.json",
+      "bytes": 2315,
+      "sha256": "8596eb49274a4c731f1086f8319601d8cecbe98886eb5d10eb78461c80a823bb"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_038_evaluation.json",
+      "bytes": 2315,
+      "sha256": "717337cf0d0491578ae55dfb88d89435c74d51e133877f51e492839d1174789b"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_039_evaluation.json",
+      "bytes": 2319,
+      "sha256": "4865dc8525cffaa2f64cd159ed88de6687f20cf9584d4ee85138ccd7294e15fa"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/epoch_040_evaluation.json",
+      "bytes": 2227,
+      "sha256": "1bfcdb712b5f7ddaa93a54367b98b19e42d6ea40994409e9e09a29d2809d2df0"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/history.csv",
+      "bytes": 8577,
+      "sha256": "e23f55984a83ae7a40b43943d3e05f49a10e09bd17739ab825955a9ae7981154"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/history.json",
+      "bytes": 21568,
+      "sha256": "083e7b225bac6b3b802f75483344b4abc336c8683073541057399d4608c0eed7"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/learning_curves.pdf",
+      "bytes": 21788,
+      "sha256": "10942d46613677447db7a8feb1f6e1f65b9123d80f14d82ef565b0af2baf6bf7"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/learning_curves.png",
+      "bytes": 133754,
+      "sha256": "2d493a0bf34c4ff4f32aac5d3fae560d438f6222a848d4ac2ca094a7e76679cc"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/run_complete.json",
+      "bytes": 841,
+      "sha256": "d62ccc316943f39c202970f0e27fb67b47d65d0b64ab6ff48b0d4f830e8d065a"
+    },
+    {
+      "path": "results/sts/retraining/raw/stage_only_seed20261013/selection.json",
+      "bytes": 298,
+      "sha256": "f91d7c1f70255a6195904ac127d84c7fb2dc4ae9817397fcae7607e047554a12"
+    },
+    {
+      "path": "results/sts/retraining/raw/suite_status.json",
+      "bytes": 4795,
+      "sha256": "db8045480ab3c2e219ab108c31967b69220058881a832f1dbfdff6891b2358f1"
+    },
+    {
+      "path": "results/sts/retraining/raw/validation_only_preference.json",
+      "bytes": 365,
+      "sha256": "37d24f0e6cc7d17438efddd2f3fd28382819ea9d279c680b6021d7e9ddaf30a8"
+    },
+    {
+      "path": "results/sts/retraining/report.json",
+      "bytes": 65165,
+      "sha256": "80a7bedf6a3d273e39d2b7384d4602686232501e06cdeb8bb209a746c4002961"
+    },
+    {
+      "path": "results/sts/retraining/summary.csv",
+      "bytes": 1727,
+      "sha256": "339bdfd9ebb6483574be44786f337be31ee31c859786b5fdd3b72c9c2d98b6d5"
     },
     {
       "path": "results/sts/supporting/README.md",
@@ -16607,8 +18597,8 @@
     },
     {
       "path": "tests/test_sts_manuscript_retraining.py",
-      "bytes": 6464,
-      "sha256": "05d19f65c4c8e4ee9eb85d11412ffa054692f9348fb1ef7333aa77f8a23fecf0"
+      "bytes": 7260,
+      "sha256": "24e4ae103b926f8e4b6a0e5f182aa80c8a60220ea60fd41f11836f41732ddfb6"
     },
     {
       "path": "tests/test_sts_repository_manifest.py",
@@ -16621,9 +18611,14 @@
       "sha256": "9c1d9aacea4f49a10c85e70fe66304f58eac7a36a40dda4572313adf7b4e8e94"
     },
     {
+      "path": "tests/test_sts_retrain_package.py",
+      "bytes": 8816,
+      "sha256": "a049622861277897ad13fa9efa7dcdecf328cd922d4cc1a114abe3fe76ce2e70"
+    },
+    {
       "path": "tests/test_sts_retrain_report.py",
-      "bytes": 11972,
-      "sha256": "5ad287f57d321b3489814510677ba83165fdada42ad4253a0325d9a1c5194715"
+      "bytes": 15906,
+      "sha256": "d8fcc39faaf2d48cd9f9b6a2825f6bf6fd9daed8e068c643cd0bc2285b28ad6c"
     },
     {
       "path": "tests/test_sts_supporting.py",

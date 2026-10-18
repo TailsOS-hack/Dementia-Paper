@@ -1,5 +1,6 @@
 """Appendix guards use explicitly synthetic metadata, never research estimates."""
 import csv
+import hashlib
 import json
 from pathlib import Path
 import tempfile
@@ -30,13 +31,15 @@ def synthetic_report(folder):
                                      for r in rows for name in ('best', 'last')],
                   split_checks={})
     path = folder/'report.json'
-    path.write_text(json.dumps(report))
     with (folder/'summary.csv').open('w', newline='') as stream:
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
         writer.writeheader(); writer.writerows(rows)
-    # Image existence checks only; the layout test separately uses labelled plots.
+    # Synthetic byte fixtures exercise integrity checks; layout tests use labelled plots.
     for name in ('matched_clean_nll.png', 'clinical_clean_nll.png'):
         (folder/name).write_bytes(b'SYNTHETIC TEST PLACEHOLDER - NOT IMAGE DATA')
+    report['figure_sha256']={name:hashlib.sha256((folder/name).read_bytes()).hexdigest()
+                            for name in ('matched_clean_nll.png','clinical_clean_nll.png')}
+    path.write_text(json.dumps(report))
     return path, report
 
 
@@ -103,6 +106,17 @@ class RetrainingAppendixTests(unittest.TestCase):
         self.path, self.report = synthetic_report(self.folder)
         self.report['checkpoint_binaries_verified'] = 12; self.write()
         with self.assertRaisesRegex(ValueError, 'verification count'):
+            self.appendix()
+
+    def test_stale_existing_figures_rejected_after_no_plots_report(self):
+        self.report['figure_sha256']={}; self.write()
+        self.assertTrue((self.folder/'matched_clean_nll.png').is_file())
+        with self.assertRaisesRegex(ValueError,'lacks generated figure hashes'):
+            self.appendix()
+
+    def test_tampered_figure_rejected_even_with_valid_summary(self):
+        (self.folder/'clinical_clean_nll.png').write_bytes(b'DIFFERENT SYNTHETIC PLOT')
+        with self.assertRaisesRegex(ValueError,'figure hash mismatch: clinical_clean_nll.png'):
             self.appendix()
 
     def test_cli_without_flag_preserves_original_content_and_filename(self):

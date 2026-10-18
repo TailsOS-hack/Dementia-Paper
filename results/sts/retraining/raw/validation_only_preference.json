@@ -1,0 +1,11 @@
+{
+  "condition": "stage_only",
+  "representative": "stage_only_seed20261011",
+  "condition_mean_validation_nll": {
+    "stage_only": 0.03744246027951733,
+    "multitask": 0.04797678396313291
+  },
+  "selection_basis": "Mean selected stage-validation NLL; lowest seed within preferred condition",
+  "test_used_for_selection": false,
+  "all_six_runs_reported": true
+}

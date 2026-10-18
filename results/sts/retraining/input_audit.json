@@ -1,0 +1,86 @@
+{
+  "archive": {
+    "name": "sts_training_inputs.tar.gz",
+    "bytes": 227894912,
+    "sha256": "aad19946366920128e4586fe2cdbe932f56c9b7e5b4ec6f5200b7d0e5a7e6195",
+    "regular_file_count": 22119
+  },
+  "counts_by_kind": {
+    "stage_image": 21728,
+    "clinical_slice": 387,
+    "stage_split_record": 2,
+    "reduced_clinical_manifest": 1,
+    "imagenet_initialization": 1
+  },
+  "uncompressed_bytes_by_kind": {
+    "stage_image": 210036157,
+    "clinical_slice": 10588099,
+    "stage_split_record": 8597048,
+    "reduced_clinical_manifest": 59480,
+    "imagenet_initialization": 22139423
+  },
+  "stage": {
+    "train_images": 19023,
+    "validation_images": 2705,
+    "included_images": 21728,
+    "excluded_test_images": 5450,
+    "frozen_manifest_sha256": "66a0cd9409d61edd32ee137154f769c749664f255ddebe461cf7683c1f4ba7b9",
+    "full_manifest_rows": 27178,
+    "note": "The unchanged full split manifest includes 5,450 test metadata rows solely to preserve frozen split identity; no test pixels are included.",
+    "all_included_decoded_pixel_hashes_match": true
+  },
+  "clinical": {
+    "train_slices": 288,
+    "validation_slices": 99,
+    "total_slices": 387,
+    "train_subjects": 32,
+    "validation_subjects": 11,
+    "total_subjects": 43,
+    "manifest_fields": [
+      "path",
+      "cohort",
+      "subject_id",
+      "group_key",
+      "diagnosis",
+      "binary_label",
+      "split"
+    ],
+    "original_full_manifest_sha256": "9dc70cad44f40f06dd028fe5e90790d656cf142ce4fb1d6f2f828646719951c1",
+    "reduced_manifest_sha256": "56e88016f6da24ae6aa4075ad700e1409d6f50868bfdc79bbb35074a1e0ac3ce",
+    "pseudonymous_grouping_identifiers_retained": true,
+    "age_and_sex_removed": true,
+    "note": "Diagnosis labels and pseudonymous subject/group identifiers remain in the reduced training manifest and corresponding filenames; they are needed for supervised training and subject grouping."
+  },
+  "verification": {
+    "all_source_byte_hashes_recorded": true,
+    "all_archive_members_readback_hash_checked": true,
+    "exact_allowlist_membership_verified": true,
+    "images_checked_no_exif_or_png_text": 22115
+  },
+  "source_references": {
+    "stage_manifest": "training_logs/experiments/kevin_20261011/prepared/stage_manifest.csv",
+    "stage_audit": "training_logs/experiments/kevin_20261011/prepared/split_audit.json",
+    "clinical_manifest": "data/external/clinical_t1_preprocessed_v1/clinical_slices.csv",
+    "initialization": "official torchvision MobileNetV3-Large ImageNet V1 mobilenet_v3_large-8738ca79.pth"
+  },
+  "omissions": [
+    "All stage test image pixels",
+    "All clinical test and external slices",
+    "Original clinical NIfTI volumes",
+    "subjects.csv and clinical demographics (age/sex)",
+    "Clinical QA artifacts",
+    "Reader identities, score sheets and results",
+    "Original100 benchmark image files and key",
+    "Historical or new fitted disease-model checkpoints",
+    "Source code (root will transfer separately)",
+    "Unrelated diseases or datasets"
+  ],
+  "status": "training_validation_bundle_verified",
+  "raw_images_published": false,
+  "private_file_inventory_published": false,
+  "reproducible_preparation": {
+    "module": "research.sts_retrain_20261018.prepare_inputs",
+    "independent_local_rebuild_identical": true,
+    "rebuild_archive_sha256": "aad19946366920128e4586fe2cdbe932f56c9b7e5b4ec6f5200b7d0e5a7e6195"
+  }
+}

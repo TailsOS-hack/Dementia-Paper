@@ -1,0 +1,24 @@
+{
+  "python": "3.12.3",
+  "platform": "Linux",
+  "machine": "x86_64",
+  "packages": {
+    "torch": "2.8.0+cu128",
+    "torchvision": "0.23.0+cu128",
+    "numpy": "2.1.2",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "Pillow": "11.0.0",
+    "matplotlib": "3.11.2",
+    "pandas": "3.0.6"
+  },
+  "cuda_runtime": "12.8",
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "gpu_memory_bytes": 101975851008,
+  "driver": "595.91.07",
+  "trainer_torch_threads": 1,
+  "dataloader_workers": 4,
+  "trainer_sha256": "58402818b041400be904963846470c4ded19b029a7120fb1dd8bc511851a8441",
+  "source_helper_sha256": "cbf67b7c6e842ce35eeef2e0c0a6a0752b865cec3399d7aa58bd5e8ff0e2a5e2",
+  "heldout_inference_performed": false
+}

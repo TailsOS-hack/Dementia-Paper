@@ -1,0 +1,8 @@
+{
+  "study": "sts_retrain_20261018",
+  "selected_epoch": 27,
+  "val_loss": 0.03615409066455745,
+  "reason": "minimum clean stage validation NLL with min_delta",
+  "selected_checkpoint_sha256": "c56ffcf8914a65a6a4b983082288838d1d962b16536d4043a351834bb8927660",
+  "test_used_for_selection": false
+}

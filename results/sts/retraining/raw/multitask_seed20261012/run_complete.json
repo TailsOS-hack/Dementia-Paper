@@ -1,0 +1,17 @@
+{
+  "study": "sts_retrain_20261018",
+  "status": "completed",
+  "epochs": 75,
+  "selected_epoch": 60,
+  "best_validation_nll": 0.04881036796945932,
+  "heldout_inference_performed": false,
+  "best_sha256": "85a08a690a9550934159abafa2d9a05e5d4ae3a7c4d0e07a6bae76aa46283b77",
+  "last_sha256": "4d44b802e510cba61dd55e07a95732b6048fb377165815634f3eac6b1946f92e",
+  "artifact_sha256": {
+    "selection.json": "c507f515afc32f900c94d015eb9387864fe9657470c4f9783b9434d4b9020ae7",
+    "history.json": "82b146e2c4cc0eaf56f1b9b04d3a10d89bade2452fda7b84281f042de7aead59",
+    "history.csv": "e9750b6c39b7b72c7acc78c413818f1387a7b65a6cae239b0e99e852c8fd59d3",
+    "learning_curves.png": "5ac546ca9e199e0c62229f4160a3213c627411b83ad3dc3fa29e7318d35bba98",
+    "learning_curves.pdf": "d2646a15cf45090eb15830f0ba64c8110eae81b61fd9414304e915a271908f4c"
+  }
+}

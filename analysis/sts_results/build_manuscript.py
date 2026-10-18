@@ -148,9 +148,15 @@ def make_retraining_appendix(report_path: Path, *, allow_synthetic: bool = False
     if any(r['train_images'] != train_n or r['validation_images'] != val_n for r in rows):
         raise ValueError('Retraining image denominators differ across runs')
     clinical_train, clinical_val = denominators['clinical_train_subjects'], denominators['clinical_validation_subjects']
+    figure_hashes = report.get('figure_sha256')
+    if not isinstance(figure_hashes, dict) or not figure_hashes:
+        raise ValueError('Retraining report lacks generated figure hashes; regenerate with plots')
     for name in ('matched_clean_nll.png', 'clinical_clean_nll.png'):
-        if not (report_path.parent/name).is_file():
+        figure_path = report_path.parent/name
+        if not figure_path.is_file() or figure_path.is_symlink():
             raise ValueError(f'Missing retraining figure: {name}')
+        if hashlib.sha256(figure_path.read_bytes()).hexdigest() != figure_hashes.get(name):
+            raise ValueError(f'Retraining figure hash mismatch: {name}')
     preference = report['validation_only_preference']
     if preference.get('test_used_for_selection') is not False or preference['representative'] not in names:
         raise ValueError('Invalid validation-only retraining preference')
@@ -234,7 +240,7 @@ def make_retraining_appendix(report_path: Path, *, allow_synthetic: bool = False
                          'metadata-only verification.')
     paragraph('The source report checked all six completed histories, per-epoch clean evaluation records, denominators, '
               'stopping decisions and validation-only selection. '+verification_text+
-              ' '+manifest_text+' The machine-readable report records source hashes. '
+              ' '+manifest_text+' The machine-readable report records source hashes; the appended figures were checked against its figure hashes. '
               f'Report SHA256 begins {report_digest[:16]}; full provenance is retained in report.json and summary.csv.')
     return blocks
 
@@ -325,7 +331,7 @@ def markdown(blocks, root, out):
             path=os.path.relpath(root/b['path'],out.parent)
             lines += [f"![{b['caption']}]({path})",'',b['caption'],'']
         elif k=='reference':lines += [f"- [{b['text']}]({b['url']})"]
-    out.write_text('\n'.join(lines)+'\n')
+    out.write_text('\n'.join(lines).rstrip()+'\n')
 
 
 def main():

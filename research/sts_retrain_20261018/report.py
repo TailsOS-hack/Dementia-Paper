@@ -23,6 +23,8 @@ EXPECTED_CONFIG = dict(epochs=100, min_epochs=20, patience=15, min_delta=1e-4,
                        weight_decay=.001, label_smoothing=.05, aux_weight=.25, aux_every=4)
 TRAIN_N, VAL_N = 19023, 2705
 COMPLETION_ARTIFACTS = frozenset(("selection.json", "history.json", "history.csv", "learning_curves.png", "learning_curves.pdf"))
+FIGURE_FILES = tuple(f"{name}.{extension}" for name in
+                     ("matched_clean_nll", "online_and_objectives", "clinical_clean_nll") for extension in ("png", "pdf"))
 
 
 def sha(path):
@@ -31,6 +33,19 @@ def sha(path):
         for block in iter(lambda: stream.read(1048576), b""):
             digest.update(block)
     return digest.hexdigest()
+
+
+def verify_figure_hashes(folder, records):
+    """Require all six generated plots to match this report's exact bytes."""
+    require(isinstance(records, dict) and set(records) == set(FIGURE_FILES),
+            "Report must pin all six generated figures; rebuild without --no-plots")
+    for filename in FIGURE_FILES:
+        expected = records[filename]
+        require(isinstance(expected, str) and len(expected) == 64 and all(c in "0123456789abcdef" for c in expected),
+                f"Invalid figure digest: {filename}")
+        path = Path(folder) / filename
+        require(path.is_file() and not path.is_symlink(), f"Missing or symlinked report figure: {filename}")
+        require(sha(path) == expected, f"Report figure hash mismatch: {filename}")
 
 
 def close(a, b, context):
@@ -305,9 +320,21 @@ def run(input_root, output_dir, make_plots=True, require_checkpoints=False,
                        train_images=TRAIN_N, validation_images=VAL_N,
                        mathematical_minimum_epoch=replay["mathematical_minimum_epoch"])
         summary_rows.append(summary); runs[name] = dict(history=history, summary=summary, stopping=replay)
-    preference = validation_preference(selections)
-    require(read("validation_only_preference.json") == preference and suite["validation_only_preference"] == preference,
-            "Suite condition preference does not match validation-only recomputation")
+    recomputed_preference = validation_preference(selections)
+    preference = read("validation_only_preference.json")
+    require(preference == suite["validation_only_preference"], "Saved and suite validation preferences differ")
+    require(isinstance(preference, dict) and set(preference) == set(recomputed_preference),
+            "Validation preference fields differ from recomputation")
+    mean_key = "condition_mean_validation_nll"
+    for key in recomputed_preference:
+        if key != mean_key:
+            require(preference[key] == recomputed_preference[key], f"Validation preference differs from recomputation: {key}")
+    require(isinstance(preference[mean_key], dict) and set(preference[mean_key]) == set(recomputed_preference[mean_key]),
+            "Validation preference condition set differs from recomputation")
+    for mode, expected in recomputed_preference[mean_key].items():
+        # Python 3.12 changed float sum accumulation. Keep the original saved
+        # record while tolerating only the existing numerical comparison bound.
+        close(preference[mean_key][mode], expected, f"Validation preference mean {mode}")
     if stage_manifest is None:
         candidate = CODE_ROOT/"docs/kevin_paper_20261011/publication/prepared/stage_manifest.csv"
         stage_manifest = candidate if candidate.is_file() else None
@@ -345,9 +372,14 @@ def run(input_root, output_dir, make_plots=True, require_checkpoints=False,
     output.mkdir(parents=True, exist_ok=True)
     write_csv(output/"summary.csv", summary_rows); write_csv(output/"condition_summary.csv", condition_rows)
     write_csv(output/"epochs.csv", epoch_rows)
-    (output/"report.json").write_text(json.dumps(report, indent=2)+"\n")
+    report["figure_sha256"] = {}
     if make_plots:
         figures(output, runs, synthetic)
+        report["figure_sha256"] = {name: sha(output/name) for name in FIGURE_FILES}
+        verify_figure_hashes(output, report["figure_sha256"])
+    temporary_report = output/"report.json.tmp"
+    temporary_report.write_text(json.dumps(report, indent=2)+"\n")
+    temporary_report.replace(output/"report.json")
     heading = "# SYNTHETIC TEST FIXTURE — NOT RESEARCH RESULTS" if synthetic else "# New retraining learning curves"
     lines = [heading, "", f"All six new October 18 runs completed and passed report validation: {report['total_epochs']} total epochs. "
              "This experiment is separate from the historical six-run study.", "",
@@ -364,7 +396,9 @@ def run(input_root, output_dir, make_plots=True, require_checkpoints=False,
               "averaging slice probabilities per subject. Clinical loss does not select checkpoints.", "",
               "`summary.csv` contains selected/final NLL and epoch counts; `epochs.csv` retains every logged observation; "
               "`condition_summary.csv` reports three-seed means and sample SDs (not confidence intervals). "
-              "`report.json` records source hashes, split identity checks, per-checkpoint verification and definitions.", "",
+              "`report.json` records source hashes, split identity checks, per-checkpoint verification and definitions. "
+              "Its `figure_sha256` map pins all six generated PNG/PDF files; a `--no-plots` build records an empty map "
+              "and cannot supply figures for the manuscript or public package, even if older plot files remain.", "",
               f"Stage split verification: `{split_checks['stage']['status']}`. Clinical split verification: `{split_checks['clinical']['status']}`. "
               "Manifest checks do not re-read image pixels or establish patient independence.", "",
               "Rebuild from the repository root:", "", "```sh",
