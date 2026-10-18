@@ -34,13 +34,13 @@
     },
     {
       "path": "analysis_refresh/evaluate_mendeley.py",
-      "bytes": 3525,
-      "sha256": "506a6c45fa6dd19356fc6fad0a841164a63a95fd94c3fd4a207e9e524cef2b31"
+      "bytes": 3545,
+      "sha256": "6f1d030805bdef7a8d0c453261ad5666c8f3183f04d20f74873ce600df2e1dfc"
     },
     {
       "path": "analysis_refresh/refresh_results.py",
-      "bytes": 8269,
-      "sha256": "6b2d3c889b085edfabde5f4d3ef698c214f4ef749bab5c05b179f40156ed226d"
+      "bytes": 8289,
+      "sha256": "574624c902de1d7e85fa0b27586b5a20cd27cdd6475e72ae89401c5762278d1c"
     },
     {
       "path": "data/evaluation/ground_truth/radiologist_test_key.csv",
@@ -590,22 +590,22 @@
     {
       "path": "datasets/mendeley_xx9zzz6t54_v1/audit.json",
       "bytes": 1034,
-      "sha256": "03557915b365baf3e93d1f8a36365bf6ea5d1242a0c544465a0091c2caeaf540"
+      "sha256": "4158fb1e68b735bfc98541a2f82340e4c8d833adb54a786b1ddaf22999483c4b"
     },
     {
       "path": "datasets/mendeley_xx9zzz6t54_v1/audit_source.py",
-      "bytes": 2456,
-      "sha256": "79addccdd092d132a87a85a1c1c7820f3f0edd0c5134a4ce936f6ac161620b0c"
+      "bytes": 2476,
+      "sha256": "6c9da6ebf4bc7a309f4e145a8c08942b91a1b87161665b056f1dc1dda8df374a"
     },
     {
       "path": "datasets/mendeley_xx9zzz6t54_v1/image_inventory.csv",
-      "bytes": 1161273,
-      "sha256": "ba24da9d2370439c653f55f58f78817278c3f51ee6e05777397271954d1e0bfd"
+      "bytes": 1154872,
+      "sha256": "5aceb1e08d16e79a0846112cabbc7cc18d875234d5c32f7d6070d2a9e828b25e"
     },
     {
       "path": "datasets/mendeley_xx9zzz6t54_v1/legacy_hash_reference.csv",
-      "bytes": 3856595,
-      "sha256": "1c562fae1dd2991f652b3d3c7fbe30d2d008b23a05a82cb04299cb94ca7297cd"
+      "bytes": 3813056,
+      "sha256": "882832ae48dac973a6bd53ede6b473799490f849d8084867760b3fc470b53fcd"
     },
     {
       "path": "docs/kevin_paper_20261011/Kevin_Paper_Datasets_and_Training_Plan.docx",
@@ -5109,8 +5109,8 @@
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/all_model_scenario_metrics.csv",
-      "bytes": 31899,
-      "sha256": "dcb732de54f347af545f3eb8bddc433499551b89c428731c950a8b291aa67ab1"
+      "bytes": 31786,
+      "sha256": "4c4249ec4e7635ee1791d5d6c70ac6a1d90b06e397b0f68fd1ec17ad583c853d"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/analysis.json",
@@ -16069,8 +16069,8 @@
     },
     {
       "path": "results/current/clinical/all_model_scenario_metrics.csv",
-      "bytes": 31899,
-      "sha256": "dcb732de54f347af545f3eb8bddc433499551b89c428731c950a8b291aa67ab1"
+      "bytes": 31786,
+      "sha256": "4c4249ec4e7635ee1791d5d6c70ac6a1d90b06e397b0f68fd1ec17ad583c853d"
     },
     {
       "path": "results/current/clinical/analysis.json",
@@ -16199,13 +16199,13 @@
     },
     {
       "path": "results/current/mendeley/predictions.csv",
-      "bytes": 2244602,
-      "sha256": "924095a86f0001c7dc6d2f5cb51f6b782c6f346852ef64da4c3c35103fe877ab"
+      "bytes": 2231811,
+      "sha256": "e2a1c8b23916568a9214698cb40be6b7eb7421cd794ef23d9dba2e6bd35ebd84"
     },
     {
       "path": "results/current/mendeley/recomputed_metrics.csv",
-      "bytes": 1134,
-      "sha256": "96be887c548afc3cb2d984a294076b583f73b39652febacc8fb6707d52104c52"
+      "bytes": 1123,
+      "sha256": "d42ed9d6187dab6265b9798819ae3415432299b38af3069df965f8342d67288e"
     },
     {
       "path": "results/current/training/index.json",

@@ -14,7 +14,7 @@ COHORTS={'besga_reused_test':(7,4),'openneuro_reused_external':(1,14)}
 SCENARIOS=['clean','intensity_0.9','intensity_1.1','gaussian_noise_0.01','gaussian_noise_0.02','blur_0.5','blur_1.0']
 def dump(p,v):p.write_text(json.dumps(v,indent=2,allow_nan=False)+'\n')
 def table(p,rows):
- with p.open('w',newline='') as f:w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+ with p.open('w',newline='') as f:w=csv.DictWriter(f,fieldnames=list(rows[0]),lineterminator="\n");w.writeheader();w.writerows(rows)
 def clinical(source,out):
  rows=[r for r in json.loads(source.read_text()) if r['cohort'] in COHORTS and r['binary_evaluable']]
  assert len(rows)==26*8*7

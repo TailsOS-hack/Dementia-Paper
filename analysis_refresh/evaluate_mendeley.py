@@ -33,6 +33,6 @@ def main():
   print(name,metric['correct'],len(y),f"{metric['seconds']:.1f}s",flush=True)
   del model,ck
   if device.type=='mps':torch.mps.empty_cache()
- with (a.output/'predictions.csv').open('w',newline='') as f:w=csv.DictWriter(f,fieldnames=list(preds[0]));w.writeheader();w.writerows(preds)
+ with (a.output/'predictions.csv').open('w',newline='') as f:w=csv.DictWriter(f,fieldnames=list(preds[0]),lineterminator="\n");w.writeheader();w.writerows(preds)
  (a.output/'metrics.json').write_text(json.dumps(dict(scope='reused image diagnostic only; all 6400 source images overlap existing data',device=str(device),torch=torch.__version__,training_performed=False,model_selection_performed=False,classes=CLASSES,metrics=allmetrics),indent=2)+'\n')
 if __name__=='__main__':main()

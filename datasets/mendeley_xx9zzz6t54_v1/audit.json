@@ -28,5 +28,5 @@
     "stage_manifest.csv": "66a0cd9409d61edd32ee137154f769c749664f255ddebe461cf7683c1f4ba7b9",
     "excluded_legacy.csv": "abcad712a8818ff20867980232c34e2b83fe5057bc7dde2dcceeddbef995296a"
   },
-  "legacy_hash_reference_sha256": "1c562fae1dd2991f652b3d3c7fbe30d2d008b23a05a82cb04299cb94ca7297cd"
+  "legacy_hash_reference_sha256": "882832ae48dac973a6bd53ede6b473799490f849d8084867760b3fc470b53fcd"
 }
