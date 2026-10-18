@@ -9,6 +9,12 @@ The [combined six-page manuscript](../../results/sts/README.md) has four tables 
 four embedded graphs. These new observations remain separate from the historical
 305-epoch experiment and add no held-out performance estimates.
 
+Training used one NVIDIA RTX PRO 6000 Blackwell Server Edition GPU with 96 GB
+VRAM on Linux x86_64, with CUDA 12.8, PyTorch 2.8.0+cu128 and torchvision
+0.23.0+cu128. The finalized runs used one Torch CPU thread and four DataLoader
+workers. The [runtime record](../../results/sts/retraining/raw/runtime.json)
+preserves the observed hardware and software versions.
+
 The experiment retains the original two conditions
 (stage only and multitask), three seeds (20261011–20261013), ImageNet initialization,
 full 19,023-image training passes, optimizer, augmentation, weighting, label

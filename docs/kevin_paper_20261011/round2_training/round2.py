@@ -210,7 +210,7 @@ def freeze(args):
       source_hashes=sources,preparation=prep,clinical_data_used=False,held_out_images_used_for_selection=False,
       prior_test_results_known=True,assessment_label='Retrospective reused-benchmark development, not fresh independent test validation.',
       attribution_used_for_selection=False,rep_seed_selection='No test-based or CAM-based seed selection. Report all3; optional representative is smallest eligible selected validation score, tie seed order.',
-      budget_authority='User superseded $10 total cap; machine <=$10/hour; epochs stop by validation plateau or100max.12h suite timeout is operational failsafe only. Root monitors billing/retrieval/cleanup.',
+      execution_notes='Epochs stop by validation plateau or 100 maximum. The 12-hour suite timeout is an operational failsafe only. The root controller handles verified retrieval and resource cleanup.',
       resume_policy='No automatic restart or resume; preserve diagnostics and completed checkpoints on failure. Any restart requires explicit reviewed continuation, not new hyperparameter search.',
       interpretation='Research-only 2D legacy-stage experiment. Does not establish real-world clinical readiness, patient independence, MRI domain robustness or improvement.')
     dump(prepared/'protocol.json',cfg)

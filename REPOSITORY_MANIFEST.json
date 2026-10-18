@@ -672,8 +672,8 @@
     },
     {
       "path": "docs/kevin_paper_20261011/Kevin_Paper_Datasets_and_Training_Plan.docx",
-      "bytes": 50471,
-      "sha256": "4a270d988897c25ac466d4d0bfd0073070ea51c9d5df9268e81faa647545bd9a"
+      "bytes": 50324,
+      "sha256": "84bb1bbc18a82770357a6233a02c732662f11488f665ddfd6535617e71e24edf"
     },
     {
       "path": "docs/kevin_paper_20261011/abid_dataset_crosswalk.json",
@@ -792,8 +792,8 @@
     },
     {
       "path": "docs/kevin_paper_20261011/build_study_plan.py",
-      "bytes": 26114,
-      "sha256": "048095c7a3712fb850b077b00fb6970a853101c11704ed45fd0dd65e1559dfbd"
+      "bytes": 25930,
+      "sha256": "86f4057555a1d5ec071879250dad90ee1be5e947cd210307514f7044b8f9e8c3"
     },
     {
       "path": "docs/kevin_paper_20261011/cohort_manifest_template.csv",
@@ -4972,13 +4972,13 @@
     },
     {
       "path": "docs/kevin_paper_20261011/round2_clinical/README.md",
-      "bytes": 7844,
-      "sha256": "ec6a74541f9edf6827f307c55e0a53324db8a2f87c08244c302ecc60976c6c96"
+      "bytes": 8056,
+      "sha256": "f73047c9ee20d24094aeffbfbb56df2c17cda79be21cda6928c785ecd2541144"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_clinical/clinical_bag.py",
-      "bytes": 38834,
-      "sha256": "c1e3c93fc8cec47aec58bbe97f8074f04e52dc67de74fdbd87508004c24d63d9"
+      "bytes": 38842,
+      "sha256": "356df0e3b922276741dc9435be35597a939d0931439ce35ebd168967e302db36"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_clinical/clinical_statistics.py",
@@ -4992,8 +4992,8 @@
     },
     {
       "path": "docs/kevin_paper_20261011/round2_clinical/prepared/protocol.json",
-      "bytes": 4837,
-      "sha256": "602cad444cf97732485d7573262f04a808e602b063715b0fb6538976c249eaa8"
+      "bytes": 5032,
+      "sha256": "6cbf9174a49dfc6c1e85c08feb1ca75e82fc1c04b29282ed807b15195aedc735"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_clinical/smoke_clinical_cuda.py",
@@ -8492,8 +8492,8 @@
     },
     {
       "path": "docs/kevin_paper_20261011/round2_training/README.md",
-      "bytes": 8253,
-      "sha256": "d7e5b0478c81e874c136af5877326035d29750b6f25e8891f5048eb987922be7"
+      "bytes": 8411,
+      "sha256": "7d93878fd0cd4debea1c2f6b2de6f19412ca5b44e2658c94fcd0decb06af617d"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_training/audit_prepared.py",
@@ -8502,13 +8502,13 @@
     },
     {
       "path": "docs/kevin_paper_20261011/round2_training/prepared/protocol.json",
-      "bytes": 6261,
-      "sha256": "26b5c0a178a02f1cb82fad148aadc540a07cbfa93784950c49c7f941bb600ba2"
+      "bytes": 6433,
+      "sha256": "c48e9e8a9ef6027ca6dd1476af485a1e69e9131a1796467d883a435950914276"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_training/round2.py",
-      "bytes": 31733,
-      "sha256": "94153e6af976fb8d31b9d3d2ae7f2ce6d011e3ef59a94909b4fdec3d4b867dcc"
+      "bytes": 31727,
+      "sha256": "1d80450f2418e39183396685a7bdb60304bac3013dfd985377034e5b34a51948"
     },
     {
       "path": "docs/kevin_paper_20261011/round2_training/test_round2.py",
@@ -8522,8 +8522,8 @@
     },
     {
       "path": "docs/kevin_paper_20261011/round3/EXECUTION_CONTRACT.md",
-      "bytes": 5379,
-      "sha256": "edd70a5ceb9033aeda63b4172be57b0dae3c27ecb9ec1013baacced4e3109953"
+      "bytes": 5308,
+      "sha256": "8357f166d723b18ffb6816b20b826f49fdb43435d6df92851dcb83ffc7e132d8"
     },
     {
       "path": "docs/kevin_paper_20261011/round3/README.md",
@@ -8552,8 +8552,8 @@
     },
     {
       "path": "docs/kevin_paper_20261011/round3/access/access_inventory.json",
-      "bytes": 7725,
-      "sha256": "3a55ef4906c41faefd88d7a2ee5826616bece27d96b2c7e00cc9b027309e02bc"
+      "bytes": 7726,
+      "sha256": "48599738226fcd5b81af4d47e6219fb08814c0c88e755313dc691c82c7838838"
     },
     {
       "path": "docs/kevin_paper_20261011/round3/access/form_fields.json",
@@ -8567,13 +8567,13 @@
     },
     {
       "path": "docs/kevin_paper_20261011/round3/access/verification.json",
-      "bytes": 1724,
-      "sha256": "a9f7663014aa608a10b5d5899d7410eb18a9c367e1d57dd53fb5bcb862275db2"
+      "bytes": 1926,
+      "sha256": "7b2367f49919fe893fa5d94453b92e3652b277a11d7b6f1447fcdb937fe55615"
     },
     {
       "path": "docs/kevin_paper_20261011/round3/current_status.json",
-      "bytes": 2062,
-      "sha256": "0bad458390913fac2069a1ade9420dea656255ea019a01d0d79a1a7dc01a2016"
+      "bytes": 2063,
+      "sha256": "5c29c040b7bd5fadc2d76d9dd6d95c6a993f7594f8e590ced9c8c55ada590858"
     },
     {
       "path": "docs/kevin_paper_20261011/round3/empty_patient_manifest.json",
@@ -8582,8 +8582,8 @@
     },
     {
       "path": "docs/kevin_paper_20261011/round3/implementation_verification.json",
-      "bytes": 3616,
-      "sha256": "4951b97eaea0ad2bf4c6116903b227ffd7f84db936bcddfd6af1961bb86c42ec"
+      "bytes": 3812,
+      "sha256": "150d035620b85bf3a8d0fbae9aa87f127b530c08dc28cff80197bb4df1c0d1ac"
     },
     {
       "path": "docs/kevin_paper_20261011/round3/inventory.json",
@@ -8597,8 +8597,8 @@
     },
     {
       "path": "docs/kevin_paper_20261011/round3/protocol.json",
-      "bytes": 4331,
-      "sha256": "494858b8b62003ec900d12d5273a83a73ffce9215580c383a5cf95cfdbb87772"
+      "bytes": 4176,
+      "sha256": "2f90b4d3730b1a63c060df6ba95e27359400874130e8ed4cbbb50d29b6e8d4a1"
     },
     {
       "path": "docs/kevin_paper_20261011/round3/reviews/data_gate_review.md",
@@ -8607,8 +8607,8 @@
     },
     {
       "path": "docs/kevin_paper_20261011/round3/reviews/model_pipeline_review.md",
-      "bytes": 7354,
-      "sha256": "3d1d0d7f370982e9632cc42c5c5008b41f27960d627214e7e9db88a09e747cfd"
+      "bytes": 7353,
+      "sha256": "61509bcb8257a69f070540d23bea3f8e4d00d8636816fd9fc5d4beaf255ea2ca"
     },
     {
       "path": "docs/kevin_paper_20261011/round3/sample_size_pending.json",
@@ -16097,13 +16097,13 @@
     },
     {
       "path": "research/dementia_round3/cli.py",
-      "bytes": 22096,
-      "sha256": "1078c236134f2212ecba76ac0ed6ee2eee7349163134424af5399e0c8f546aae"
+      "bytes": 22097,
+      "sha256": "2256540fa5f45129ba1b2a98a8c6bba08aafa2c37e2a95213dd3cac0c1c927ad"
     },
     {
       "path": "research/dementia_round3/common.py",
-      "bytes": 25472,
-      "sha256": "58c07bd8a136dec6b78a6bc9155819c749146d88d10443471a5818d905752d26"
+      "bytes": 25314,
+      "sha256": "de24c4c0a38be4841958a0a18a2706148688716fd799a68b9c5a622e89cd3b02"
     },
     {
       "path": "research/dementia_round3/data.py",
@@ -16152,8 +16152,8 @@
     },
     {
       "path": "research/dementia_round3/training.py",
-      "bytes": 23969,
-      "sha256": "04bff35c9c3c2b8c17bc16de0af553919b61984adf0dd0e736b46d36ac2a214b"
+      "bytes": 23876,
+      "sha256": "76d99d86f7d3d4d71189e58126bcce135700f609e5cc19073f54bf435f38c6b7"
     },
     {
       "path": "research/dementia_round3/workflow.py",
@@ -16162,8 +16162,8 @@
     },
     {
       "path": "research/sts_retrain_20261018/README.md",
-      "bytes": 9856,
-      "sha256": "9639953a3dfb1444b25fd94f71c0cb74071e4eaa454fe1bcbdbe60dc9ec9799a"
+      "bytes": 10220,
+      "sha256": "1ffac7672631b07a2dcb6e330fee19df4c7de285fa2fbd61296389923248daf8"
     },
     {
       "path": "research/sts_retrain_20261018/__init__.py",

@@ -45,8 +45,6 @@ def validate_protocol(protocol):
         raise ValueError("Search must be bounded to 24 preregistered configurations")
     if protocol.get("execution", {}).get("training_gpu") != "NVIDIA B300" or protocol["execution"].get("analysis_location") != "local_mac":
         raise ValueError("User specified B300 training and local Mac analysis")
-    if protocol["execution"].get("maximum_gpu_hourly_usd") != 8.99:
-        raise ValueError("Live B300 hourly rate must not exceed the user-selected $8.99")
     if protocol.get("clinical_deployment_permitted") is not False:
         raise ValueError("Research authorization is not clinical deployment authorization")
     return protocol

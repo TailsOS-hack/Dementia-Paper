@@ -32,7 +32,9 @@ Preparation reads only frozen TRAIN/VAL image rows and verifies decoded-pixel id
 
 Run `train ... --seed 20261011 --smoke --device mps --workers 0` into a separate disposable output to check one tiny TRAIN/VAL epoch. Smoke checkpoints are marked and cannot be research candidates. Research batch size 64 is protocol-fixed, not an adjustable sweep; workers/device are runtime settings. A hardware throughput benchmark, if needed, must be a clearly marked smoke output and does not select hyperparameters.
 
-The user superseded the original $10 total cap and authorized enough time at **machine rate ≤ $10/hour**. Training stops by the validation rule. A 12 hour suite deadline is only an operational failsafe; reaching it yields incomplete status, not scientific completion. The root controller owns billing checks, verified retrieval, and deletion of this task's resources. This trainer cannot delete or provision cloud resources. It does not automatically restart failed runs.
+Training stops by the validation rule. A 12 hour suite deadline is only an operational failsafe; reaching it yields incomplete status, not scientific completion. The root controller owns verified retrieval and deletion of this task's resources. This trainer cannot delete or provision cloud resources. It does not automatically restart failed runs.
+
+The public protocol's execution description was revised after the archived runs. Its source hashes retain the original run identities; rerun `prepare` to freeze a protocol for the current source before new training. Historical checkpoint and evaluation identities remain unchanged.
 
 Per-seed outputs are `stage_only_seed<seed>/{best.pt,last.pt,selection.json,run_status.json,history.json,history.csv,epoch_NNN_validation.json,raw_curves.png,raw_curves.pdf}`. The checkpoint keeps the exact architecture/class vocabulary and adds `round=2`, `selection`, `best_selection_score`, `stage_validation`, `stress_validation` and initial/protocol identities. Do not use the old frozen evaluator's pure-clean-NLL selection check on this different criterion.
 

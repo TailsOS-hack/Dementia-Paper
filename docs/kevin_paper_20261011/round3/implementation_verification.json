@@ -35,6 +35,7 @@
   "real_round3_patient_predictions": false,
   "real_round3_training": false,
   "status": "passed_software_verification_only",
+  "source_identity_scope": "Prior-source verification snapshot: code_sha256 and test_sha256 identify the reviewed source bytes, not current-file checksums after subsequent repository revisions.",
   "synthetic_figure_visual_qa": {
     "checked": [
       "new_site_confusion",

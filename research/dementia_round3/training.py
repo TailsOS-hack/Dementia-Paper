@@ -22,10 +22,9 @@ from .preprocessing import file_hash, object_hash, anatomical_volume_fractions
 TRAINING_VERSION = 'round3-patient-training-v1'
 SEARCH_SEED = 20261030
 FINAL_SEEDS = (20261031, 20261032, 20261033)
-RUNTIME_POLICY = {'real_training': 'NVIDIA B300 CUDA; live price verified by external launcher',
-                  'requested_gpu_hourly_usd': 8.99,
+RUNTIME_POLICY = {'real_training': 'NVIDIA B300 CUDA',
                   'analysis_statistics_figures': 'local Mac',
-                  'paid_launch_authority': 'separate dataset/protocol and live provider gates'}
+                  'cloud_launch_authority': 'separate dataset/protocol and live provider gates'}
 
 
 def bounded_search_space():

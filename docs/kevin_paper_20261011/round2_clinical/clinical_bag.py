@@ -338,7 +338,7 @@ def prepare(args):
         no_selection_sources=['All legacy-stage data and outcomes','Besga test','OpenNeuro','AlzaSet'],
         convergence=dict(safety_wall_hours=12,wall_limit_is_not_scientific_convergence=True,
                          max_epochs_without_patience_requires_validation_only_review=True),
-        spending_authority='User machine cap10USD/hour; no total cap; resource control belongs to root',
+        execution_notes='The root controller manages the training infrastructure and verified resource cleanup',
         limitations=['Exploratory small single-source development:32train11validation patients',
                      'Only19freshAD/CNT1patients, with broad uncertainty and case-control spectrum bias',
                      'No validated brain segmentation, atlas registration, prospective workflow or calibrated clinical-risk claim',
