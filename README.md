@@ -2,6 +2,8 @@
 
 Dedicated dementia/Alzheimer research code, model checkpoints, figures, raw learning histories, statistical comparisons, methods, dataset-source notes, and study plans extracted on October 17, 2026.
 
+**For Abid or an AI writing assistant, begin with [AI_START_HERE.md](AI_START_HERE.md).** See [source coverage](SOURCE_COVERAGE.md) for the scope and explicit omissions.
+
 ## Start here
 
 - [Current scientific handoff](handoff/START_HERE.md)
