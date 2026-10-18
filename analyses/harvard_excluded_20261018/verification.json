@@ -1,0 +1,20 @@
+{
+  "analysis_type": "post_hoc_cohort_exclusion",
+  "excluded_cohort": "harvard_fresh_external",
+  "exclusion_reason": "User requested exclusion after observing poor performance; no independent data-quality exclusion established.",
+  "retained_cohorts": [
+    "besga_reused_test",
+    "openneuro_reused_external"
+  ],
+  "retained_unique_patients": 26,
+  "fresh_external_patients_remaining": 0,
+  "source_path": "docs/kevin_paper_20261011/round2_publication/artifacts/clinical/report/analysis.json",
+  "source_sha256": "3e60ec506b737b9a8d93ca94ab78c1701a761d0e724f66c8dd313827a11092ff",
+  "metrics_recomputed_from": "saved aggregate confusion matrices",
+  "all_16_model_cohort_count_metrics_match_original": true,
+  "inference_rerun": false,
+  "training_rerun": false,
+  "original_results_preserved": true,
+  "pooled_accuracy_reported": false,
+  "limitation": "Descriptive selected subset of reused cohorts, not new external validation or evidence of clinical superiority."
+}

@@ -14,13 +14,33 @@
     },
     {
       "path": "README.md",
-      "bytes": 3769,
-      "sha256": "390597fe6d41dbe15f18492576171cb14bd32732d610d0293de9d7581fc3495b"
+      "bytes": 4015,
+      "sha256": "05e1a768803902341ff8c6dd4b8a172966d8f316d368434984224ee68fdef565"
     },
     {
       "path": "SOURCE_COVERAGE.md",
       "bytes": 2549,
       "sha256": "8c7c1a7db691dd15f8fbbd18185ac2f0413c0985768e4ef448b1c7857827248e"
+    },
+    {
+      "path": "analyses/harvard_excluded_20261018/README.md",
+      "bytes": 2237,
+      "sha256": "da5dec6de8a081ae47cceea082c392e19b90db4841a1954de5e9b175239d2e9d"
+    },
+    {
+      "path": "analyses/harvard_excluded_20261018/recompute.py",
+      "bytes": 2643,
+      "sha256": "9dc53143ff96ffb58539694c284bfa338168259a75573aa00ddc7d56d57bdc71"
+    },
+    {
+      "path": "analyses/harvard_excluded_20261018/recomputed_metrics.csv",
+      "bytes": 1820,
+      "sha256": "7aacf4bd41cef60c15b92fcc73f03b75aa11c8acac5a80ac5158ac5952b7a252"
+    },
+    {
+      "path": "analyses/harvard_excluded_20261018/verification.json",
+      "bytes": 975,
+      "sha256": "b6bc8b80dd144efdf143d5277600982bd872f032e74232d03d26ed7733fd0e70"
     },
     {
       "path": "data/evaluation/ground_truth/radiologist_test_key.csv",

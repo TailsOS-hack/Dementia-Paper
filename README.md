@@ -4,6 +4,10 @@ Dedicated dementia/Alzheimer research code, model checkpoints, figures, raw lear
 
 See [source coverage](SOURCE_COVERAGE.md) for the scope and explicit omissions.
 
+## Post-hoc cohort subset
+
+[October 18 analysis excluding Harvard](analyses/harvard_excluded_20261018/README.md) recomputes the remaining reused-cohort counts. It preserves the original full results and leaves no fresh external clinical cohort.
+
 ## Start here
 
 - [Current scientific handoff](handoff/START_HERE.md)
